@@ -2,7 +2,8 @@
 
 **Bases de datos relacionales · Solo contenido de estudio**
 
-> Resumen reorganizado a partir del material de clase (*¿Qué es MySQL?*, *Tipo de datos en MySQL*, *Constraints en SQL*, *Clase JOIN* y la práctica *DATABASE clinica_medica*). Se conservan definiciones, clasificaciones, ejemplos, tablas y datos relevantes; se unificaron las repeticiones y cada concepto está explicado con palabras simples.
+> Resumen reorganizado a partir del material de clase (*¿Qué es MySQL?*, *Tipo de datos en MySQL*, *Constraints en SQL*, *Clase JOIN* y la práctica *DATABASE clinica_medica*).  
+> La **sección 7 (GROUP BY) es extra**: no está en el material, pero es lo que usan los enunciados de la práctica; va con resultados verificados. Se conservan definiciones, clasificaciones, ejemplos, tablas y datos relevantes; se unificaron las repeticiones y cada concepto está explicado con palabras simples.
 
 ---
 
@@ -14,8 +15,9 @@
 4. [Tipos de datos en MySQL](#4-tipos-de-datos-en-mysql)
 5. [Constraints en SQL](#5-constraints-en-sql)
 6. [JOIN: combinar tablas](#6-join-combinar-tablas)
-7. [Práctica integradora: base de datos `clinica_medica`](#7-práctica-integradora-base-de-datos-clinica_medica)
-8. [Resumen rápido para repasar](#8-resumen-rápido-para-repasar)
+7. [Agregaciones y GROUP BY](#7-agregaciones-y-group-by)
+8. [Práctica integradora: base de datos `clinica_medica`](#8-práctica-integradora-base-de-datos-clinica_medica)
+9. [Resumen rápido para repasar](#9-resumen-rápido-para-repasar)
 
 ---
 
@@ -487,14 +489,270 @@ El **FULL JOIN** devuelve **todas las filas de ambas tablas**, emparejando cuand
 
 ---
 
-## 7. Práctica integradora: base de datos `clinica_medica`
+## 7. Agregaciones y `GROUP BY`
+
+> **Tema fuera del material de clase**, pero es el complemento natural de las funciones de agregación (`COUNT · SUM · AVG · MAX · MIN`) y de la práctica de la sección 8: casi todos los enunciados de `clinica_medica` terminan agrupando. Todo lo de abajo está verificado ejecutando las consultas sobre esa base.
+
+### 7.1 La idea en una frase
+
+**`GROUP BY` parte las filas en "cajones" y devuelve una sola fila por cajón.** Sin `GROUP BY`, la tabla entera es un único cajón.
+
+```sql
+SELECT COUNT(*) AS pacientes, ROUND(AVG(edad),1) AS edad_prom FROM pacientes;
+-- 15 · 47.4                                            → 1 fila
+
+SELECT ciudad, COUNT(*) AS pacientes, ROUND(AVG(edad),1) AS edad_prom
+FROM pacientes
+GROUP BY ciudad
+ORDER BY pacientes DESC, ciudad;
+-- Rosario 3 (58.7) · Buenos Aires 2 (37) · Córdoba 2 (26.5) · Mendoza 2 (48)
+-- Salta 2 (50) · La Plata 1 (54) · Neuquén 1 (67) · San Juan 1 (58) · Tucumán 1 (33)
+--                                                        → 9 filas
+```
+
+El `COUNT(*)` deja de contar "todos" y **cuenta dentro de cada cajón**; lo mismo pasa con `AVG`, `SUM`, `MAX` y `MIN`.
+
+### 7.2 El vocabulario
+
+| Término | Qué es |
+|---|---|
+| **clave de agrupamiento** | lo que va después de `GROUP BY`; define los cajones (`ciudad`). |
+| **función de agregación** | reduce N filas a un valor: `COUNT · SUM · AVG · MAX · MIN · GROUP_CONCAT`. |
+| **clave compuesta** | agrupar por 2 o más columnas: el cajón es la *combinación* (`GROUP BY ciudad, rango`). |
+| **agrupar por expresión** | el cajón es un cálculo, no una columna: `GROUP BY YEAR(fecha)` o un `CASE`. |
+| **filtro de filas** | `WHERE`: se aplica **antes** de armar los cajones. |
+| **filtro de grupos** | `HAVING`: se aplica **después**, sobre cada grupo ya formado. |
+| **`ONLY_FULL_GROUP_BY`** | modo de MySQL (activo desde 5.7) que exige la regla de oro; si se incumple da **error 1055**. |
+| **dependencia funcional** | la excepción que habilita MySQL: si agrupás por la **PK**, podés mostrar las otras columnas de esa tabla. |
+| **agregado ponderado** | el efecto de joinear antes de agregar: las filas duplicadas "pesan más" en el promedio. |
+
+### 7.3 Las funciones de agregación y los `NULL`
+
+| Función | Qué hace | Con `NULL` | Medido en `clinica_medica` |
+|---|---|---|---|
+| `COUNT(*)` | cuenta **filas** | las cuenta | `medicos LEFT JOIN turnos` → **37** |
+| `COUNT(col)` | cuenta valores **no nulos** | los ignora | `COUNT(t.id_turno)` → **30** (faltan 7 = los médicos sin turno) |
+| `COUNT(DISTINCT col)` | valores distintos | ignora `NULL` | `COUNT(DISTINCT ciudad)` → **9** |
+| `SUM(col)` | suma | ignora `NULL` | `SUM(m.salario)` por especialidad → 1.130.000 (Neurología) |
+| `AVG(col)` | promedio de los no nulos | divide por la cantidad **de no nulos**, no por `COUNT(*)` | `AVG(salario)` → 483.666,67 |
+| `MAX` / `MIN` | extremo; andan con número, `DATE` y texto | ignoran `NULL` | `MAX(fecha_turno)` → 2025-10-30 |
+| `GROUP_CONCAT(col)` *(MySQL)* | junta los valores en un string | ignora `NULL` | Rosario → `'Juan,Laura,Pedro'` |
+
+> `ROUND(x, 2)` **no** es una agregación: solo redondea el resultado. Úsala encima de `AVG` para que el promedio se lea.
+
+### 7.4 La regla de oro
+
+**Toda columna del `SELECT` que no esté dentro de una función de agregación tiene que estar en el `GROUP BY`.**
+
+No es un capricho del profe: cada cajón representa a muchas filas, y una columna suelta **no tiene un valor único**.
+
+```sql
+SELECT ciudad, nombre, COUNT(*) AS n FROM pacientes GROUP BY ciudad;   -- MAL
+```
+
+SQLite la deja correr y devuelve `Buenos Aires | María | 2`... ¿María o Jorge? Son dos pacientes: eligió uno al azar, **el resultado miente**. MySQL con `ONLY_FULL_GROUP_BY` la corta en seco:
+
+```
+ERROR 1055 (42000): Expression #2 of SELECT list is not in GROUP BY clause
+```
+
+Tres formas de corregirla:
+
+```sql
+-- a) sacarla
+SELECT ciudad, COUNT(*) AS n FROM pacientes GROUP BY ciudad;
+
+-- b) agrupar también por ella (el cajón pasa a ser ciudad + nombre)
+SELECT ciudad, nombre, COUNT(*) AS n FROM pacientes GROUP BY ciudad, nombre;
+
+-- c) agregarla (forzar un valor por grupo)
+SELECT ciudad, GROUP_CONCAT(nombre) AS nombres, COUNT(*) AS n
+FROM pacientes GROUP BY ciudad;      -- Rosario → 'Juan,Laura,Pedro' · 3
+```
+
+Y la excepción que conviene conocer: **si el `GROUP BY` usa la clave primaria**, MySQL deja seleccionar cualquier otra columna de esa tabla (es *funcionalmente dependiente*). Por eso en el material se agrupa `GROUP BY m.id_medico` y se muestra `m.nombre`.
+
+### 7.5 El orden de ejecución: el que resuelve todas las dudas
+
+Se **escribe** `SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY → LIMIT`, pero la base **ejecuta**:
+
+```
+FROM  →  WHERE  →  GROUP BY  →  HAVING  →  SELECT   →  ORDER BY  →  LIMIT
+ 1         2          3            4           5            6          7
+                                    (los alias nacen acá)
+```
+
+De ese orden se desprende todo lo que suele confundir:
+
+- En el `WHERE` todavía **no existe** `COUNT(*)`: `WHERE COUNT(*) > 1` da `ERROR 1111 (Invalid use of group function)`. Las agregadas se filtran en `HAVING` (paso 4).
+- Los **alias del `SELECT` nacen en el paso 5**: no se pueden usar en `WHERE` (`ERROR 1054: Unknown column 'n' in 'where clause'`), pero **sí** en `HAVING` y en `ORDER BY` (MySQL lo permite).
+- `ORDER BY` se aplica a los grupos ya formados: por eso ordena por el agregado (`ORDER BY n DESC`).
+
+### 7.6 `WHERE` y `HAVING`, con el mismo objetivo y resultados distintos
+
+```sql
+-- filtra FILAS antes de agrupar: cuenta solo los mayores de 40
+SELECT ciudad, COUNT(*) AS n
+FROM pacientes WHERE edad > 40 GROUP BY ciudad;
+-- Rosario 3 · Mendoza 2 · La Plata 1 · Neuquén 1 · Salta 1 · San Juan 1  → 6 filas
+
+-- filtra GRUPOS después: cuenta a todos y tira los cajones chicos
+SELECT ciudad, COUNT(*) AS n
+FROM pacientes GROUP BY ciudad HAVING COUNT(*) > 1;
+-- Rosario 3 · Buenos Aires 2 · Córdoba 2 · Mendoza 2 · Salta 2            → 5 filas
+
+-- los dos: primero filas, después grupos
+SELECT ciudad, COUNT(*) AS n
+FROM pacientes WHERE edad > 40
+GROUP BY ciudad HAVING COUNT(*) > 1;
+-- Rosario 3 · Mendoza 2                                                   → 2 filas
+```
+
+### 7.7 La plantilla
+
+```sql
+SELECT   columna_grupo,                        -- solo lo que está en GROUP BY…
+         AGREGACION(otra_columna) AS alias      -- …o dentro de una agregada
+FROM     tabla
+WHERE    filtro_sobre_filas                     -- opcional, sin agregadas
+GROUP BY columna_grupo                          -- arma los cajones
+HAVING   filtro_sobre_grupos                    -- opcional, acá sí agregadas
+ORDER BY alias DESC, columna_grupo              -- desempatar siempre
+LIMIT    n;                                     -- opcional
+```
+
+### 7.8 Los patrones que hay que tener domados
+
+**Varias agregadas en la misma consulta**
+
+```sql
+SELECT ciudad, MAX(edad) AS mayor, MIN(edad) AS menor
+FROM pacientes
+GROUP BY ciudad
+ORDER BY (MAX(edad) - MIN(edad)) DESC;
+-- Salta 70/30 (brecha 40) · Rosario 73/41 · Mendoza 51/45 · Buenos Aires 39/35 · …
+```
+
+**`COUNT(*)` o "cuáles": `COUNT(DISTINCT x)`**
+
+```sql
+SELECT e.nombre_especialidad,
+       COUNT(t.id_turno) AS turnos,
+       COUNT(DISTINCT t.id_paciente) AS pacientes_distintos
+FROM turnos t
+INNER JOIN medicos m ON t.id_medico = m.id_medico
+INNER JOIN especialidades e ON m.id_especialidad = e.id_especialidad
+GROUP BY e.nombre_especialidad;
+-- Cardiología 4/4 · Clínica General 4/4 · Dermatología 4/4 · Neurología 4/4 · Pediatría 4/4
+-- Traumatología 4/4 · Ginecología 3/3 · Oftalmología 3/3      (la Σ de los grupos da 30 = el total, así que el JOIN no duplicó)
+```
+
+Sumar los grupos y comparar contra el total real es la mejor manera de comprobar que un `JOIN` no duplicó filas.
+
+**Rangos que no existen como columna: `CASE`**
+
+```sql
+SELECT CASE WHEN edad < 40 THEN '18 a 39'
+            WHEN edad < 60 THEN '40 a 59'
+            ELSE '60 y más' END AS rango,
+       COUNT(*) AS pacientes, ROUND(AVG(edad),1) AS edad_prom
+FROM pacientes
+GROUP BY rango
+ORDER BY rango;
+-- 18 a 39 → 6 (31.7) · 40 a 59 → 5 (49.8) · 60 y más → 4 (68)
+```
+
+**Cortar una fecha para agrupar**
+
+```sql
+SELECT SUBSTR(fecha_turno, 1, 7) AS mes, COUNT(*) AS turnos
+FROM turnos GROUP BY mes;
+-- 2025-10 → 30  (en MySQL: DATE_FORMAT(fecha_turno,'%Y-%m') o YEAR() + MONTH())
+```
+
+**"Los que no tienen nada": `LEFT JOIN` + `HAVING COUNT(...) = 0`**
+
+```sql
+SELECT m.nombre, m.apellido, COUNT(t.id_turno) AS turnos
+FROM medicos m LEFT JOIN turnos t ON t.id_medico = m.id_medico
+GROUP BY m.id_medico
+HAVING COUNT(t.id_turno) = 0;
+-- 7 filas: Herrera · López · Martínez · Molina · Ortega · Rivas · Silva
+```
+
+Con `INNER JOIN` da **0 filas**: el `INNER` descarta justamente las filas sin turno, que son las que estabas buscando. Y ojo con `COUNT(*)` acá: sobre el `LEFT JOIN` devuelve **1** para esos médicos (la fila con `NULL`), mientras que `COUNT(t.id_turno)` devuelve **0**.
+
+**Porcentaje sobre el total, con subconsulta en el denominador**
+
+```sql
+SELECT e.nombre_especialidad, COUNT(*) AS turnos,
+       ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM turnos), 1) AS porcentaje
+FROM turnos t
+INNER JOIN medicos m ON t.id_medico = m.id_medico
+INNER JOIN especialidades e ON m.id_especialidad = e.id_especialidad
+GROUP BY e.nombre_especialidad;
+-- 13.3 % (seis especialidades) · 10 % (dos)  → el total da 100 %
+```
+
+El `* 100.0` (con punto decimal) evita la división entera; y el total se saca con un subquery **aparte**, no con `COUNT(*)` a secas.
+
+### 7.9 La trampa del `JOIN` que sesga el promedio
+
+```sql
+SELECT ROUND(AVG(salario),2) FROM medicos;                        -- 483666.67
+SELECT ROUND(AVG(salario),2) FROM medicos
+WHERE id_medico IN (SELECT id_medico FROM turnos);                -- 481875
+SELECT ROUND(AVG(m.salario),2)
+FROM medicos m INNER JOIN turnos t ON t.id_medico = m.id_medico;  -- 480166.67
+```
+
+Hay **dos efectos mezclados**:
+
+1. el `JOIN` **excluye** a los 7 médicos sin turnos → el promedio pasa a ser de 8, no de 15;
+2. y **repite** el sueldo de cada médico una vez por turno → queda **ponderado**:
+
+```
+peso 4: Luis 420000 · Valeria 430000 · Andrés 450000 · Pedro 470000 · Carla 510000 · Romina 560000
+peso 3: Lucas 495000 · Marina 520000
+```
+
+Ninguno está "mal": son preguntas distintas. Antes de agregar sobre un `JOIN` de 1:N, definí qué querés medir y, si hace falta, **agrupá primero en un subquery y joineá después**.
+
+### 7.10 Errores típicos y su antídoto
+
+| Síntoma | Causa | Arreglo |
+|---|---|---|
+| `ERROR 1055 … not in GROUP BY clause` | columna suelta en el `SELECT` | sacarla, agruparla o meterla en una agregada |
+| `ERROR 1111 Invalid use of group function` | una agregada en el `WHERE` | moverla al `HAVING` |
+| `ERROR 1054 Unknown column 'n'` | usaste un alias del `SELECT` en el `WHERE` | usarlo en `HAVING`/`ORDER BY` o repetir la expresión |
+| el `AVG` o el `SUM` dan más grande/chico de lo esperado | el `JOIN` 1:N duplicó filas | verificar con `COUNT(*)` contra el total, o agregar antes de joinear |
+| `COUNT(*)` dice 1 pero "no hay datos" | `LEFT JOIN` sin coincidencia (fila `NULL`) | contar con `COUNT(clave_hija)` |
+| un grupo desaparece de la lista | `INNER JOIN` filtró los que no tenían nada | `LEFT JOIN` + `HAVING COUNT(...) = 0` |
+| el orden de los empates cambia cada vez | `ORDER BY` sin desempate | `ORDER BY n DESC, ciudad` |
+| SQLite deja hacer algo que MySQL rechaza | SQLite no valida `ONLY_FULL_GROUP_BY` | no confiar en el resultado "arbitrario" |
+
+### 7.11 Checklist para el parcial
+
+1. Definí **qué fila** querés que devuelva la consulta: esa es la clave del `GROUP BY`.
+2. Lo que no esté en esa clave, solo dentro de una función de agregación.
+3. Filtro de filas → `WHERE`. Filtro de grupos → `HAVING`.
+4. ¿Joinear antes o después de agregar? Si el `JOIN` duplica filas, agregá primero.
+5. `ORDER BY alias DESC, clave_de_grupo` para que el resultado sea estable.
+6. Sumá los grupos y compará contra el total real: si no cierra, hay filas duplicadas por el `JOIN`.
+7. `ROUND(x, 2)` para promedios y `* 100.0` para porcentajes.
+
+> 🏋️ Para practicar esto con resultados verificables: `practica/group-by-ejercicios.md` (15 ejercicios) y `practica/run.py`, que además te avisa si tu consulta reventaría con `ONLY_FULL_GROUP_BY`.
+
+---
+
+## 8. Práctica integradora: base de datos `clinica_medica`
 
 > Fuente: **«DATABASE clinica_medica — práctica de todas las consultas»**.
 > Es la práctica más completa del material porque recorre **todos los temas** del resumen en una sola base de datos: DDL (`CREATE TABLE`), constraints (`PRIMARY KEY`, `AUTO_INCREMENT`, `FOREIGN KEY`), tipos de datos (`INT`, `VARCHAR`, `DECIMAL`, `DATE`), DML (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), `ALTER TABLE`, operadores y palabras clave, funciones de agregación, `GROUP BY` / `HAVING`, los tres `JOIN` y `CREATE VIEW`.
 >
-> Los 56 enunciados están resueltos abajo. **Todas las consultas fueron ejecutadas sobre los datos reales del PDF**, así que en 7.12 figura la cantidad de filas (o el valor) que tiene que dar cada una para que puedas autocorregirte.
+> Los 56 enunciados están resueltos abajo. **Todas las consultas fueron ejecutadas sobre los datos reales del PDF**, así que en 8.12 figura la cantidad de filas (o el valor) que tiene que dar cada una para que puedas autocorregirte.
 
-### 7.1 Estructura de la base (DDL + constraints)
+### 8.1 Estructura de la base (DDL + constraints)
 
 Cuatro tablas. `turnos` es la tabla "puente": relaciona pacientes con médicos, y cada médico pertenece a una especialidad.
 
@@ -550,7 +808,7 @@ CREATE TABLE turnos (
 - `VARCHAR(100)` para textos de largo variable; `NOT NULL` solo donde el dato es obligatorio.
 - `FOREIGN KEY`: `turnos.id_medico` **solo puede existir si existe en `medicos`** → por eso en 47-49 hay que borrar primero los registros "hijos".
 
-### 7.2 Datos cargados (DML)
+### 8.2 Datos cargados (DML)
 
 ```sql
 INSERT INTO especialidades (nombre_especialidad) VALUES
@@ -596,7 +854,7 @@ INSERT INTO turnos (id_paciente, id_medico, fecha_turno, motivo) VALUES
 **Volumen de datos:** 8 especialidades · 15 pacientes · 15 médicos · 30 turnos.
 Cada turno tiene **un día distinto** (`2025-10-01` al `2025-10-30`) y cada paciente tiene 1 o 2 turnos: los pacientes 1 a 15 tienen un turno en la "vuelta 1" y los pacientes 1 a 15 vuelven en la "vuelta 2" (médicos rotados).
 
-### 7.3 Consultas simples (1 a 12)
+### 8.3 Consultas simples (1 a 12)
 
 1. Mostrar todos los pacientes → `SELECT * FROM pacientes;`
 2. Nombre, apellido y edad de todos los pacientes → `SELECT nombre, apellido, edad FROM pacientes;`
@@ -613,7 +871,10 @@ Cada turno tiene **un día distinto** (`2025-10-01` al `2025-10-30`) y cada paci
 
 > **Ojo con el orden lógico de una consulta (sección 3):** se escribe `SELECT … FROM … WHERE … ORDER BY`, pero la base de datos lo ejecuta al revés: primero `FROM`, después `WHERE`, recién después `SELECT` y por último `ORDER BY`. Por eso en el `SELECT` se puede usar el alias y en el `WHERE` no.
 
-### 7.4 Funciones de agregación (13 a 17)
+### 8.4 Funciones de agregación (13 a 17)
+
+> Acá conviene tener leída la sección 7 (agregaciones) y, para lo que sigue, 7.4 a 7.6.
+
 
 13. Edad promedio de los pacientes → `SELECT AVG(edad) AS edad_promedio FROM pacientes;`
 14. Edad máxima y mínima → `SELECT MAX(edad) AS mayor, MIN(edad) AS menor FROM pacientes;`
@@ -623,7 +884,7 @@ Cada turno tiene **un día distinto** (`2025-10-01` al `2025-10-30`) y cada paci
 
 > `MIN()` y `MAX()` no solo sirven con números: con `DATE` (16 y 17) y con texto (alfabéticamente) también funcionan.
 
-### 7.5 Consultas con JOIN (18 a 25)
+### 8.5 Consultas con JOIN (18 a 25)
 
 18. Nombre del paciente y fecha de su turno.
 
@@ -685,7 +946,10 @@ INNER JOIN especialidades e ON m.id_especialidad = e.id_especialidad;
 > Y para practicar `LEFT JOIN`: los 15 médicos tienen turnos, pero si querés ver **los pacientes sin turno** (no hay en estos datos, la consulta igual debe devolver 0 filas) usá
 > `SELECT p.nombre FROM pacientes p LEFT JOIN turnos t ON t.id_paciente = p.id_paciente WHERE t.id_turno IS NULL;`
 
-### 7.6 Consultas con GROUP BY (26 a 33)
+### 8.6 Consultas con GROUP BY (26 a 33)
+
+> Toda esta serie se apoya en la sección 7: la regla de oro (7.4), el orden de ejecución (7.5) y `WHERE` vs `HAVING` (7.6).
+
 
 26. Cantidad de pacientes por ciudad → `SELECT ciudad, COUNT(*) AS cantidad FROM pacientes GROUP BY ciudad;`
 27. Cantidad de médicos por especialidad.
@@ -754,7 +1018,7 @@ GROUP BY p.id_paciente;
 
 > **Regla de oro del `GROUP BY`:** toda columna que esté en el `SELECT` y que no esté dentro de una función (`COUNT`, `AVG`, `MAX`…) **tiene que estar en el `GROUP BY`**. En MySQL con `ONLY_FULL_GROUP_BY` (viene activo por defecto) una consulta mal armada da error en vez de devolver datos inventados.
 
-### 7.7 Consultas con HAVING (34 a 38)
+### 8.7 Consultas con HAVING (34 a 38)
 
 `HAVING` filtra **después** de agrupar; `WHERE` filtra **antes**. Por eso acá no se puede usar `WHERE COUNT(*) > 1`.
 
@@ -809,7 +1073,7 @@ HAVING COUNT(*) > 1;
 
 > El 38 **devuelve 0 filas** con estos datos: cada turno tiene un día distinto. No es un error de la consulta, es el dato. Comparalo con el 30: ahí se ven las 30 fechas, todas con `1`.
 
-### 7.8 ALTER TABLE (39 a 41) — estructura, no datos
+### 8.8 ALTER TABLE (39 a 41) — estructura, no datos
 
 Estas sentencias son **DDL** (sección 2.1): cambian el contenedor, no los registros.
 
@@ -828,7 +1092,7 @@ ALTER TABLE medicos ADD COLUMN email VARCHAR(100);
 ALTER TABLE pacientes RENAME COLUMN ciudad TO localidad;
 ```
 
-### 7.9 UPDATE (42 a 46) — modificar datos
+### 8.9 UPDATE (42 a 46) — modificar datos
 
 ```sql
 -- 42. Actualizar la edad de un paciente
@@ -850,7 +1114,7 @@ UPDATE medicos SET salario = 520000 WHERE id_medico = 1;
 > Fijate en el 44: **sin `WHERE` el `UPDATE` afecta a toda la tabla** (y acá eso es lo que pide el enunciado). El cálculo usa la columna misma (`salario * 1.10`), por eso alcanza con una sola sentencia.
 > Si MySQL se niega con *"safe update mode"*, es la protección contra cambios masivos: `SET SQL_SAFE_UPDATES = 0;` o agregá la clave primaria al `WHERE`.
 
-### 7.10 DELETE (47 a 49) — y las foreign keys
+### 8.10 DELETE (47 a 49) — y las foreign keys
 
 ```sql
 -- 47. Eliminar un turno específico
@@ -871,7 +1135,7 @@ WHERE id_especialidad NOT IN (
 >
 > Con estos datos: el 48 y el 49 **no borran nada** (los 15 pacientes tienen turnos y las 8 especialidades tienen médicos). Escribilos igual: el profe suele preguntar justo eso.
 
-### 7.11 VISTAS (50 a 56)
+### 8.11 VISTAS (50 a 56)
 
 Una **vista** es una consulta guardada con nombre: no duplica datos, solo guarda el `SELECT`.
 
@@ -923,7 +1187,7 @@ GROUP BY nombre_especialidad;
 > Compará el 56 con el 31: dan el mismo resultado, pero el 56 no necesita escribir los cuatro `JOIN` otra vez. Ese es el motivo de existir de las vistas.
 > Para borrarlas: `DROP VIEW vista_pacientes;` (no borra los datos de las tablas).
 
-### 7.12 Resultado esperado — para autocorregirte
+### 8.12 Resultado esperado — para autocorregirte
 
 Medido sobre los datos exactos del PDF (`8 · 15 · 15 · 30` registros).
 
@@ -937,7 +1201,7 @@ Medido sobre los datos exactos del PDF (`8 · 15 · 15 · 30` registros).
 | 9 | 483.666,67 |
 | 10 | máx 570.000 · mín 410.000 |
 | 11 | 15 |
-| 12 | 7.255.000 |
+| 12 | 8.255.000 |
 | 13 | 47,4 años |
 | 14 | máx 73 · mín 25 |
 | 15 | 30 turnos |
@@ -958,21 +1222,21 @@ Medido sobre los datos exactos del PDF (`8 · 15 · 15 · 30` registros).
 | 48 · 49 | 0 filas borradas (hay dependencias / no sobra nadie) |
 | 53 · 54 · 55 · 56 | 15 filas · 2 médicos (Cardiología) · 30 filas · 8 filas |
 
-### 7.13 Orden sugerido para practicar
+### 8.13 Orden sugerido para practicar
 
-1. Crear la base y las tablas (**7.1**) → DDL + constraints.
-2. Cargar los datos (**7.2**) → DML `INSERT`.
+1. Crear la base y las tablas (**8.1**) → DDL + constraints.
+2. Cargar los datos (**8.2**) → DML `INSERT`.
 3. 1-17 sin tocar otra cosa que `SELECT`, `WHERE`, `ORDER BY` y agregaciones.
 4. 18-25: un JOIN por vez, y después agregar el siguiente.
 5. 26-38: `GROUP BY` primero, `HAVING` después (34 es 26 + filtro).
 6. 39-49: acá sí se modifica la base → **conviene hacer una copia o un `mysqldump` antes**, porque un `DELETE` no se deshace.
 7. 50-56: crear las vistas y reescribir con ellas consultas que ya hiciste.
 
-> ⚠️ Los bloques 39-49 cambian los datos. Si los corrés antes que los ejercicios 8 a 38, los resultados de la tabla 7.12 ya no van a coincidir (por ejemplo el 34 pasa de 5 a otra cantidad si borras pacientes).
+> ⚠️ Los bloques 39-49 cambian los datos. Si los corrés antes que los ejercicios 8 a 38, los resultados de la tabla 8.12 ya no van a coincidir (por ejemplo el 34 pasa de 5 a otra cantidad si borras pacientes).
 
 ---
 
-## 8. Resumen rápido para repasar
+## 9. Resumen rápido para repasar
 
 - **SQL** = *Structured Query Language*, lenguaje estándar para bases de datos relacionales. Motores principales: MySQL (el más popular), SQLite (ligero, apps móviles) y MariaDB (fork de MySQL, 100% open source).
 - **Tres familias de sentencias:** DDL (estructura: `CREATE · ALTER · DROP · TRUNCATE`), DML (datos: `SELECT · INSERT · UPDATE · DELETE`), DCL (permisos: `GRANT · REVOKE`).
@@ -980,7 +1244,8 @@ Medido sobre los datos exactos del PDF (`8 · 15 · 15 · 30` registros).
 - **Cláusulas y operadores:** `FROM` (tabla), `WHERE` (condición), `ORDER BY` (orden); comparación `= > < >= <= <> !=`; lógicos `AND` (todas) / `OR` (una alcanza); palabras clave `BETWEEN · IN · LIKE · IS NULL · IS NOT NULL · NOT`.
 - **TRUNCATE vs DELETE:** TRUNCATE es DDL, vacía todo, conserva estructura, resetea *identity*, no admite `WHERE`; DELETE es DML, admite `WHERE`, no resetea *identity*.
 - **Tipos de datos:** `CHAR` fijo · `VARCHAR` variable · `INT` entero (rango −2.147.483.648 a 2.147.483.647) · `DECIMAL(p,s)` exacto para dinero · `FLOAT` aproximado · `DATE` (`YYYY-MM-DD`) · `BOOLEAN` (0/1) · `ENUM` lista cerrada · `TEXT` largo (hasta 65.535 caracteres, no usable como clave).
+- **GROUP BY:** agrupa filas en cajones y devuelve una fila por cajón; toda columna del `SELECT` que no esté en una agregada tiene que estar en el `GROUP BY` (MySQL: error 1055). `WHERE` filtra filas antes de agrupar, `HAVING` filtra grupos después; `COUNT(*)` cuenta filas, `COUNT(col)` ignora `NULL`.
 - **Constraints:** `PRIMARY KEY` (única, no repetida, no `NULL`) · `FOREIGN KEY` (relaciona con tabla padre) · `UNIQUE` (no repetida, admite `NULL`) · `NOT NULL` (obligatorio) · `CHECK` (condición) · `DEFAULT` (valor automático). Acciones FK: `CASCADE` (se borra en cadena) · `SET NULL` (queda `NULL`) · `RESTRICT` (no deja borrar).
 - **JOIN:** combina filas de dos o más tablas por un campo común. `INNER` = solo coincidencias (intersección) · `LEFT` = todo lo de la izquierda + coincidencias · `RIGHT` = todo lo de la derecha + coincidencias · `FULL` = todo de ambas, con `NULL` donde no hay coincidencia.
-- **Práctica integradora:** ver la sección 7 (`clinica_medica`), que usa todo lo anterior sobre una base real.
+- **Práctica integradora:** ver la sección 8 (`clinica_medica`), que usa todo lo anterior sobre una base real.
 

@@ -231,7 +231,8 @@ def make_table(rows, avail):
         free = avail - sum(min_w)
         widths = [min_w[i] + free * units[i] / sum(units) for i in range(ncols)]
 
-    data = [[Paragraph(inline(c, 7.9), S["cellhead"]) for c in header]]
+    # en el encabezado de la tabla el `codigo` se deja como texto (fondo azul)
+    data = [[Paragraph(inline(c.replace("`", ""), 7.9), S["cellhead"]) for c in header]]
     for r in body:
         data.append([Paragraph(inline(c, 7.9), S["cell"]) for c in r])
 
