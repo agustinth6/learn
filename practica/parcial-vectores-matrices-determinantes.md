@@ -8,10 +8,10 @@ Basada en tus cuatro archivos: los slides de **Vectores** (15-5), **Matrices com
 
 | Bloque | Contenido | Dónde está en tu material |
 |---|---|---|
-| 1. Vectores | magnitud, escalar × vector, suma (analítica y gráfica), distancia entre puntos, punto medio, recta $y=mx+b$, vocabulario (equipolentes, opuestos, concurrentes, ortogonales) | Slides Vectores + TP 1–11 |
-| 2. Matrices | orden y elementos $a_{ij}$, suma/resta, opuesta, nula, escalar × matriz, producto, traspuesta, equivalentes | Slides Matrices + TP 12, 14, 15 |
-| 3. Determinantes | Sarrus ($3\times3$), Laplace por cofactores (cualquier orden) | Slides Determinante + TP 16, 17 |
-| 4. Modelos | plantear un sistema $3\times3$ y resolverlo por determinantes (Cramer); producto de matrices para totales de insumos | TP 18–21 |
+| **1.** Vectores | magnitud, escalar × vector, suma (analítica y gráfica), distancia entre puntos, punto medio, recta $y=mx+b$, vocabulario (equipolentes, opuestos, concurrentes, ortogonales) | Slides Vectores + TP 1–11 |
+| **2.** Matrices | orden y elementos $a_{ij}$, suma/resta, opuesta, nula, escalar × matriz, producto, traspuesta, equivalentes | Slides Matrices + TP 12, 14, 15 |
+| **3.** Determinantes | Sarrus ($3\times3$), Laplace por cofactores (cualquier orden) | Slides Determinante + TP 16, 17 |
+| **4.** Modelos | plantear un sistema $3\times3$ y resolverlo por determinantes (Cramer); producto de matrices para totales de insumos | TP 18–21 |
 
 **Dónde están los puntos:** el TP dedica cuatro ejercicios largos (18 a 21) a *plantear* un problema en forma de matriz y resolverlo. Eso es lo que más pesa y lo que más se practica acá.
 
@@ -212,6 +212,7 @@ $$
 Cada cero que elegís te ahorra un determinante entero. Por eso "elegir bien la fila" es la mitad del ejercicio.
 
 **Propiedades que ahorran todo el cálculo:**
+
 - Si una fila o columna es toda cero → $\det=0$.
 - Si hay dos filas (o columnas) iguales o proporcionales → $\det=0$.
 - Triangular (o diagonal): $\det$ = producto de la diagonal.
@@ -374,7 +375,7 @@ b) Si M1 cuesta \$80 el kg y M2 \$120, ¿cuál es el costo de insumos de cada lo
 
 ---
 
-# Solucionario
+## Solucionario
 
 ## S0 — Diagnóstico
 
@@ -395,6 +396,7 @@ b) Si M1 cuesta \$80 el kg y M2 \$120, ¿cuál es el costo de insumos de cada lo
 **D8.** $\Delta=3\cdot1-2\cdot1=1$. $\Delta_x=16\cdot1-2\cdot6=4$; $\Delta_y=3\cdot6-16\cdot1=2$. Entonces $x=4$, $y=2$. Verificación: $3(4)+2(2)=16$ ✓, $4+2=6$ ✓.
 
 **Diagnóstico de errores:**
+
 - Fallaste D1, D4 o D5 → Bloque 1 completo, arrancando por signos.
 - Fallaste D2 o D3 → fórmulas de distancia/punto medio (Bloque 1).
 - Fallaste D6 → condición del producto (Bloque 2).
@@ -603,7 +605,7 @@ P\cdot R=(50\ \ 30\ \ 40)\begin{pmatrix}2&1&0\\1&2&1\\3&2&0\end{pmatrix}=(250\ \
 $$
 
 Necesita **250 m de tela, 190 bobinas de hilo y 30 cierres**.
-Costo total: $250(200)+190(50)+30(80)=50.000+9.500+2.400=\$61.900$.
+Costo total: $250(200)+190(50)+30(80)=50.000+9.500+2.400$, es decir **\$61.900**.
 
 **4.4** a) Incógnitas $p$ (micro), $m$ (memoria), $v$ (video). Filas = dispositivos:
 
@@ -651,7 +653,11 @@ $$
 
 Interpretación: la fila 1 dice que el evento 1 necesita 940 unidades de naranja, 800 de jengibre y 520 de miel; la fila 2, 780/680/400; la fila 3, 1020/860/580.
 
-Costo de cada evento (multiplicando por el vector de precios $\begin{pmatrix}20\\15\\30\end{pmatrix}$): E1 $=940(20)+800(15)+520(30)=18.800+12.000+15.600=\$46.400$; E2 $=\;15.600+10.200+12.000=\$37.800$; E3 $=\;20.400+12.900+17.400=\$50.700$.
+Costo de cada evento (precios $\begin{pmatrix}20\\15\\30\end{pmatrix}$):
+
+- E1: $940(20)+800(15)+520(30)=18.800+12.000+15.600=46.400$ → **\$46.400**
+- E2: $780(20)+680(15)+400(30)=15.600+10.200+12.000=37.800$ → **\$37.800**
+- E3: $1.020(20)+860(15)+580(30)=20.400+12.900+17.400=50.700$ → **\$50.700**
 
 **4.6** Incógnitas $p$ (papa), $c$ (cebolla), $t$ (tomate). Filas = bolsones:
 
@@ -665,9 +671,20 @@ $$
 
 $\Delta=\det\begin{pmatrix}2&1&1\\3&2&1\\1&1&2\end{pmatrix}=2(4-1)-1(6-1)+1(3-2)=6-5+1=2$.
 
-$\Delta_p=\det\begin{pmatrix}3.100&1&1\\4.500&2&1\\3.200&1&2\end{pmatrix}=1.600\Rightarrow p=800$.
-$\Delta_c=\det\begin{pmatrix}2&3.100&1\\3&4.500&1\\1&3.200&2\end{pmatrix}=1.200\Rightarrow c=600$.
-$\Delta_t=\det\begin{pmatrix}2&1&3.100\\3&2&4.500\\1&1&3.200\end{pmatrix}=1.800\Rightarrow t=900$.
+$$
+\Delta_p=\det\begin{pmatrix}3.100&1&1\\4.500&2&1\\3.200&1&2\end{pmatrix}=1.600
+\quad\Rightarrow\quad p=\frac{1.600}{2}=800
+$$
+
+$$
+\Delta_c=\det\begin{pmatrix}2&3.100&1\\3&4.500&1\\1&3.200&2\end{pmatrix}=1.200
+\quad\Rightarrow\quad c=\frac{1.200}{2}=600
+$$
+
+$$
+\Delta_t=\det\begin{pmatrix}2&1&3.100\\3&2&4.500\\1&1&3.200\end{pmatrix}=1.800
+\quad\Rightarrow\quad t=\frac{1.800}{2}=900
+$$
 
 Papa \$800/kg, cebolla \$600/kg, tomate \$900/kg.
 Verificación: $2(800)+600+900=3.100$ ✓; $2.400+1.200+900=4.500$ ✓; $800+600+1.800=3.200$ ✓.
@@ -708,13 +725,27 @@ g+3m+2c=2.600\\
 \end{cases}
 $$
 
-$\Delta=\det\begin{pmatrix}2&1&3\\1&3&2\\4&1&1\end{pmatrix}=2(3-2)-1(1-8)+3(1-12)=2+7-33=-24$.
+$$
+\Delta=\det\begin{pmatrix}2&1&3\\1&3&2\\4&1&1\end{pmatrix}=2(3-2)-1(1-8)+3(1-12)=2+7-33=-24
+$$
 
-$\Delta_g=\det\begin{pmatrix}2.400&1&3\\2.600&3&2\\3.700&1&1\end{pmatrix}$. Desarrollando: $2.400(3-2)-1(2.600-7.400)+3(2.600-11.100)=2.400+4.800-25.500=-18.300$ → $g=762{,}5$.
+$$
+\Delta_g=\det\begin{pmatrix}2.400&1&3\\2.600&3&2\\3.700&1&1\end{pmatrix}
+=2.400(3-2)-1(2.600-7.400)+3(2.600-11.100)=-18.300
+\quad\Rightarrow\quad g=\frac{-18.300}{-24}=762{,}5
+$$
 
-$\Delta_m=\det\begin{pmatrix}2&2.400&3\\1&2.600&2\\4&3.700&1\end{pmatrix}=2(2.600-7.400)-2.400(1-8)+3(3.700-10.400)=-9.600+16.800-20.100=-12.900$ → $m=537{,}5$.
+$$
+\Delta_m=\det\begin{pmatrix}2&2.400&3\\1&2.600&2\\4&3.700&1\end{pmatrix}
+=2(2.600-7.400)-2.400(1-8)+3(3.700-10.400)=-12.900
+\quad\Rightarrow\quad m=\frac{-12.900}{-24}=537{,}5
+$$
 
-$\Delta_c=\det\begin{pmatrix}2&1&2.400\\1&3&2.600\\4&1&3.700\end{pmatrix}=2(11.100-2.600)-1(3.700-10.400)+2.400(1-12)=-2.700$ → $c=112{,}5$.
+$$
+\Delta_c=\det\begin{pmatrix}2&1&2.400\\1&3&2.600\\4&1&3.700\end{pmatrix}
+=2(11.100-2.600)-1(3.700-10.400)+2.400(1-12)=-2.700
+\quad\Rightarrow\quad c=\frac{-2.700}{-24}=112{,}5
+$$
 
 (Chequeo rápido por despeje en la primera ecuación: $3c=2.400-2(762{,}5)-537{,}5=337{,}5$ → $c=112{,}5$ ✓.)
 
@@ -730,11 +761,11 @@ $$
 
 Local 1: 165 kg de M1 y 145 kg de M2. Local 2: 175 kg de cada uno.
 
-b) Local 1: $165(80)+145(120)=13.200+17.400=\$30.600$. Local 2: $(175)(200)=\$35.000$.
+b) Local 1: $165(80)+145(120)=13.200+17.400=30.600$ → **\$30.600**. Local 2: $175(80)+175(120)=14.000+21.000=35.000$ → **\$35.000**.
 
 ---
 
-# Hoja de fórmulas
+## Hoja de fórmulas
 
 $$
 |v|=\sqrt{x^2+y^2}\qquad k(x,y)=(kx,ky)\qquad (x_1,y_1)+(x_2,y_2)=(x_1+x_2,\ y_1+y_2)
@@ -758,6 +789,7 @@ $$
 $$
 
 **Checklist de 60 segundos antes de entregar**
+
 - ¿Cada distancia y cada módulo es positivo?
 - ¿El orden de cada producto de matrices es el que anuncié?
 - ¿El determinante lo verifiqué por el otro método?
