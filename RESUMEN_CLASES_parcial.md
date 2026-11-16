@@ -83,7 +83,7 @@
   persona["edad"] = 26          # cambia el valor de la clave "edad"
   persona["nombre"] = "Luis"
   ```
-- Nota de la clase: los que más se usan en la práctica son `items()`, `update` y `pop`; el resto conviene conocerlos y **aprender a leer la ayuda del editor** (鼠标 sobre lo rojo → explica el error, p. ej. *"Did you mean items?"* si escribís `item`).
+- Nota de la clase: los que más se usan en la práctica son `items()`, `update` y `pop`; el resto conviene conocerlos y **aprender a leer la ayuda del editor** (pasar el mouse sobre lo rojo → explica el error, p. ej. *"Did you mean items?"* si escribís `item`).
 
 ### Recorrer un diccionarios (clases 6/10 y 13/10)
 - `for clave in dic:` → por defecto un `for` sobre el diccionario **recorre las claves**. Con `dic.keys()` se ve igual: devuelve la lista de claves.

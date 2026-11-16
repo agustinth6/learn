@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Genera GUIA_ESTUDIO_parcial.pdf a partir de GUIA_ESTUDIO_parcial.md,
-agregando como ANEXO el codigo fuente de las soluciones.
+Genera un PDF a partir de un .md del repositorio.
 
-Uso:  python generar_pdf.py
+Uso:  python generar_pdf.py [archivo.md]
+      (por defecto: GUIA_ESTUDIO_parcial.md con sus Anexos A/B/C)
+
 Requiere: markdown, xhtml2pdf, pypdf  (instalados en /home/user/.venv)
 """
 import html
@@ -17,17 +18,24 @@ import markdown
 from xhtml2pdf import pisa
 
 ROOT = pathlib.Path(__file__).resolve().parent
-MD_PATH = ROOT / "GUIA_ESTUDIO_parcial.md"
-PDF_PATH = ROOT / "GUIA_ESTUDIO_parcial.pdf"
+
+# ---------------------------------------------------------------
+# Fuente: el primer argumento de la linea de comandos (o la guia)
+# ---------------------------------------------------------------
+_SRC = sys.argv[1] if len(sys.argv) > 1 else "GUIA_ESTUDIO_parcial.md"
+MD_PATH = ROOT / _SRC
+PDF_PATH = MD_PATH.with_suffix(".pdf")
+ES_GUIA = _SRC == "GUIA_ESTUDIO_parcial.md"
+
 ANEXOS = [
     ("Anexo A &mdash; ejercicio1_estudiantes.py", ROOT / "ejercicio1_estudiantes.py"),
     ("Anexo B &mdash; ejercicio2_stock.py", ROOT / "ejercicio2_stock.py"),
     ("Anexo C &mdash; ejercicio3_inventario.py", ROOT / "ejercicio3_inventario.py"),
-]
+] if ES_GUIA else []
 
 # ---------------------------------------------------------------
 # Sanitizado: la tipografia del PDF (Helvetica/DejaVu) no cubre
-# emojis ni flechas/cuadros Unicode. Los convertimos a texto.
+# emojis ni flechas/cuadras Unicode. Los convertimos a texto.
 # ---------------------------------------------------------------
 REEMPLAZOS = {
     "\u2192": "->",   "\u2190": "<-",   "\u2191": "^",    "\u2193": "v",
@@ -125,16 +133,26 @@ def main() -> None:
     text = "\n".join((page.extract_text() or "") for page in reader.pages)
     plano = re.sub(r"\s+", "", text)   # sin espacios/saltos: tolera cortes de linea
 
-    chequeos = [
-        ("guia completa (final)", "Datos de prueba oficiales"),
-        ("checklist", "CHECKLIST"),
-        ("anexo A (inicio)", "AnexoA"),
-        ("anexo A (final - no cortado)", "5)Listadeaprobados"),
-        ("anexo B (final - no cortado)", "4)Productosconstockpromediomenor"),
-        ("anexo C (final - no cortado)", "5)Productossinstock"),
-        ("valor total Ej3", "815000"),
-        ("errata Ej1", "Reprobado"),
-    ]
+    if ES_GUIA:
+        chequeos = [
+            ("guia completa (final)", "Datos de prueba oficiales"),
+            ("checklist", "CHECKLIST"),
+            ("anexo A (inicio)", "AnexoA"),
+            ("anexo A (final - no cortado)", "5)Listadeaprobados"),
+            ("anexo B (final - no cortado)", "4)Productosconstockpromediomenor"),
+            ("anexo C (final - no cortado)", "5)Productossinstock"),
+            ("valor total Ej3", "815000"),
+            ("errata Ej1", "Reprobado"),
+        ]
+    else:
+        chequeos = [
+            ("fechas arriba", "Fechasyformatodelparcial"),
+            ("fecha parcial", "lunes16denoviembrede2026"),
+            ("patron while True", "whileTrue"),
+            ("doble salto Ej3", "doblesalto"),
+            ("metodo isalpha", "isalpha"),
+            ("cierre (final - no cortado)", "practicarelfindesemanalargo"),
+        ]
     for nombre, token in chequeos:
         ok = re.sub(r"\s+", "", token) in plano
         print(f"  [{'OK' if ok else 'FALTA'}] {nombre}")
