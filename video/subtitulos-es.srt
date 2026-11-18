@@ -1,0 +1,752 @@
+1
+00:00:02,400 --> 00:00:07,579
+Bienvenidos a este repaso de Administración y Gestión de Bases de Datos.
+
+2
+00:00:07,579 --> 00:00:13,190
+La idea es recorrer los temas de la materia en orden y terminar resolviendo el
+
+3
+00:00:13,190 --> 00:00:17,578
+modelo de segundo parcial de CinePlus, consulta por consulta.
+
+4
+00:00:17,578 --> 00:00:19,592
+Empezamos por lo más básico:
+
+5
+00:00:19,592 --> 00:00:25,779
+qué es una base de datos y en qué se diferencian los dos grandes grupos de sentencias.
+
+6
+00:00:25,779 --> 00:00:31,462
+Una base de datos es un conjunto de datos organizados que se guardan en tablas,
+
+7
+00:00:31,462 --> 00:00:37,432
+y cada tabla tiene filas, que son los registros, y columnas, que son los atributos.
+
+8
+00:00:37,432 --> 00:00:41,317
+Para trabajar con esa base usamos distintos lenguajes.
+
+9
+00:00:41,317 --> 00:00:45,273
+El DDL, Data Definition Language, define la estructura:
+
+10
+00:00:45,273 --> 00:00:49,877
+crear bases de datos, crear tablas, agregar columnas, borrarlas.
+
+11
+00:00:49,877 --> 00:00:53,042
+Sus palabras clave son CREATE, ALTER y DROP.
+
+12
+00:00:53,042 --> 00:00:55,560
+El DML, Data Manipulation Language,
+
+13
+00:00:55,560 --> 00:00:59,516
+trabaja con los datos que van dentro de esa estructura:
+
+14
+00:00:59,516 --> 00:01:02,897
+insertar, consultar, actualizar y borrar filas.
+
+15
+00:01:02,897 --> 00:01:06,854
+Sus palabras clave son INSERT, SELECT, UPDATE y DELETE.
+
+16
+00:01:06,854 --> 00:01:10,810
+La regla mental es simple: si cambia el envase, es DDL;
+
+17
+00:01:10,810 --> 00:01:13,040
+si cambia el contenido, es DML.
+
+18
+00:01:15,440 --> 00:01:20,786
+Ahora los tipos de datos, porque elegir bien el tipo es la mitad del trabajo.
+
+19
+00:01:20,786 --> 00:01:24,812
+Para texto tenemos dos opciones. CHAR es de longitud fija:
+
+20
+00:01:24,812 --> 00:01:29,672
+si declarás CHAR de ocho y guardás cinco caracteres, igual ocupa ocho.
+
+21
+00:01:29,672 --> 00:01:34,809
+Se usa cuando todos los valores tienen el mismo largo, por ejemplo un DNI.
+
+22
+00:01:34,809 --> 00:01:39,530
+VARCHAR es de longitud variable y es el que vas a usar casi siempre,
+
+23
+00:01:39,530 --> 00:01:41,891
+porque ocupa solo lo que necesita.
+
+24
+00:01:41,891 --> 00:01:47,167
+Para números, INT es el entero que usamos para identificadores y cantidades,
+
+25
+00:01:47,167 --> 00:01:52,304
+y DECIMAL se usa para dinero, porque guarda los decimales de forma exacta.
+
+26
+00:01:52,304 --> 00:01:55,984
+FLOAT o DOUBLE existen pero no conviene para precios,
+
+27
+00:01:55,984 --> 00:01:59,872
+porque redondean y te pueden aparecer centavos fantasma.
+
+28
+00:01:59,872 --> 00:02:04,870
+Para fechas está DATE, que guarda año, mes y día en formato año mes día,
+
+29
+00:02:04,870 --> 00:02:07,855
+y DATETIME cuando además necesitás la hora.
+
+30
+00:02:07,855 --> 00:02:10,285
+Después están los tipos especiales.
+
+31
+00:02:10,285 --> 00:02:15,562
+BOOLEAN guarda verdadero o falso. Y ENUM es una lista de valores permitidos:
+
+32
+00:02:15,562 --> 00:02:21,532
+escribís ENUM con las opciones entre paréntesis y la columna solo acepta esos valores.
+
+33
+00:02:21,532 --> 00:02:26,947
+Por ejemplo, el estado de una inscripción como activo, completado o cancelado.
+
+34
+00:02:26,947 --> 00:02:32,640
+Se combina muy bien con DEFAULT, que completa el campo solo si no le indicás nada.
+
+35
+00:02:35,040 --> 00:02:40,254
+Las constraints son reglas que se le ponen a los atributos de una tabla al crearla,
+
+36
+00:02:40,254 --> 00:02:45,028
+para que los datos se guarden correctamente y no se almacene cualquier cosa.
+
+37
+00:02:45,028 --> 00:02:48,859
+Sirven para tres cosas: evitar datos repetidos o incorrectos,
+
+38
+00:02:48,859 --> 00:02:54,136
+mantener las relaciones entre tablas y obligar a que ciertos campos estén completos.
+
+39
+00:02:54,136 --> 00:02:58,470
+Vamos con las siete. PRIMARY KEY identifica de forma única cada fila:
+
+40
+00:02:58,470 --> 00:03:00,857
+no se puede repetir y no admite nulos.
+
+41
+00:03:00,857 --> 00:03:06,887
+FOREIGN KEY relaciona una tabla con otra y solo admite valores que ya existan en la tabla padre;
+
+42
+00:03:06,887 --> 00:03:09,211
+se declara con la palabra REFERENCES.
+
+43
+00:03:09,211 --> 00:03:12,101
+UNIQUE evita valores repetidos en esa columna,
+
+44
+00:03:12,101 --> 00:03:15,179
+pero a diferencia de la primaria sí admite nulos.
+
+45
+00:03:15,179 --> 00:03:18,634
+NOT NULL impide valores vacíos: el dato es obligatorio.
+
+46
+00:03:18,634 --> 00:03:22,654
+CHECK define una condición que el dato debe cumplir al cargarse;
+
+47
+00:03:22,654 --> 00:03:24,978
+existe, pero en la cursada no se usa.
+
+48
+00:03:24,978 --> 00:03:28,621
+DEFAULT define un valor por defecto si no indicás ninguno.
+
+49
+00:03:28,621 --> 00:03:33,207
+Y AUTO_INCREMENT genera el valor solo, sumando uno a cada registro nuevo;
+
+50
+00:03:33,207 --> 00:03:37,353
+se usa en las claves primarias numéricas para no cargarlas a mano.
+
+51
+00:03:37,353 --> 00:03:39,803
+Una diferencia que se pregunta siempre:
+
+52
+00:03:39,803 --> 00:03:43,571
+la primaria es única y no nula, o sea mucho más restrictiva;
+
+53
+00:03:43,571 --> 00:03:48,848
+UNIQUE permite nulos, así que un email con UNIQUE puede quedar vacío en alguna fila,
+
+54
+00:03:48,848 --> 00:03:51,298
+pero no puede haber dos emails iguales.
+
+55
+00:03:51,298 --> 00:03:55,632
+Y un detalle importante: si a un atributo no le ponés la restricción,
+
+56
+00:03:55,632 --> 00:04:00,720
+MySQL lo trata como un atributo común y admite cualquier cosa, incluso repetidos.
+
+57
+00:04:03,120 --> 00:04:08,017
+Pasamos al DDL en acción: crear la base, las tablas y cargar datos.
+
+58
+00:04:08,017 --> 00:04:10,867
+Primero, CREATE DATABASE con el nombre,
+
+59
+00:04:10,867 --> 00:04:15,763
+y después USE con el mismo nombre para trabajar dentro de esa base.
+
+60
+00:04:15,763 --> 00:04:19,856
+Para crear una tabla se escribe CREATE TABLE, el nombre,
+
+61
+00:04:19,856 --> 00:04:23,656
+y entre paréntesis los atributos separados por coma.
+
+62
+00:04:23,656 --> 00:04:27,968
+Cada atributo lleva su nombre, su tipo y sus restricciones.
+
+63
+00:04:27,968 --> 00:04:33,376
+El orden de creación importa: primero las tablas que no dependen de nadie,
+
+64
+00:04:33,376 --> 00:04:36,665
+y después las que contienen la clave foránea.
+
+65
+00:04:36,665 --> 00:04:39,369
+Y acá aparece el error más frecuente:
+
+66
+00:04:39,369 --> 00:04:42,000
+la clave foránea no crea la columna.
+
+67
+00:04:42,000 --> 00:04:46,969
+La columna hay que declararla como cualquier otra, y recién después,
+
+68
+00:04:46,969 --> 00:04:52,231
+al final de la tabla, agregar la restricción FOREIGN KEY con REFERENCES.
+
+69
+00:04:52,231 --> 00:04:57,420
+Si falta la columna, MySQL avisa que esa columna no existe en la tabla.
+
+70
+00:04:57,420 --> 00:05:01,805
+Para cargar datos usamos INSERT INTO, el nombre de la tabla,
+
+71
+00:05:01,805 --> 00:05:06,263
+entre paréntesis las columnas, la palabra VALUES y los datos.
+
+72
+00:05:06,263 --> 00:05:11,160
+Los textos y las fechas van entre comillas simples, los números no.
+
+73
+00:05:11,160 --> 00:05:15,764
+Se pueden cargar varias filas de una vez separándolas por coma,
+
+74
+00:05:15,764 --> 00:05:19,637
+y a las columnas con AUTO_INCREMENT no se las nombra.
+
+75
+00:05:19,637 --> 00:05:22,195
+Y un detalle clave para el parcial:
+
+76
+00:05:22,195 --> 00:05:25,849
+el orden de los INSERT define los identificadores.
+
+77
+00:05:25,849 --> 00:05:31,403
+La primera fila de actores es la uno, la segunda la dos, la tercera la tres.
+
+78
+00:05:31,403 --> 00:05:34,327
+Si se saltea una o se inserta dos veces,
+
+79
+00:05:34,327 --> 00:05:38,200
+todas las referencias posteriores dejan de coincidir.
+
+80
+00:05:40,600 --> 00:05:44,929
+Seguimos con SELECT, que es la sentencia que más vas a usar.
+
+81
+00:05:44,929 --> 00:05:49,763
+La estructura es SELECT las columnas que querés ver, FROM la tabla,
+
+82
+00:05:49,763 --> 00:05:52,289
+y después las cláusulas opcionales.
+
+83
+00:05:52,289 --> 00:05:55,319
+El asterisco significa todas las columnas.
+
+84
+00:05:55,319 --> 00:06:00,803
+Con AS le ponés un alias a una columna, para que el encabezado se lea mejor.
+
+85
+00:06:00,803 --> 00:06:02,895
+ORDER BY ordena el resultado:
+
+86
+00:06:02,895 --> 00:06:08,667
+ASC de menor a mayor, que es lo que se usa por defecto, y DESC de mayor a menor.
+
+87
+00:06:08,667 --> 00:06:12,997
+WHERE filtra filas: solo pasan las que cumplen la condición.
+
+88
+00:06:12,997 --> 00:06:17,831
+Ahí tenés los operadores de siempre, igual, distinto, mayor, menor.
+
+89
+00:06:17,831 --> 00:06:20,428
+LIKE sirve para búsquedas parciales:
+
+90
+00:06:20,428 --> 00:06:26,417
+el símbolo de porcentaje significa cualquier cantidad de caracteres y el guion bajo
+
+91
+00:06:26,417 --> 00:06:28,870
+significa exactamente un carácter.
+
+92
+00:06:28,870 --> 00:06:32,983
+Y BETWEEN filtra un rango con los dos extremos incluidos.
+
+93
+00:06:32,983 --> 00:06:35,652
+Después están las funciones de fecha:
+
+94
+00:06:35,652 --> 00:06:39,404
+MONTH, YEAR, DAY y WEEK, que se pegan al paréntesis,
+
+95
+00:06:39,404 --> 00:06:44,816
+porque si separás el nombre de la función del paréntesis, MySQL tira error.
+
+96
+00:06:44,816 --> 00:06:47,774
+Y dos conceptos que se confunden seguido.
+
+97
+00:06:47,774 --> 00:06:50,516
+Por un lado, NULL no es vacío ni cero:
+
+98
+00:06:50,516 --> 00:06:54,556
+es ausencia de valor, y por eso no se compara con igual,
+
+99
+00:06:54,556 --> 00:06:57,226
+se compara con IS NULL y IS NOT NULL.
+
+100
+00:06:57,226 --> 00:07:02,998
+Por el otro, DISTINCT devuelve un solo valor por cada valor distinto encontrado,
+
+101
+00:07:02,998 --> 00:07:07,472
+mientras que COUNT cuenta filas. DISTINCT lista, COUNT cuenta.
+
+102
+00:07:07,472 --> 00:07:13,749
+Y las funciones de agregación van sobre un conjunto de filas y devuelven un solo valor:
+
+103
+00:07:13,749 --> 00:07:19,377
+COUNT cuenta registros, SUM suma, AVG promedia, MAX el máximo y MIN el mínimo.
+
+104
+00:07:19,377 --> 00:07:23,129
+COUNT puede contar cualquier cosa, incluso un texto;
+
+105
+00:07:23,129 --> 00:07:26,520
+SUM y AVG solo números. No son intercambiables.
+
+106
+00:07:28,920 --> 00:07:34,564
+Ahora modificar datos y modificar estructura, que es donde se mezclan DML y DDL.
+
+107
+00:07:34,564 --> 00:07:38,021
+UPDATE es DML y cambia el contenido de las filas.
+
+108
+00:07:38,021 --> 00:07:43,030
+La estructura es UPDATE, la tabla, SET la columna igual al nuevo valor,
+
+109
+00:07:43,030 --> 00:07:49,309
+y WHERE para elegir qué filas. Y acá va la advertencia más importante de toda la materia:
+
+110
+00:07:49,309 --> 00:07:53,965
+si te olvidás el WHERE, se actualizan todas las filas de la tabla.
+
+111
+00:07:53,965 --> 00:07:58,762
+No hay botón de deshacer. ALTER TABLE es DDL y cambia la estructura.
+
+112
+00:07:58,762 --> 00:08:03,842
+ADD COLUMN agrega una columna, MODIFY cambia el tipo, y CHANGE renombra:
+
+113
+00:08:03,842 --> 00:08:08,216
+se escribe CHANGE, el nombre viejo, el nombre nuevo y el tipo,
+
+114
+00:08:08,216 --> 00:08:10,755
+todo seguido y sin coma en el medio.
+
+115
+00:08:10,755 --> 00:08:15,905
+Si ponés una coma entre el nombre viejo y el nuevo, es error de sintaxis.
+
+116
+00:08:15,905 --> 00:08:21,831
+Y ese renombre puede romper consultas o vistas viejas que usaban el nombre anterior.
+
+117
+00:08:21,831 --> 00:08:25,288
+DELETE es DML y borra filas. Ojo con la sintaxis:
+
+118
+00:08:25,288 --> 00:08:29,169
+DELETE FROM, el nombre de la tabla, WHERE la condición.
+
+119
+00:08:29,169 --> 00:08:34,107
+El FROM no es opcional; DELETE peliculas sin FROM es un error clásico.
+
+120
+00:08:34,107 --> 00:08:38,693
+Sin WHERE, borra todas las filas, pero la tabla sigue existiendo.
+
+121
+00:08:38,693 --> 00:08:42,855
+Y cuando hay claves foráneas, el orden del borrado importa:
+
+122
+00:08:42,855 --> 00:08:45,536
+primero los hijos, después los padres.
+
+123
+00:08:45,536 --> 00:08:49,769
+Si borrás un padre que todavía tiene hijos, MySQL lo impide.
+
+124
+00:08:49,769 --> 00:08:52,450
+Eso se llama borrado en cadena manual,
+
+125
+00:08:52,450 --> 00:08:56,189
+y se resuelve de la punta de la cadena hacia la raíz:
+
+126
+00:08:56,189 --> 00:09:01,480
+nietos, hijos, padre. Si la clave foránea se declaró con ON DELETE CASCADE,
+
+127
+00:09:01,480 --> 00:09:05,360
+alcanza con borrar el padre y MySQL arrastra todo solo.
+
+128
+00:09:07,760 --> 00:09:12,994
+Los JOIN son la parte que más cuesta, pero con una idea clara salen solos.
+
+129
+00:09:12,994 --> 00:09:14,125
+La idea es esta:
+
+130
+00:09:14,125 --> 00:09:20,066
+las tablas están relacionadas por claves, y el JOIN las combina usando esa relación.
+
+131
+00:09:20,066 --> 00:09:22,825
+La condición ON dice por dónde se unen,
+
+132
+00:09:22,825 --> 00:09:26,361
+y siempre es clave foránea igual a clave primaria.
+
+133
+00:09:26,361 --> 00:09:28,978
+Hay tres tipos que tenés que manejar.
+
+134
+00:09:28,978 --> 00:09:33,717
+INNER JOIN devuelve solo las filas que coinciden en las dos tablas:
+
+135
+00:09:33,717 --> 00:09:37,111
+si una película no tiene alquileres, no aparece.
+
+136
+00:09:37,111 --> 00:09:41,001
+LEFT JOIN devuelve todo lo de la tabla de la izquierda,
+
+137
+00:09:41,001 --> 00:09:44,326
+y donde no hay coincidencia completa con nulos.
+
+138
+00:09:44,326 --> 00:09:49,276
+RIGHT JOIN es lo mismo al revés. Y FULL JOIN no se toma en la cursada,
+
+139
+00:09:49,276 --> 00:09:52,671
+entre otras cosas porque MySQL no lo implementa.
+
+140
+00:09:52,671 --> 00:09:57,056
+El LEFT JOIN tiene un truco muy útil que vale para el parcial:
+
+141
+00:09:57,056 --> 00:10:00,522
+si querés los autores que no tienen ningún libro,
+
+142
+00:10:00,522 --> 00:10:06,392
+hacés LEFT JOIN desde autores y filtrás por IS NULL en la columna de la otra tabla.
+
+143
+00:10:06,392 --> 00:10:10,424
+Eso te deja justo las filas que no tuvieron coincidencia.
+
+144
+00:10:10,424 --> 00:10:15,799
+Sobre el orden: el JOIN va después del FROM, y el WHERE va después del JOIN.
+
+145
+00:10:15,799 --> 00:10:19,830
+Y el método para pensar una consulta es siempre el mismo:
+
+146
+00:10:19,830 --> 00:10:24,640
+primero identificá qué querés mostrar, después desde dónde arrancás,
+
+147
+00:10:24,640 --> 00:10:28,105
+después uní las claves, y recién al final filtrá.
+
+148
+00:10:28,105 --> 00:10:33,905
+Para tres tablas, la cadena es préstamos con libros por el identificador de libro,
+
+149
+00:10:33,905 --> 00:10:37,512
+y libros con autores por el identificador de autor.
+
+150
+00:10:37,512 --> 00:10:39,280
+Nunca saltees un eslabón.
+
+151
+00:10:41,680 --> 00:10:42,980
+GROUP BY y HAVING.
+
+152
+00:10:42,980 --> 00:10:48,830
+Hasta acá las funciones de agregación devolvían un solo valor para toda la tabla.
+
+153
+00:10:48,830 --> 00:10:50,780
+GROUP BY permite otra cosa:
+
+154
+00:10:50,780 --> 00:10:56,847
+agrupar filas por el valor de una columna y aplicar la función dentro de cada grupo.
+
+155
+00:10:56,847 --> 00:10:59,736
+Sirve para obtener información resumida:
+
+156
+00:10:59,736 --> 00:11:04,286
+cuántos libros hay por género, cuántos clientes hay por ciudad,
+
+157
+00:11:04,286 --> 00:11:06,886
+cuántos préstamos tiene cada lector.
+
+158
+00:11:06,886 --> 00:11:10,136
+Siempre se usa con una función de agregación.
+
+159
+00:11:10,136 --> 00:11:11,797
+Y hay una regla de oro:
+
+160
+00:11:11,797 --> 00:11:17,719
+todo lo que se pone en el SELECT y no es una función de agregación tiene que estar
+
+161
+00:11:17,719 --> 00:11:22,414
+también en el GROUP BY. Si no, MySQL no sabe qué valor mostrarte.
+
+162
+00:11:22,414 --> 00:11:26,170
+Después está HAVING, que es el filtro de los grupos.
+
+163
+00:11:26,170 --> 00:11:28,770
+WHERE filtra filas antes de agrupar;
+
+164
+00:11:28,770 --> 00:11:31,658
+HAVING filtra grupos después de agrupar.
+
+165
+00:11:31,658 --> 00:11:36,714
+Por eso, cuando el filtro usa COUNT o AVG, va en HAVING y no en WHERE.
+
+166
+00:11:36,714 --> 00:11:42,492
+Poner WHERE COUNT da error, porque en ese momento todavía no existen los grupos.
+
+167
+00:11:42,492 --> 00:11:46,392
+El orden de las cláusulas, que conviene memorizar, es:
+
+168
+00:11:46,392 --> 00:11:50,870
+SELECT, FROM, JOIN con ON, WHERE, GROUP BY, HAVING y ORDER BY.
+
+169
+00:11:50,870 --> 00:11:57,153
+Y un consejo: para agrupar conviene poner en el GROUP BY la clave primaria de la tabla,
+
+170
+00:11:57,153 --> 00:12:01,920
+no el nombre, así dos registros con el mismo nombre no se mezclan.
+
+171
+00:12:04,320 --> 00:12:08,641
+Las vistas. Una vista es una consulta guardada con un nombre,
+
+172
+00:12:08,641 --> 00:12:12,183
+que después se puede usar como si fuera una tabla.
+
+173
+00:12:12,183 --> 00:12:18,204
+No guarda datos: guarda la consulta, y cada vez que la consultás se ejecuta de nuevo.
+
+174
+00:12:18,204 --> 00:12:21,320
+Sirven para simplificar consultas complejas,
+
+175
+00:12:21,320 --> 00:12:25,570
+para reutilizar lógica y para mostrar solo ciertas columnas.
+
+176
+00:12:25,570 --> 00:12:30,316
+Se crean con CREATE VIEW, el nombre de la vista, AS, y la consulta.
+
+177
+00:12:30,316 --> 00:12:35,841
+Para usarla, hacés SELECT sobre el nombre de la vista como si fuera una tabla.
+
+178
+00:12:35,841 --> 00:12:38,533
+Y un punto importante para el parcial:
+
+179
+00:12:38,533 --> 00:12:42,854
+para modificar una vista existente no se usa un ALTER cómodo;
+
+180
+00:12:42,854 --> 00:12:48,592
+lo habitual es borrarla con DROP VIEW y volver a crearla con la definición nueva.
+
+181
+00:12:48,592 --> 00:12:52,063
+Antes de cerrar la teoría, tres buenas prácticas.
+
+182
+00:12:52,063 --> 00:12:54,471
+Primero, verificá antes de borrar:
+
+183
+00:12:54,471 --> 00:12:59,713
+un SELECT con el mismo WHERE te muestra exactamente qué filas se van a ir.
+
+184
+00:12:59,713 --> 00:13:04,034
+Segundo, después de un INSERT con SELECT, comprobá con COUNT,
+
+185
+00:13:04,034 --> 00:13:09,276
+porque si la consulta no encuentra nada, inserta cero filas y no da error:
+
+186
+00:13:09,276 --> 00:13:13,455
+es silencioso. Y tercero, nunca asumas los identificadores.
+
+187
+00:13:13,455 --> 00:13:18,838
+Consultalos. El contador automático gasta números aunque la operación falle,
+
+188
+00:13:18,838 --> 00:13:24,080
+así que después de un error los identificadores pueden quedar desplazados.
+

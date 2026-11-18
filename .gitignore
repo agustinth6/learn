@@ -16,3 +16,9 @@ __pycache__/
 # Runtime state
 .memory/
 *.log
+
+# Video: derivados pesados (se regeneran con video/build.py)
+video/out/
+video/tmp/
+video/audio/
+Repaso-Bases-de-Datos-Parcial.mp4
