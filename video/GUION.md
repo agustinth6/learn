@@ -1,25 +1,25 @@
 # Guion del video — Repaso de Bases de Datos + parcial CinePlus
 
-**Duración:** 14:03 (9 de 10 capítulos narrados) · **Formato:** 1280×720, 25 fps, H.264 + AAC ·
+**Duración:** 18:42 (10 capítulos, todos narrados) · **Formato:** 1280×720, 25 fps, H.264 + AAC ·
 **Subtítulos:** incrustados en el video y además `subtitulos-es.srt` (pista aparte).
 
-El capítulo 10 (resolución del parcial) tiene las láminas preparadas en `video/contenido.py`
-pero todavía no tiene narración: falta el audio `video/audio/cap10a.mp3`.
+Todos los capítulos están narrados. El capítulo 10 se armó pegando cuatro tramos de voz
+(`cap10a`…`cap10d.mp3`) en un solo `cap10.mp3`.
 
 ## Capítulos
 
 | # | Capítulo | Inicio | Duración | Qué cubre |
 |---|---|---|---|---|
 | 1 | Qué es una base de datos y DDL vs DML | 00:00 | 1:13 | tablas/filas/columnas, CREATE-ALTER-DROP vs INSERT-SELECT-UPDATE-DELETE |
-| 2 | Tipos de datos en SQL | 01:13 | 1:20 | CHAR vs VARCHAR, INT/DECIMAL/FLOAT, DATE/DATETIME, BOOLEAN, ENUM |
-| 3 | Constraints | 02:34 | 1:30 | las 7 restricciones, PK vs UNIQUE, AUTO_INCREMENT, CASCADE |
-| 4 | DDL: crear base, tablas e INSERT | 04:04 | 1:40 | orden de creación, la FK no crea la columna, INSERT y el orden de los IDs |
-| 5 | SELECT, filtros, NULL y agregación | 05:44 | 1:49 | WHERE, ORDER BY, LIKE, BETWEEN, MONTH/YEAR, NULL, DISTINCT vs COUNT |
-| 6 | UPDATE, ALTER, DELETE y borrado en cadena | 07:34 | 1:42 | SET sin WHERE, CHANGE sin coma, DELETE FROM, nietos→hijos→padre |
-| 7 | JOIN | 09:16 | 1:37 | INNER, LEFT/RIGHT, LEFT+IS NULL, tres tablas |
-| 8 | GROUP BY y HAVING | 10:53 | 1:23 | regla de oro, WHERE vs HAVING, orden de cláusulas |
-| 9 | Vistas y buenas prácticas | 12:16 | 1:26 | CREATE VIEW, DROP VIEW, los tres errores de la práctica |
-| 10 | Resolución del parcial CinePlus | — | — | modelo, consultas 1-16, V/F y múltiple choice (pendiente de audio) |
+| 2 | Tipos de datos en SQL | 01:13 | 1:19 | CHAR vs VARCHAR, INT/DECIMAL/FLOAT, DATE/DATETIME, BOOLEAN, ENUM |
+| 3 | Constraints | 02:32 | 1:28 | las 7 restricciones, PK vs UNIQUE, AUTO_INCREMENT, CASCADE |
+| 4 | DDL: crear base, tablas e INSERT | 04:00 | 1:38 | orden de creación, la FK no crea la columna, INSERT y el orden de los IDs |
+| 5 | SELECT, filtros, NULL y agregación | 05:38 | 1:48 | WHERE, ORDER BY, LIKE, BETWEEN, MONTH/YEAR, NULL, DISTINCT vs COUNT |
+| 6 | UPDATE, ALTER, DELETE y borrado en cadena | 07:26 | 1:39 | SET sin WHERE, CHANGE sin coma, DELETE FROM, nietos→hijos→padre |
+| 7 | JOIN | 09:05 | 1:34 | INNER, LEFT/RIGHT, LEFT+IS NULL, tres tablas |
+| 8 | GROUP BY y HAVING | 10:39 | 1:22 | regla de oro, WHERE vs HAVING, orden de cláusulas |
+| 9 | Vistas y buenas prácticas | 12:01 | 1:24 | CREATE VIEW, DROP VIEW, los tres errores de la práctica |
+| 10 | Resolución del parcial CinePlus | 13:24 | 4:46 | modelo, consultas 1-16, V/F y múltiple choice (pendiente de audio) |
 
 ## Cómo regenerar
 

@@ -458,7 +458,7 @@ CHAPTERS = [
         "n": 10,
         "dir": "cap10",
         "title": "Resolución del parcial CinePlus",
-        "weight_per_scene": [1.0, 1.2, 1.0, 1.3, 1.2, 1.1, 0.9],
+        "weight_per_scene": [1.0, 1.15, 1.0, 1.25, 1.05, 0.95, 0.75, 0.85],
         "scenes": [
             {
                 "title": "El modelo CinePlus",
@@ -505,17 +505,27 @@ CHAPTERS = [
                 ],
             },
             {
-                "title": "GROUP BY (13 a 15)",
+                "title": "GROUP BY (13 y 14)",
                 "lines": [
-                    ("code", "13) SELECT genero, COUNT(*) FROM peliculas GROUP BY genero;"),
+                    ("code", "13) SELECT genero, COUNT(*) FROM peliculas"),
+                    ("code", "    GROUP BY genero;"),
+                    ("b", "Cuenta películas por género"),
                     ("code", "14) SELECT c.nombre, AVG(al.dias_alquilada)"),
                     ("code", "    FROM clientes c JOIN alquileres al"),
                     ("code", "      ON c.id_cliente = al.id_cliente"),
                     ("code", "    GROUP BY c.id_cliente, c.nombre, c.apellido;"),
+                    ("note", "Promedio de días por cliente"),
+                ],
+            },
+            {
+                "title": "GROUP BY (15)",
+                "lines": [
                     ("code", "15) SELECT p.titulo, COUNT(al.id_alquiler)"),
                     ("code", "    FROM peliculas p JOIN alquileres al"),
                     ("code", "      ON p.id_pelicula = al.id_pelicula"),
                     ("code", "    GROUP BY p.id_pelicula, p.titulo;"),
+                    ("b", "Cuántas veces se alquiló cada película"),
+                    ("note", "Todo lo que no es agregación va en el GROUP BY"),
                 ],
             },
             {
@@ -553,3 +563,47 @@ NARRACION = {
     8: "GROUP BY y HAVING. Hasta acá las funciones de agregación devolvían un solo valor para toda la tabla. GROUP BY permite otra cosa: agrupar filas por el valor de una columna y aplicar la función dentro de cada grupo. Sirve para obtener información resumida: cuántos libros hay por género, cuántos clientes hay por ciudad, cuántos préstamos tiene cada lector. Siempre se usa con una función de agregación. Y hay una regla de oro: todo lo que se pone en el SELECT y no es una función de agregación tiene que estar también en el GROUP BY. Si no, MySQL no sabe qué valor mostrarte. Después está HAVING, que es el filtro de los grupos. WHERE filtra filas antes de agrupar; HAVING filtra grupos después de agrupar. Por eso, cuando el filtro usa COUNT o AVG, va en HAVING y no en WHERE. Poner WHERE COUNT da error, porque en ese momento todavía no existen los grupos. El orden de las cláusulas, que conviene memorizar, es: SELECT, FROM, JOIN con ON, WHERE, GROUP BY, HAVING y ORDER BY. Y un consejo: para agrupar conviene poner en el GROUP BY la clave primaria de la tabla, no el nombre, así dos registros con el mismo nombre no se mezclan.",
     9: "Las vistas. Una vista es una consulta guardada con un nombre, que después se puede usar como si fuera una tabla. No guarda datos: guarda la consulta, y cada vez que la consultás se ejecuta de nuevo. Sirven para simplificar consultas complejas, para reutilizar lógica y para mostrar solo ciertas columnas. Se crean con CREATE VIEW, el nombre de la vista, AS, y la consulta. Para usarla, hacés SELECT sobre el nombre de la vista como si fuera una tabla. Y un punto importante para el parcial: para modificar una vista existente no se usa un ALTER cómodo; lo habitual es borrarla con DROP VIEW y volver a crearla con la definición nueva. Antes de cerrar la teoría, tres buenas prácticas. Primero, verificá antes de borrar: un SELECT con el mismo WHERE te muestra exactamente qué filas se van a ir. Segundo, después de un INSERT con SELECT, comprobá con COUNT, porque si la consulta no encuentra nada, inserta cero filas y no da error: es silencioso. Y tercero, nunca asumas los identificadores. Consultalos. El contador automático gasta números aunque la operación falle, así que después de un error los identificadores pueden quedar desplazados.",
 }
+
+NARRACION[10] = (
+    "Y llegamos al examen. El modelo se llama CinePlus y es una plataforma de alquiler de películas. "
+    "Tiene cuatro tablas. Actores, con identificador, nombre y nacionalidad. Películas, con identificador, "
+    "título, género, año de estreno y el actor principal como clave foránea. Clientes, con identificador, "
+    "nombre, apellido y ciudad. Y alquileres, la tabla intermedia, con dos claves foráneas, una a películas "
+    "y otra a clientes, más la fecha y la cantidad de días. La relación entre actores y películas es uno a "
+    "muchos, porque cada película tiene un solo actor principal. Y la relación entre clientes y películas es "
+    "muchos a muchos, y por eso existe la tabla intermedia. "
+    "Con la estructura resuelta, vamos a las consultas simples. Para todas las películas, SELECT asterisco "
+    "FROM películas. Para los actores ordenados, ORDER BY nombre, que va al final, y en orden ascendente. "
+    "Para las estrenadas después de dos mil dieciocho, WHERE año de estreno mayor que dos mil dieciocho. "
+    "Para los alquileres de Laura Gómez hay que unir alquileres con clientes, porque en la tabla alquileres "
+    "no está el nombre: ese es el punto donde el profe espera un JOIN. Y para Acción o Comedia, WHERE género "
+    "IN con los dos valores entre paréntesis. Después, la parte de estructura. Agregar una columna se hace "
+    "con ALTER TABLE y ADD COLUMN. Actualizar el año de Matrix se hace con UPDATE, SET y WHERE, nunca sin el "
+    "WHERE. Borrar un alquiler puntual, con DELETE FROM y WHERE por el identificador. Y renombrar la columna "
+    "ciudad a localidad, con CHANGE, el nombre viejo, el nombre nuevo y el tipo, todo seguido y sin coma en "
+    "el medio. "
+    "Los tres JOIN del examen. El primero pide cliente, película y actor principal, y es el más largo: cuatro "
+    "tablas encadenadas. Se arranca por alquileres, se une con clientes por el identificador de cliente, con "
+    "películas por el identificador de película, y con actores por el identificador de actor. Cada eslabón "
+    "usa su clave, y no se saltea ninguno. El segundo es más corto: películas con su actor, un solo JOIN. Y "
+    "el tercero pide los clientes que alquilaron películas de Leonardo DiCaprio. Es el mismo encadenado de "
+    "cuatro tablas, más un WHERE sobre el nombre del actor, y conviene agregar DISTINCT para que un cliente "
+    "que alquiló dos películas del mismo actor no aparezca repetido. Después, agrupar. Contar películas por "
+    "género: se selecciona el género y COUNT, y se agrupa por género. Promediar los días de alquiler por "
+    "cliente: se une clientes con alquileres, se usa AVG sobre los días y se agrupa por el identificador del "
+    "cliente y su nombre. Y contar cuántas veces se alquiló cada película: se une películas con alquileres y "
+    "se agrupa por película. En los tres casos, todo lo que no es función de agregación va también en el "
+    "GROUP BY. "
+    "La vista del punto dieciséis: CREATE VIEW vista_alquileres_detalle AS, y la consulta que une alquileres "
+    "con clientes y con películas, para mostrar el nombre del cliente y el título de la película. Después se "
+    "consulta como si fuera una tabla. Y cerramos con las preguntas teóricas. Verdadero o falso. La primera "
+    "es verdadera: GROUP BY agrupa valores iguales y permite usar COUNT o AVG. La segunda es falsa: UPDATE "
+    "modifica filas existentes, para insertar se usa INSERT. La tercera es verdadera: DELETE FROM con WHERE "
+    "borra las filas que cumplen la condición. La cuarta es falsa: el que muestra todos los registros "
+    "coincidan o no es el FULL OUTER JOIN, no el INNER, que solo devuelve coincidencias. La quinta es "
+    "verdadera: la clave foránea garantiza integridad referencial. Y la sexta también: en una relación "
+    "muchos a muchos la tabla intermedia es obligatoria. Múltiple choice: la uno es la opción C, la única "
+    "que agrupa por cliente y cuenta sus alquileres. La dos es la B, ALTER TABLE con ADD COLUMN. La tres es "
+    "la C, borra la fila de Matrix. Y la cuatro es la C, UPDATE. Con esto tenés el recorrido completo. "
+    "Éxitos en el parcial."
+)

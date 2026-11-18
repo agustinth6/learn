@@ -128,15 +128,39 @@ def split_captions(text, max_chars=84):
 
 
 # ------------------------------------------------------------------ láminas
-def slide(ch, scene, ch_title, total_scenes, idx):
+def slide(ch, scene, ch_title, total_scenes, idx, limite=None):
+    """Dibuja una lámina. `limite` = Y máximo disponible (por la banda de subtítulos)."""
     img = gradient(W, H).copy()
     d = ImageDraw.Draw(img, "RGBA")
+    limite = limite or (H - 30)
 
     # barra superior
     d.rectangle([0, 0, W, 6], fill=ACCENT)
     d.text((70, 52), f"CAPÍTULO {ch['n']} DE {len(CHAPTERS)}", font=F_CHAP, fill=ACCENT)
     d.text((70, 82), ch_title, font=ImageFont.truetype(FONT, 22), fill=GREY)
     d.line([70, 120, W - 70, 120], fill=(60, 80, 105), width=1)
+
+    # ---- ajuste automático: busca la escala más grande que entre completa ----
+    def total_height(scale):
+        h = 0.0
+        for kind, txt in scene["lines"]:
+            if kind == "b":
+                f = ImageFont.truetype(FONT, int(30 * scale))
+                n = len(wrap(d, txt, f, W - 230))
+                h += n * (40 * scale) + 14 * scale
+            elif kind == "code":
+                h += 54 * scale
+            else:
+                f = ImageFont.truetype(FONT, int(27 * scale))
+                n = len(wrap(d, txt, f, W - 260))
+                h += (24 + 36 * n) * scale + 16 * scale
+        return h
+
+    titulo_alto = 152 + (52 if d.textlength(scene["title"], font=F_TITLE) > W - 140 else 0) + 62
+    disp = limite - 24 - titulo_alto
+    scale = 1.0
+    while scale > 0.62 and total_height(scale) > disp:
+        scale -= 0.04
 
     # título de la lámina (2 líneas si hace falta)
     ty = 152
@@ -148,31 +172,35 @@ def slide(ch, scene, ch_title, total_scenes, idx):
         ty += tf.size + 10
     y = ty + 26
 
+    f_bul = ImageFont.truetype(FONT, int(30 * scale))
+    f_code = ImageFont.truetype(MONO, int(26 * scale))
+    f_note = ImageFont.truetype(FONT, int(27 * scale))
+
     for kind, txt in scene["lines"]:
         if kind == "b":
-            d.ellipse([72, y + 13, 80, y + 21], fill=ACCENT2)
-            for ln in wrap(d, txt, F_BUL, W - 230):
-                d.text((100, y), ln, font=F_BUL, fill=WHITE)
-                y += 40
-            y += 14
+            d.ellipse([72, y + 13 * scale, 80, y + 21 * scale], fill=ACCENT2)
+            for ln in wrap(d, txt, f_bul, W - 230):
+                d.text((100, y), ln, font=f_bul, fill=WHITE)
+                y += 40 * scale
+            y += 14 * scale
 
         elif kind == "code":
-            tw = d.textlength(txt, font=F_CODE)
-            d.rounded_rectangle([70, y - 4, min(70 + tw + 34, W - 70), y + 40],
+            tw = d.textlength(txt, font=f_code)
+            d.rounded_rectangle([70, y - 4, min(70 + tw + 34, W - 70), y + 40 * scale],
                                 radius=6, fill=CODE_BG)
-            d.text((88, y + 4), txt, font=F_CODE, fill=CODE_FG)
-            y += 54
+            d.text((88, y + 4), txt, font=f_code, fill=CODE_FG)
+            y += 54 * scale
 
         elif kind == "note":
-            lines = wrap(d, txt, F_NOTE, W - 240)
-            hgt = 24 + 36 * len(lines)
+            lines = wrap(d, txt, f_note, W - 260)
+            hgt = (24 + 36 * len(lines)) * scale
             d.rounded_rectangle([70, y, W - 70, y + hgt], radius=8, fill=NOTE_BG)
             d.rectangle([70, y, 76, y + hgt], fill=ACCENT2)
-            yy = y + 12
+            yy = y + 12 * scale
             for ln in lines:
-                d.text((96, yy), ln, font=F_NOTE, fill=(214, 236, 255))
-                yy += 36
-            y += hgt + 16
+                d.text((96, yy), ln, font=f_note, fill=(214, 236, 255))
+                yy += 36 * scale
+            y += hgt + 16 * scale
 
     # pie
     d.text((W - 70, 56), f"lámina {idx}/{total_scenes}",
@@ -273,7 +301,9 @@ def build_chapter(ch):
     subs = cronometrar(narr, dur)
 
     # láminas base por escena
-    base_imgs = [slide(ch, sc, ch["title"], len(ch["scenes"]), i + 1)
+    # reserva espacio para la banda de subtítulos (2 líneas = ~105 px)
+    LIMITE = H - 105
+    base_imgs = [slide(ch, sc, ch["title"], len(ch["scenes"]), i + 1, limite=LIMITE)
                  for i, sc in enumerate(ch["scenes"])]
 
     # tarjeta de título (2.4 s) + audio desplazado

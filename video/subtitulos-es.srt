@@ -750,3 +750,259 @@ Consultalos. El contador automático gasta números aunque la operación falle,
 00:13:18,838 --> 00:13:24,080
 así que después de un error los identificadores pueden quedar desplazados.
 
+189
+00:13:26,480 --> 00:13:27,991
+Y llegamos al examen.
+
+190
+00:13:27,991 --> 00:13:33,244
+El modelo se llama CinePlus y es una plataforma de alquiler de películas.
+
+191
+00:13:33,244 --> 00:13:38,353
+Tiene cuatro tablas. Actores, con identificador, nombre y nacionalidad.
+
+192
+00:13:38,353 --> 00:13:41,591
+Películas, con identificador, título, género,
+
+193
+00:13:41,591 --> 00:13:45,548
+año de estreno y el actor principal como clave foránea.
+
+194
+00:13:45,548 --> 00:13:49,506
+Clientes, con identificador, nombre, apellido y ciudad.
+
+195
+00:13:49,506 --> 00:13:53,751
+Y alquileres, la tabla intermedia, con dos claves foráneas,
+
+196
+00:13:53,751 --> 00:13:58,788
+una a películas y otra a clientes, más la fecha y la cantidad de días.
+
+197
+00:13:58,788 --> 00:14:02,674
+La relación entre actores y películas es uno a muchos,
+
+198
+00:14:02,674 --> 00:14:06,344
+porque cada película tiene un solo actor principal.
+
+199
+00:14:06,344 --> 00:14:10,661
+Y la relación entre clientes y películas es muchos a muchos,
+
+200
+00:14:10,661 --> 00:14:13,323
+y por eso existe la tabla intermedia.
+
+201
+00:14:13,323 --> 00:14:17,497
+Con la estructura resuelta, vamos a las consultas simples.
+
+202
+00:14:17,497 --> 00:14:21,670
+Para todas las películas, SELECT asterisco FROM películas.
+
+203
+00:14:21,670 --> 00:14:27,714
+Para los actores ordenados, ORDER BY nombre, que va al final, y en orden ascendente.
+
+204
+00:14:27,714 --> 00:14:31,240
+Para las estrenadas después de dos mil dieciocho,
+
+205
+00:14:31,240 --> 00:14:34,766
+WHERE año de estreno mayor que dos mil dieciocho.
+
+206
+00:14:34,766 --> 00:14:39,947
+Para los alquileres de Laura Gómez hay que unir alquileres con clientes,
+
+207
+00:14:39,947 --> 00:14:43,401
+porque en la tabla alquileres no está el nombre:
+
+208
+00:14:43,401 --> 00:14:46,711
+ese es el punto donde el profe espera un JOIN.
+
+209
+00:14:46,711 --> 00:14:52,323
+Y para Acción o Comedia, WHERE género IN con los dos valores entre paréntesis.
+
+210
+00:14:52,323 --> 00:14:58,799
+Después, la parte de estructura. Agregar una columna se hace con ALTER TABLE y ADD COLUMN.
+
+211
+00:14:58,799 --> 00:15:04,556
+Actualizar el año de Matrix se hace con UPDATE, SET y WHERE, nunca sin el WHERE.
+
+212
+00:15:04,556 --> 00:15:09,809
+Borrar un alquiler puntual, con DELETE FROM y WHERE por el identificador.
+
+213
+00:15:09,809 --> 00:15:14,917
+Y renombrar la columna ciudad a localidad, con CHANGE, el nombre viejo,
+
+214
+00:15:14,917 --> 00:15:19,451
+el nombre nuevo y el tipo, todo seguido y sin coma en el medio.
+
+215
+00:15:19,451 --> 00:15:21,250
+Los tres JOIN del examen.
+
+216
+00:15:21,250 --> 00:15:26,358
+El primero pide cliente, película y actor principal, y es el más largo:
+
+217
+00:15:26,358 --> 00:15:28,229
+cuatro tablas encadenadas.
+
+218
+00:15:28,229 --> 00:15:33,914
+Se arranca por alquileres, se une con clientes por el identificador de cliente,
+
+219
+00:15:33,914 --> 00:15:37,296
+con películas por el identificador de película,
+
+220
+00:15:37,296 --> 00:15:40,462
+y con actores por el identificador de actor.
+
+221
+00:15:40,462 --> 00:15:44,060
+Cada eslabón usa su clave, y no se saltea ninguno.
+
+222
+00:15:44,060 --> 00:15:48,521
+El segundo es más corto: películas con su actor, un solo JOIN.
+
+223
+00:15:48,521 --> 00:15:54,061
+Y el tercero pide los clientes que alquilaron películas de Leonardo DiCaprio.
+
+224
+00:15:54,061 --> 00:15:59,818
+Es el mismo encadenado de cuatro tablas, más un WHERE sobre el nombre del actor,
+
+225
+00:15:59,818 --> 00:16:05,790
+y conviene agregar DISTINCT para que un cliente que alquiló dos películas del mismo
+
+226
+00:16:05,790 --> 00:16:09,028
+actor no aparezca repetido. Después, agrupar.
+
+227
+00:16:09,028 --> 00:16:15,144
+Contar películas por género: se selecciona el género y COUNT, y se agrupa por género.
+
+228
+00:16:15,144 --> 00:16:18,239
+Promediar los días de alquiler por cliente:
+
+229
+00:16:18,239 --> 00:16:20,469
+se une clientes con alquileres,
+
+230
+00:16:20,469 --> 00:16:26,442
+se usa AVG sobre los días y se agrupa por el identificador del cliente y su nombre.
+
+231
+00:16:26,442 --> 00:16:29,895
+Y contar cuántas veces se alquiló cada película:
+
+232
+00:16:29,895 --> 00:16:33,997
+se une películas con alquileres y se agrupa por película.
+
+233
+00:16:33,997 --> 00:16:40,113
+En los tres casos, todo lo que no es función de agregación va también en el GROUP BY.
+
+234
+00:16:40,113 --> 00:16:45,150
+La vista del punto dieciséis: CREATE VIEW vista_alquileres_detalle AS,
+
+235
+00:16:45,150 --> 00:16:49,611
+y la consulta que une alquileres con clientes y con películas,
+
+236
+00:16:49,611 --> 00:16:54,073
+para mostrar el nombre del cliente y el título de la película.
+
+237
+00:16:54,073 --> 00:16:57,239
+Después se consulta como si fuera una tabla.
+
+238
+00:16:57,239 --> 00:16:59,973
+Y cerramos con las preguntas teóricas.
+
+239
+00:16:59,973 --> 00:17:03,067
+Verdadero o falso. La primera es verdadera:
+
+240
+00:17:03,067 --> 00:17:07,312
+GROUP BY agrupa valores iguales y permite usar COUNT o AVG.
+
+241
+00:17:07,312 --> 00:17:13,285
+La segunda es falsa: UPDATE modifica filas existentes, para insertar se usa INSERT.
+
+242
+00:17:13,285 --> 00:17:19,617
+La tercera es verdadera: DELETE FROM con WHERE borra las filas que cumplen la condición.
+
+243
+00:17:19,617 --> 00:17:26,237
+La cuarta es falsa: el que muestra todos los registros coincidan o no es el FULL OUTER JOIN,
+
+244
+00:17:26,237 --> 00:17:29,475
+no el INNER, que solo devuelve coincidencias.
+
+245
+00:17:29,475 --> 00:17:34,800
+La quinta es verdadera: la clave foránea garantiza integridad referencial.
+
+246
+00:17:34,800 --> 00:17:41,060
+Y la sexta también: en una relación muchos a muchos la tabla intermedia es obligatoria.
+
+247
+00:17:41,060 --> 00:17:42,211
+Múltiple choice:
+
+248
+00:17:42,211 --> 00:17:47,896
+la uno es la opción C, la única que agrupa por cliente y cuenta sus alquileres.
+
+249
+00:17:47,896 --> 00:17:50,990
+La dos es la B, ALTER TABLE con ADD COLUMN.
+
+250
+00:17:50,990 --> 00:17:53,940
+La tres es la C, borra la fila de Matrix.
+
+251
+00:17:53,940 --> 00:17:58,689
+Y la cuatro es la C, UPDATE. Con esto tenés el recorrido completo.
+
+252
+00:17:58,689 --> 00:18:00,200
+Éxitos en el parcial.
+
