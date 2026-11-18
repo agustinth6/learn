@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Repaso Bases de Datos — video, PDF y parcial</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         background: #0d1421; color: #e8f0fa; }
+  header { padding: 26px 32px 18px; border-bottom: 1px solid #1e2c40; }
+  h1 { margin: 0 0 6px; font-size: 1.35rem; color: #7ed1ff; }
+  .sub { font-size: .86rem; color: #8fa6c0; }
+  main { display: grid; grid-template-columns: minmax(0,2fr) minmax(280px,1fr); gap: 24px;
+         padding: 24px 32px 40px; align-items: start; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+  video { width: 100%; border-radius: 10px; background: #000; box-shadow: 0 10px 32px rgba(0,0,0,.5); }
+  .card { background: #131f30; border: 1px solid #1f3049; border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; }
+  .card h2 { font-size: .82rem; text-transform: uppercase; letter-spacing: .06em;
+             color: #7ed1ff; margin: 0 0 10px; }
+  a { color: #9fd8ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul { margin: 0; padding-left: 18px; font-size: .86rem; line-height: 1.75; color: #cfdcec; }
+  ol { margin: 0; padding-left: 20px; font-size: .84rem; line-height: 1.7; color: #cfdcec; }
+  .card li strong { color: #fff; }
+  .hint { font-size: .76rem; color: #7f95ae; margin-top: 10px; line-height: 1.5; }
+  .time { color: #6ee7b7; font-variant-numeric: tabular-nums; font-size: .8rem; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Repaso de Administración y Gestión de Bases de Datos</h1>
+    <div class="sub">Video explicativo por capítulos con subtítulos · 14:03 · + resumen PDF y parcial CinePlus</div>
+  </header>
+  <main>
+    <section>
+      <video controls preload="metadata" poster="">
+        <source src="Repaso-Bases-de-Datos-Parcial.mp4" type="video/mp4">
+        <track kind="subtitles" src="video/subtitulos-es.srt" srclang="es" label="Español" default>
+        Tu navegador no reproduce el video.
+        <a href="https://github.com/agustinth6/learn/raw/arena/728cd526-learn/Repaso-Bases-de-Datos-Parcial.mp4">Descargar</a>
+      </video>
+      <div class="hint">
+        Si el reproductor no carga en el preview, usá el link de descarga de la derecha.
+        Los subtítulos ya vienen incrustados; el archivo .srt permite activarlos o desactivarlos aparte.
+      </div>
+    </section>
+    <aside>
+      <div class="card">
+        <h2>Descargas</h2>
+        <ul>
+          <li><a href="https://github.com/agustinth6/learn/raw/arena/728cd526-learn/Repaso-Bases-de-Datos-Parcial.mp4">Video completo (26 MB)</a></li>
+          <li><a href="https://github.com/agustinth6/learn/raw/arena/728cd526-learn/video/subtitulos-es.srt">Subtítulos .srt</a></li>
+          <li><a href="https://github.com/agustinth6/learn/raw/arena/728cd526-learn/resumen-bases-de-datos.pdf">Resumen PDF (30 págs.)</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Capítulos</h2>
+        <ol>
+          <li><span class="time">00:00</span> Base de datos, DDL vs DML</li>
+          <li><span class="time">01:13</span> Tipos de datos</li>
+          <li><span class="time">02:34</span> Constraints</li>
+          <li><span class="time">04:04</span> DDL: tablas e INSERT</li>
+          <li><span class="time">05:44</span> SELECT, NULL, agregación</li>
+          <li><span class="time">07:34</span> UPDATE / ALTER / DELETE</li>
+          <li><span class="time">09:16</span> JOIN</li>
+          <li><span class="time">10:53</span> GROUP BY y HAVING</li>
+          <li><span class="time">12:16</span> Vistas y buenas prácticas</li>
+          <li><span class="time">—</span> Parcial CinePlus (pendiente de audio)</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h2>Material del parcial</h2>
+        <ul>
+          <li><a href="parcial-practica/cineplus-enunciado.md">Enunciado CinePlus</a></li>
+          <li><a href="parcial-practica/cineplus-solucionario.sql">Solucionario .sql</a></li>
+          <li><a href="parcial-practica/cineplus-fix-ids.sql">Fix de IDs</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
