@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resumen de estudio — Análisis Matemático</title>
+<style>
+:root{--ink:#16233b;--muted:#5b6b85;--line:#dfe6ef;--bg:#f6f8fb;--accent:#0b6f74;--accent2:#1d4ed8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:16.5px}
+header{background:linear-gradient(160deg,#0b3b46,#0b6f74 55%,#12868b);color:#fff;padding:38px 20px 34px}
+header .wrap{max-width:1040px;margin:0 auto}
+header h1{margin:0 0 10px;font-size:clamp(25px,4.6vw,40px);line-height:1.12;letter-spacing:-.02em}
+header p{margin:0;opacity:.94;font-size:15.5px;max-width:78ch}
+header .tag{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.34);border-radius:999px;padding:3px 12px;font-size:12.5px;margin-bottom:12px;letter-spacing:.06em;text-transform:uppercase}
+main{max-width:1040px;margin:0 auto;padding:0 18px 80px}
+article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(18px,4vw,46px);margin-top:-22px;box-shadow:0 12px 36px rgba(22,35,59,.09)}
+.toc{margin:0 0 30px;padding:16px 18px;background:#f2f7f8;border:1px solid #d6e6e8;border-radius:14px;font-size:14.6px}
+.toc strong{display:block;margin-bottom:8px;color:#0b3b46;letter-spacing:.03em;text-transform:uppercase;font-size:12.5px}
+.toc ol{margin:0;padding-left:1.2em;columns:2;column-gap:26px}
+.toc li{margin:.16em 0;break-inside:avoid}
+.toc li.l1{font-weight:700;margin-top:.55em;color:#0b3b46}
+.toc a{color:#0b3b46;text-decoration:none;border-bottom:1px dotted #a9c3c6}
+.toc a:hover{color:var(--accent2)}
+@media(max-width:760px){.toc ol{columns:1}}
+h1{font-size:clamp(21px,3.4vw,28px);margin:2.4em 0 .6em;padding-bottom:.32em;border-bottom:2px solid var(--line);scroll-margin-top:14px}
+h2{font-size:clamp(18px,2.7vw,23px);margin:2em 0 .5em;color:#0b3b46;scroll-margin-top:14px}
+h3{font-size:17px;margin:1.6em 0 .4em;color:var(--accent)}
+p{margin:.7em 0}
+ul,ol{margin:.6em 0 .95em;padding-left:1.45em}
+li{margin:.3em 0}
+strong{color:#0d2a3a}
+hr{border:0;border-top:1px solid var(--line);margin:2.6em 0}
+code{background:#eef3f8;padding:.12em .38em;border-radius:5px;font-size:.92em}
+blockquote{margin:1.1em 0;padding:13px 17px;background:#effaf9;border-left:5px solid var(--accent);border-radius:10px}
+blockquote p{margin:.32em 0}
+.formula{margin:.9em 0;padding:13px 16px;background:#f2f6ff;border:1px solid #dbe6fb;border-left:5px solid var(--accent2);border-radius:10px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15.5px;color:#10224a;font-weight:600;overflow-x:auto}
+table{border-collapse:collapse;width:100%;margin:1.05em 0 1.4em;font-size:14.8px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:#eef4f6;color:#0b3b46;font-weight:700;white-space:nowrap}
+tr:nth-child(even) td{background:#fafcfe}
+@media print{header{background:#0b3b46 !important;-webkit-print-color-adjust:exact}article{box-shadow:none;border:0;margin-top:0}h1{page-break-after:avoid}table{page-break-inside:avoid}.toc{page-break-after:always}}
+.pdfbtn{display:inline-block;margin-top:14px;padding:10px 18px;border-radius:8px;
+background:#d99a2b;color:#1a1200;font-weight:700;font-size:14px;text-decoration:none;border:1px solid #b87e18}
+.pdfbtn:hover{background:#f0b040}
+@media print{.pdfbtn{display:none}}
+</style></head>
+<body>
+<header><div class="wrap">
+<span class="tag">Resumen de estudio</span>
+<h1>Elementos de Análisis Matemático</h1>
+<a class="pdfbtn" href="Resumen_Analisis_Matematico.pdf" download target="_blank" rel="noopener">⬇ Descargar el resumen en PDF (18 páginas)</a>
+<p>Vectores · Matrices · Determinantes · Aplicaciones · Definiciones de teoría · Apéndice del TP. Armado a partir de las cinco clases transcriptas (10/09, 16/10, 23/10, 30/10 y 6/11) y del Trabajo Práctico de Vectores, Matrices y Determinantes.</p>
+</div></header>
+<main><article>
+<nav class="toc"><strong>Contenido</strong><ol><li class="l1"><a href="#0-como-es-el-segundo-parcial">0. Cómo es el segundo parcial</a></li><li class="l1"><a href="#1-vectores">1. Vectores</a></li><li class="l2"><a href="#11-magnitud-escalar-y-magnitud-vectorial">1.1 Magnitud escalar y magnitud vectorial</a></li><li class="l2"><a href="#12-que-es-un-vector">1.2 Qué es un vector</a></li><li class="l2"><a href="#13-componentes">1.3 Componentes</a></li><li class="l2"><a href="#14-como-se-ubica-en-el-plano-cartesiano">1.4 Cómo se ubica en el plano cartesiano</a></li><li class="l2"><a href="#15-modulo-del-vector-teorema-de-pitagoras">1.5 Módulo del vector: teorema de Pitágoras</a></li><li class="l2"><a href="#16-suma-de-vectores">1.6 Suma de vectores</a></li><li class="l2"><a href="#17-producto-de-un-vector-por-un-escalar">1.7 Producto de un vector por un escalar</a></li><li class="l2"><a href="#18-distancia-entre-dos-puntos">1.8 Distancia entre dos puntos</a></li><li class="l2"><a href="#19-punto-medio-entre-dos-puntos">1.9 Punto medio entre dos puntos</a></li><li class="l2"><a href="#110-que-se-responde-en-cada-tipo-de-ejercicio-muy-importante">1.10 Qué se responde en cada tipo de ejercicio (muy importante)</a></li><li class="l2"><a href="#111-ecuacion-de-la-recta-no-entra-en-el-examen">1.11 Ecuación de la recta (NO entra en el examen)</a></li><li class="l1"><a href="#2-matrices">2. Matrices</a></li><li class="l2"><a href="#21-que-es-una-matriz-y-como-se-leen-sus-elementos">2.1 Qué es una matriz y cómo se leen sus elementos</a></li><li class="l2"><a href="#22-orden-o-tamano">2.2 Orden o tamaño</a></li><li class="l2"><a href="#23-clasificacion">2.3 Clasificación</a></li><li class="l2"><a href="#24-suma-y-resta-de-matrices">2.4 Suma y resta de matrices</a></li><li class="l2"><a href="#25-matriz-opuesta">2.5 Matriz opuesta</a></li><li class="l2"><a href="#26-multiplicacion-de-matrices">2.6 Multiplicación de matrices</a></li><li class="l2"><a href="#27-matriz-traspuesta">2.7 Matriz traspuesta</a></li><li class="l2"><a href="#28-matriz-nula">2.8 Matriz nula</a></li><li class="l2"><a href="#29-producto-de-una-matriz-por-un-escalar">2.9 Producto de una matriz por un escalar</a></li><li class="l2"><a href="#210-los-cuatro-casos-de-equivalencia-de-matrices">2.10 Los cuatro casos de equivalencia de matrices</a></li><li class="l2"><a href="#211-tabla-resumen-de-condiciones">2.11 Tabla resumen de condiciones</a></li><li class="l1"><a href="#3-determinantes">3. Determinantes</a></li><li class="l2"><a href="#31-que-es-un-determinante">3.1 Qué es un determinante</a></li><li class="l2"><a href="#32-determinante-de-una-matriz-de-22">3.2 Determinante de una matriz de 2×2</a></li><li class="l2"><a href="#33-regla-de-sarrus-solo-para-33">3.3 Regla de Sarrus (solo para 3×3)</a></li><li class="l2"><a href="#34-regla-de-laplace">3.4 Regla de Laplace</a></li><li class="l2"><a href="#35-sarrus-o-laplace">3.5 ¿Sarrus o Laplace?</a></li><li class="l1"><a href="#4-aplicaciones-situaciones-problematicas">4. Aplicaciones: situaciones problemáticas</a></li><li class="l2"><a href="#41-sistemas-de-ecuaciones-resueltos-por-determinantes-cramer">4.1 Sistemas de ecuaciones resueltos por determinantes (Cramer)</a></li><li class="l2"><a href="#42-producto-de-matrices-en-problemas-pedidos-e-insumos">4.2 Producto de matrices en problemas (pedidos e insumos)</a></li><li class="l1"><a href="#5-definiciones-clave-para-la-teoria-verdaderofalso">5. Definiciones clave para la teoría (Verdadero/Falso)</a></li><li class="l1"><a href="#6-errores-frecuentes-y-consejos-para-el-parcial">6. Errores frecuentes y consejos para el parcial</a></li><li class="l1"><a href="#7-chuleta-final-todo-junto">7. Chuleta final (todo junto)</a></li><li class="l1"><a href="#8-apendice-que-seccion-mirar-para-cada-punto-del-tp">8. Apéndice: qué sección mirar para cada punto del TP</a></li><li class="l2"><a href="#81-vectores-puntos-1-a-11">8.1 Vectores (puntos 1 a 11)</a></li><li class="l2"><a href="#82-teoria-punto-12">8.2 Teoría (punto 12)</a></li><li class="l2"><a href="#83-matrices-y-determinantes-puntos-14-a-17">8.3 Matrices y determinantes (puntos 14 a 17)</a></li><li class="l2"><a href="#84-situaciones-problematicas-puntos-18-a-21">8.4 Situaciones problemáticas (puntos 18 a 21)</a></li><li class="l2"><a href="#85-los-dos-patrones-que-se-repiten-en-todo-el-tp">8.5 Los dos patrones que se repiten en todo el TP</a></li></ol></nav>
+
+<p><strong>Fuente:</strong> las 5 clases transcriptas (10/09, 16/10, 23/10, 30/10 y 6/11) + el Trabajo Práctico de Vectores, Matrices y Determinantes.
+<strong>Contenido:</strong> Vectores → Matrices → Determinantes → Aplicaciones (sistemas y pedidos) → Definiciones para la teoría → Chuleta final.</p>
+<hr />
+<h1 id="0-como-es-el-segundo-parcial">0. Cómo es el segundo parcial</h1>
+<blockquote>
+<p><strong>Lo que anticipó la profesora en clase (no es el examen literal, pero marca el formato).</strong></p>
+</blockquote>
+<ul>
+<li><strong>Entra teoría.</strong> Es <strong>un punto de teoría dividido en 4 subpuntos (A, B, C, D)</strong> para responder <strong>Verdadero/Falso</strong> o <strong>elegir la opción correcta</strong>. <strong>No hay preguntas de teoría a desarrollar.</strong></li>
+<li><strong>También se evalúa teoría aplicada dentro de la práctica.</strong> Ejemplos que dio: <em>"resuelva A + B y al resultado aplíquele la opuesta"</em>, <em>"resten A − B y al resultado apliquen la traspuesta"</em>, <em>"multipliquen A · B y apliquen un caso de equivalencia"</em>.</li>
+<li><strong>Se corrige el desarrollo, no solo el resultado.</strong> Un ejercicio sin procedimiento se considera incompleto: hay que mostrar qué fila o columna se eligió en Laplace, las matrices de 2×2, o las dos filas agregadas en Sarrus; en la multiplicación, todo el proceso.</li>
+<li><strong>Llevar calculadora.</strong></li>
+<li>La matriz más grande del examen es <strong>3×3</strong> (en el TP hay una 4×4 sin ceros, solo para practicar).</li>
+<li><strong>Fechas:</strong> segundo parcial <strong>20/11</strong>; recuperatorio <strong>27/11</strong>.</li>
+<li><strong>En vectores siempre se pide graficar</strong>: "todos los temas que hacen a vectores se tienen que terminar graficando".</li>
+<li><strong>El cuadrante</strong> donde cae un vector <strong>no es importante</strong> (no se evalúa).</li>
+<li>La <strong>ecuación de la recta no entra</strong> como ejercicio (sí hay que reconocer rectas horizontales, verticales e inclinadas).</li>
+</ul>
+<hr />
+<h1 id="1-vectores">1. Vectores</h1>
+<h2 id="11-magnitud-escalar-y-magnitud-vectorial">1.1 Magnitud escalar y magnitud vectorial</h2>
+<ul>
+<li><strong>Magnitud escalar:</strong> se define solo con un <strong>número acompañado de una unidad de medida</strong>. No tiene dirección ni sentido.</li>
+<li>Ejemplos: 15 °C, 18:45 (hora), 3 km, el tiempo, la energía, la superficie, la temperatura, la capacidad.</li>
+<li><strong>Magnitud vectorial:</strong> necesita <strong>número + unidad + dirección + sentido</strong>.</li>
+<li>Ejemplos: la fuerza, la velocidad, un campo magnético, un campo eléctrico, la aceleración.</li>
+</ul>
+<blockquote>
+<p><strong>El ejemplo del micro a Pilar:</strong> se conocía la capacidad del micro, la velocidad (60 km/h), la distancia (100 km) y el tiempo (1 hora y media), pero <strong>faltaba saber en qué vereda esperar</strong>. Ese dato que falta es el <strong>sentido</strong>: por eso la información era escalar y no vectorial.</p>
+</blockquote>
+<h2 id="12-que-es-un-vector">1.2 Qué es un vector</h2>
+<ul>
+<li>Es una <strong>flecha dirigida</strong> (un <strong>segmento orientado</strong>) que va hacia diferentes direcciones.</li>
+<li>Para ser vector tiene que tener <strong>tres características</strong>:</li>
+<li><strong>Módulo (magnitud):</strong> el tamaño de la flecha, cuánto mide.</li>
+<li><strong>Dirección:</strong> la recta sobre la que está, su inclinación.</li>
+<li><strong>Sentido:</strong> hacia dónde apunta la punta de la flecha.</li>
+<li>Se nombra con <strong>letra mayúscula</strong> (A, B, D…) y se escribe como <strong>par ordenado</strong>: <em>(x, y)</em>.</li>
+</ul>
+<h2 id="13-componentes">1.3 Componentes</h2>
+<ul>
+<li><strong>Componente x (horizontal):</strong> cuánto se desplaza a la derecha (positivo) o a la izquierda (negativo).</li>
+<li><strong>Componente y (vertical):</strong> cuánto se desplaza hacia arriba (positivo) o hacia abajo (negativo).</li>
+<li>En un par ordenado <strong>el primer dato siempre es la x</strong> y <strong>el segundo siempre es la y</strong>.</li>
+<li>En el espacio existen vectores de tres componentes (x, y, z); en esta materia se trabaja <strong>solo en el plano</strong>.</li>
+</ul>
+<h2 id="14-como-se-ubica-en-el-plano-cartesiano">1.4 Cómo se ubica en el plano cartesiano</h2>
+<ol>
+<li><strong>Todo vector nace en el origen (0,0)</strong> — la única excepción es cuando se está sumando (método punta-cola).</li>
+<li>Se cuentan los espacios en <strong>x</strong> y luego en <strong>y</strong> (o al revés, pero siempre partiendo del origen) y se marca el punto.</li>
+<li>Desde el origen se traza una línea hasta ese punto y se le pone <strong>punta de flecha</strong>.</li>
+<li>Recién ahí el par ordenado <strong>se convierte en vector</strong>.</li>
+</ol>
+<blockquote>
+<p>Si el ejercicio pide <strong>dos o más vectores</strong>, se pueden graficar <strong>en el mismo plano</strong> con colores distintos. No hace falta un eje cartesiano para cada uno.</p>
+</blockquote>
+<h2 id="15-modulo-del-vector-teorema-de-pitagoras">1.5 Módulo del vector: teorema de Pitágoras</h2>
+<ul>
+<li><strong>Definición de Pitágoras:</strong> el cuadrado de la <strong>hipotenusa</strong> es igual a la suma de los cuadrados de los <strong>catetos</strong>.</li>
+<li>La <strong>hipotenusa</strong> es siempre el <strong>lado más largo</strong> del triángulo rectángulo, y en estos ejercicios <strong>es el vector</strong>.</li>
+<li>Para calcular la magnitud se despeja con <strong>raíz cuadrada</strong>:</li>
+</ul>
+<div class="formula">|v| = √(x² + y²)</div>
+
+<ul>
+<li>El resultado <strong>siempre es positivo</strong>, porque es una <strong>medida</strong> y se trabaja entre <strong>módulos</strong> (valor absoluto).</li>
+<li><strong>No importa el signo de la componente</strong>: (−4)² = 4² = 16.</li>
+<li>El triángulo rectángulo se arma con <strong>los catetos iguales a las componentes</strong>; se puede contar en cuadraditos o tomar los datos del enunciado (es lo mismo).</li>
+<li>El resultado se expresa en <strong>unidades de medida</strong> (no se sabe si son metros, km, etc.).</li>
+</ul>
+<blockquote>
+<p><strong>Trigonometría (vista en clase, no evaluable):</strong> en un triángulo rectángulo uno de los ángulos mide 90° y los otros dos suman 90° (total 180°). <strong>Seno = opuesto / hipotenusa</strong>; <strong>coseno = adyacente / hipotenusa</strong>; <strong>tangente = opuesto / adyacente</strong>. Sirve para calcular ángulos, tema que no entra.</p>
+</blockquote>
+<h3>Ejemplos resueltos de módulo</h3>
+<table>
+<thead>
+<tr>
+<th>Vector</th>
+<th>Cálculo</th>
+<th>Módulo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(3, 4)</td>
+<td>√(3² + 4²) = √(9 + 16) = √25</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td>(−5, 2)</td>
+<td>√(25 + 4)</td>
+<td><strong>√29 ≈ 5,38</strong></td>
+</tr>
+<tr>
+<td>(2, −4)</td>
+<td>√(4 + 16)</td>
+<td><strong>√20 ≈ 4,47</strong></td>
+</tr>
+<tr>
+<td>vector del ejemplo</td>
+<td>√(49 + 9)</td>
+<td><strong>√58 ≈ 7,61</strong></td>
+</tr>
+<tr>
+<td>(4, 4)</td>
+<td>√(16 + 16) = √32</td>
+<td><strong>5,65</strong></td>
+</tr>
+<tr>
+<td>campo de 100 m × 50 m</td>
+<td>√(100² + 50²) = √12500</td>
+<td><strong>111,8</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="16-suma-de-vectores">1.6 Suma de vectores</h2>
+<ul>
+<li><strong>Método del recorrido (punta-cola):</strong> el primer vector sale del origen; el segundo <strong>empieza en la punta de flecha del primero</strong>; el tercero en la punta del segundo, y así.</li>
+<li>La <strong>respuesta es un punto en el plano</strong>: el punto final del recorrido.</li>
+<li><strong>Verificación algebraica:</strong> se suman las componentes (todas las x y todas las y) y el resultado tiene que coincidir con el punto final del dibujo.</li>
+<li><strong>La suma es conmutativa:</strong> A + B y B + A llegan <strong>al mismo punto</strong>, pero el <strong>recorrido (el dibujo) cambia</strong>. Si el enunciado dice A + B, hay que dibujar primero A.</li>
+<li><strong>En la suma no se usan raíces</strong>: solo se suman componentes y se hace el recorrido.</li>
+<li>Se pueden sumar tres o más vectores.</li>
+</ul>
+<h3>Signos de los puntos cardinales</h3>
+<table>
+<thead>
+<tr>
+<th>Dirección</th>
+<th>Eje</th>
+<th>Signo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Este (derecha)</td>
+<td>x</td>
+<td><strong>+</strong></td>
+</tr>
+<tr>
+<td>Oeste (izquierda)</td>
+<td>x</td>
+<td><strong>−</strong></td>
+</tr>
+<tr>
+<td>Norte (arriba)</td>
+<td>y</td>
+<td><strong>+</strong></td>
+</tr>
+<tr>
+<td>Sur (abajo)</td>
+<td>y</td>
+<td><strong>−</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Ejemplos</h3>
+<ul>
+<li>Estudiante: 4 m al este y 3 al norte → <strong>A = (4, 3)</strong>; luego 2 m al oeste y 5 al sur → <strong>B = (−2, −5)</strong> → A + B = (4 + (−2), 3 + (−5)) = <strong>(2, −2)</strong></li>
+<li>Recorrido con parada: de mi casa a la tuya 3 al este y 5 al norte → (3, 5); de tu casa a lo de Romi 2 al oeste y 1 al sur → (−2, −1) → total = (3, 5) + (−2, −1) = <strong>(1, 4)</strong></li>
+<li><strong>Cuidado con los signos:</strong> no es 3 + 7 = 10, es <strong>−3 + 7 = 4</strong>.</li>
+</ul>
+<h2 id="17-producto-de-un-vector-por-un-escalar">1.7 Producto de un vector por un escalar</h2>
+<ul>
+<li><strong>Escalar</strong> = un número (en estos ejercicios va <strong>sin unidad de medida</strong>, para que tenga sentido).</li>
+<li>Se aplica <strong>propiedad distributiva</strong>: se multiplica el escalar por <strong>cada componente</strong>.</li>
+</ul>
+<div class="formula">k · (x, y) = (k·x, k·y)</div>
+
+<ul>
+<li><strong>La respuesta es otro vector</strong> (un punto en el plano), y se grafica <strong>desde el origen</strong>. No se suma al vector original: se lo pasa por encima.</li>
+<li>Si el escalar es <strong>mayor que 1</strong>, el vector <strong>se alarga</strong> (duplica, triplica…); si está <strong>entre 0 y 1</strong>, se acorta.</li>
+<li>Si el escalar es <strong>negativo</strong>, cambia el <strong>sentido</strong> (va para el lado contrario, a otro cuadrante) → son <strong>vectores opuestos</strong>: misma magnitud y misma dirección, sentido contrario.</li>
+<li>La <strong>dirección se mantiene</strong> (se respetan los signos); lo que cambia es el <strong>módulo</strong>.</li>
+</ul>
+<h3>Ejemplos</h3>
+<ul>
+<li>(3, 2) · 2 = <strong>(6, 4)</strong> — se duplica el tamaño, mismo cuadrante.</li>
+<li>(−5, 3) · 2 = <strong>(−10, 6)</strong> — se duplica el tamaño, respetando el signo (no da 10).</li>
+<li><strong>Situación problemática:</strong> un repartidor se mueve con velocidad (2, 1) (2 cuadras al este y 1 al norte por minuto). Si mantiene ese ritmo 3 minutos:
+  → <strong>3 · (2, 1) = (6, 3)</strong>: se desplazó 6 cuadras al este y 3 al norte</li>
+</ul>
+<h2 id="18-distancia-entre-dos-puntos">1.8 Distancia entre dos puntos</h2>
+<ul>
+<li>Es la <strong>medida de longitud del segmento</strong> que une dos puntos.</li>
+<li><strong>Se grafican PUNTOS</strong>, no vectores (el título del ejercicio lo indica).</li>
+<li>Hay <strong>tres situaciones</strong>:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Tipo de recta</th>
+<th>Cómo se calcula</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Horizontal</strong> (paralela al eje x)</td>
+<td>resta de las x (sin fórmula)</td>
+<td>(2,1) y (5,1) → <strong>3</strong></td>
+</tr>
+<tr>
+<td><strong>Vertical</strong> (paralela al eje y)</td>
+<td>resta de las y (sin fórmula)</td>
+<td>(−3,4) y (−3,−2) → <strong>6</strong></td>
+</tr>
+<tr>
+<td><strong>Inclinada</strong></td>
+<td><strong>Pitágoras</strong></td>
+<td>ver fórmula</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Regla de la resta:</strong> siempre <strong>el de abajo menos el de arriba (B − A)</strong>. Como después se eleva al cuadrado, el resultado da positivo igual, pero conviene respetar el orden para no confundirse.</li>
+<li><strong>Fórmula general:</strong></li>
+</ul>
+<div class="formula">d = √((x₂ − x₁)² + (y₂ − y₁)²)</div>
+
+<ul>
+<li>Es la misma fórmula de Pitágoras: los catetos son las diferencias de x y de y.</li>
+<li><strong>La respuesta es un número con unidad de medida</strong> (nunca un par ordenado).</li>
+<li>Si la recta es vertical y la resta da negativa, se toma el <strong>módulo</strong> porque es una distancia.</li>
+</ul>
+<h3>Ejemplos</h3>
+<ul>
+<li>Recta horizontal: A(2,1), B(5,1) → 5 − 2 = <strong>3 unidades</strong>.</li>
+<li>Recta vertical: C(−3,4), D(−3,−2) → −2 − 4 = −6 → <strong>6 unidades</strong>.</li>
+<li>Recta inclinada: C(−3,−2) y D(3,5) → diferencias 6 y 7 → √(36+49) = √85 ≈ <strong>9,22</strong>.</li>
+<li>Montaña rusa (2,5) y autitos chocadores (10,9) → diferencias 8 y 4 → √(64+16) = √80 ≈ <strong>8,94</strong>.</li>
+</ul>
+<h2 id="19-punto-medio-entre-dos-puntos">1.9 Punto medio entre dos puntos</h2>
+<ul>
+<li>Es "el promedio": <strong>sumo los datos y divido por la cantidad de datos</strong>.</li>
+<li><strong>Fórmula:</strong></li>
+</ul>
+<div class="formula">M = ( (x₁ + x₂) / 2 , (y₁ + y₂) / 2 )</div>
+
+<ul>
+<li><strong>La respuesta es un punto en el plano</strong> (un par ordenado), <strong>no</strong> una medida.</li>
+<li>Puede dar <strong>fracciones o decimales</strong>: está bien.</li>
+<li><strong>Verificación:</strong> al graficarlo tiene que quedar <strong>exactamente a la mitad</strong> del segmento que une los dos puntos.</li>
+</ul>
+<h3>Ejemplos</h3>
+<ul>
+<li>Datos 2 y 8 → (2 + 8) / 2 = <strong>5</strong> (está a la mitad en la recta numérica).</li>
+<li>(1, 2) y (9, 6) → <strong>(5, 4)</strong>.</li>
+<li>(−3, 6) y (1, 2) → (−2/2, 8/2) = <strong>(−1, 4)</strong>.</li>
+<li>(−3, −5) y (5, 8) → (2/2, 3/2) = <strong>(1; 1,5)</strong>.</li>
+</ul>
+<h2 id="110-que-se-responde-en-cada-tipo-de-ejercicio-muy-importante">1.10 Qué se responde en cada tipo de ejercicio (muy importante)</h2>
+<table>
+<thead>
+<tr>
+<th>El ejercicio pide</th>
+<th>Qué se grafica</th>
+<th>Qué se responde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Magnitud / módulo</strong></td>
+<td>un vector</td>
+<td><strong>número + unidad de medida</strong></td>
+</tr>
+<tr>
+<td><strong>Suma de vectores</strong></td>
+<td>vectores (recorrido punta-cola)</td>
+<td><strong>un punto del plano</strong></td>
+</tr>
+<tr>
+<td><strong>Producto por un escalar</strong></td>
+<td>dos vectores (original y resultante)</td>
+<td><strong>un punto del plano</strong></td>
+</tr>
+<tr>
+<td><strong>Distancia entre dos puntos</strong></td>
+<td>dos puntos</td>
+<td><strong>número + unidad de medida</strong></td>
+</tr>
+<tr>
+<td><strong>Punto medio</strong></td>
+<td>dos puntos y el punto medio</td>
+<td><strong>un punto del plano</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="111-ecuacion-de-la-recta-no-entra-en-el-examen">1.11 Ecuación de la recta (NO entra en el examen)</h2>
+<ul>
+<li>Forma: <strong>y = m·x + b</strong>, donde <strong>m</strong> es la pendiente (inclinación) y <strong>b</strong> es la ordenada al origen (dónde corta al eje y).</li>
+<li><strong>Ejemplo del taxi:</strong> bajada de bandera $200 + $10 por km → <strong>y = 10x + 200</strong>. La y (costo total) es la <strong>variable dependiente</strong>; la x (kilómetros) es la <strong>variable independiente</strong>.</li>
+<li>Sirve para mostrar <strong>relaciones lineales</strong> entre dos cantidades reales.</li>
+<li><strong>Lo que sí hay que saber:</strong> las rectas pueden ser <strong>horizontales</strong> (paralelas al eje x), <strong>verticales</strong> (paralelas al eje y) o <strong>inclinadas</strong>. La ecuación como ejercicio no se toma.</li>
+</ul>
+<hr />
+<h1 id="2-matrices">2. Matrices</h1>
+<h2 id="21-que-es-una-matriz-y-como-se-leen-sus-elementos">2.1 Qué es una matriz y cómo se leen sus elementos</h2>
+<ul>
+<li>Es un <strong>grupo de números ordenados en filas y columnas</strong>, encerrados entre corchetes o paréntesis, identificado con una <strong>letra mayúscula</strong>.</li>
+<li><strong>Fila:</strong> línea horizontal (como un renglón de una hoja).</li>
+<li><strong>Columna:</strong> línea vertical.</li>
+<li><strong>Siempre se dice primero fila y después columna.</strong> Cada ejercicio se trabaja en ese orden.</li>
+<li>Cada número tiene una <strong>posición</strong>: a(ij) → <strong>i = fila</strong>, <strong>j = columna</strong>.</li>
+<li>Posición <strong>21</strong> = fila 2, columna 1.</li>
+<li>Posición <strong>34</strong> = fila 3, columna 4 (en una matriz 3×4, es el último elemento).</li>
+<li>Posición <strong>43</strong> en una matriz de 3×4 <strong>no existe</strong> (no se inventa ni se da vuelta para que convenga).</li>
+<li>Los subíndices <strong>no se escriben</strong> en la matriz: solo se usan para ubicar los datos.</li>
+<li>El <strong>último elemento</strong> de la matriz indica su orden.</li>
+</ul>
+<h2 id="22-orden-o-tamano">2.2 Orden o tamaño</h2>
+<ul>
+<li>Se escribe <strong>m × n</strong>: <strong>m filas</strong> y <strong>n columnas</strong>.</li>
+<li><strong>No es una multiplicación</strong>: 3 × 4 <strong>no significa 12</strong>; significa 3 filas y 4 columnas.</li>
+<li>Es el dato más importante para saber <strong>si se pueden sumar, restar o multiplicar</strong>.</li>
+</ul>
+<h2 id="23-clasificacion">2.3 Clasificación</h2>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Definición</th>
+<th>Ejemplo de orden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rectangular</strong></td>
+<td>distinta cantidad de filas y de columnas</td>
+<td>2×3, 3×4, 4×2</td>
+</tr>
+<tr>
+<td><strong>Cuadrada</strong></td>
+<td><strong>igual</strong> cantidad de filas y de columnas</td>
+<td>2×2, 3×3, 4×4, 5×5</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>No importa si el número es par o impar: solo que filas = columnas.</li>
+<li>Geométricamente, la rectangular "se parece a un rectángulo" y la cuadrada a un cuadrado.</li>
+<li><strong>Ventaja de las cuadradas:</strong> se pueden <strong>sumar, restar, multiplicar y calcular su determinante</strong> sin revisar condiciones.</li>
+<li><strong>Clasificación de las matrices cuadradas</strong> (según su diagonal principal):</li>
+<li><strong>Diagonal:</strong> todos los elementos fuera de la diagonal principal son cero.</li>
+<li><strong>Escalar:</strong> diagonal y todos los elementos de la diagonal iguales.</li>
+<li><strong>Identidad (I):</strong> diagonal y todos los elementos de la diagonal valen 1.</li>
+<li><strong>Triangular superior:</strong> ceros por debajo de la diagonal.</li>
+<li><strong>Triangular inferior:</strong> ceros por encima de la diagonal.</li>
+</ul>
+<h2 id="24-suma-y-resta-de-matrices">2.4 Suma y resta de matrices</h2>
+<ul>
+<li><strong>Condición (la misma para las dos):</strong> que las matrices tengan <strong>el mismo orden / el mismo tamaño</strong>. No hace falta que sean cuadradas, pero sí iguales entre sí.</li>
+<li><strong>Procedimiento:</strong> se opera <strong>posición por posición</strong>. Lo que está en la posición 11 se suma/resta con lo de la posición 11 y el resultado va en la posición 11.</li>
+<li><strong>El resultado tiene el mismo orden</strong> que las matrices originales.</li>
+<li><strong>Se pueden sumar tres o más matrices</strong> (más cuentas en la misma posición).</li>
+<li><strong>Al leer una matriz en voz alta o escribirla, se lee por filas</strong> (para que todos hablemos de lo mismo).</li>
+</ul>
+<h3>Propiedades</h3>
+<ul>
+<li><strong>La suma es conmutativa:</strong> A + B = B + A.</li>
+<li><strong>La resta NO es conmutativa:</strong> A − B y B − A dan <strong>matrices opuestas</strong>.</li>
+<li><strong>Cuidado con los signos en la resta:</strong> si hay 4 y −3, la cuenta es <strong>4 − (−3) = 7</strong>, no 4 − 3. Conviene escribir el paso intermedio (aunque no sea obligatorio) para no confundirse.</li>
+<li><strong>No hace falta mostrar el procedimiento en la suma</strong> (se puede ir directo al resultado), pero <strong>sí conviene en la resta</strong> porque el signo cambia.</li>
+</ul>
+<h2 id="25-matriz-opuesta">2.5 Matriz opuesta</h2>
+<ul>
+<li>La opuesta de una matriz <strong>A</strong>, que se anota <strong>−A</strong>, es la que resulta de <strong>cambiar el signo de cada elemento</strong>.</li>
+<li><strong>A + (−A) = matriz nula.</strong></li>
+<li><strong>No confundir:</strong></li>
+<li><strong>Opuesta:</strong> mismos valores con <strong>signo contrario</strong>.</li>
+<li><strong>Simétrica:</strong> <strong>idéntica</strong> a su traspuesta (A = Aᵗ).</li>
+</ul>
+<h2 id="26-multiplicacion-de-matrices">2.6 Multiplicación de matrices</h2>
+<h3>Condición (distinta a la de la suma)</h3>
+<div class="formula">Columnas de la primera matriz = Filas de la segunda matriz</div>
+
+<ul>
+<li>Si eso no se cumple, <strong>no se puede multiplicar</strong>.</li>
+<li><strong>No importa</strong> que tengan distinto tamaño en todo lo demás.</li>
+</ul>
+<h3>Tamaño del resultado</h3>
+<div class="formula">Filas de la primera × Columnas de la segunda</div>
+
+<ul>
+<li>Son <strong>los números que quedaron afuera</strong> en la condición (los del medio se "cancelan").</li>
+<li>Ejemplos: (2×3)·(3×5) → <strong>2×5</strong>; (3×2)·(2×4) → <strong>3×4</strong>; (3×2)·(2×3) → <strong>3×3</strong>; dos cuadradas del mismo orden → <strong>mismo orden</strong>.</li>
+</ul>
+<h3>Procedimiento: fila por columna</h3>
+<ol>
+<li>Se toma la <strong>primera fila</strong> de la primera matriz.</li>
+<li>Se la multiplica <strong>elemento a elemento</strong> con la <strong>primera columna</strong> de la segunda matriz y se <strong>suman</strong> los productos. Ese es el elemento de la posición 11 del resultado.</li>
+<li>La <strong>misma fila</strong> se multiplica por la <strong>segunda columna</strong>, luego por la tercera, etc. <strong>No se baja de renglón</strong> hasta haber pasado por todas las columnas.</li>
+<li>Se repite con la segunda fila, la tercera, etc.</li>
+</ol>
+<ul>
+<li><strong>La multiplicación es una gran suma</strong>: cada término se une con un "+" y se resuelve al final.</li>
+<li>Si un producto da 0, <strong>el 0 se escribe igual</strong>: ocupa un lugar en la matriz.</li>
+<li><strong>Hay dos formas de resolverlo</strong> (las dos son válidas):</li>
+<li>Armando la matriz con todas las cuentas entre paréntesis y resolviendo después.</li>
+<li>Directo, ubicando cada resultado en la matriz de letras (A, B, C…) y reemplazando al final. <em>Es la más rápida, pero hay que ubicar los números con cuidado.</em></li>
+</ul>
+<h3>Propiedades</h3>
+<ul>
+<li><strong>No es conmutativa:</strong> <strong>A · B ≠ B · A</strong>. El resultado cambia.</li>
+<li><strong>A veces se puede invertir el orden y a veces no.</strong> Depende de los tamaños: (2×3)·(3×4) se puede, pero (3×4)·(2×3) no.</li>
+<li>Cuando el resultado de A·B y de B·A son distintos, <strong>no es que esté mal</strong>: son operaciones diferentes.</li>
+<li><strong>En el examen hay que hacer todo el proceso</strong> de la multiplicación: no se puede poner solo el resultado.</li>
+</ul>
+<h2 id="27-matriz-traspuesta">2.7 Matriz traspuesta</h2>
+<ul>
+<li>Se obtiene <strong>cambiando filas por columnas</strong>: la fila 1 pasa a ser la columna 1, la fila 2 la columna 2, etc. Se anota <strong>Aᵗ</strong>.</li>
+<li><strong>Cambia el orden:</strong> 3×2 → <strong>2×3</strong>.</li>
+<li><strong>No cambia el orden interno de los datos</strong>, solo su ubicación.</li>
+<li><strong>¿Para qué sirve?</strong></li>
+<li>Permite <strong>sumar, restar o multiplicar</strong> matrices que con su tamaño original no se podían (porque cambia el tamaño).</li>
+<li>En los problemas, sirve para <strong>acomodar los datos</strong> y que la multiplicación "tenga sentido" (no mezclar peras con manzanas).</li>
+<li>Si una matriz es <strong>igual a su traspuesta</strong> (A = Aᵗ) se llama <strong>simétrica</strong>; eso solo puede pasar en matrices cuadradas.</li>
+</ul>
+<h2 id="28-matriz-nula">2.8 Matriz nula</h2>
+<ul>
+<li>Es la matriz en la que <strong>todos sus elementos son cero</strong>.</li>
+<li>Existe <strong>una para cada orden</strong> (2×2, 3×3, 3×2…).</li>
+<li>Es el <strong>elemento neutro de la suma</strong>: A + O = A.</li>
+<li>El <strong>cero es un número</strong>, no "nada": ocupa un lugar y se escribe igual.</li>
+</ul>
+<h2 id="29-producto-de-una-matriz-por-un-escalar">2.9 Producto de una matriz por un escalar</h2>
+<ul>
+<li><strong>Escalar</strong> = un número con unidad de medida (concepto ya visto en vectores).</li>
+<li>Se aplica <strong>propiedad distributiva</strong>: se multiplica el escalar <strong>por cada elemento</strong> de la matriz.</li>
+<li><strong>El resultado conserva el mismo orden</strong> de la matriz original.</li>
+<li>Es la misma lógica que el producto de un vector por un escalar.</li>
+<li>Al resultado se le puede aplicar después otra operación (por ejemplo, la traspuesta).</li>
+</ul>
+<h2 id="210-los-cuatro-casos-de-equivalencia-de-matrices">2.10 Los cuatro casos de equivalencia de matrices</h2>
+<p>Una <strong>matriz equivalente</strong> se obtiene aplicando una transformación a las filas o a las columnas de la matriz original.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Caso</th>
+<th>Qué se hace</th>
+<th>¿Cambia el orden?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Intercambiar</strong></td>
+<td>se cambian entre sí <strong>dos filas</strong> o <strong>dos columnas</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Multiplicar</strong></td>
+<td>se multiplica <strong>una fila o una columna</strong> por un <strong>número distinto de cero</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Sumar</strong></td>
+<td>se suma a <strong>una fila otra fila</strong> (o a una columna otra columna)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Añadir / eliminar</strong></td>
+<td>se agrega o se quita <strong>una fila o columna nula</strong></td>
+<td><strong>Sí</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>En el caso 2, <strong>no se puede multiplicar por cero</strong>: anularía toda la fila o columna.</li>
+<li>En el caso 3, <strong>la fila que se usa para sumar no cambia</strong>; solo cambia la fila que recibe la suma.</li>
+<li>En el caso 4 se agrega <strong>al final</strong>, y <strong>o se agrega fila o se agrega columna</strong> (no las dos). Se puede usar, por ejemplo, para formar una matriz diagonal.</li>
+<li><strong>Notación habitual:</strong> flecha de ida y vuelta entre las filas que se intercambian; "3·F2" para multiplicar la fila 2 por 3; "F2 + F3" para sumarle la fila 3 a la fila 2.</li>
+</ul>
+<h2 id="211-tabla-resumen-de-condiciones">2.11 Tabla resumen de condiciones</h2>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Condición</th>
+<th>Orden del resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A + B</strong></td>
+<td>mismo orden</td>
+<td>el mismo</td>
+</tr>
+<tr>
+<td><strong>A − B</strong></td>
+<td>mismo orden</td>
+<td>el mismo</td>
+</tr>
+<tr>
+<td><strong>A · B</strong></td>
+<td>columnas de A = filas de B</td>
+<td>filas de A × columnas de B</td>
+</tr>
+<tr>
+<td><strong>k · A</strong></td>
+<td>siempre</td>
+<td>el mismo de A</td>
+</tr>
+<tr>
+<td><strong>Aᵗ</strong></td>
+<td>siempre</td>
+<td>se invierte (m×n → n×m)</td>
+</tr>
+<tr>
+<td><strong>det(A)</strong></td>
+<td>solo cuadradas</td>
+<td>un número</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="3-determinantes">3. Determinantes</h1>
+<h2 id="31-que-es-un-determinante">3.1 Qué es un determinante</h2>
+<ul>
+<li>Es un <strong>cálculo</strong>: a partir de <strong>toda la matriz</strong> se obtiene <strong>un solo número</strong>.</li>
+<li><strong>No es una matriz</strong> y <strong>no es el inverso</strong> de nada.</li>
+<li>Solo se calcula en <strong>matrices cuadradas</strong>.</li>
+<li>En el examen se corrige <strong>todo el procedimiento</strong>.</li>
+</ul>
+<h2 id="32-determinante-de-una-matriz-de-22">3.2 Determinante de una matriz de 2×2</h2>
+<ul>
+<li>Se multiplican las diagonales y se restan:</li>
+</ul>
+<div class="formula">det = (a · d) − (b · c)</div>
+
+<ul>
+<li>Es <strong>exactamente el mismo cálculo</strong> que se usaba en ecuaciones con el método de Cramer (A·D − B·C).</li>
+<li><strong>Cuidado con el signo:</strong> si el segundo producto da negativo, la resta se convierte en suma. Ejemplo: 15 − (−10) = <strong>25</strong>.</li>
+<li><strong>La resta va siempre en ese orden</strong>: primero la diagonal principal menos la secundaria.</li>
+</ul>
+<h2 id="33-regla-de-sarrus-solo-para-33">3.3 Regla de Sarrus (solo para 3×3)</h2>
+<p><strong>Paso 1 — Repetir las dos primeras filas debajo de la matriz</strong> (o las dos primeras columnas a la derecha).</p>
+<p><strong>Paso 2 — Multiplicar las diagonales:</strong></p>
+<ul>
+<li><strong>Tres diagonales ↘ (de izquierda hacia abajo):</strong> arrancan en la primera fila, en las columnas 1, 2 y 3. <strong>Se suman.</strong></li>
+<li><strong>Tres diagonales ↙ (de derecha hacia abajo):</strong> arrancan en la última columna, en las filas 1, 2 y 3. <strong>Se restan.</strong></li>
+</ul>
+<div class="formula">det = (suma de las ↘) − (suma de las ↙)</div>
+
+<ul>
+<li><strong>Poner paréntesis en cada grupo</strong>: los signos son el principal motivo de error.</li>
+<li>La <strong>única resta</strong> de todo el cálculo es la que separa los dos grupos; adentro todo son multiplicaciones.</li>
+<li>Se puede hacer repitiendo <strong>filas abajo</strong> o <strong>columnas a la derecha</strong>: da lo mismo.</li>
+<li>Con <strong>columnas a la derecha</strong> las líneas quedan <strong>rectas</strong> y es más difícil equivocarse.</li>
+<li>Con <strong>filas abajo</strong>, las diagonales que se salen por el borde derecho "vuelven a entrar" por la izquierda: el resultado es el mismo, pero visualmente confunde más.</li>
+<li><strong>Consejo:</strong> marcar las seis diagonales con dos colores (o resaltador) para no perder ninguna.</li>
+</ul>
+<h3>Ejemplos vistos en clase</h3>
+<table>
+<thead>
+<tr>
+<th>Determinante</th>
+<th>↘</th>
+<th>↙</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ejemplo de clase</td>
+<td>80 + 0 + 0 + 8 = 88</td>
+<td>96 − 25 + 0 = 71</td>
+<td><strong>17</strong></td>
+</tr>
+<tr>
+<td>primera matriz del TP</td>
+<td>6 − 40 − 90 = −124</td>
+<td>−48 + 45 − 10 = −13</td>
+<td><strong>−111</strong></td>
+</tr>
+<tr>
+<td>segunda matriz del TP</td>
+<td>(suma)</td>
+<td>(suma)</td>
+<td><strong>24</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="34-regla-de-laplace">3.4 Regla de Laplace</h2>
+<ul>
+<li>Sirve para <strong>3×3 en adelante</strong>, y es <strong>obligatoria</strong> para <strong>4×4 o más</strong>.</li>
+<li><strong>Idea central:</strong> se <strong>baja una dimensión</strong>. Una matriz de 3×3 se convierte en tres matrices de 2×2; una de 4×4, en cuatro matrices de 3×3 (y cada una, a su vez, en tres de 2×2).</li>
+</ul>
+<h3>La matriz de signos</h3>
+<ul>
+<li><strong>Arranca siempre con "+"</strong> y va alternando:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>−</td>
+<td>+</td>
+</tr>
+<tr>
+<td>−</td>
+<td>+</td>
+<td>−</td>
+</tr>
+<tr>
+<td>+</td>
+<td>−</td>
+<td>+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>De dónde sale:</strong> se suman los subíndices de la posición (i + j). Si da <strong>par → +</strong>; si da <strong>impar → −</strong>. (Ej.: posición 11 → 2, par, "+"; posición 12 → 3, impar, "−"; posición 23 → 5, impar, "−"; posición 31 → 4, par, "+".)</li>
+<li>Hay que <strong>armarla siempre</strong>; en el examen la tenés que escribir vos.</li>
+</ul>
+<h3>Procedimiento</h3>
+<ol>
+<li>Armar la matriz de signos.</li>
+<li><strong>Elegir UNA fila o UNA columna</strong> (cualquiera de las seis opciones es válida).</li>
+<li>Para <strong>cada elemento</strong> de esa fila o columna: <strong>signo</strong> (según la matriz de signos) <strong>× elemento × determinante de la matriz que queda al tachar su fila y su columna</strong>.</li>
+<li>Sumar los términos.</li>
+</ol>
+<ul>
+<li><strong>Cantidad de términos:</strong> una matriz de <strong>n×n</strong> genera <strong>n</strong> términos.</li>
+<li><strong>Atajo fundamental:</strong> elegir la fila o columna con <strong>más ceros</strong>, porque el <strong>cero anula el término completo</strong> (no hay que calcular ese menor).</li>
+<li>El cero <strong>se escribe igual</strong> (con su signo), pero no se calcula.</li>
+<li><strong>Signos del término:</strong> si el elemento ya es negativo y el signo de la posición también, se multiplican (por ejemplo, (−1)·(−1) = +1). No confundir con "el número es negativo, entonces el término es negativo".</li>
+</ul>
+<h3>Ejemplos vistos en clase</h3>
+<ul>
+<li>Matriz 3×3 elegida la <strong>primera fila</strong> → <strong>35</strong>. Verificado también por la <strong>segunda fila</strong> y por la <strong>tercera columna</strong>: da lo mismo.</li>
+<li>Otra 3×3 → <strong>28</strong> (algunos llegaron a otro número por un error de signos).</li>
+<li>Matriz de <strong>4×4</strong> elegida la <strong>tercera columna</strong> (con ceros) → <strong>−12</strong>.</li>
+<li>Matriz de <strong>4×4</strong> con tres términos → se resuelve bajando a 3×3 y después a 2×2.</li>
+</ul>
+<h2 id="35-sarrus-o-laplace">3.5 ¿Sarrus o Laplace?</h2>
+<table>
+<thead>
+<tr>
+<th>Tamaño de la matriz</th>
+<th>Método recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2×2</td>
+<td>(a·d) − (b·c)</td>
+</tr>
+<tr>
+<td>3×3</td>
+<td><strong>Sarrus</strong> (más rápido) o <strong>Laplace</strong> (cualquiera de los dos)</td>
+</tr>
+<tr>
+<td>4×4 o más</td>
+<td><strong>Laplace</strong> (obligatorio)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Los dos métodos dan el mismo resultado.</strong> Si tenés tiempo, se puede verificar uno con el otro.</li>
+<li>En el parcial, <strong>lo importante es el desarrollo</strong>, no solo el número final.</li>
+</ul>
+<hr />
+<h1 id="4-aplicaciones-situaciones-problematicas">4. Aplicaciones: situaciones problemáticas</h1>
+<h2 id="41-sistemas-de-ecuaciones-resueltos-por-determinantes-cramer">4.1 Sistemas de ecuaciones resueltos por determinantes (Cramer)</h2>
+<h3>Cómo se plantea</h3>
+<ul>
+<li><strong>Cada ecuación es una fila</strong>: un producto, una persona, una mezcla, un equipo.</li>
+<li><strong>Cada incógnita es una columna</strong> (hierro, planchuela, electrodo; tela, hilo, cierre; etc.).</li>
+<li><strong>El término independiente</strong> es el total de cada caso (costo, gasto, precio).</li>
+</ul>
+<div class="formula">A · X = B</div>
+
+<div class="formula">(matriz de coeficientes) · (incógnitas) = (términos independientes)</div>
+
+<h3>Cómo se resuelve</h3>
+<ol>
+<li>Calcular el <strong>determinante del sistema</strong> (el de la matriz de coeficientes).
+   - Si <strong>det ≠ 0</strong> → <strong>solución única</strong>.
+   - Si <strong>det = 0</strong> → no se puede aplicar Cramer (sistema incompatible o indeterminado).</li>
+<li>Calcular <strong>un determinante por cada incógnita</strong>, reemplazando <strong>su columna</strong> por la columna de los términos independientes y dejando las demás iguales.</li>
+<li>Dividir:</li>
+</ol>
+<div class="formula">x = det(Ax) / det(A) ; y = det(Ay) / det(A) ; z = det(Az) / det(A)</div>
+
+<ul>
+<li><strong>Cantidad de determinantes:</strong> con <strong>2 incógnitas</strong> son <strong>3</strong>; con <strong>3 incógnitas</strong> son <strong>4</strong>.</li>
+<li><strong>Con 3 incógnitas no conviene despejar a mano</strong>: queda limitado, hay que usar determinantes.</li>
+<li><strong>Verificar siempre</strong> reemplazando en las ecuaciones originales.</li>
+</ul>
+<h3>Ejemplo de clase (hierro, planchuela y electrodo)</h3>
+<ul>
+<li>Determinante del sistema: <strong>−206</strong>.</li>
+<li>Determinante del hierro: <strong>−22660</strong>.</li>
+<li>Precio unitario: <strong>−22660 / −206 = 110</strong> → cada hierro vale <strong>$110</strong>.</li>
+<li>Verificación: 7 · 110 + 3 · (planchuela) + 36 · (electrodo) = 1124.</li>
+</ul>
+<blockquote>
+<p><strong>Si un precio sale negativo</strong> no hay que "arreglar" las cuentas: primero revisar el cálculo y la verificación. Si las tres ecuaciones cierran, el valor negativo <strong>viene de los datos del enunciado</strong> (datos inconsistentes) y conviene <strong>dejarlo escrito y aclararlo</strong>.</p>
+</blockquote>
+<h2 id="42-producto-de-matrices-en-problemas-pedidos-e-insumos">4.2 Producto de matrices en problemas (pedidos e insumos)</h2>
+<h3>Las dos matrices</h3>
+<ul>
+<li><strong>Matriz de requerimientos:</strong> <strong>filas = productos</strong>, <strong>columnas = insumos</strong>. Cada número es "cuánto insumo necesita ese producto".</li>
+<li><strong>Matriz de pedidos:</strong> los pedidos se ubican <strong>en columnas</strong> y los productos <strong>en filas</strong>.</li>
+<li>Un solo pedido → <strong>3×1</strong> (columna).</li>
+<li>Dos pedidos → <strong>3×2</strong> (dos columnas, uno por pedido).</li>
+</ul>
+<h3>Por qué a veces hay que aplicar la traspuesta</h3>
+<ul>
+<li>Para multiplicar, <strong>fila por columna</strong> obliga a que los datos "de arriba" del pedido coincidan con los insumos.</li>
+<li>Si se arma la matriz de pedidos <strong>al revés</strong>, la multiplicación multiplica "peras con manzanas" (por ejemplo, planchuelas de A con pedidos de B).</li>
+<li><strong>Solución:</strong> aplicar la <strong>traspuesta</strong> a la matriz de requerimientos (o a la de pedidos) para que la condición se cumpla <strong>y el resultado tenga sentido</strong>.</li>
+<li>Aplicar traspuesta puede cambiar el orden de la matriz (3×3 sigue siendo 3×3; 2×3 pasa a 3×2).</li>
+</ul>
+<h3>Lectura del resultado</h3>
+<ul>
+<li><strong>Cada fila</strong> del resultado = un <strong>pedido</strong>.</li>
+<li><strong>Cada columna</strong> = un <strong>insumo</strong>.</li>
+<li>Cada número indica <strong>cuánto insumo</strong> se necesita para ese pedido.</li>
+</ul>
+<h3>Consejos</h3>
+<ul>
+<li><strong>Los datos que faltan se completan con 0</strong> (por ejemplo, si un producto no lleva cierres).</li>
+<li>Se pueden resolver <strong>todos los pedidos juntos</strong> en una sola matriz (una columna por pedido) en lugar de hacer una cuenta por pedido.</li>
+<li>Conviene <strong>plantear primero los tamaños</strong> y verificar que la multiplicación "cierre" antes de hacer las cuentas.</li>
+<li><strong>Interpretar el resultado</strong>: no alcanza con el número, hay que decir qué significa (cuántos metros de tela, cuántas bobinas, cuántas unidades de fruta, etc.).</li>
+</ul>
+<hr />
+<h1 id="5-definiciones-clave-para-la-teoria-verdaderofalso">5. Definiciones clave para la teoría (Verdadero/Falso)</h1>
+<blockquote>
+<p>Estas son las definiciones que pueden aparecer en el punto de teoría. Conviene saberlas <strong>con palabras propias</strong> y <strong>con un ejemplo</strong>.</p>
+</blockquote>
+<ul>
+<li><strong>Vector:</strong> segmento orientado (flecha dirigida) que tiene <strong>módulo, dirección y sentido</strong>.</li>
+<li><strong>Componentes:</strong> <strong>x</strong> (desplazamiento horizontal) e <strong>y</strong> (desplazamiento vertical); se escriben como <strong>par ordenado</strong>.</li>
+<li><strong>Vectores equipolentes:</strong> los que tienen <strong>el mismo módulo, la misma dirección y el mismo sentido</strong>, aunque estén dibujados en lugares distintos del plano. Son "el mismo vector" trasladado; algebraicamente tienen <strong>las mismas componentes</strong>.</li>
+<li><strong>Vectores opuestos:</strong> <strong>mismo módulo y misma dirección</strong>, pero <strong>sentido contrario</strong>; sus componentes tienen signos cambiados. Cumplen v + (−v) = vector nulo.</li>
+<li><strong>Vectores concurrentes:</strong> los que tienen <strong>el mismo punto de aplicación (origen)</strong>; sus rectas de acción se cortan en ese punto.</li>
+<li><strong>Vectores ortogonales:</strong> los que forman <strong>90°</strong> entre sí (perpendiculares). Algebraicamente, su <strong>producto escalar es cero</strong>.</li>
+<li><strong>Magnitud escalar:</strong> <strong>número + unidad</strong> (temperatura, tiempo, superficie, energía).</li>
+<li><strong>Magnitud vectorial:</strong> <strong>número + unidad + dirección + sentido</strong> (velocidad, fuerza, aceleración, campos).</li>
+<li><strong>Matriz:</strong> conjunto de números <strong>ordenados en filas y columnas</strong>, identificado con una <strong>letra mayúscula</strong>.</li>
+<li><strong>Orden o tamaño:</strong> <strong>filas × columnas</strong> (no es una multiplicación).</li>
+<li><strong>Matriz rectangular:</strong> <strong>distinta</strong> cantidad de filas y de columnas.</li>
+<li><strong>Matriz cuadrada:</strong> <strong>igual</strong> cantidad de filas y de columnas (2×2, 3×3, 4×4…). Se clasifica en <strong>diagonal, escalar, identidad, triangular superior y triangular inferior</strong>.</li>
+<li><strong>Matriz nula:</strong> <strong>todos sus elementos son cero</strong>.</li>
+<li><strong>Matriz opuesta:</strong> la que resulta de <strong>cambiar el signo de cada elemento</strong>; A + (−A) = nula.</li>
+<li><strong>Matriz traspuesta:</strong> se obtiene <strong>cambiando filas por columnas</strong>; si A es m×n, Aᵗ es n×m.</li>
+<li><strong>Matriz simétrica:</strong> es <strong>igual a su traspuesta</strong> (A = Aᵗ).</li>
+<li><strong>Equivalencia de matrices (4 casos):</strong> <strong>intercambiar</strong> filas o columnas; <strong>multiplicar</strong> una fila o columna por un número distinto de cero; <strong>sumar</strong> a una fila otra fila (o a una columna otra columna); <strong>añadir o eliminar</strong> una fila o columna nula.</li>
+<li><strong>Determinante:</strong> <strong>número</strong> que se obtiene de <strong>toda la matriz cuadrada</strong> mediante un cálculo (Sarrus, Laplace).</li>
+</ul>
+<hr />
+<h1 id="6-errores-frecuentes-y-consejos-para-el-parcial">6. Errores frecuentes y consejos para el parcial</h1>
+<ul>
+<li><strong>Signos en la resta de matrices:</strong> 4 − (−3) = <strong>7</strong>, no 4 − 3. Escribir el paso intermedio aunque no sea obligatorio.</li>
+<li><strong>Signos en Sarrus y Laplace:</strong> poner paréntesis en cada grupo y escribir cada producto con su signo.</li>
+<li><strong>Confundir fila con columna:</strong> siempre <strong>fila primero</strong> (posición 21 = fila 2, columna 1).</li>
+<li><strong>Confundir el orden con una multiplicación:</strong> 3×4 <strong>no es 12</strong>.</li>
+<li><strong>Multiplicar sin revisar la condición:</strong> primero columnas de la primera = filas de la segunda, y recién después calcular.</li>
+<li><strong>Olvidar repetir las dos filas (o columnas) en Sarrus:</strong> sin eso no se tocan todos los elementos.</li>
+<li><strong>No bajar de renglón en la multiplicación:</strong> una fila se multiplica por <strong>todas</strong> las columnas antes de pasar a la siguiente.</li>
+<li><strong>Olvidar el signo que corresponde a cada término en Laplace.</strong></li>
+<li><strong>Responder cualquier cosa:</strong> si pide distancia → <strong>número con unidad</strong>; si pide punto medio o suma → <strong>punto del plano</strong>.</li>
+<li><strong>No graficar:</strong> en vectores, el gráfico es parte del ejercicio.</li>
+<li><strong>Apurarse:</strong> "el apurarte en matemática no te lleva buen puerto". Ir paso por paso y verificar.</li>
+<li><strong>Usar calculadora para el determinante en el parcial:</strong> el desarrollo se corrige igual; la calculadora es para verificar, no para reemplazar el procedimiento.</li>
+</ul>
+<hr />
+<h1 id="7-chuleta-final-todo-junto">7. Chuleta final (todo junto)</h1>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Fórmula / regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Módulo de un vector</td>
+<td>|v| = √(x² + y²)</td>
+</tr>
+<tr>
+<td>Producto por escalar (vector)</td>
+<td>k·(x, y) = (k·x, k·y)</td>
+</tr>
+<tr>
+<td>Suma de vectores</td>
+<td>(x₁ + x₂, y₁ + y₂) — recorrido punta-cola</td>
+</tr>
+<tr>
+<td>Distancia entre dos puntos</td>
+<td>d = √((x₂ − x₁)² + (y₂ − y₁)²)</td>
+</tr>
+<tr>
+<td>Punto medio</td>
+<td>M = ((x₁ + x₂)/2 , (y₁ + y₂)/2)</td>
+</tr>
+<tr>
+<td>Posición de un elemento</td>
+<td>a(ij) = fila i, columna j</td>
+</tr>
+<tr>
+<td>Suma / resta de matrices</td>
+<td>mismo orden; posición por posición</td>
+</tr>
+<tr>
+<td>Multiplicación de matrices</td>
+<td>col. de A = fil. de B → resultado: fil. de A × col. de B; se hace fila por columna</td>
+</tr>
+<tr>
+<td>Traspuesta</td>
+<td>filas ↔ columnas; el orden se invierte</td>
+</tr>
+<tr>
+<td>Opuesta</td>
+<td>se cambia el signo de cada elemento</td>
+</tr>
+<tr>
+<td>Nula</td>
+<td>todos los elementos 0</td>
+</tr>
+<tr>
+<td>Determinante 2×2</td>
+<td>a·d − b·c</td>
+</tr>
+<tr>
+<td>Determinante 3×3 (Sarrus)</td>
+<td>(suma ↘) − (suma ↙), repitiendo dos filas abajo</td>
+</tr>
+<tr>
+<td>Determinante 3×3 o más (Laplace)</td>
+<td>matriz de signos + elegir la fila/columna con más ceros; signo × elemento × menor</td>
+</tr>
+<tr>
+<td>Cramer</td>
+<td>x = det(Ax) / det(A), con det(A) ≠ 0</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Las tres ideas que ordenan todo el resumen:</strong> 1) cada operación tiene una <strong>condición</strong> y una <strong>respuesta esperada</strong> (número o punto); 2) en matrices y determinantes, <strong>el desarrollo es lo que se evalúa</strong>; 3) <strong>verificar siempre</strong> (reemplazando, sumando componentes o comparando con el gráfico).</p>
+</blockquote>
+<hr />
+<h1 id="8-apendice-que-seccion-mirar-para-cada-punto-del-tp">8. Apéndice: qué sección mirar para cada punto del TP</h1>
+<blockquote>
+<p>Cuando te trabás con un ejercicio del Trabajo Práctico, esta tabla te dice <strong>dónde está la teoría</strong> de ese punto y <strong>qué conviene tener a mano</strong>.</p>
+</blockquote>
+<h2 id="81-vectores-puntos-1-a-11">8.1 Vectores (puntos 1 a 11)</h2>
+<table>
+<thead>
+<tr>
+<th>Punto</th>
+<th>Qué pide</th>
+<th>Sección del resumen</th>
+<th>Qué conviene recordar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Producto de un escalar por un vector, graficar</td>
+<td>§1.7</td>
+<td>Se aplica distributiva a cada componente; si el escalar es negativo, la flecha va al lado contrario (vectores opuestos)</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Hallar la magnitud, graficar</td>
+<td>§1.5</td>
+<td>Pitágoras con las dos componentes; el resultado es <strong>positivo</strong> y en unidades de medida</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Magnitud con situación problemática (cable)</td>
+<td>§1.5</td>
+<td>El enunciado da los catetos (horizontal y vertical); el vector es la hipotenusa</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Magnitud de un vector dado + interpretar</td>
+<td>§1.5 y §1.1</td>
+<td>Interpretar = decir que es la <strong>distancia en línea recta</strong>, no la suma de los tramos</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Distancia entre puntos, graficar</td>
+<td>§1.8</td>
+<td><strong>Cada distancia es un segmento entre su par de puntos</strong>; si la recta es horizontal o vertical se resta, si es inclinada se usa Pitágoras. La respuesta es un número</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>Distancia y punto medio</td>
+<td>§1.8 y §1.9</td>
+<td>Dos respuestas distintas: la distancia es <strong>un número</strong>, el punto medio es <strong>un par ordenado</strong></td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td>Suma de vectores, graficar</td>
+<td>§1.6</td>
+<td>Recorrido punta-cola; la respuesta es un <strong>punto</strong>; verificar con la suma de componentes</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td>Suma de tres vectores (cuadras)</td>
+<td>§1.6</td>
+<td>Traducir cada tramo a vector con los signos de los puntos cardinales; el resultado es el punto final</td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td>Suma de tres vectores (robot)</td>
+<td>§1.6</td>
+<td>Ojo con el <strong>oeste</strong>: va en <strong>x negativo</strong></td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td>Punto medio con fórmula y gráfico</td>
+<td>§1.9</td>
+<td>Sumar las x, sumar las y, dividir por 2; puede dar fracción o decimal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="82-teoria-punto-12">8.2 Teoría (punto 12)</h2>
+<table>
+<thead>
+<tr>
+<th>Punto</th>
+<th>Qué pide</th>
+<th>Sección del resumen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>12 a) a f)</strong></td>
+<td>vector, componentes, equipolentes, opuestos, concurrentes, ortogonales</td>
+<td>§5</td>
+</tr>
+<tr>
+<td><strong>12 g) a l)</strong></td>
+<td>matriz nula, escalar vs. vectorial, matriz cuadrada, opuesta, equivalencias, traspuesta</td>
+<td>§5, §2.3, §2.5, §2.7, §2.8, §2.10</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Todo el punto 12 está respondido en la <strong>sección 5 (Definiciones clave)</strong>, que está escrita en el formato en que se toma: Verdadero/Falso.</p>
+</blockquote>
+<h2 id="83-matrices-y-determinantes-puntos-14-a-17">8.3 Matrices y determinantes (puntos 14 a 17)</h2>
+<table>
+<thead>
+<tr>
+<th>Punto</th>
+<th>Qué pide</th>
+<th>Sección del resumen</th>
+<th>Qué conviene recordar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>14 a) y b)</strong></td>
+<td>Suma y resta de matrices</td>
+<td>§2.4</td>
+<td>Mismo orden, posición por posición; <strong>cuidado con los signos negativos en la resta</strong></td>
+</tr>
+<tr>
+<td><strong>14 c) y d)</strong></td>
+<td>A · B y B · A</td>
+<td>§2.6</td>
+<td>Fila por columna; <strong>no es conmutativa</strong>, los resultados son distintos y eso está bien</td>
+</tr>
+<tr>
+<td><strong>15</strong></td>
+<td>Producto de matrices rectangulares</td>
+<td>§2.6</td>
+<td>Verificar la condición <strong>antes</strong> de calcular y anticipar el tamaño del resultado</td>
+</tr>
+<tr>
+<td><strong>16</strong></td>
+<td>Determinante por Sarrus</td>
+<td>§3.3</td>
+<td>Repetir las dos primeras filas (o columnas); paréntesis en cada grupo de diagonales</td>
+</tr>
+<tr>
+<td><strong>17</strong></td>
+<td>Determinante por Laplace</td>
+<td>§3.4</td>
+<td>Armar la matriz de signos y <strong>elegir la fila o columna con más ceros</strong>; para 4×4 es obligatorio Laplace</td>
+</tr>
+</tbody>
+</table>
+<h2 id="84-situaciones-problematicas-puntos-18-a-21">8.4 Situaciones problemáticas (puntos 18 a 21)</h2>
+<table>
+<thead>
+<tr>
+<th>Punto</th>
+<th>Qué pide</th>
+<th>Sección del resumen</th>
+<th>Qué conviene recordar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>18</strong></td>
+<td>Sistema 3×3 por determinantes</td>
+<td>§4.1</td>
+<td>Plantear las 3 ecuaciones, calcular <strong>det del sistema + 3 determinantes</strong> y dividir; <strong>verificar</strong> reemplazando</td>
+</tr>
+<tr>
+<td><strong>19 parte 1</strong></td>
+<td>Sistema 3×3 por determinantes</td>
+<td>§4.1</td>
+<td>Cada producto es una fila; los insumos que no se usan van con <strong>0</strong></td>
+</tr>
+<tr>
+<td><strong>19 parte 2</strong></td>
+<td>Producto de matrices (pedido)</td>
+<td>§4.2</td>
+<td>Matriz de requerimientos × matriz de pedidos; interpretar cuántos metros, bobinas y cierres</td>
+</tr>
+<tr>
+<td><strong>20 parte 1</strong></td>
+<td>Sistema 3×3 por determinantes</td>
+<td>§4.1</td>
+<td>Igual que el 18; si un valor sale negativo, <strong>revisar y dejarlo aclarado</strong></td>
+</tr>
+<tr>
+<td><strong>20 parte 2</strong></td>
+<td>Producto de matrices (sucursales)</td>
+<td>§4.2</td>
+<td>Dos pedidos = <strong>dos filas</strong>; el resultado tiene una fila por sucursal</td>
+</tr>
+<tr>
+<td><strong>21 parte 1</strong></td>
+<td>Sistema 3×3 por determinantes</td>
+<td>§4.1</td>
+<td>Los precios pueden dar <strong>fracciones</strong>: está bien, se deja la fracción exacta</td>
+</tr>
+<tr>
+<td><strong>21 parte 2</strong></td>
+<td>Producto de matrices (eventos)</td>
+<td>§4.2</td>
+<td>Tres eventos = <strong>tres filas</strong>; interpretar la matriz resultante</td>
+</tr>
+</tbody>
+</table>
+<h2 id="85-los-dos-patrones-que-se-repiten-en-todo-el-tp">8.5 Los dos patrones que se repiten en todo el TP</h2>
+<ul>
+<li><strong>Los puntos 18 a 21 son el mismo ejercicio cuatro veces</strong>: primero un <strong>sistema 3×3 resuelto por Cramer</strong> (§4.1) y después un <strong>producto de matrices</strong> (§4.2). Si entendés uno, entendés los cuatro.</li>
+<li><strong>Los puntos 3, 4, 5, 6 y 11 son el mismo bloque</strong>: medida (Pitágoras) y punto medio. Cambia el enunciado, no la matemática.</li>
+</ul>
+<blockquote>
+<p><strong>Cómo usar este apéndice:</strong> primero leé la sección indicada, después volvé al punto del TP. Si el ejercicio no sale, el problema casi siempre está en un <strong>signo</strong> o en una <strong>condición de tamaño</strong> (§6).</p>
+</blockquote>
+</article></main>
+</body></html>
