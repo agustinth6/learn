@@ -1,6 +1,6 @@
 # Contadores, microprocesador por dentro y assembly x86
 
-Resumen de estudio de los videos #55 y #57 a #64 del curso **"Arquitectura y Lógica de Computadoras"** del canal Hacker Lykeion. Es la continuación de `logica-secuencial.md` y cubre el resto de los temas posteriores al primer parcial (clases 9 y 10 de la planilla).
+Resumen de estudio de los videos #55 y #57 a #64 del curso **"Arquitectura y Lógica de Computadoras"** del canal Hacker Lykeion. Es la continuación de `logica-secuencial.md` y se complementa con las transcripciones de las clases del 22 y 29 de octubre y del 5, 12 y 19 de noviembre de 2026.
 
 | # | Video | Tema | Sección |
 |---|-------|------|---------|
@@ -18,7 +18,7 @@ Resumen de estudio de los videos #55 y #57 a #64 del curso **"Arquitectura y Ló
 
 - Las notas marcadas con ⚠️ señalan lapsus del video, o agregados que no están en el material original.
 - Los listados de assembly están **reconstruidos a partir del relato** del profesor (en el video se ven en pantalla, pero la transcripción solo los describe). La lógica es la del video; algún detalle menor de escritura puede diferir.
-- En la planilla figuran además "Cómo arranca la PC" y "Resolución de ejercicios" (clase 11) y los TP5. No tienen video enlazado, así que no están resumidos acá.
+- El arranque de la PC se incorporó a partir de la clase del 19 de noviembre (sección 10). Los ejemplos de las transcripciones son aproximados cuando lo mostrado en pantalla no se ve o no queda claro en el audio.
 
 ---
 
@@ -73,6 +73,8 @@ Cada salida es un dígito de un número binario de 4 cifras. `Q0` es el bit meno
 
 ⚠️ **Complemento (no está en el video):** este tipo de contador, donde solo el primer flip-flop recibe el clock y cada etapa dispara a la siguiente, se llama **contador asincrónico** o *de rizado*. Con `n` flip-flops cuenta de 0 a 2ⁿ − 1. Cada salida tiene la mitad de la frecuencia de la anterior (es el efecto del flip-flop T con T=1 visto en el resumen anterior).
 
+**Aporte de clase: contador frente a sumador.** El contador es un circuito **secuencial**: guarda el valor de cuenta y lo actualiza al recibir pulsos. Un sumador combinacional, en cambio, calcula una suma a partir de sus entradas y no conserva por sí solo una cuenta. Un contador puede usar flip-flops T o JK. También se puede detectar un valor y reiniciar anticipadamente para obtener un módulo menor; por ejemplo, contar de 0 a 9 y volver a 0 (módulo 10).
+
 ---
 
 ## 2. Cómo funciona un microprocesador por dentro
@@ -89,6 +91,8 @@ El microprocesador (CPU) se comunica con la memoria RAM y la memoria ROM a trav�
 
 Además de CPU, ROM y RAM aparece un bloque de **entrada/salida (I/O)**: es el mecanismo con el que el micro hace de interfaz con los dispositivos (discos rígidos y sus controladoras, almacenamiento en general, placas de red y de sonido, buses USB, serie, etc.).
 
+**Aporte de clase: direcciones y tamaño de datos.** En la PC la memoria es normalmente **direccionable por byte**: cada dirección identifica un byte; un dato de 32 bits ocupa cuatro bytes consecutivos. El ancho de palabra o de registro (16, 32 o 64 bits) indica el tamaño de datos que se maneja en una operación, pero **no es necesariamente igual** al ancho de las direcciones ni al del bus de datos. Con `n` bits de dirección se pueden distinguir hasta `2ⁿ` direcciones; el espacio efectivo y la RAM disponible dependen de la arquitectura y del modo de operación.
+
 ### 2.2 Bloques internos del microprocesador
 
 El video usa un diagrama en bloques **genérico**: algunos microprocesadores reales se parecen más a él y otros menos, pero sirve para explicar cualquiera.
@@ -99,6 +103,13 @@ El video usa un diagrama en bloques **genérico**: algunos microprocesadores rea
 - Hace operaciones **aritméticas**: suma, resta, producto, división.
 - Hace operaciones **lógicas** (comparaciones): igual, distinto, mayor, menor, mayor o igual, menor o igual.
 - Todas las operaciones que uno escribe en un lenguaje de alto nivel sobre números enteros, y las comparaciones, las resuelve la ALU.
+
+**Complemento de la clase del 22 de octubre: ALU, FPU y precisión**
+
+- La ALU también realiza operaciones bit a bit como AND, OR y NOT. Una forma de restar enteros en complemento a dos es sumar el opuesto: invertir los bits del sustraendo y sumar 1, respetando el ancho elegido. Ejemplo en 8 bits: `5 - 3 = 00000101 + 11111101 = 00000010`, descartando el acarreo exterior.
+- La **FPU** (*unidad de punto flotante*) realiza operaciones aritméticas con números de punto flotante. Procesadores y GPU pueden contar además con unidades vectoriales que aplican una operación a varios elementos; no toda operación vectorial ni toda implementación corresponde necesariamente a la misma FPU.
+- Para convertir una fracción decimal a binario, se multiplica reiteradamente la parte fraccionaria por 2 y se anotan, en orden, las partes enteras obtenidas. Por ejemplo: `0,75 × 2 = 1,5` y `0,5 × 2 = 1,0`; por lo tanto `4,75₁₀ = 100,11₂`. Los pesos tras la coma son `2⁻¹`, `2⁻²`, etc.
+- Algunas fracciones, como `0,3₁₀ = 0,0100110011…₂`, tienen expansión binaria infinita. Al guardarlas con bits finitos se redondean y pueden acumularse errores. La escritura matemática en binario **no es todavía** la codificación de punto flotante: esta usa un formato que representa signo, exponente y significando.
 
 **Registros**
 
@@ -133,7 +144,7 @@ ADD AX, BX        ; AX = AX + BX
 
 1. **Traer la instrucción.** El IP apunta a una dirección de memoria RAM. La instrucción guardada ahí viaja por el **bus de datos** hacia el microprocesador.
 2. **Decodificar.** La lógica de control interpreta el código de la instrucción.
-3. **Buscar los operandos.** Según la instrucción:
+3. **Buscar los operandos.** Un literal inmediato forma parte de la instrucción; un dato en memoria debe leerse usando su dirección. Según la instrucción:
    - puede haber que ir a la RAM a buscarlos (usando los buses de datos, direcciones y control), o
    - pueden estar ya en registros del micro (cargados en un paso anterior o resultado de una operación previa).
    - Hay distintos **tipos de direccionamiento**.
@@ -166,13 +177,15 @@ ADD AX, BX        ; AX = AX + BX
 | Modo | Bits | Cuándo se usa | Características |
 |------|------|---------------|-----------------|
 | **Modo real** | 16 | Al **encender** la computadora o apretar **reset** | El micro funciona como un **8086**. **No** se puede acceder a toda la memoria RAM |
-| **Modo protegido** | 32 | Cuando corre un sistema operativo (Windows, Linux) | El acceso a la memoria está **protegido** por dos mecanismos: **segmentación** y **paginación**. Se puede acceder a toda la RAM |
+| **Modo protegido** | Habitualmente 32 | Ejecución de sistemas operativos y programas de 32 bits | Admite protección por **segmentación** y, si se habilita, **paginación**. El espacio direccionable depende de la configuración; no implica poder acceder sin límites a toda la RAM |
 | **System management mode** | — | Administración del microprocesador | No es el modo de ejecución normal |
 | **Modo compatibilidad** | 64 (corre 32) | Dentro de la arquitectura de 64 bits | Estando en 64 bits, permite correr **código de 32 bits** |
 | **Modo 64 bits** | 64 | Dentro de la arquitectura de 64 bits | El micro funciona como un micro de 64 bits |
 
 - Cita del manual: *"the processor is placed in real-address mode following power-up or a reset"*. Es decir, **el micro siempre arranca en modo real**.
 - El manual agrupa los modos en dos partes: los modos básicos (real, protegido y system management) y, aparte, la arquitectura Intel 64 (compatibilidad y 64 bits).
+
+**Protección y excepciones.** En modo protegido se comprueban límites y permisos asociados a segmentos, y, si está habilitada, también los de las páginas. Un acceso no permitido puede causar una **excepción** del procesador; el sistema operativo la atiende y puede finalizar el proceso. En modo de 64 bits, gran parte de la segmentación tradicional queda desactivada y la paginación es central para la protección.
 
 ### 4.3 Quién inventó los 64 bits de la PC
 
@@ -224,7 +237,7 @@ Los nombres vienen "desde la antigüedad" y se fueron extendiendo:
 - Todo lo anterior vale igual para **A, B, C y D**.
 - Según cuántos bits se quieran tomar del registro, se escribe AL, AH, AX, EAX o RAX.
 - La "granularidad" es: los primeros 8 bits (AL), los segundos 8 bits (AH) o los primeros 16 (AX). Al pasar a 32 bits se pasó directo a EAX.
-- **SI, DI, BP y SP** nacieron de 16 bits (no se parten en H y L). También tienen sus versiones E (32 bits) y R (64 bits).
+- **SI, DI, BP y SP** nacieron de 16 bits (sin partes altas H como AH). También tienen versiones E (32 bits) y R (64 bits); en modo de 64 bits existen los nombres de byte bajo SIL, DIL, BPL y SPL.
 - En 64 bits aparecen **algunos registros más** de propósito general.
 
 **Tamaños de dato** (aparecen en el assembly):
@@ -289,7 +302,7 @@ Qué contienen según el modo:
 
 - **Modo real (16 bits)**: los 16 bits sirven directamente para el direccionamiento de base más desplazamiento.
 - **Modo protegido y modos de 64 bits**: el registro contiene un **índice dentro de un vector (tabla) de descriptores de segmento**. Cada descriptor describe un bloque de memoria RAM (de código, de datos o de pila) con su **inicio, fin, tamaño y permisos** (lectura, sentido de crecimiento, etc.).
-- En 64 bits la lógica es parecida a la del modo protegido, con algunos cambios.
+- En modo de 64 bits la segmentación tradicional se simplifica: las bases de CS, DS, ES y SS se tratan generalmente como cero y se ignoran la mayoría de sus límites; FS y GS conservan usos especiales de base. La paginación proporciona el aislamiento principal.
 
 ### 5.4 Registro de flags (registro de estado)
 
@@ -373,9 +386,9 @@ Es un tema que cuesta y "en el que se equivocan en los exámenes". Las variables
 
 | | **Pila (*stack*)** | ***Heap*** ("parva" o montículo) |
 |---|--------------------|----------------------------------|
-| Qué variables | Las **creadas en el código**: se les reserva memoria al escribir el programa. Ejemplo: `int a = 4;` | Las que se crean **dinámicamente**, durante la ejecución |
+| Qué variables | A menudo, las variables locales automáticas y datos de llamadas. Ejemplo: `int a = 4;` dentro de una función | Datos reservados **dinámicamente**, durante la ejecución |
 | Cómo se piden | Automáticamente | En C: con `malloc`. En Java: con `new` y el constructor de una clase |
-| Cuánto viven | Al **salir de la función** (o terminar el proceso), la variable **se pierde** | Hasta que se libera |
+| Cuánto viven | Habitualmente hasta salir del bloque o función correspondiente | Hasta que se libera o termina el proceso |
 | Quién libera | Nadie; es automático | En C: **el programador** debe pedirla y liberarla. En Java: el ***garbage collector*** libera la que ya no se usa |
 
 - La memoria de un proceso tiene la pila, el heap y otros sectores.
@@ -384,8 +397,8 @@ Es un tema que cuesta y "en el que se equivocan en los exámenes". Las variables
 
 ### 6.5 Idea clave: los nombres de las variables no existen
 
-- En assembly no hay variables con nombre. Los nombres son **"nombres de fantasía"** del lenguaje de alto nivel.
-- Cada variable es en realidad **una dirección de memoria**, expresada como **el puntero base de pila (RBP) más un desplazamiento**: `[rbp-4]`, `[rbp-8]`, `[rbp-12]`.
+- En código máquina las variables no se identifican por sus nombres de C: los nombres ayudan a programar y pueden aparecer como símbolos o información de depuración. Se accede a valores mediante registros y direcciones.
+- En los ejemplos sin optimización, una variable local puede almacenarse en memoria y referirse como **RBP más un desplazamiento**, por ejemplo `[rbp-4]`, `[rbp-8]`, `[rbp-12]`. No es una regla universal: variables pueden estar en registros, otras regiones o incluso desaparecer por optimización.
 - Esas direcciones **cambian en cada ejecución** del programa.
 - Un `int` de C ocupa **32 bits** = 4 posiciones de memoria (4 bytes). En assembly aparece como `DWORD PTR`.
 
@@ -450,7 +463,7 @@ Cada variable ocupa 4 "cajoncitos" (4 bytes).
 
 Paso a paso:
 
-1. **El microprocesador no opera con lo que está en la RAM: hay que traerlo a registros.** Se trae `val1` a EDX y `val2` a EAX.
+1. En este ejemplo se copian `val1` a EDX y `val2` a EAX. Aunque la operación ocurre dentro del procesador, x86 también admite operandos de memoria en algunas instrucciones, como se ve en la resta siguiente.
 2. `add` suma los dos registros. **El resultado queda en EAX** (el registro acumulador).
 3. El resultado está dentro del micro, pero lo queremos en `resu`, que está en la RAM. Se **mueve de EAX a `[rbp-4]`**.
 
@@ -479,6 +492,7 @@ Paso a paso:
 
 ```
     mov  eax, DWORD PTR [rbp-8]    ; EAX = val2  (dividendo)
+    cdq                            ; extiende el signo de EAX a EDX:EAX
     idiv DWORD PTR [rbp-12]        ; divide por val1 (divisor)
     mov  DWORD PTR [rbp-4], eax    ; resu = EAX  (cociente)
 ```
@@ -486,7 +500,7 @@ Paso a paso:
 - El uso "suena raro" comparado con las otras: **el dividendo se carga antes en EAX**, y a `idiv` solo se le pasa **el divisor** (acá, una dirección de memoria).
 - Después de `idiv` la división ya está hecha: **el cociente queda en EAX**.
 
-⚠️ **Complemento (no está en el video):** `idiv` divide el número formado por EDX:EAX. Por eso gcc pone antes una instrucción `cdq`, que extiende el signo de EAX hacia EDX. El cociente queda en EAX y el **resto** en EDX.
+⚠️ **Corrección del listado reconstruido:** para un divisor de 32 bits, `idiv` divide el número con signo formado por EDX:EAX. Por eso se incluye `cdq`, que extiende el signo de EAX hacia EDX. El cociente queda en EAX y el **resto** en EDX.
 
 ### 7.7 Final de la función
 
@@ -508,12 +522,12 @@ Paso a paso:
 | `add a, b` | `a = a + b` | `add eax, edx` |
 | `sub a, b` | `a = a - b` | `sub eax, DWORD PTR [rbp-8]` |
 | `imul a, b` | `a = a * b` (enteros con signo) | `imul eax, DWORD PTR [rbp-8]` |
-| `idiv b` | Divide EAX por `b`; cociente en EAX | `idiv DWORD PTR [rbp-12]` |
+| `idiv b` | Divide EDX:EAX por `b`; cociente en EAX y resto en EDX | `idiv DWORD PTR [rbp-12]` |
 | `push r` | Guarda un valor en la pila | `push rbp` |
 | `pop r` | Recupera un valor de la pila | `pop rbp` |
 | `ret` | Retorna de la función | `ret` |
 
-**Patrón general de una operación:** traer los operandos de la memoria a registros → operar (el resultado queda en EAX) → guardar EAX en la variable de destino.
+**Patrón de estos ejemplos:** cargar operandos en registros o usar un operando de memoria permitido → operar → guardar el resultado si hace falta. El registro de destino no tiene que ser siempre EAX.
 
 ---
 
@@ -587,13 +601,15 @@ mi_funcion_duplicadora:
 
 ### 8.5 Ideas clave
 
-- **`call`**: instrucción para llamar a subrutinas o funciones. Es un **salto con retorno** a una etiqueta. Para seguir el programa hay que buscar esa etiqueta en el código y ver qué hace.
+- **`call`**: instrucción para llamar a subrutinas o funciones. En el llamado cercano habitual guarda en la pila la dirección de retorno y salta a la función; `ret` recupera esa dirección. El prólogo y el epílogo de la función, no `ret` por sí solo, pueden guardar y restaurar el puntero base y otros registros.
 - **`ret`**: retorna al lugar desde donde se llamó a la función.
 - **Paso por copia**: la función trabaja sobre una copia del valor; la variable original no se toca.
 - **El valor de retorno queda en EAX.** Que el retorno vaya en EAX (o en otros registros) y que el parámetro vaya en EDI es una **convención** del compilador y del sistema operativo para el que se compila.
-- Si uno escribe sus propias funciones en assembly, se hacen igual: una **etiqueta con dos puntos**, `pop` para recuperar el valor de la pila y `ret` para retornar.
+- Al escribir funciones en assembly se usa una etiqueta de entrada y se debe respetar la convención de llamada, restaurar lo que corresponda y retornar con `ret`. El prólogo y el epílogo dependen de la función.
 
-⚠️ **Complemento (no está en el video):** `call` guarda en la pila la dirección de la instrucción siguiente (la dirección de retorno), y `ret` la saca de la pila para saltar ahí. Por eso modificar la pila permite desviar el retorno: es el ataque mencionado en la sección 5.2. La convención usada en Linux de 64 bits se llama *System V AMD64 ABI*.
+**Aporte de clase: marco de pila y convenciones.** Cada llamada puede tener su propio *stack frame* con dirección de retorno, valores guardados y variables locales. `RSP` apunta al tope; `RBP` puede usarse como referencia estable del marco, aunque el compilador puede omitirlo. Las llamadas anidadas forman marcos sucesivos y el epílogo restaura lo necesario antes de volver.
+
+La forma de pasar argumentos depende de la **ABI**, no solo de la cantidad de bits. En una convención x86 de 32 bits como `cdecl` suelen pasarse por pila; en Linux x86-64, la *System V AMD64 ABI* usa primero `RDI`, `RSI`, `RDX`, `RCX`, `R8` y `R9` para argumentos enteros o punteros y luego la pila. Tipos y plataformas pueden cambiar estas reglas. El retorno entero del ejemplo va en `EAX`.
 
 ---
 
@@ -707,21 +723,37 @@ Todas funcionan igual: después de que ocurrió una operación, la instrucción 
 
 ---
 
-## 10. Ideas clave para repasar
+## 10. Cómo arranca una PC: recorrido clásico con BIOS
+
+**Fuente: clase del 19 de noviembre.** Es el modelo **BIOS heredado** explicado por el docente, no una descripción universal del arranque de todas las computadoras modernas.
+
+1. **Alimentación de espera.** Con una fuente ATX conectada y habilitada, una parte de la fuente y de la placa madre permanece alimentada en *standby*. El botón de encendido indica a la placa que solicite el encendido de la fuente principal.
+2. **Estado inicial del procesador.** Al energizarse o recibir un reset, el procesador x86 comienza en su estado de arranque y busca instrucciones en una dirección predeterminada del espacio de direcciones, donde el hardware mapea el firmware. ⚠️ No se trata de «la última dirección de la RAM». En x86 moderno el estado inicial incluye un comportamiento especial de la base interna de CS; no debe confundirse el vector físico de reset con un cálculo ordinario de segmento:desplazamiento de 8086.
+3. **Firmware y POST.** El código de firmware persistente en memoria no volátil inicia y comprueba componentes básicos mediante el **POST** (*power-on self-test*). El BIOS proporciona funciones básicas de entrada/salida y configuración, inicializa dispositivos y busca un medio de arranque según su configuración. No es el sistema operativo de uso general.
+4. **Sector de arranque.** En el esquema BIOS clásico para disco, el firmware lee el sector de arranque de **512 bytes** del dispositivo seleccionado, lo copia a la dirección física **`0x7C00`** de RAM y transfiere allí el control si el sector es válido. Si no encuentra un medio arrancable, informa un error o sigue buscando según la configuración.
+5. **Cargador y sistema operativo.** El código del sector de arranque es una primera etapa del **bootloader**; puede cargar otras etapas antes de cargar el núcleo del sistema operativo. El sistema inicializa sus dispositivos y servicios y, finalmente, presenta su interfaz o inicio de sesión. El detalle depende del cargador y del sistema operativo.
+6. **Reinicio.** Un reset hace que el procesador retome la secuencia de inicio. Un reinicio solicitado al sistema operativo normalmente le permite cerrar programas y guardar datos; el botón de reset puede interrumpirlos abruptamente. Un reinicio no garantiza borrar la RAM.
+
+⚠️ **Actualidad:** en sistemas **UEFI**, el firmware normalmente carga un ejecutable EFI desde una partición de sistema; no es obligatorio usar el sector de 512 bytes ni `0x7C00`. Algunas máquinas UEFI ofrecen compatibilidad BIOS heredada, otras no.
+
+---
+
+## 11. Ideas clave para repasar
 
 - **Contador**: 4 flip-flops T con T=1, cada `Q̄` al clock del siguiente. Cuenta en binario de 0 a 15 (16 valores).
 - **Buses**: direcciones (solo sale del CPU), datos (ida y vuelta), control (leer/escribir y selección).
 - **ALU**: operaciones aritméticas y lógicas. **Registro**: conjunto de flip-flops; "una variable por hardware" dentro del micro. **Lógica de control**: decodifica la instrucción.
 - **Ciclo de una instrucción**: traer → decodificar → buscar operandos → operar en la ALU → guardar el resultado → siguiente.
 - **Arquitectura PC**: basada en Intel, con la promesa de compatibilidad hacia atrás. Los 64 bits compatibles los inventó **AMD**.
-- **Modos**: real (16 bits, al encender o resetear), protegido (segmentación y paginación, acceso a toda la RAM), compatibilidad y 64 bits.
+- **Modos**: real (arranque x86), protegido (segmentación y paginación opcional), compatibilidad y 64 bits. El espacio accesible depende del modo y la configuración.
 - **Nombres**: AL/AH (8) → AX (16) → EAX (32) → RAX (64). Byte, word, double word, quad word.
 - **Propósito general**: A acumulador, B base, C contador, D datos, SI/DI origen y destino, BP base de pila, SP puntero de pila.
 - **Segmento** (siempre 16 bits): CS código, DS datos, SS pila, ES/FS/GS auxiliares.
 - **FLAGS**: bits de estado (cero, signo, carry, overflow, paridad, interrupciones). **IP**: dirección de la próxima instrucción.
-- **Pila** = variables creadas en el código, se pierden al salir de la función. **Heap** = memoria dinámica (`malloc`, `new`).
-- Las variables son direcciones relativas a RBP: `[rbp-4]`, `[rbp-8]`…
-- **Toda función**: `push rbp` / `mov rbp, rsp` al entrar; `pop rbp` / `ret` al salir. El valor de retorno va en **EAX**.
-- **Aritmética**: `add`, `sub`, `imul`, `idiv`. Se traen los operandos a registros, se opera y se guarda EAX en memoria.
+- **Pila** = marcos de llamadas y, a menudo, variables locales automáticas. **Heap** = memoria dinámica (`malloc`, `new`); también existen datos estáticos y variables alojadas en registros.
+- En los ejemplos, las variables locales se ubican relativas a RBP: `[rbp-4]`, `[rbp-8]`…; no es obligatorio para todo programa.
+- En los ejemplos: `push rbp` / `mov rbp, rsp` al entrar; restauración de pila y `ret` al salir. El compilador puede usar otros prólogos; el retorno entero del ejemplo va en **EAX**.
+- **Aritmética**: `add`, `sub`, `imul`, `idiv`. Se opera con registros y, en ciertas instrucciones, operandos en memoria; se guarda el resultado donde corresponda.
 - **`call`** = salto con retorno a una etiqueta. **`ret`** = volver. El parámetro viaja en EDI (convención).
 - **Salto condicional**: `cmp` modifica los flags; `je` / `jne` miran un bit y saltan o no. El compilador pregunta por la condición **opuesta** a la del `if`.
+- **Arranque BIOS clásico**: alimentación → reset → firmware y POST → sector de arranque a `0x7C00` → bootloader → sistema operativo. UEFI sigue otro mecanismo.

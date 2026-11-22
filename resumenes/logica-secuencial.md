@@ -1,6 +1,6 @@
 # Lógica secuencial, clock, flip-flops y registros de desplazamiento
 
-Resumen de estudio de los videos #48 a #54 y #56 del curso **"Arquitectura y Lógica de Computadoras"** del canal Hacker Lykeion.
+Resumen de estudio de los videos #48 a #54 y #56 del curso **"Arquitectura y Lógica de Computadoras"** del canal Hacker Lykeion, complementado con las transcripciones de las clases del 22 y 29 de octubre y del 5 de noviembre de 2026.
 
 | # | Video | Tema | Sección |
 |---|-------|------|---------|
@@ -143,6 +143,10 @@ Ejemplo del video con tres señales: la **roja** (pulsos más anchos) es la más
   - las **instrucciones por segundo** que realmente ejecuta.
 - Esa comparación directa se podía hacer en los **años 90**. Desde los **2000** en adelante ya no es válida, por cómo funcionan los microprocesadores.
 - Dato: hace unos 20 años que las frecuencias se mantienen por debajo de los 5 o 6 GHz.
+
+**Aporte de clase: por qué dejó de crecer tan rápido la frecuencia**
+
+Desde aproximadamente los años 2000, aumentar el clock encontró límites de consumo, disipación de calor y otras restricciones físicas. Por eso se buscan mejoras también mediante **varios núcleos**, cambios de arquitectura y operaciones vectoriales. La mejora depende de que el programa pueda aprovechar esos recursos; ni más núcleos ni una mayor frecuencia garantizan por sí solos más rendimiento.
 
 ### 3.5 Ver el clock en una computadora con GNU/Linux
 
@@ -664,6 +668,10 @@ Es el comportamiento de "foto" del flip-flop D, aplicado a varios bits a la vez.
 | 4 | 0 | 0 | 0 | 0 |
 
 - Después de 4 pulsos, los bits "fluyeron" hacia la salida de a uno. Analogía del video: como tirar la cadena.
+
+**Aporte de clase: capacidad y sincronización del buffer.** Un registro de `n` flip-flops puede almacenar `n` bits, no un flujo ilimitado. Si el productor escribe más rápido que el consumidor durante un tiempo prolongado, el buffer se llena: hace falta coordinar la transferencia, detener al productor o aceptar pérdida de datos. Un simple registro de desplazamiento no resuelve por sí solo la diferencia permanente de velocidades.
+
+**Otra aplicación mencionada en clase:** un registro con realimentación y compuertas puede generar una secuencia de bits pseudoaleatoria a partir de un estado inicial, y formar parte de un cifrador de flujo. ⚠️ Una secuencia producida por un registro sencillo no es por sí sola un cifrado seguro; la seguridad depende del diseño completo.
 
 ### 12.8 Cuadro resumen de los registros
 
