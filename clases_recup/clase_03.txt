@@ -1,0 +1,146 @@
+--- pagina 1 ---
+Información Privada
+Docente: Lucas Marques de Paiva
+Técnicas de 
+Programación
+--- pagina 2 ---
+Información Privada
+Unidad 2: Tipos de datos, Variables, 
+Operaciones Básicas de Entrada y 
+Salida, operadores Básicos
+• La función print()
+• Literales de Python
+• Operadores - herramientas de manipulación de 
+datos
+• Variables
+• Comentarios
+• Interacción con el usuario, la función input()
+--- pagina 3 ---
+Información Privada
+Tipos de Datos
+Los literales son notaciones para representar valores fijos en el código
+Enteros (int) 1      5      345      -3      0
+Punto flotantes (float) 3.14       2.5       0.0
+Cadena de texto (string)
+Booleanos (bool)     true   false
+Complex  2X
+Listas, tuplas, diccionarios…
+None → ausencia de valor     NoneType
+--- pagina 4 ---
+Información Privada
+Variables
+Una variable es un espacio de memoria que podemos utilizar para almacenar valores
+Difinir una variable 
+nombre_de_la_variable = valor
+
+--- pagina 5 ---
+Información Privada
+Funciones
+→ función:una función es un bloque de código reutilizable
+-causar algún efecto  
+- evaluar un valor
+→ ¿De dónde provienen las funciones?
+-de Python
+-de módulos
+-creada por nosotros
+→ Estructura de un función →
+
+--- pagina 6 ---
+Información Privada
+Print()
+→ La función print() en Python se utiliza para mostrar información en la 
+pantalla, normalmente en la consola.
+→Sintaxis básica:       print("Hola mundo") → Resultado: Hola mundo
+→Podemos mostrar el contenido de una variable:
+nombre = “Juan”
+print(nombre)    → Resultado:  Juan
+→ Mostrar texto y variables
+nombre = “Juan"
+edad = 30
+print(f"Mi nombre es {nombre} y tengo {edad} años")
+→ Resultado: Mi nombres es  Juan y tengo 30 años
+--- pagina 7 ---
+Información Privada
+Print()
+→ Mostrar el resultado de una operación 
+a = 10
+b = 5
+print(a + b)    Resultado:  15
+print(a * b) Resultado:  50
+print(10 + 5)  Resultado:  15
+→Podemos pasar varios elementos separados por comas:
+nombre = “Juan"
+edad = 30
+print("Nombre:", nombre, "Edad:", edad)
+Resultado: Nombre: Juan Edad: 30
+Python agrega automáticamente un espacio entre los elementos.
+--- pagina 8 ---
+Información Privada
+Print()
+→Podemos cambiar ese espacio que Python deja entre elementos
+print("Python", "Java", "C#", sep=" - ")
+Resultado: Python - Java - C#
+→Por defecto, cada print() termina con un salto de línea:
+print("Hola")
+print("Mundo")
+Resultado: Hola
+Mundo
+→Podemos cambiar este comportamiento utilizando end:
+print("Hola", end=" ")
+print("Mundo")
+Resultado: Hola Mundo
+--- pagina 9 ---
+Información Privada
+Operaciones
+
+--- pagina 10 ---
+Información Privada
+Operaciones con variables
+
+--- pagina 11 ---
+Información Privada
+Operaciones con variables
+
+--- pagina 12 ---
+Información Privada
+Tipos de división
+Booleanos
+
+--- pagina 13 ---
+Información Privada
+Booleanos
+
+--- pagina 14 ---
+Información Privada
+Convención para Python → existe una convención de estilo 
+muy usada llamada PEP 8, que define cómo escribir código claro y 
+legible.
+●Variables y funciones → snake_case
+● Espacios alrededor de operadores: suma = 5 + 3
+● Puedes usar 'comillas simples' o "comillas dobles“
+● Usa # para comentarios en línea.
+● Indentación: 4 espacios
+● Para documentar funciones o clases """comillas triples""“
+(docstrings)
+Fundamentos Python
+--- pagina 15 ---
+Información Privada
+Función input()
+• La función print() envía datos a la consola, mientras que la función input() obtiene datos de la 
+consola.
+• La función input() viene con un parámetro opcional: la cadena de mensaje. Te permite escribir 
+un mensaje antes de que el usuario ingrese algo, por ejemplo:
+• Cuando la función input() es llamada o invocada, el flujo del programa se detiene, el símbolo del 
+cursor se mantiene parpadeando (le está indicando al usuario que tome acción ya que la consola 
+está en modo de entrada) hasta que el usuario haya ingresado un dato y/o haya presionado la tecla 
+Enter.
+--- pagina 16 ---
+Información Privada
+Función input()
+• El resultado de la función input() es una cadena. Se pueden unir cadenas unas con otras a través 
+del operador de concatenación (+). Observa el siguiente código:
+• También se pueden multiplicar (* - replicación) cadenas, por ejemplo:
+
+--- pagina 17 ---
+Información Privada
+Transformación de tipos → casting

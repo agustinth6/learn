@@ -1,0 +1,68 @@
+--- pagina 1 ---
+Información Privada
+Docente: Lucas Marques de Paiva
+Técnicas de 
+Programación
+--- pagina 2 ---
+Información Privada
+Introducción a funciones
+De donde provienen las funciones
+
+--- pagina 3 ---
+Información Privada
+Funciones
+
+--- pagina 4 ---
+Información Privada
+Funciones
+
+--- pagina 5 ---
+Información Privada
+Funciones
+• Los parámetros son las variables que se definen en la declaración de la función.
+Sirven como “espacios reservados” para los valores que la función recibirá.
+• Los argumentos son los valores reales que pasás al llamar la función.
+Son los datos concretos que se envían a los parámetros.
+--- pagina 6 ---
+Información Privada
+Funciones
+
+--- pagina 7 ---
+Información Privada
+Funciones
+
+--- pagina 8 ---
+Información Privada
+Funciones
+Parámetros
+--- pagina 9 ---
+Información Privada
+Funciones
+
+--- pagina 10 ---
+Información Privada
+Funciones
+
+--- pagina 11 ---
+Información Privada
+Ejercicios
+1- Escribí una función llamada saludar que muestre por pantalla el mensaje “¡Hola, bienvenido!”. 
+Luego llamá a la función para comprobar que funciona correctamente. Como variante, modificá la 
+función para que el saludo se muestre dos veces.
+2 - Definí una función llamada saludar que reciba un parámetro llamado nombre y muestre un saludo 
+personalizado. Por ejemplo: “Hola Pepe”. Luego, modificá la función para que también reciba la edad 
+y muestre ambos datos en el mensaje.
+3 - Escribí una función llamada sumar que reciba dos números como parámetros e imprima la suma 
+de ambos. Después, cambiá la función para que devuelva el resultado usando la palabra clave return
+en lugar de imprimirlo.
+4 - Definí una función llamada area_cuadrado que reciba el valor del lado de un cuadrado y devuelva 
+su área. Luego, creá una función similar para calcular el área de un rectángulo.
+5 - Escribí una función llamada es_par que reciba un número y devuelva True si el número es par o 
+False si es impar.Luego, modificá la función para que en lugar de devolver un valor booleano muestre 
+un mensaje que indique “El número es par” o “El número es impar”.
+6 - Definí una función llamada clasificar_edad que reciba una edad y devuelva un texto según el 
+rango: “Niño” si la edad es menor que 13 “Adolescente” si está entre 13 y 17 “Adulto” si es 18 o mayor.
+7 - Escribí una función llamada sumar_lista que reciba una lista de números y devuelva la suma de 
+todos sus elementos.
+8 - Definí una función llamada contar_pares que reciba una lista y cuente cuántos de sus elementos 
+son números pares. La función debe devolver ese número.
