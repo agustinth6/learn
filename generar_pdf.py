@@ -133,8 +133,8 @@ def main() -> None:
     text = "\n".join((page.extract_text() or "") for page in reader.pages)
     plano = re.sub(r"\s+", "", text)   # sin espacios/saltos: tolera cortes de linea
 
-    if ES_GUIA:
-        chequeos = [
+    CHEQUEOS = {
+        "GUIA_ESTUDIO_parcial.md": [
             ("guia completa (final)", "Datos de prueba oficiales"),
             ("checklist", "CHECKLIST"),
             ("anexo A (inicio)", "AnexoA"),
@@ -143,17 +143,28 @@ def main() -> None:
             ("anexo C (final - no cortado)", "5)Productossinstock"),
             ("valor total Ej3", "815000"),
             ("errata Ej1", "Reprobado"),
-        ]
-    else:
-        chequeos = [
+        ],
+        "RESUMEN_CLASES_parcial.md": [
             ("fechas arriba", "Fechasyformatodelparcial"),
             ("fecha parcial", "lunes16denoviembrede2026"),
             ("patron while True", "whileTrue"),
             ("doble salto Ej3", "doblesalto"),
             ("metodo isalpha", "isalpha"),
             ("cierre (final - no cortado)", "practicarelfindesemanalargo"),
-        ]
-    for nombre, token in chequeos:
+        ],
+        "GUIA_RECUPERATORIO_parcial1.md": [
+            ("titulo (recuperatorio)", "RECUPERATORIOPRIMERPARCIAL"),
+            ("errata clave 16/17", "intercambiadas"),
+            ("modelo P18", "P18"),
+            ("input siempre str", "SIEMPREdevuelve"),
+            ("practica EJ3 menu", "Opcioninvalida"),
+            ("cierre (final - no cortado)", "ejecutadoyverificado"),
+        ],
+    }
+    chequeos = CHEQUEOS.get(_SRC)
+    if chequeos is None:
+        print("  (sin chequeos definidos para este archivo)")
+    for nombre, token in chequeos or []:
         ok = re.sub(r"\s+", "", token) in plano
         print(f"  [{'OK' if ok else 'FALTA'}] {nombre}")
 
