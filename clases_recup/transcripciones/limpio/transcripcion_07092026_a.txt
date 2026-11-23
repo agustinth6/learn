@@ -1,0 +1,1297 @@
+Me Sí, sí, efectivamente lo que venía pasando eh pasó, así que bueno, si va a pasar a pasar esto.
+Espero que no muchas veces son es un cachito no más.
+Eh, vuelvo a compartir, estaba diciendo que la estructura es parecida a los condicionales que
+estuvimos trabajando la semana que viene.
+la semana, qué bien, la semana pasada donde teníamos eh un bloque de código que se va a ejecutar
+siempre que esta condición sea verdadera.
+Acá ya la estoy forzando a que esta condición sea verdadera.
+Entonces, este bloque de código se va a ejecutar constantemente.
+Bueno, nosotros no queremos eso, sino que queremos evaluar eh, no sé, que una variable contador,
+vamos a usar la el mismo ejemplo que estaba en la diapositiva, que es que contador vale uno menor o
+igual a 5 y vamos a ir analizando qué pasa.
+contador menor igual 5, pero lo mismo con todo e me está dando una alerta ahí como que no está
+definido antes de querer hacer uso de una variable sin definirla, me conviene inicializar esa
+variable contador en el número que sea.
+puede ser cero, va a depender un poco de las veces que yo quiera que este código se repita.
+Eh, y acá vamos a poner algo así.
+Cuando esta condición sea verdadera, este bloque de código va a ser un print, va a decir la
+iteración y va a imprimir el valor de la variable contador.
+En la primera iteración, contador vale uno, evalúa si la condición es verdadera, cómo es verdadera,
+va imprimir iteración los puntos, no sé, número uno.
+Y lo que está pasando en la línea CCO es que estamos incrementando de alguna manera esa variable
+para que cuando llegue a CCO este bucle termine.
+Esto que está escrito acá es lo mismo que poner, lo voy a poner comentado.
+contador eh vale uno, lo que vale contador le sumo uno.
+Es una manera abreviada de escribir esto, esta sintaxis misma, pero de una manera más ordenada, más
+corta, más práctica.
+¿Qué dicen?
+Si a veces envío general, ¿cómo funciona?
+Eh, yo no sé si hablas de internet o eh porque yo estuve Sí, en otro lugar y también funcionaba
+raro, pero Ah, sí, sí, sí.
+mismos acumuladores en el preingreso acumuladores.
+Bueno, sí, sí, esta esta variable vendría a ser la las veces de de una variable acumuladora, aunque
+en realidad la estamos usando más como un contador, pero es el es más o menos el mismo concepto.
+acumulador cuando, no sé, nosotros queremos ir incrementando una variable, ir sumando, no sé, eh,
+todos los números pares y bueno, a una variable acumuladora diciendo que vale dos, después vale
+cuatro, después vale ocho y así va a ir sumando todos los pares.
+E pero en este caso solo lo estamos incrementando en uno, podríamos incrementar en dos y eso de eso
+va a depender también la cantidad de iteraciones que nosotros ejecutemos.
+En este caso lo eh una práctica muy útil para hacer lo digo ahora en este ejemplo simple, pero
+después en la en la cuando empecemos a complejizar los los ejercicios va les va a resultar útil ir
+haciendo el paso a paso de estos eh de estos bucles y sobre todo los del for para entender qué es lo
+que está pasando cuando yo ejecute este este código, yo lo ejecuto, me va lo que estamos esperando
+que eh que haga es que me imprima esta este mensaje cinco veces en la iteración uno y en la cinco no
+me lo cuando el contador vale cinco no lo imprime porque la condición es falsa.
+lo que les comentaba antes que está bueno ir haciendo eh el paso a paso, que acá hay una herramienta
+que es este bichito que es ejecución y depuración y nosotros podemos poner un punto, un punto de
+interrupción, un breakpos eh en estas líneas de código para que se vaya deteniendo y ir evaluando
+ahí cuánto está valiendo las variables, cuánto, qué va a pasar.
+Ahora este ejercicio también lo pueden hacer en papel.
+Ustedes agarran un eh yo creo que puedo dibujar, quiero dibujar acá un papel y poner las distintas
+variables y cuánto está valiendo en cada en cada una de para que me abra esto bien.
+Algo así podemos hacer.
+Eh, tenemos la variable contador que vale uno en la primera iteración, ¿no?
+Eh, perdón, la verita acá.
+Si esta es la iteración uno acá contador vale uno.
+Arranca el bucle while contador uno es menor a perdón, voy a tener que ir a entre los cortes y los y
+los No haya más interrupciones.
+Eh, bueno, vamos a si corréramos el programa en la primera en la línea número dos evalúa uno es
+menor a a CCO verdadero.
+Entonces imprime contador igual 1.
+Este sería el print y también la iteración.
+En la línea cco, contador que vale uno, le va a sumar uno.
+Entonces ahora en la segunda línea, contador va pasa a valer dos.
+Y conta dos en la segunda instalación de dos.
+Esto lo pueden armar como a ustedes le quede cómodo, eh, yo lo lo hago así, pero 2 es menor o igual
+a 5, verdadero.
+Entonces, imprime cuando llega a la línea 5 incrementa de vuelta.
+Contador pasa a valer tres.
+Eh, 3 es menor o igual a 5.
+Perfecto.
+Eso es verdadero.
+Imprime tres.
+No, con la otra iteración.
+Incrementa antes de terminar el bucle wide incrementa uno.
+Contador vale 4.
+Pongo acá 4 es menor o igual a 5, verdadero.
+Imprime cuatro y incrementa.
+Y ahora pasa a valer 5.
+es menor [carraspeo] o igual a a cco verdadero, porque es igual.
+Parece que habíamos visto que cuando está esta variable eh si es igual también esa condición es
+verdadera.
+Entonces, imprime contador, imprime cinco, incrementa.
+Ahora contador pasa valer seis con y cuando llega de vuelta a evaluar esa condición, 6 es menor o
+igual a 5, esto ya es falso.
+Y sigue el bloque de código, sigue el programa en su ejecución o termina en este caso.
+Por eso es que imprime 1 2 3 4 5.
+Si nosotros acá hubiésemos puesto menor a CCO, la última iteración no la va a hacer porque cuando
+vale 5 ya condición no es verdadera.
+Cinco es menor a cinco.
+No, no es menor, son exactamente iguales.
+Y esa es un poco la diferencia.
+Ah, bueno, ahora no sé si lo va a correr porque tengo un punto de Sí, sí que corrió ahí cambió.
+Y si lo quieren hacer con el depurador, eh, en la solapita de ejecución y depuración, pueden
+directamente, creo que con el play ahí marcar un punto de para que frene.
+Y ahí está iniciando.
+Se entiende esto.
+Por ahí lo voy haciendo muy muy eh muy despacio y muy detalladamente porque son como fundamentos.
+Eh, en un ejemplo simple es bastante evidente, pero después cuando se empieza a complejizar la cosa
+es es clave poder entender qué es lo que está pasando eh en el código.
+Bueno, arrancó.
+les va a aparecer esta esta solapita de acá, este estos comandos que si ponen el mouse arriba arriba
+le vas a ir diciendo continuar, depurar por procedimientos, por instrucciones, eh o salir
+generalmente es por instrucciones o F11.
+Y acá les va a ir eh marcando cuánto está eh cuál es el valor de la de la variable de las variables.
+Si hay varias también contador vale uno.
+Vamos a dar eh F11 para que siga el código.
+Hizo todo el proceso.
+Contador vale dos.
+Eh, y acá empieza a imprimir también les va a ir mostrando eso.
+Contador vale dos.
+Esto es verdadero.
+Hace todo esto, imprime, contador, vale tres.
+Eh, imprime número tres.
+Contador vale cuatro.
+Y ahora va a frenar.
+Acá ya va a frenar porque 5 es menor a 5.
+Falso.
+Entonces termina por ahí con este ejemplito simple.
+Hm, no tiene mucho sentido, pero es una herramienta sobre todo para el aprendizaje o para depurar
+errores o para ver cosas que están fallando.
+Muy muy útil.
+Después sacamos el punto y nada, podemos quedarnos ahí o volvemos a nuestra solapita de de archivos.
+¿Qué pasa si nosotros no, esto lo que les decía antes, si nosotros esta condición, este contador no
+lo incrementamos?
+Siempre contador va a valer uno y este bucle se va a quedar continuamente iterando en este eh en
+esta condición.
+Miren, también lo podemos probar con el depurador para que quede más claro, ¿eh?
+Y lo voy a iniciar de acá.
+Si yo no incremento contador siempre va a valer uno y esta condición siempre va a ser verdadera.
+Así le ponga dos o le ponga sé un millón.
+Por más que imprima un millón de veces ese mensaje, nunca se va a detener a eh ahora sí va a ir
+parando porque yo le puse un un punto de corte, pero nunca nunca va a terminar este este programa.
+Si les pasa eso o matan la terminal acá o la o aprietan control C también eh también corta el
+proceso.
+Eh, bueno, ahora paro acá de vuelta porque apreté, fíjense que le estoy dando y la variable no
+cambia.
+Entonces esta condición sigue siendo verdadera y va a imprimir, imprimir, imprimir.
+Si yo no pongo este break point, me va a quedar la máquina colgada.
+Para cortarlo, control C y apago la la depuración.
+Y si no también reiniciar o detect.
+Por eso importante para que no se descuelue el programa de que la variable se incremente.
+No se olviden de poner este cosito de contador más un o puede ir decreyendo también.
+Si nosotros hacemos una variable, el contador vale 10.
+Y podemos hacer que se haga algo así.
+Entonces acá en vez de eh algo así y esto me va a imprimir en vez de aumentar va a ir bajando.
+De 10 va a valer 9.
+Entonces imprime 10 9 8 7 y 6.
+muchas cositas que podemos hacer con el bucle wide.
+Eh, algo más que tiene el bucle que está en la diapositiva es la el comando break, que es para
+romper la secuencia.
+Eh, también sirve para el for, que ahora vamos a ir a trabajar for o el continuo.
+El break se usa dentro del bucle while para salir inmediatamente, aunque la condición o el rango no
+haya terminado.
+Y el continuo hace que el bucle salte una iteración sin ejecutar el resto del código.
+Acá creo que hay algunos ejemplitos también.
+Por ejemplo, si tenemos el mismo ejemplo, ahora tenemos un una condición que el contador tiene que
+ser menor o igual a 10.
+Pero si el contador No sé si volví del todo.
+No está comp está presentando.
+Ahora sí.
+Eh, Rodrigo, sí, a mí eh no sé.
+Levantaste la mano vos.
+Ya fue sin quar.
+No, no, tranqui, tranqui.
+Eh, bueno, se se me cortó la conexión y le había dado eh ejecutar el archivo y sigue imprimiendo.
+El error está acá, que como me había quedado en en que el contador vaya decreyendo, claro, esta
+condición no se va a dar nunca porque de uno va a pasar a -1, a -2, a -3, o sea, siempre va a ser
+número de negativo.
+Y esta condición no me va a dar falsa nunca, por ende, nunca me va a cortar el break y por eso está
+imprimiendo todo lo que está imprimiendo.
+Sí, va va a seguir va a seguir hasta que yo lo frene.
+Entonces, eh control C pero acá C eh Shift Z control enter no funciona.
+Control C.
+Voy a terminar ahí y ahí se ahí terminó.
+Luego la directamente la la borré.
+Voy a poner el comando correcto para que esto no suceda, que es eh más igual 1 o contador igual a
+contador + 1.
+Exactamente lo mismo.
+Eh, y ahora sí tendría que hacer algo más más coherente que que lo que acaba de pasar.
+imprimió solo hasta el cinco.
+Mi condición sigue siendo verdadera porque contador vale cinco.
+Pero, ¿qué pasó?
+Como yo le puse un condicional que si se encontraba con el número cinco eh directamente rompa, hace
+obliga a al terminar.
+Por eso es que solo imprima está el cinco.
+Podría pasar que no lo encuentre.
+Si yo lo incremento dos en dos y yo tengo este programa, eh, va a pasar algo distinto.
+Va a imprimir uno, va a imprimir tres y va a imprimir cinco, porque fue imprimiendo, eh, ah, claro,
+ahí también lo encuentro.
+Pero si arranca ahí, eh, ahí no va no se va a encontrar con el cinco porque si arrancan dos y lo
+incremento en dos, nunca va a aparecer el número cinco que haga que esta condición sea verdadera
+para que pueda romper el eh el bucle wi.
+Y lo mismo podemos hacer, por eso la diferencia.
+Ahora le cambié el número de la variable, le puse dos y el incremento es de dos en dos también puede
+ser de dos en dos, de 10 en 10, el número que ustedes quieran.
+Y eh esta condición no pasó nunca, siempre la evaluó en dos, en cuatro, en se en 8, en 10.
+siempre dio falsa, por ende rompió el bucle wild y terminó cuando el bucle wi eh se encuentra con
+una condición falsa para seguir.
+Y lo mismo pasa con continuo.
+A ver cómo está en la diapositiva.
+Si hacemos el mismo ejemplo.
+Contador vale cer.
+eh incrementa y después el ejemplo de la diapositiva es algo así, ¿no?
+Cinco.
+Eh, la diferencia es que incrementa acá.
+Control C.
+Eh, bloque de código que se ejecuta cuando es ¿Qué pasaría ahí?
+Pisaría la variable dos veces, la incrementaría dos veces.
+Eh, este lo voy a poner abajo porque si no no se va a notar.
+Y acá en vez de poner el break, voy a poner y quiero que solo cuando bueno, con el cuatro.
+Vamos a ver qué pasa en este caso.
+Contador vale cer es menor a CCO.
+Perfecto.
+Ah, no, acá, pero no sé si me lo va a agarrar incrementar en uno.
+Espen, esperen, esperen.
+Cancelos.
+Vamos a el No, lo voy a Sí, lo voy a encontrar igual.
+sacar esto.
+Cero.
+Qué raro.
+Ah, muy bien.
+Sí, señor.
+Eh, gracias.
+Claro, claro.
+No estaba estaba bien estructurado el código, pero no mostraba nada.
+O sea, hacía todas las iteraciones posibles, pero como yo no tengo un print que me muestre lo que va
+el cómo va cambiando de valores el contador, bueno, nunca me iba a enterar.
+Genial.
+Ahí, Federico.
+A ver, ahora sí, ¿no?
+Bien.
+imprimió eh el uno, el dos, el tres, me faltó el cuatro, me saltó el cuatro, el cinco y el seis.
+Saltó el cuatro porque yo le dije que si en algún momento la variable contador es igual a cu,
+continúa este bloque de código, saltalo y volve a empezar.
+Después con cuando vale cinco, esto no es verdadero, entonces sí imprime, no ejecuta esto.
+Eh, y para todas las otras eh opciones sí funciona, sí imprime contado.
+Bueno, hasta acá.
+Ble while, profe, una consulta.
+¿Y por qué se paró en seis el contador?
+A ver.
+Eh, ¿por qué se paró un seis?
+Pero igual qué imprimió seis.
+Y veámoslo, veámoslo paso a paso, porque cuando contador vale seis, claro, este no lo tiene que
+imprimir.
+Seis es falso.
+Contador, ¿por qué imprimió se?
+Buena pregunta.
+Debería haber impreso hasta el 5.
+A ver.
+Un ejemplo práctico para profe, pero no dice que es menor o igual.
+C tiene que tomar al cinco y le sumaría uno.
+Ahí llega el seis y termina.
+Eh, sí, cuando llega el cinco, sí lo tiene que imprimir, pero el seis, ¿por qué me lo estoy
+imprimiendo?
+Porque es el contador cinco en realidad.
+Como salté el cuatro, si uno los cuenta son cinco contadores.
+¿Será por eso?
+Eh, se me fue.
+Pero el cinco sí lo imprimió.
+No imprimió.
+Eh, no, en realidad no es para hacer un número específ 1 2 3 5 y 6.
+Quizás nos pide el contador que el seis funcionaría como cinco en vez de el número.
+¿Será por eso?
+Porque el contador lo analizamos.
+No, no creo.
+Eh eh, cuando contador vale cero, imprime.
+Perfecto.
+Vamos a ir paso a paso.
+Vale cero, imprime uno.
+E claro, imprime el seis porque primero lo incrementa y después lo imprime cuando por eso no
+imprimió el cero.
+En realidad es el número cinco el que está imprimiendo el seis porque lo incrementa y después lo
+imprime, pero después cuando llega acá a seis eh ahí sí no entra porque está incrementando antes del
+print.
+Ahí está la la respuesta.
+¿Se entiende?
+Si yo tuviera el print arriba, eh, igual buenísimo que que pasó esto, que que salga este estas
+situaciones así inesperadas para para usar las herramientas para analizar.
+Lo que pasa es que contador vale cero, la condición es verdadera, perfecto.
+Antes de imprimir lo incrementa.
+Entonces contador pasa a valer uno.
+En el primer print ya imprima, imprime uno.
+Vuelve ahora contador vale dos.
+Perfecto.
+Eh, lo incrementa y después lo imprime.
+En la próxima va a valer tres.
+Lo incrementa y después lo imprime.
+Lo mismo había hacer un ahí y ahí el contador vale cinco porque se salteó el cuatro.
+Esta es la es la línea que que hace imprimir el el número seis.
+Contador vale cinco, entonces la condición es verdadera, pero no va a imprimir cinco.
+Antes lo va a incrementar.
+Cuando pasa a la siguiente línea, contador vale seis.
+Por eso es que imprime seis como último número y después cuando vuelve a querer entrar al wild, ahí
+sí ya con ese número no se eh no se valida la condición y ya no no sigue iterando.
+Así que bien buen ejemplo para para probar otras cosas.
+Si el contador estuviera acá, control C, control X sería otra cosa.
+Voy a sacar esto y lo voy a correr directamente.
+Me quedo, tengo que parar aquí.
+Vale, sí.
+¿Alguna duda de esto antes de pasar al bucle for?
+Cualquier duda, eh, cualquier situación, cualquier pregunta.
+Eh, yo no llegué a ver la consolita, la de depuración.
+Ah, okay.
+Ahora lo lo corremos de vuelta.
+Dale.
+Gracias.
+Continue me lo está cortando.
+A ver si es esto.
+Bueno, probemos este.
+Acá lo corta.
+Hace 0 1 2 e tres.
+¿Y por qué no imprime el cuatro?
+Bueno, el cuatro no me lo imprime por esto.
+¿Y por qué no imprime el cinco?
+porque ya me parece que no entra de vuelta.
+Para depurar yo puedo poner eh puntos de control, lo pongo en el while para ver la condición, para
+ver cómo está evaluando la condición y lo voy a poner en el PR.
+Y la consolita de depuración está acá, es una de las solapitas.
+Si no le aparecen estas cosas acá, creo que eh algún lado se podía agregar y si no lo pueden buscar
+en consola de depuración.
+este y le dan iniciar desde acá.
+Vamos a ver qué pasa en este ejemplo.
+Esto practíquenlo también en en papel porque en el parcial les van a aparecer ejercicios como los
+que están en en los laboratorios, que es un bloque de código y decir qué imprime la consola.
+Y ustedes tienen que poner 1 2 3 5 y 6y como escribió Aron en el chat, eh, pero lo van a no van a
+tener la compu para hacerlo.
+Entonces tienen que ir haciendo.
+Bueno, primero imprimir tal cosa, después eh hace toda la vuelta.
+Entonces es muy práctico ir haciendo también el la práctica en papel.
+Eh, contador celo arrancan cero.
+Condición verdadera.
+Si contador es igual a 4, eso no es.
+Entonces imprime contador y después incrementa.
+El contador y se va para arriba.
+Contador vale uno, funciona.
+Imprime uno, incrementa.
+Contador vale dos.
+Imprime dos.
+Contador vale tres.
+Tendría que imprimir tres.
+Aumentó.
+Contador vale cuatro.
+Esta condición es verdadera, esta condición también es verdadera.
+Y le dice que continúe, que no impriman el contador.
+Mm.
+Pero, ¿por qué no imprime eh contador?
+Vale cu no incrementó.
+me hizo no te suma a no te lo suma a cinco.
+No me incrementó esto, ¿no?
+A ver qué hace la que sigue.
+Claro, como que este continuo, profe, el contador igual 4 al lado del menor.
+Sí.
+Esto, esto te lo va poniendo es eh te lo va poniendo este eh la consola de depuración, lo mismo que
+acá me va poniendo, está saltando la Claro, eso es lo que está pasando.
+Este continuo, este continue me hace que salte el contador también.
+Entonces queda cuatro.
+De hecho, eh, quedó ahí como colgado, si no queda siempre en cuatro.
+El continue es para seguir con eh con el programa y y no y no seguir contando.
+Sería ese es el el break el break que hace que siga el programa por acá.
+Sí, el cono hace que me salte eh esa iteración, pero en este caso, como el contador está acá abajo,
+eh no me lo está incrementando.
+M.
+Bueno, ya es molesto, ¿no?
+Qué mal.
+Voy a volver a compartir eh Bueno, les da esa esos tiempos de de cortes les da como un ratito para
+que sigan ustedes probando ahí en su en sus cómpulos estas estas cositas que estamos haciendo.
+Justo antes de de que se me corte, lo que estaba diciendo es que eh el continuo hace que salte de
+acá cuando esta condición es verdadera, salte de acá y vuelva acá.
+Entonces está saltando el print, o sea, hace que salte todo lo que sigue a continuación, por eso que
+tampoco incrementa y salta la variable contador.
+Antes cuando estaba arriba sí incrementaba porque solo se saltaba el print.
+Entonces, eh esto me me gusta ejemplos que salieron eh espontáneamente no los tenía pensado.
+Eh nos sirven para bueno, para entender que dónde pongamos eh los distintos comandos, es que le
+vamos a a alterar un poco el el funcionamiento a al programa.
+Salta de acá, vuelve acá.
+Como se quedó clavado en cuatro y nunca está incrementando de acá, viene acá.
+Es cuatro.
+Bueno, continúa, es vuelta.
+Cuatro es menor a CCO.
+Sí, eso es verdad de vuelta.
+Entonces ahí se me queda.
+No hace nada, no imprime nada, pero queda ahí colgado el programa.
+Así que sería más práctico poner la variable contador.
+Si yo voy a poner un continue, saber que me va a saltar eh todo.
+Y esto ahí va.
+Y eso que me preguntaban acá que se pone como un más cu contador.
+Fíjense que ahora va a aparecer.
+Ahora no está.
+Y cuando inicia la depuración me va a ir marcando el valor de la variable en ese momento, en esa
+intereración.
+Ahí me abrió la consolita esta.
+A ver los mensajes.
+Ahí apareció.
+Primero vale cero, acá incrementa y cuando vuelva a ese punto de control, vale uno.
+Para eso sirve un poquito.
+Y esto mismo pueden hacer ustedes en en papel, ir anotando.
+Vale uno.
+Okay.
+Acá incrementa.
+Vale dos.
+Exacto.
+¿Qué hace?
+Imprime contador y así con con todos los ejercicios que que vayan haciendo para poder entender el el
+flujo de del programa.
+E primero vamos a a ver los este while, después al final vamos a ver la diferencia entre el do
+while, pero eh me gustaría ver antes de complicárnosla eh ver los bucles for hasta acá.
+Estamos bien con Wild.
+Eh, hay muchas formas de poder trabajar con wilde.
+A veces se hace algo como esto.
+Eh, pregunta primero, corta y pregunta primero y corta en falso.
+Perfecto, perfecto.
+A veces en algunos programas o en algunas prácticas se le va se les va a pedir que hagan como una
+simulación de que si el usuario ingresa un número nada, impriman una cosa, si ingresa otro número,
+impriman otro y si ingresa el número cero que el programa salga.
+Entonces, muchas veces se usa como white true, siempre verdadero, eh, C y se le pone como si el
+número es igual igual a eh 0.
+Entonces antes se pone no número igual eh inputar un número, ¿eh?
+Y acá también se le pone un mensajito.
+Para salir apretar el cero.
+Para agregar un nombre apretado uno.
+Entonces vas eh con un elif van haciendo distintas eh opciones.
+Si número, no sé esto cualquier cosa.
+Y si aprieta cero, bueno, sale sale del eh de la consola.
+Es es como simular un un switch, como distintas opciones para distintas acciones en en el programa y
+hay una de ellas que hace que el wi se rompa.
+Entonces, siempre va a estar acá hasta que el usuario lo decida.
+Cuando quiere salir aprieta C.
+Eh, esto lo podemos programar si el número un programita como para mantener al usuario todo el
+tiempo.
+La condición siempre es verdadera, nada más va a terminar cuando ingrese un número.
+Eh, cuatro.
+Oh, siempre es true.
+Bueno, acá esto tendría que estar acá dentro.
+Control C.
+Disculpa, no estoy entendiendo la la lógica del del while true.
+O sea, ¿qué sería algo falso entonces?
+que no ponga un número.
+Sería falso cuando eh el número es eh es cero.
+No, no hay no hay falso.
+Es no hay falso.
+No es la condición, siempre es verdadera, nada más que voy a romper el bucle cuando el usuario
+ingrese un número cero.
+¿Y el true lo puedo sacar entonces de ahí del código o no?
+No, el true lo dejas para que para que arranque.
+Siempre va a arrancar.
+Cuando vos corres el programa arranca.
+ingresa un número.
+Bueno, eh si el número es tal, si el número cero, lo rompe.
+Acá lo voy a lo voy a romper a propósito.
+Primero lo voy a romper y después lo voy a dejar que corra.
+No quería avanzar tanto con esto.
+Es como para mostrarle que también podemos hacer acá ingresa.
+Si yo ingreso cero, sale que tengo uso era como para darles un ejemplo del uso del más práctico del
+break.
+En caso contrario, cort pregunta, eh un switch es como en eh algunos de lenguaje de programación.
+V tenés el comando switch y lee lo mismo, lee los distintos valores.
+Si ingresa uno, manda un saludo.
+Si ingresa dos, huta una operación.
+ingresa tres es como simular con un wi through una especie de opciones.
+Eh, vieron que a veces en las páginas hay como distintas opciones para para elegir para hacer
+determinadas acciones.
+Bueno, eso sería como una selección múltiple.
+Exactamente.
+imprime cosas distintas según el Entonces, arranca el va siempre va a arrancar, nos va a pedir un
+número y en base a ese número va a Bueno, le faltaría un els acá como para que no siga no siga eh no
+siga siendo infinito, ¿eh?
+Eh, si ingresa cualquier otro número me valida y si no, si yo quiero salir, si ingreso cero, salgo
+del del wi.
+Para esto se usa a veces el el wth, pero siempre tengo que tener o una condición de o una eh una
+sentencia de break para terminarlo o me de lo contrario me va me va a seguir.
+Eh, y el continue.
+para hacer algunos saltos de línea cuando, no sé, yo tengo una lista, quiero recorrer un un conjunto
+de datos y quiero imprimir todos los valores menos los que son positivos o los que son negativos o
+los que los que te contengan la palabra tal herramientas herramientas que que van a ir empezando a
+incorporar en los ejercicios.
+Después vamos a armar de vamos a tener eh más chances de trabajar con eh con el Wild Through.
+Es útil, es útil.
+Bien.
+E por qué me viene para acá cuál es la Ahora vamos a empezar a ver buook for.
+eh es una estructura para iterar también parecida a al bucle while, pero la gran diferencia es que
+el bucle while va a hacer esas iteraciones siempre y cuando se cumpla una condición o salvo que la
+forcemos a que esa condición sea verdadera siempre en este wild tr.
+Eh, entonces de antemano nosotros no sabemos cuál es el número eh específico o podríamos deducirlo,
+pero no no es no es la la eh nuestra prioridad.
+Nosotros decimos, mientras pase esto, hace tal cosa.
+Mientras esta condición sea verdadera, ejecuta este bloque de código.
+Con el con el bucle for, nosotros vamos a también poder hacer iteraciones de elementos, pero ya
+estableciendo de alguna forma más eh la cantidad de iteraciones que nosotros queremos ejecutar.
+Tenemos una función si queremos e hacer un número determinado de iteraciones, que es la función
+range que sirve para más.
+¿Qué sería más más?
+Eh, Aarón.
+cuenta las vueltas.
+Eh, la función range, ¿no?
+Esta función nos va a devolver un iterable y dentro de los parámetros que recibe vamos a poder
+decirle cuántas veces queremos que itere.
+En general, los bucles for sirven para eh trabajar con elementos iterables.
+Un elemento iterable es una lista, un diccionario, un una cadena de texto.
+son elementos o conjunto de elementos que tienen adentro números, valores, palabras o si es una
+letra, si es una cadena de texto, caracteres o nosotros con la herramienta for, con el bucle for
+vamos a poder recorrer todo ese conjunto de elementos y lo mismo y ejecutar un bloque de código para
+cada uno de esas de esos elementos que estén dentro de ese iterable.
+Con la función range, nosotros vamos a tener una especie de lista de números.
+Si nosotros decimos, vamos a usar la función range y le ponemos cinco, esta función nos va a generar
+de el 0 1 2 3 4 e y el cinco no lo voy a imprimir.
+La estructura del range es eh algo así.
+Esto no es complicado, pero tiene su estructura con varias cositas.
+Así que paso a paso, poco a poco, vamos a ir de Y una vez que sepamos cómo trabaja range, vamos a
+ver cómo trabaja el for.
+Eh, a la función range nosotros le podemos dar un solo argumento, eh, como en el ejemplo anterior,
+le damos cinco y eso nos va a generar números desde el cero hasta el número que le pasemos -1.
+Esto lo que está haciendo es, voy a hacer un dibujito.
+Supongamos que una lista es algo como esto.
+Pongamos que esto es una lista donde tenemos el cer, el un dos, el tres y el cu.
+Bueno, tenemos cinco elementos.
+Lo que hace la función range, por eso siempre es hasta el último menos 1, es que toma hasta el
+principio del último número, hasta acá, hasta donde termina el cuatro y donde empieza el cinco,
+justo hasta esta intersección.
+Por eso el último número no lo toma y toma el a uno menos del último.
+En el caso del cero, sí arrancan cer0.
+Si nosotros queremos tener cinco elementos, vamos a tener 0 1 2 3 y cu.
+Si le ponemos 10, vamos a tener del cer hasta el 9, vamos a tener 10 elementos que va a arrancar del
+cero.
+Eh, y ese detallito nada más para tener en cuenta, cuando se trata de los parámetros que recibe la
+función range, siempre tener en cuenta que va a ir hasta el último hasta el final menos1 o hasta
+como como les quede más práctico entenderlo, hasta el principio del último número.
+Entonces, lo que está acá no lo va a tomar, que eso ya corresponde al número seis, digamos.
+Eh, vamos a borrar todo esto.
+Vamos a trabajar la misma función con un parámetro de inicio y un parámetro del final.
+Vamos a pasarle eh que vaya del dos hasta el seis.
+En este caso me va a imprimir el dos, el tres, el cuatro y el cinco, porque el parámetro que
+indicaba al final era -1, 1 men.
+Y hay un tercer parámetro que nos va a ser para nos va a servir para determinar el paso que queremos
+darle.
+Si no le ponemos nada, va a ir de uno en uno.
+1 2 3 4 como mi primer caso, 2 3 4 5 como en el segundo ejemplo.
+Pero si nosotros ponemos un parámetro al final, eso va a ser el paso.
+Esto nos va a devolver una lista de números del 0 al nu salteándose uno con un paso de dos, o sea,
+va a ser 0 2 4 6 y 8.
+El 10 no, porque habíamos dicho que del final era -1, o sea, llegaría hasta el 9, pero como va
+saltando de dos en dos, al nu tampoco lo agarra.
+Vamos a probar esto y después vemos cómo trabaja eh el función que recibe parámetros.
+Ya habíamos visto que puede recibir uno, dos o tres parámetros.
+Si nosotros le ponemos un eh parámetro de este un CCO, lo que nos va a devolver esa función va a ser
+0 1 2 3 cu y cinco.
+Nos va a dar cinco números, pero el último menos un eh okay.
+¿Cómo hacemos para usar esto?
+eh en un bucle for.
+Nosotros con esta función le estamos diciendo al bucle for que haga cinco veces una cosa.
+La estructura del bucle for es for.
+Vamos a tener acá una un variable, una variable temporal.
+Generalmente se le pone i, pero se le puede poner cualquier cosa.
+Se puede poner variable.
+temporal.
+Y ahora vamos a decir para esta variable temporal eh que me recorra lo que está en el rango de 5
+imprimíelo.
+La estructura es la palabra reservada for la variable temporal en tal cosa.
+Ahora, esta esta sintaxis me va a permitir a mí ejecutar un bloque de código siempre respetando las
+identaciones, ¿no?
+Cuando tr bloque de código que se ejecuta cinco veces.
+Eh, y básicamente lo que vamos a hacer para verificar esto es imprimir esa variable temporal.
+Le cambio el nombre y quiero que que no se acostumbren a o que se acostumbren a visibilizar que esa
+esto es una variable temporal y a veces le van a llamar i, a veces le van a llamar X o a veces vamos
+a tener dos variables temporales que vamos a ir guardando de un de un de recorrer un diccionario
+varias cosas.
+Eh, dos cosas en este caso, profe, disculpe, lo que sí primero hay que poner range y la cantidad y
+la misma cantidad que en el for 5 después No, esto era como de ejemplo, ¿eh?
+No, esto no.
+Perfecto.
+No hay que poner.
+Claro, porque el range no es una variable, sino es una función función que me sirve para trabajar
+con for en principio eh que me va a devolver números.
+Eh, también puedo hacer como habíamos dicho, que empiece desde el número dos y que vaya hasta eh eh
+11.
+Así me imprime el 10 también.
+Si yo quiero que me imprima el 10, que cuando eh llegue al número 10, que también lo use, entonces
+le pongo uno más, va a arrancar del dos y me va a imprimir eh del dos al 10.
+Y si yo quisiera que esto lo haga de dos en dos, bueno, por último le agrego el el el otro argumento
+que recibe esta función, que es el paso, que en este caso va a ir de dos, va a terminar en el 10.
+Siempre acuérdense que es el final -1 y de dos en dos, 2 8 10.
+Si nos paramos acá, eh, en si yo pongo el mouse sobre la función, también me dice, es una la función
+va e recibe parámetro de inicio, parámetro de stop, de inicio para de fin y step y el paso.
+Por defecto es uno, pero nosotros podemos poner lo que sea, 4, 10, lo que sea.
+Okay, perfecto.
+Pero esto es cómo funciona la función range, o sea, si yo ejecuto esto o vamos a volver al cinco, lo
+que yo tengo es una un conjunto de números dentro de un bucle for que todavía no sabemos cómo
+funciona.
+Habíamos visto que es una sintaxis for, que va a guardar en una variable temporal todo lo que esté
+en este rango que es esto que tengo acá señalado arriba.
+Lo que hace el bucle for es iterar en ese rango o en ese iterable, porque ahora vamos a trabajar con
+listas y con otros iterables.
+Entonces, todo lo que se encuentre en ese rango lo va a guardar en la variable temporal y con ese
+con ese resultado, con ese valor va a ejecutar el bloque de código correspondiente a a esa
+iteración.
+Sí, están.
+Sí, Rubén, se está grabando la clase.
+Está grabando, eh, Romi, que después la sube a su a su canal que está muy bueno.
+Enrique, una pregunta, profesor.
+Sí, el tema es por aparentemente, por lo que yo entiendo, eh la función range y la función for
+trabajan en conjunto.
+Sí.
+Puede trabajar una sin la otra, puede trabajar for sin range.
+Sí.
+O sea, que simple, o sea, que Range está cumpliendo la función de entregar unos parámetros o algo
+así sería.
+Exactamente.
+Exactamente.
+Parámetros lo definimos nosotros o son generados por alguna fórmula o alguna función.
+Eh, ahora lo estamos viendo para empezar a trabajar con con el Google for.
+Después más adelante vamos a ver para qué nos sirve.
+En principio nos sirve para no no para qué sirve, sino cómo funciona.
+O sea, si uno depende del otro, por ahí yo estoy teniendo las cosas medi un poco a medias.
+En este caso están trabajando juntos, pero nosotros podemos trabajar eh los bucle for, los ciclos
+for con otra cosa, con una lista.
+No vimos lista todavía, pero una lista sería como una variable, pero en vez de guardar un solo
+elemento, guarda varias.
+Okay, gracias.
+Gracias.
+No, no quiero mezclar las cosas.
+Bien, bien, bien.
+Eh, en este caso sí están trabajando juntas, pero podrían trabajar separadas.
+Son dos cosas distintas.
+Sí, sí, como para hacerlo más resumido.
+Una cosa es el for, que su estructura es esta, que me va a decir para esta variable temporal donde
+yo voy a ir guardando todo lo que me encuentre en el camino que esté guardado en este rango, bueno,
+este bloque de código.
+Eso sería un poco la lectura del bucle for.
+Entonces, BCLEF va a guardar en la variable temporal todo lo que haya acá en el rango de cinco
+elementos, pero lo va a ir haciendo elemento a elemento.
+Primero en la variable temporal va a guardar el primer elemento que se encuentre en ese rango.
+En este caso es cero.
+¿Qué va a hacer con ese cero?
+Bueno, se va lo va a imprimir.
+Después si quieren lo podemos ir acumulando.
+Es igual a eh 0 cer0 eh más variable temporal.
+No sé, el acumulador por es como bloque de código que yo puedo hacer acá siempre que esté dentado va
+a pertenecer a al bucle for y después cuando termina esto eh mira mismo.
+Todo para eh mostrar que el bucle for llega hasta la línea 18, más allá de que no hay nada, pero
+todo lo que yo ponga en esta identación con esta tabulación va a ser parte del bucle for y se va a
+repetir todas las veces como elementos tenga este rango.
+Si tengo un rango de cinco, se va a repetir cinco veces.
+Por eso habláamos de la diferencia entre el while y el for.
+El for, yo ya sé que se va a repetir cinco veces.
+El while, bueno, no sé si es un código chiquito, sí, pero por ahí no sé cuántas veces se va a
+repetir.
+Se va a repetir sí o sí, si la condición es verdadera, solo va a terminar cuando es falsa.
+Acá va a terminar cuando se encuentre con el último elemento.
+Entonces está está más delimitado, digamos, que wh.
+Exactamente, exactamente.
+Sí, sí, sí.
+Nosotros podemos ya delimitar o por ahí no sabemos cuántos elementos tiene un iterable que vamos a
+recorrer, pero eh está ya está delimitado.
+Si son 50, son 50.
+No se va a hacer 51 si pasa tal cosa, va a recorrer todos uno a uno.
+Y la gracia de esto es que lo va haciendo por cada elemento.
+El primer elemento lo guarda en la variable temporal, lo imprime, hace otras cosas.
+En este caso lo está acumulando, pero y viene hasta acá.
+Listo, vuelve.
+se encuentra con otro elemento, en este caso es uno, lo imprime, acumula, etcétera.
+Lo mismo con el dos, solo llega al final cuando dice, "Bueno, este es el último elemento, listo,
+terminé." No es que valida si la si compro una condición o no es hay 50 elementos, hago 50
+iteraciones.
+Eh, y bueno, esto básicamente va a imprimir del un a 5.
+Bueno, ya lo habíamos probado de del cer del cuatro, perdón.
+Tanto hablar del el último menos un empieza en cer y termina en el último -1.
+Okay, pero para qué yo yo para qué hice esto si nada lo acumulé, me quedó guardado en la variable y
+después si lo quiero lo puedo imprimir acá.
+Miren esta esta la diferencia entre imprimir dentro de vamos a hacer el f string este que acumulador
+eh dentro del for Y lo mismo vamos a hacer acá.
+Cerar esto.
+Acumulador fuera.
+Imprime cero.
+Acumulador cero dentro del for.
+Imprime uno, vale uno.
+Imprime dos, imprime dos.
+Me va imprimiendo por cada eh por cada elemento.
+Bueno, en realidad no lo está acumulando, solo está imprimiendo eh esto eh solo estaba imprimiendo
+el el la variable temporal.
+Pero afuera me lo imprime solo una vez fuera del for porque nada, terminó, agarra lo que quedó
+guardado en la variable acumulador y lo imprime.
+Eh, pero dentro del for lo hace por cada iteración, lo hace cuando se encuentra con el cero.
+hace, imprime la variable, acumula, imprime el acumulador, se encuentra con el uno, lo hace todas
+las veces.
+Recién cuando llega el cuatro y el acumulador quedó en cuatro o en el número que quede, va a
+imprimir este mensaje que ya está afuera.
+Una vez que terminó el el bucle for, sigue el código y se encuentra con esta eh impresión.
+Pero una cosa es adentro del for, lo va a hacer todas las veces que como elementos tenga para
+recorrer y afuera, bueno, una sola vez.
+Eso como para entender un poco la variable, la función range, el ciclo for que va a guardar en una
+variable y después vamos a por ahí lo van a ver, lo cambio para que un poco para marearlo y un poco
+para que no se acostumbren.
+Si yo le pongo a esa variable, le pongo la letra I dentro del for, lo tengo que llamar de la misma
+forma.
+y y acumulador también.
+Y si no me va a empezar a a marcar errores.
+Eh, ¿qué más?
+Bueno, habíamos visto también que acumulador más eh está definirla acá.
+igual cer.
+Ahora sí, eh, igual.
+Eh, también habíamos visto que podíamos hacer o rangos más grandes, siempre indicando, eh, si no
+ponemos nada, arranca en cero y termina en este caso en nueve.
+Si ponemos algo así va a arrancar en 10, va a terminar en 30, pero va a ir de cinco en cinco, ¿eh?
+Y si no ponemos nada al final también nos va nos va a ir de uno en uno.
+El número por defecto es uno.
+Y ahora sí arrancan 10, vale 15, después 20, después 25, después último vale 100.
+Y el valor que me imprimé, bueno, es el último que quedó guardado en la variable acumulador.
+Muy muy importante entender qué es lo que pasa en los bucles, en los wild, cuánto vale acumulador
+acá, cuánto vale en la iteración número tanto.
+Está bien, ¿no?
+No tan con números así ya tirando complicado, sino bueno, no es una cuenta difícil, pero lo
+importante no es la cuenta, sino entender el funcionamiento.
+Acá tuve que poner la variable afuera porque si yo la ponía acá me la estaba borrando cada vez que
+que ingresaba porque lo hacía todas las veces.
+Antes yo tenía acumulador igual eh a cero y después como que le sumaba esto, ¿no?
+E y bueno, algo así tenía.
+Y lo que me estaba pasando es que yo acumulador le decía, "Bueno, eh, súmale lo que va ir en la
+variable temporal.
+Lo voy a hacer en dos líneas.
+acumulado.
+Bueno, una vez más me fijo, una vez más volví.
+Eh, me me siguen viendo a mí cuando yo eh cada vez que se corta, yo no sé si me ven, pero no se
+corta, queda congelada la imagen enseguida y después ya se te corta enseguida la la imagen, profe.
+Ah.
+Ah.
+porque lo que lo que estoy puteando y no no estaría bueno que que el profesor quede grabado
+renegando.
+Eh, bueno, igual ya ahora terminamos de ver este cosito y hacemos un corte pero intencional.
+E lo que les estaba mostrando es que si nosotros en vez de poner la variable acumuladora afuera, la
+ponemos adentro, cuando en cada iteración esta variable se va a pisar y va a volver a valer cero,
+entonces no me va a acumular nunca nada.
+[carraspeo] Supongamos que el primer elemento va a ser un 10, ¿no?
+Esto nos va a devolver eh 10, 15, 20, 25 30.
+Entonces va a recorrer cinco elementos.
+Uno, el primero vale 10, el segundo vale 15.
+El segundo se encuentra con el primer elemento que es 10.
+Lo guarda eh, lo guarda en la variable i.
+Imprime 10, imprime la variable i.
+Acumul vale cer0.
+Okay.
+Ahora acumulador, sumale lo que vale, okay, vale 10.
+Imprime acumulador, vuelve.
+Ahora vale 15.
+Entonces, mi variable acumulador debería valer 25, ¿no?
+Pero si yo imprimo 15, acumulador de vuelta, le digo, vale cer, pero antes valía 10, ahora le estoy
+diciendo que valga cero y cuando quiera acumular me va a volver a valer 15 en vez de 25.
+Lo que estoy haciendo acá es pisándome solo la variable acumulador, la estoy borrando todo el
+tiempo.
+Entonces, esto no debería estar en esta línea como estaba anteriormente.
+Debería estar en un lugar donde no se borre cómo ser afuera.
+Eh, fuera del for tiene que estar antes y no después porque como yo voy a usar una variable, voy a
+usar esa variable para ir sumando cosas, eh no la puedo poner después porque no va a estar definida,
+me va a dar un error, me va a decir, "¿Estás usando algo que no definiste, por ejemplo, si yo la
+comento y digo acá acumulador int, ahora cuando el programa lo identifique, me va a empezar a a
+marcar errores.
+Bueno, ese ese es ese detallito, nada más que van a empezar a a identificar dónde tienen que ir las
+eh la declaración de las variables, donde qué va a pasar si yo pongo este print acá o lo pongo acá.
+Bueno, ir entendiendo el orden de ejecución y cómo cuando nos encontramos con un eh una estructura
+de iteración va a empezar a pasar esto.
+Va a empezar a pasar que se queda un ratito acá en el código y después sigue y en el for se va a
+quedar la cantidad de veces delimitada y en el while se va a quedar la cantidad de veces que eh se
+cumpla la condición.
+Bueno, hagamos un un reset así eamos un cachito, armamos el mate, el café y volvemos en Bien.
+¿Qué nos queda por ver?
+A ver, voy a volver a compartir.
+Queda abrimos elos for.
+Tenemos [resoplido] que hablar de listas.
+Tenemos otro tipo de dato, así como vimos que teníamos datos numéricos, datos del tipo stram,
+cadenas de texto, buanos, tenemos un tipo de dato que es para guardar eh distintos elementos.
+Estas son las listas.
+Eh, en las listas nosotros vamos a poder guardar o palabras o números o de todo un poco.
+Podemos guardar palabras, números, eh con decimales.
+Podemos guardar listas de listas.
+Eh, en otros lenguajes se le llama ar o list, pero en definitiva es es un poco lo mismo, es un un
+tipo de dato que nos sirve para guardar diferentes cosas.
+Y un poco la estructura de una lista es como si fuera este dibujito que está acá, que es una una
+cajita con compartimientos donde en cada uno vamos a poder alojar un dato, un elemento.
+[resoplido] La particularidad de estos elementos es que nosotros vamos a poder acceder a los
+elementos de esa lista a través de los índices de esa lista.
+Cada uno de estos de estas cajitas tiene un índice, siempre arranca por el cero.
+Entonces, el primer elemento va a estar en el índice cero y así sucesivamente.
+O también podemos ingresar eh con números con índices negativos accediendo del -1, va a ser el
+último.
+Y a medida que vamos dejando en los números negativos, bueno, vamos a acceder al primero.
+Si quiero acceder al anteúltimo, al menos y así sucesivamente.
+¿Y para qué nos sirve esto?
+Para básicamente poder trabajar con el elemento eh individual que está dentro de ese conjunto de
+elementos.
+digo conjuntos, pero como hablando de de una agrupación de elementos, porque después hay otra otro
+tipo de datos que son los conjuntos o los set que van a ver más adelante también en análisis de
+datos, pero por ahora le vamos a decir conjuntos y y no va a generar confusión.
+Después cuando vean diccionarios, cuando nosotros vamos a ver diccionarios y veamos conjuntos,
+bueno, ya ahí vamos a ser más específicos con las palabras.
+Pero para empezar a hablar de listas nos sirve entender que es un tipo de dato que es un conjunto de
+elementos y adentro, bueno, podemos poner lo que sea.
+En Python no tenemos que definir qué le vamos a poner adelante, simplemente usar la sintaxis
+adecuada para que Python entienda que es una lista, que son los corchetes.
+Nosotros definimos una variable y cuando con el operador igual asignamos el valor, cuando
+automáticamente le pongamos, cuando pongamos los corchetes, automáticamente Python va a entender que
+esto es una lista.
+Si le ponemos letras entender que es una letra, una lista de palabras.
+Si le ponemos números, vas a entender que son números.
+Y si le ponemos eh cosas variadas, no le no le molesta, no los va a trabajar de manera
+independiente.
+Eh, volviendo a nuestro a nuestro programita del día de hoy, a nuestro archivo del día de hoy, vamos
+eh voy a comentar todo esto y bueno, vamos a empezar a a en principio a crear una lista.
+Le pongo un nombre, le pongo el nombre lista de números, el nombre que crea más representativo y
+puedo hacer o una lista vacía o una lista con número y así para todo, ¿no?
+Habíamos visto que habíamos teníamos listas de listas eh palabras chete.
+Y acá le pongo casa.
+Siempre los elementos se separan con coma, las palabras son eh son strings y los stram van con con e
+comillas.
+Y bueno, podemos también hacer, ya que estamos, hacemos la lista mixta, que vamos a meter un poco de
+todo.
+Vamos a poner un true con mayúscula un 31, una palabra, un número y un falso.
+Muy útiles, muy muy útiles las listas.
+Eh, y vamos a empezar a ver cómo podemos acceder.
+Y esto también, si se acostumbran a acceder a los elementos a través del índice, vamos a a poder
+hacer un montón de cosas, eh, y entender siempre que el primer elemento no es el uno, sino es el
+cero.
+Y si yo quisiera imprimir de la lista de palabras palabras lo mismo con la con los corchetes voy a
+poder acceder algún algún elemento lista de palabras y quiero acceder a gato, quiero imprimir el
+elemento gato, entonces puedo acceder al elemento 01 iría lista y en bajo de y en bajo palabras.
+Ah, mira, bien, ahí me estaba corrigiendo.
+Sí, sí, sí.
+Gracias.
+Ahora sí, exactamente.
+Lista de palabras.
+Entonces, yo voy a estar imprimiendo a, en este caso, no a perro, que es el subíndice un sino que
+quiero imprimir gato, que es 0 1 cera, perro sería uno y el subíndice dos es efectivamente gato.
+También se puede acceder de atrás para adelante.
+Y yo quiero de la misma lista e imprimir eh lista eh palabras.
+El elemento eh pelota es lo mismo que Ah, sí, era -1 o podría acceder al último accediendo con el
+sub índice negativo.
+-1 -2 sería auto, -3 sería gato.
+o puedo usar el uso de los índices positivos 0 1 2 3 4 sería pelota y voy a estar imprimiendo el o
+cediendo al mismo.
+En este caso lo imprimo, pero puedo hacer alguna otra operación.
+Eh, podría hacer mismo en el print.
+Voy a borrar y puedo.
+Esto es como ejemplos de cosas que se puedo hacer que se pueden hacer con con las listas.
+Quiero imprimir eh quiero agarrar el elemento uno y sumárselo a lista eh mixta.
+al elemento.
+Bueno, y acá ojo porque si yo le pongo eh uno que no sería 0 1 2 3.
+Voy a sumar al tres, eh, para que no me tire error, porque si yo accedo a al elemento dos, eh, perro
+má 5 me está listo de palabras.
+Lista de números.
+Habíamos visto que no se puede sumar stream con números.
+Eh, puedo escribir el código y correrlo, me va a tirar un error.
+Entonces, lo que estoy queriendo hacer es hacer la suma de los elementos del elemento que está en el
+subínde 1, el 15 de lista de números más le quiero sumar el elemento 3 de la lista mixta, 0 1 2 3 el
+5.
+Bueno, básicamente me va a sumar eh 15 + 5 formas de acceder a los elementos de la lista y también
+como accedo a los elementos de la lista a través del subíndice, también puedo modificarlos.
+decir ahora esta lista, bueno, tiene gato, perro, auto.
+Quiero que en vez de auto diga otra cosa.
+Vamos a Esto no hizo nada.
+¿Qué pasó?
+Eh, vamos a borrar esto.
+Eh, bueno, me imprimó gato, pelota y 20, que era la suma de 15 más este elemento 5.
+Si yo quisiera modificar, vamos a poner modificar, eh, quiero modificar de la lista de números, por
+ejemplo, el elemento cer0 quiero que en vez de eh 10 ahora valga 100.
+O le voy a poner eh vamos a hacer un print anterior de lista de números y voy a hacer un print
+posterior.
+Lo mismo.
+Copio esto.
+Control C.
+Control D.
+Eh, la primer lista a decir que vale 10, 15, 20, 20.
+Y la segunda, ya me veo veo cómo impactó la modificación que yo hice accediendo a el elemento que
+está en la posición cero de la lista de números, pero se le estoy reasignando un valor con el
+operador igual.
+Así como también modificamos o asignamos valores a variables, también le podemos asignar valores a
+elementos de una lista.
+Eso como en principio para entender un poquito cómo podemos trabajar con las listas la semana.
+¿Qué?
+Buenas.
+Estamos de vuelta.
+A mí yo estoy estaba haciendo paralelo como lo que estabas haciendo y puse no llego a entender que
+si le puedo sacar una foto.
+Puse en la parte de la lista de palabras lo abrí también tal cual está llegando a ver lo que
+escribiste.
+Ah, no está.
+No dije nada.
+Me faltaban unas comillas.
+Me faltaban unas comillas para que me tome el stream de casa y no lo había visto.
+No llegaba a notificar.
+Sí.
+Sí, me tiraba un error la ejecutaria es me faltaba las comillas que cierran casa.
+Ah, mira esa, o sea, es el único momento que el stream al hacer la lista lo hacemos las comillas van
+palabra por palabra.
+Claro, claro, porque cada una de esa de esos espacios separados por coma es un elemento.
+Okay.
+Eh, claro.
+Y bueno, podría acá podría ser, no solc podrían ser varias palabras dentro del mismo stream, pero
+como la coma está separando elementos acá, puede ser una oración completa, después los números.
+Bueno, en ese caso sí se podría poner varias, pero sí, si no cerrás se te tira ahí el error, el
+editor, de hecho.
+Eh, perfecto.
+Pero sí, sí vayan consultándome si tienen ahí errores, dudas que o alguna que se les va trabando en
+algún momento, vayan vayan avisando si lo vemos.
+Sí, yo tenía un error parecido, ya estaba por consultarlo, pero me pasó lo mismo con el el cerrado.
+Sí, falla.
+Perfecto.
+Sí, sí, eso pasa.
+Esto también por ahí el mismo error le está resultando a varios.
+eh ayuda que uno haga la consulta, aunque sea bien las listas eh nos nosotros ahora la estamos
+viendo, pero también podríamos eh trabajarlas y o sea, esto es una lista relativamente chiquita.
+Todas son listas de prueba, pero podríamos tener una lista muy grande y podríamos hacer un montón de
+operaciones con las listas.
+Eh, y la forma que tenemos para analizar o mirar o eh recorrer todos los elementos de la lista de
+una lista es el font, que es una herramienta para trabajar con iterables, como le había les había
+dicho al principio, con la función rango.
+nos la usábamos para que ese for trabaje con un rango de números.
+Ahora vamos a ver cómo trabajar con el bucle for, pero en vez de que recorra un rango de números,
+que recorra directamente una lista.
+Entonces, la misma estructura que usábamos for y en rango esto, nada.
+En vez de eso vamos a hacer eh, no sé, lista de palabras, lista de palabras.
+Entonces, lo que está pasando acá, lo que va a hacer el programa cuando ejecución, el for va a
+recorrer y va a guardar en la variable i todo lo que encuentre en esa lista de palabras.
+esta lista de palabras tenía todo esto control, eh, y lo voy a pegar comentado acá en ya.
+Además está decir, ¿no?, que esto que está verdecito y está comentado, no lo va a tener en cuenta.
+Simplemente lo pongo ahí para que nos ayude eh nos ayude para ir identificando los elementos.
+Y lo que va a pasar que el for va a empezar a iterar y eh arranca con el elemento que está en la
+posición cero, el primer elemento, y lo imprime, que lo guarda en la variable.
+Es importante esto.
+El for guarda en esa variable temporal el primer elemento y hace lo que nosotros le pongamos en el
+fragmento de código correspondiente al for, que es el que está ahí entado o tabulado.
+Una vez que hace la acción que nosotros le ponemos en el código o que está en el código
+correspondiente al primer elemento, si no tiene nada más que hacer, pasa al segundo, imprime el
+segundo y así sucesivamente hasta que se encuentra con el último elemento.
+Cuando ya no hay más elementos, básicamente termina el for y continúa el flujo del programa.
+Esto es en principio lo que hace un for.
+Ahora simplemente estamos imprimiendo eh todos los elementos de la lista, pero hay un montón de
+cositas más que esto no está funcionando.
+Hay varias cosas que podemos hacer.
+Lo importante y lo que más tienen que tener en cuenta ahora es que cada uno de estos elementos eh va
+a tener su protagonismo en cada iteración.
+Eh, ahora simplemente imprimir cada uno de los elementos.
+Eh, bueno, imprimió todas estas cosas, pero después a lo último hace eh esto que está acá.
+Imprime casa de piedras, perro, gato, auto, pelotón.
+Esto como lo más básico, pero supongamos que nosotros de la lista de números ahora sí no sé,
+queremos empezar a hacer operaciones, eh, y no sé, queremos encontrar los pares y los impares, un
+ejercicio que ya habían ya habían eh hecho en los laboratorios anteriormente cuando el usuario
+ingresaba un número, nosotros le decíamos si eso era imparo o imparo.
+Ahora lo vamos a hacer, pero con un conjunto de números.
+Ahora no le vamos a pedir al usuario que ingrese número, sino que evalúe eh cuáles de esos números,
+cuáles números de esa lista son pares o cuáles son.
+Acá empezamos ya a mezclar un poco los conceptos y a mezclar en el en el buen uso, ¿no?
+Porque todo lo que vamos viendo, todos los los conceptos que vamos viendo aisladamente son
+básicamente para empezar a trabajar en conjunto.
+Entonces vamos a recorrer esa lista.
+Vamos a guardar en una variable todo lo que esté en mi lista de números.
+Dos puntos.
+Y ahora, ¿qué quiero hacer yo cuando me encuentre con el primer?
+Porque esto va a funcionar así.
+va a arrancar el programa y se va a encontrar con esta lista control acá aumentado.
+Así lo primero se va a encontrar con el 10.
+Bueno, yo quiero que a ese número, a ese número que se encontró eh y guardó en la variable i lo
+divida por eh dos.
+Quiero ver si es par o impar.
+Entonces, le voy a decir que ahí le haga el módulo de dos.
+Y si eso da cero, si eso da es igual igual a cer, entonces que me hm que me imprima que ese número
+es par, ¿no?
+Porque si yo dividía eh divido por dos un número y el resto es cero, quiere decir que es par.
+Y con la opción módulo, con el operador módulo, trabajábamos con el resto de la división.
+Si el resto es cero, es par.
+Y si el resto es uno y par, siempre hablando de números enteros.
+Eh, esa sería la operación que yo quiero hacer para tener un una idea de si ese número es par
+imparo.
+Okay.
+Pero esto va a pasar a ser ahora una condición de que va a pasar a ser la condición de un if.
+Y si eso es así, entonces ese número es y si no es impría quedarme ahí, podría seguir haciendo
+cosas, podría decir, bueno, si este número quiero sumar todos los pares, bueno, cuando se encuentre
+un par, no solo que lo imprima, sino que eh lo sume.
+Por ahora no lo voy a implementar, pero quiero que los sume.
+¿Y papas qué?
+Control C.
+También quiero que sumen los impactos y después lo después implementamos esto porque necesitamos dos
+dos variables ahí sí, dos variables acumuladoras.
+Eh, bueno, lo mismo que hicimos para e para depurar los casos que estuvimos trabajando anteriormente
+para ir viendo paso a paso el wide, podemos hacer con bucle de for.
+Es interesante también ir viendo para cada elemento qué es lo que pasa.
+Entonces, iniciar acá y vamos a ir viendo paso a paso qué es eh lo que hace un for en acción.
+Acuérdense que nuestra lista es 10, 15, 20, 25.
+Tenemos una estructura de for, una estructura de iteración con la sintaxis para for la variable en
+mi lista que con la lista que voy a trabajar hacer tal cosa.
+Quiere decir que todo esto va a hacerse para cada elemento que haya en nuestra lista.
+Todo esto no.
+O sea, este bloque de código siempre y cuando esta condición se cumpla, ¿no?
+Si esta condición se cumple va a ser esto y si esa condición no se cumple va a ser lo siguiente.
+Eh, bueno, ahí está.
+Ahí está cargando.
+Me abrió la consolita de de comandos.
+Consolita, no sé si es una consolita, es como un cuadrito de comandos.
+Eh, bueno, imprimió un montón de cosas porque tengo arriba, no tengo otras cosas.
+Y lo interesante que acá ustedes pueden ver esto y esto, mi variable i pelota.
+Ah, ¿por qué lista de números?
+Hm.
+Está leyendo otras cosas.
+Vamos a pensar.
+Eh, la pelota lista.
+Ah, okay.
+Le quedó guardada.
+F.
+Lo que pasa acá es que quedó la última.
+¿Cómo se llaman?
+Iguales.
+Y acá también se llama I.
+Eh, me volvió esto.
+La consola es impar 33 es impar 15 es impar.
+Perfecto, perfecto, perfecto, perfecto.
+Sí, sí, eso es lo que debería dar, ¿eh?
+Pero bueno, acá por ahí para no confundirse podemos ponerle otro nombre acá para que no pase esto,
+pero bueno, ahora automáticamente va a cambiar porque la variable i quedó que la última, el último
+elemento hizo este for, quedó con el valor pelota un stream.
+Y ahora estamos en esta línea cuando va a empezar a analizar otra lista.
+Está bien, eh, se llama igual la variable, entonces me la va a pisar.
+Ahora, el primer elemento de la lista es 33 y JK.
+Sí, sí, sí.
+Eh, o número, pueden ponerle lo que les acá le pueden poner for palabra en lista.
+Entonces, te va a ir guardando todas las palabras acá.
+For, número en lista de números.
+va ir guardando todo lo el número que se en cada elemento se encuentre lo va a ir guardando en esa
+variable.
+No, no va a hacer nada porque la está pisando.
+Y ahora sí, y vale 33.
+Va a ejecutar este if, va a dar negativo y esta condición no se va a cumplir.
+Imprimió, se encontró con el 15.
+Tampoco se cumple.
+Impar.
+Ahora se va a encontrar con el 20, mismo acá y lo mismo acá.
+20.
+Ahora sí es verdadero.
+Está en la línea eh en el bloque de código correspondiente a la opción verdadera del if.
+Acuérdense, si es verdadero viene acá y si es falso, viene acá.
+Ahora debería imprimir par.
+20 par.
+¿Qué más tiene?
+25.
+Se encontró con un 25, ¿eh?
+Ahí cambio a 25, imprime impar y por último el último elemento es 30 y debería imprimir par.
+Y ahí como no hay más números, voy a correr una instrucción más.
+Y también eh insisto mucho en esto porque es importante entender que el bucle for va a hacer una
+iteración por cada uno de los elementos.
+Insisto ahora que es elementos simples, porque cuando después veamos diccionarios, acá vamos a tener
+dos variables X y ahora que recorra.
+Entonces, en cada uno de los elementos va a guardar distintas partes de ese elemento.
+Ese elemento se va a componer de dos cosas, clave valor, cosa que vamos a ver más adelante, pero eh
+muy importante que entiendan cómo trabajan los los bucles, que por cada elemento va a ser
+iteraciones y todo el choc lo que yo tenga acá lo va a ejecutar por cada elemento.
+¿Se entiende?
+Eh, se entiende hasta acá.
+¿Hay alguna duda?
+¿Quieren revisar?
+¿Cómo?
+No vi quién habló, pero escuché una Bien.
+¿Qué más tenemos acá?
+Bueno, vimos esto.
+Bueno, haciendo un resumen rapidísimo de lo que vimos hoy, fue bucle while condición.
+Habíamos visto que en eh justamente en esta materia no se da mucho el do while porque Python en sí
+no tiene do while.
+lo que hace es una simulación con Wildr, como habíamos visto anteriormente que le dábamos la
+condición de verdadero para que ingrese y ejecute al menos una vez el código y después a esa
+condición se la podemos cambiar.
+simular un do while sería algo como esto.
+Eh, esa estructura de de bucle la trabaja cava o C#ARP, pero en Python no está explícita esa esa
+estructura.
+Lo que podemos hacer es white true eh print ejecuta.
+que ruta al menos una vez em o sería algo así, perdón.
+Vamos a poner una condición igual a true.
+Ponemos condición y dentro bucle wi después que al menos se ejecute una vez en algún momento podemos
+decir Ok.
+Eh, bueno, un poco lo que lo que hacemos es iniciamos una variable en verdadero, hacemos que el
+código se ejecute al menos una vez.
+Por ahí no va a quedar todo claro en este ejemplo, pero eh pues cuando sigamos trabajando algunos
+ejemplos de los laboratorios van a hacer uso de de esta estructura simulando un do while.
+Así que si no lo entendían anteriormente, mucho no se preocupen porque Python no la no la usa, pero
+es lo que hablábamos anteriormente, con el do while al menos se ejecuta una vez el código y después
+podemos hacer que esa condición eh se vuelva y ahí ya estaríamos rompiendo el el bucle o trabajar
+con el la sentencia.
+Eh, bueno, hasta acá tenemos todo el contenido teórico de la clase de hoy, pero sería interesante
+que empecemos a chusmear.
+No subí esto al aula, así que ya lo voy a subir.
+Mientras tanto, vayan chusmeando un poquito esto que está acá, elatorio tres.
+Eh, ahora lo lo vamos a ver juntos.
+Se me cayó de vuelta.
+Ojalá que se resuelva para mañana porque es es bastante tedioso para ustedes, para mí, para todos.
+Eh, no es una empresa, yo soy de Merlo, una empresa de zoneste que se llama Norte.
+Anda, anda bien, eh, anda bien.
+Pero el fin de semana no sé qué pasó, eh, se cayó, volvió y después anduvo así todo el fin de
+semana.
+Imagínense mirando una película, eh, se corta cada 15 minutos un embole.
+Bueno, ya se los reclamo, no sé, ojalá se se resuelva mañana.
+Eh, y frío.
+¿Qué frío que hizo, casi que casi que hay una nevada, pero bueno.
+Laboratorio.
+Ahora subo la diapositiva clase 7.
+Esto ya estamos dentro de la unidad tres.
+Claro, claro, claro.
+Todo el fin de semana para ver la odisea.
+Sí, un embolo.
+Mm.
+Laboratorio unidad 3.
+Acá ya hay para trabajar un montón.
+A ver, hasta dónde podemos esto también háganlo, eh, porque por ahí en el parcial le preguntan esto,
+eh, 2 es igual igual a 2, ¿qué da?
+verdadero falso.
+2 es igual igual a 2.0 y este la B.
+Claro, ese sería falso por el punto.
+Sí.
+Y este, bueno, este sí no.
+Este sí es fácil, pero guarda, eh, fíjense, hagan hagan la la prueba y sorpréndanse ahí con los
+resultados, eh, porque si yo les digo todos los resultados por ahí se van a a olvidar, pero hacer el
+las pruebas o todas las preguntas que les surjan y van ahí y dicen, "Bueno, a ver, no sé, print,
+¿qué ha qué pasa si Yo quiero imprimir print eh 2 = ig a 2.
+¿Qué me devuelve esto?
+Bueno, acá me va a imprimir un par de cosas, pero prueben 2 punto 2 es igual igual a 2 punto Bueno,
+este es true.
+Yo pongo dos puntos ti error.
+No me deja.
+Voy a correr así a ver qué pasa.
+True.
+Yo pongo dos.
+ser true son distinto tipo, pero me sigue devolviendo true.
+Eh, y el otro como intas false.
+Eh, into.
+Si no lo defino como entero, quizás me lo toma igual.
+Mira, la realidad es que si yo vos haces número num 1 igual a 2 y haces num 2 ig 2.0, no cer los
+está tomando de de formas distintas.
+primero lo guarda como a este lo eh lo va a guardar como entero y control C control V.
+Vamos a hacer lo mismo.
+Esta función type es para ver qué tipo de dato es.
+Y a este lo va a agarrar como eh flat, número decimal.
+Ahora, ¿por qué en la comparación eh de igual igual 1 igual igual dos?
+¿Está escrito, sí?
+Si son de distinto tipo, me los toma.
+Eh, me dice que esto es verdadero.
+A veces tiene que ver un poco, por eso está bueno que ustedes hagan la Claro, las pruebas.
+Hay cosas que aunque sean de distinto tipo, depende del lenguaje y depende cómo toma el lenguaje
+cada una de esas eh situaciones.
+Python, a pesar de que sean distintos tipos, hace como una lectura de que son lo mismo.
+por ahí en otros lenguajes eh va hay hay varias cositas así de que Python tiene esa particularidad.
+Eh, por eso tienen que hacer los ejercicios y empezar a reconocer.
+Eh, después hay una particularidad también, no me acuerdo si es en que si nosotros hacemos resultado
+de dividir 10 Hm.
+O esto ya lo vimos dividido dos.
+Eh, imprimimos el tipo del resultado.
+Bien.
+Y de hecho, en un momento, esta cuenta me daba que el tipo era flotante y después no.
+Bueno, ahí va flotante.
+Y si vos decís, "Pero para 2 di 5 es 2 10 di 2 es 5, me da un número entero.
+¿Por qué Python me dice que esto es 5.0?
+Básicamente porque Python las divisiones ya automáticamente las toma como flotante.
+A ver si imprimo resultado.
+Si me pone 5.0.
+5.0.
+Cuando dividimos de esta forma, Python lo divide, eh, y el resultado es un flotante para obtener con
+el signo de porcentaje, ¿no?
+La que divida por como entero o me estoy confundiendo algo para Sí, el que divide por entero es los
+dos signitos de división.
+Está cambió.
+Ahora en vez de 5.0 me dice 5.
+Esta es la división por entero.
+La otra división que es la división común, Python la toma como eh flotante más allá de que nos dé un
+número entero.
+Y si nosotros hacíamos esto que decía el compañero 10 di 2, esto me va a dar el resto.
+El resto, exactamente.
+Cero.
+Hay un montón de cositas, ¿no?
+No es como no es para bocharlos en un examen, pero son cosas que está bueno tenerlas en cuenta.
+Están ahí en el en los laboratorios para practicar.
+Eh, usando uno de los operadores de comparación de Python, escribe un programa simple de dos líneas
+que tome un parámetro n como entrada, que es un entero, imprima falso si n es mayor que 100 y true
+si n o igual que 100.
+No debes crear ningún bloque if.
+Bueno, ahí hay como para pensar cómo hago esto.
+Eh, calcular el pago de un impuesto para para si el ingreso acá sí si el ingreso es superior a
+tanto.
+Algo parecido hicimos eh anteriormente con esto que calculábamos los porcentajes.
+Ah, en los ejercicios que había que entregar.
+Bueno, tienen más para trabajar.
+Son un montón, ¿no?
+No es que obligatoriamente tienen que hacer todos, pero si hacen todos, pu agarrarle un una Bueno,
+acá ya hay como métodos de listas.
+Bueno, esto lo vamos a ver la clase que viene.
+¿Cómo borrar elementos de una lista?
+Métodos de listas.
+largo de listas, pero los primeros pueden ir practicando tranquilamente.
+Eh, igual mañana vamos a seguir y estos ejercicios también son muy de de parcial.
+Eh, después del ejercicio están para hacer los que vimos hoy en clase.
+Bueno, un bucle break dejado.
+Hay uno para hacer con wild through continua.
+Todos estos los pueden hacer.
+A ver, esto no lo vimos.
+Esto no es todavía.
+Bueno, crea un bucle for que cuente de cer a 10 e imprima.
+Ah, mira, parecía lo que hicimos.
+Eh, mi recomendación es que vayan haciendo y estos analizarlos así con papel y lápiz, eh, como si
+fuera este cosito de acá.
+Vamos a analizar este puntos.
+Se ve mucho, ¿no?
+No lo puedo cambiar.
+Eh, ¿se ve o si no me cambio de Sí, se ve.
+Ay, lo grandezco.
+Tenía abierto el otro.
+Ahí está.
+Y vamos con esto.
+N vale 3.
+Mientras n sea mayor que 0, imprimí esto y después hacé lo que sigue.
+Bueno, va.
+Este también.
+Eh, no vimos que el bucle wi tiene una sentencia else también como eh como si fuera la opción cuando
+esta sentencia es falsa y también ahí tiene un else, es lo mismo que el if, pero eh para el while eh
+funciona exactamente igual.
+Entonces analicemos un poquito.
+N vale 3.
+Mientras n sea mayor a 0, entonces tal cosa.
+3 es mayor que 0, verdadero, imprime n + 1.
+Entonces la primer impresión por consola va a ser 3 + 1, eh 4.
+Y a n le va a restar uno.
+Okay.
+Ahora sí, ¿cuánto vale n?
+porque acá me lo sumó, pero acá está valiendo tres.
+Ojo con esto porque una cosa es que yo haga una operación en print eh cambiando el valor a n,
+simplemente estoy imprimiendo el valor de noo.
+O sea, el primer va a ser este cuatro, pero no modifiqué el valor de n.
+Entonces, n que está valiendo 3, ahora le estoy modificando, le estoy asignando un nuevo valor y lo
+que estoy haciendo restándole uno.
+Bueno, ahora n vale 2.
+Si quieren pueden ir haciéndose así como n vale 3, después vale 2.
+Imaginen que eso es un tres.
+Eh, 2 es mayor que 0.
+Sí.
+Entonces, si imprimo n, 2 + 1, imprimo 3.
+Eh, ¿cuánto vale n?
+2.
+Ahora le resto uno.
+N vale 1.
+Uno es mayor que 0.
+Si imprimo 1 + 1, imprimo 2.
+Y que ahora n 1 - 1 es 0.
+Ahora n vale 0.
+0 mayor que 0.
+No, falso.
+¿Y qué pasa después?
+Bueno, les voy a dejar lo prueben ustedes, hagan este ejercicio y prueben qué pasa con el els dejo
+todo tan le dejo tarea para el hogar.
+¿Qué pasa cuando n vale 0?
+Esta condición es falsa.
+¿Y qué pasa?
+¿Se imprime n o no se imprime?
+Pruébenlo y después me dice.
+Pero estos ejercicios son importantes que los hagan porque la parte en papel de los parciales es de
+esta forma.
+Le dan un ejercicio, les dicen, "¿Qué devuelve este ejercicio?" Y esto que parece simple puede traer
+puede complicarlo por esto, porque acá pueden confundirse que n empieza a valer cuatro y acá le
+restan, entonces va a tener un valor de más eh la consola for en [resoplido] rango que empieza en
+cero termina en cco y un paso de tres.
+Entonces va a imprimir eh cero, no, dos no, tres y nada más porque el cuatro y el cinco se lo va a
+saltear y en el cinco terminaba, así que va a imprimir cer y tres.
+Pero insisto, acuérdense de cómo es la sintaxis del rango de la función range, hagan las pruebas y
+bueno, ahí tienen un montón de de cositas para ir trabajando.
+Eh, mira, me sobró me sobró bastante tiempo.
+¿Cómo están?
+Estamos bien, hay que practicar.
+Bueno, eh dudas, profe, eh no sé si se importar, pero por ejemplo el que incluye el primer número,
+pero no el último.
+Claro.
+¿Puede hacer algo para que se incluya el último o es algo como innecesario?
+No, es esa sintaxis.
+Si vos querés eh si vos querés incluir el 10, tenés que poner 11.
+Claro.
+Eso sería la modificación.
+Listo.
+Sí, sí, sí, sí.
+¿Cómo están con después eh con ya resuelta la situación de de la compu, del Visual Studio Code,
+todos están pudiendo hacer ejercicios?
+Eh, genial, genial, genial.
+¿Hay alguno que no?
+Profe, buenas tardes, buenas noches.
+Buenas noches.
+Eh, bueno, ya es la primera clase que estoy asistiendo, así que estoy muy perdida.
+Estoy tratando de ponerme al día porque, bueno, tuve unos problemas personales y, bueno, esta semana
+estuve viendo todas las clases de todas las materias, pero bueno, hoy realmente estoy media perdida,
+pero calculo que me voy a poner al día.
+Hay mucha tarea para hacer también.
+Creo que mañana hay que entregar un trabajo práctico, ¿no?
+O hay algo que entregar por lo que vi.
+Hola, Karina.
+¿Cómo se fue otra vez?
+Parece que sí.
+La verdad que bueno, ahora entra el grupo hoy, así que bueno, ponerme Estás en el grupo de WhatsApp.
+Sí, sí.
+Hoy justamente me pasó uno de los compañeros que le hablé y bueno, me tengo que sentar y ponerme
+porque estoy perdidísima.
+Sí.
+Yeah.
