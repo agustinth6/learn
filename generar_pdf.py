@@ -158,6 +158,7 @@ def main() -> None:
             ("modelo P18", "P18"),
             ("input siempre str", "SIEMPREdevuelve"),
             ("practica EJ3 menu", "Opcioninvalida"),
+            ("parte D (profe en vivo)", "PARTED"),
             ("cierre (final - no cortado)", "ejecutadoyverificado"),
         ],
     }

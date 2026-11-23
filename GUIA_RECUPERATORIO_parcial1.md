@@ -1,6 +1,7 @@
 # 📘 GUÍA DE ESTUDIO — RECUPERATORIO PRIMER PARCIAL
 
-**Técnicas de Programación** · Basada en las diapositivas de las clases 3, 5, 6, 7, 9, 11 y 13.
+**Técnicas de Programación** · Basada en las diapositivas de las clases 3, 5, 6, 7, 9, 11 y 13
+**+** las transcripciones de las clases del 01/09 al 29/09 (lo que dijo el profe en vivo).
 Todo el código de esta guía fue **corrido y verificado** en Python 3.
 
 ---
@@ -346,6 +347,91 @@ while True:
         print("  Opcion invalida.")
 ```
 **Salida verificada:** calculadora `10 + 5 = 15.0` ✅ · división por cero → mensaje de guardia ✅ · registrar Pedro/Luis · eliminar Pedro ✓ · eliminar Fabian → *"no se encuentra registrado"* ✅ · opción `9` → *"opción inválida"* ✅ · `0` → despedida con `Registrados: ['Luis']` ✅
+
+---
+
+## PARTE D — Lo que dijo el profe en clase (transcripciones 01/09 a 29/09)
+
+> Fuente: 6 transcripciones NoteGPT procesadas y limpiadas. Acá está lo que el profesor enfatizó
+> **en vivo**, que no siempre está en las diapositivas.
+
+### D.1 Formato EXACTO del parcial (clase 29/09)
+
+1. **Dos partes, en este orden**: primero una **hoja en papel** con preguntas → la entregan →
+   **después** sacan la compu (del instituto) y hacen la **parte práctica**.
+2. Parte teórica (papel): **verdadero/falso** y **"¿qué imprime / qué devuelve este código?"**.
+   Ojo: *"no hay que explicar nada, solo hay que decir cuál será la salida"*.
+3. Parte práctica: **UNO solo** de los tres ejercicios de práctica —
+   *"en el parcial va a haber solo uno"*. Estructuras exactas = las del PDF
+   **Practica_para_parcial** (lista + función + menú / notas + promedio / menú con calculadora).
+4. Los **dos modelos** que habilitó en el aula virtual (unidad 4) son justamente los que ya resolvimos:
+   - **Modelo teórico** = las **18 preguntas** con respuestas al final (= `Modelo_primer_parcial.pdf`)
+   - **Modelo práctico** = los **3 ejercicios** (= `Practica_para_parcial.pdf`)
+   Su consejo: hacé el modelo teórico **sin mirar las respuestas** y después autoevaluáte.
+5. La parte práctica de este primer parcial fue **presencial en el instituto** (el lunes 5 que manejaba).
+
+### D.2 Alcance: qué NO entra (confirmado en clase)
+
+- **Módulos**: *"después del parcial vamos a empezar a hacer módulos"* (21/09) → **NO entra**.
+- **Excepciones** (`try/except`): *"eso lo vamos a trabajar después del parcial"* (29/09) → **NO entra**.
+- **Sí entra**: variables y tipos, condicionales (`if/elif/else`), bucles (`while`/`for`/`break`/`continue`),
+  listas y sus métodos, funciones (parámetros posicionales, nombrados y mezclados), `return`,
+  variables globales/locales, f-strings.
+
+### D.3 Las 3 combinaciones de funciones (21/09)
+
+| Tipo | Recibe | Retorna | Ejemplo de la clase |
+|---|---|---|---|
+| 1 | no | no | `saludar()` que solo muestra un mensaje |
+| 2 | sí | no | `agregar_notas(notas)` que muta la lista con `append` |
+| 3 | sí | sí | `calcular_promedio(notas)` que hace `return` |
+
+`return` se usa **cuando necesitás el valor** desde afuera (guardarlo, operar, mostrarlo con `print`).
+
+### D.4 Variables globales dentro de funciones (28/09)
+
+- **Lectura** de una global desde una función → funciona **sin `global`** (Python la busca afuera).
+- **Modificación** (`a += 15`) → **da error**. Soluciones:
+  1. `global a` adentro de la función (funciona), o
+  2. **Mejor práctica del profe**: definir la variable **dentro** y **retornarla**.
+- Por eso en el Ejercicio 1 la lista se define **afuera** (lo pide el enunciado): la función la muta
+  con `append` (lectura de referencia + mutación, sin `global`) y el principal la puede imprimir.
+
+### D.5 Patrones de menú `while True` vistos en vivo (29/09)
+
+```python
+opcion = int(input("Si querés agregar un nombre, ingresá 1: "))
+if opcion == 1:
+    saludar()
+elif opcion == 2:
+    calcular()
+else:
+    break              # cualquier otro valor corta
+```
+- **Variante "solo sale con 0"**: el `break` va en `elif opcion == 0` y el `else` avisa
+  *"opción inválida"* → el usuario queda en el bucle hasta que pone 0.
+- **`input` sin mensaje** queda mudo (espera sin texto en pantalla) — el profe lo remarcó en vivo.
+- Si la lista estuviera **dentro** de la función, el principal no podría imprimirla **sin `return`**
+  (por eso el enunciado la pide global).
+
+### D.6 Cómo practicar la parte en papel (07/09 y 14/09)
+
+- *"Practíquenlo **en papel** porque en el parcial les van a aparecer ejercicios como los de los
+  laboratorios: un bloque de código y **qué imprime la consola**, y **no van a tener la compu** para
+  hacerlo."*
+- Método: recorrer **iteración por iteración**, anotando el valor de las variables en cada vuelta
+  (contador, acumuladora inicializada en 0).
+- Trampas que él mismo marcó como "muy de parcial": `while-else` (¿qué pasa si la condición arranca
+  falsa?), `range` con paso, acumuladas en listas, `break`/`continue`, `elif` que corta en el primero
+  que se cumple.
+
+### D.7 Entregas que mandó (práctica extra si te queda tiempo)
+
+- **01/09**: ejercicios de `if` — precio > 50.000 → 10% de descuento, par/impar con `%`, etc.
+- **21/09**: la **serie de ejercicios de funciones** de la diapositiva (clase 11): *"todos, a entregar"*.
+- **28/09**: los **3 de parámetros** (precio_final, mostrar_persona, calculadora) **en un mismo
+  archivo** — solo 17 entregaron.
+- **07/09**: laboratorio unidad 3 (comparaciones, bucles): *"también son muy de parcial"*.
 
 ---
 
