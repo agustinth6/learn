@@ -13,6 +13,7 @@ import json
 import re
 import subprocess
 import sys
+import unicodedata
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -248,10 +249,45 @@ def main():
         wsum = sum(weights)
         durs = [dur * w / wsum for w in weights]
 
-        # asignar slides a cues (reparto parejo, en orden)
+        # asignar slides a cues por ANCLA de narracion (el visual espera al audio)
         S, C = len(slides), len(cues)
+
+        def norm(s):
+            return "".join(
+                c for c in unicodedata.normalize("NFD", s.casefold())
+                if unicodedata.category(c) != "Mn")
+
+        bounds = [0] * S
+        prev = 0
+        for i, sl in enumerate(slides):
+            if i == 0:
+                continue
+            a = sl.get("ancla")
+            if a:
+                na = norm(a)
+                found = None
+                for k in range(prev, C):
+                    if na in norm(cues[k]):
+                        found = k
+                        break
+                if found is None:  # fallback: reparto parejo
+                    found = min(C - 1, prev + max(1, (C - prev) // max(1, S - i)))
+                bounds[i] = max(found, prev)
+                prev = bounds[i]
+            else:
+                bounds[i] = prev
+        for i, b in enumerate(bounds):
+            cue0 = cues[b] if b < C else ""
+            print(f"    slide {i}: cue {b:>2} '{cue0[:46]}'")
+
         def slide_of(k):
-            return min(S - 1, k * S // C)
+            idx = 0
+            for i in range(S):
+                if bounds[i] <= k:
+                    idx = i
+                else:
+                    break
+            return idx
 
         frame_paths = []
         t = 0.0

@@ -25,7 +25,8 @@
             "4) NO entran módulos ni excepciones",
             "5) Salida en papel: solo la respuesta"
           ],
-          "res": "Papel primero, compu después"
+          "res": "Papel primero, compu después",
+          "ancla": "El formato, según el profe"
         }
       ]
     },
@@ -44,7 +45,8 @@
             "4) Anotar el TIPO: '63' es texto, 1.0 es decimal",
             "5) Dudas? marca y segui; después lo probas"
           ],
-          "res": "Así lo pide el profe"
+          "res": "Así lo pide el profe",
+          "ancla": "El método en papel"
         },
         {
           "tipo": "codigo",
@@ -57,7 +59,8 @@
             "else:",
             "    print(n)"
           ],
-          "res": "Salida: 4 3 2 0   (el else del WHILE corre al terminar)"
+          "res": "Salida: 4 3 2 0   (el else del WHILE corre al terminar)",
+          "ancla": "Pregunta uno"
         },
         {
           "tipo": "codigo",
@@ -66,7 +69,8 @@
             "for i in range(1, 4):",
             "    print(i * 2)"
           ],
-          "res": "Salida: 2 4 6   (range(1,4) = 1,2,3 - el 4 NO entra)"
+          "res": "Salida: 2 4 6   (range(1,4) = 1,2,3 - el 4 NO entra)",
+          "ancla": "Pregunta trece"
         },
         {
           "tipo": "codigo",
@@ -79,7 +83,8 @@
             "    j += 1",
             "    i += 1"
           ],
-          "res": "Salida: 1 1 / 2 2 / 3 3   (suben juntos, corta el AND)"
+          "res": "Salida: 1 1 / 2 2 / 3 3   (suben juntos, corta el AND)",
+          "ancla": "Pregunta quince"
         },
         {
           "tipo": "codigo",
@@ -93,7 +98,8 @@
             "    lst_2.append(add)",
             "print(lst_2)"
           ],
-          "res": "Salida: [1, 3, 6, 10, 15]   (guarda el TOTAL de cada vuelta)"
+          "res": "Salida: [1, 3, 6, 10, 15]   (guarda el TOTAL de cada vuelta)",
+          "ancla": "Pregunta dos"
         },
         {
           "tipo": "codigo",
@@ -105,7 +111,8 @@
             "lst.append(1)      # [6, 2, 3, 4, 5, 1]",
             "print(lst)"
           ],
-          "res": "Salida: [6, 2, 3, 4, 5, 1]   (escribi la lista en cada paso)"
+          "res": "Salida: [6, 2, 3, 4, 5, 1]   (escribi la lista en cada paso)",
+          "ancla": "Y pregunta ocho"
         }
       ]
     },
@@ -125,7 +132,8 @@
             "# (F and F) or (F and T)",
             "#   False   or   False"
           ],
-          "res": "Salida: False"
+          "res": "Salida: False",
+          "ancla": "Pregunta siete"
         },
         {
           "tipo": "codigo",
@@ -138,7 +146,8 @@
             "",
             "# x==y es False -> z = True -> not(z)"
           ],
-          "res": "Salida: False   (no te comas el not del print)"
+          "res": "Salida: False   (no te comas el not del print)",
+          "ancla": "Pregunta nueve"
         },
         {
           "tipo": "codigo",
@@ -148,7 +157,8 @@
             "print((a != b) or (b > 10))   # T or F",
             "print(not(a == b))            # not(F)"
           ],
-          "res": "Salida REAL: True True True   <- la clave dice otra cosa!"
+          "res": "Salida REAL: True True True   <- la clave dice otra cosa!",
+          "ancla": "Preguntas dieciséis"
         },
         {
           "tipo": "codigo",
@@ -158,7 +168,8 @@
             "print(x or y)    # T or F  = True",
             "print(not y)     # not F   = True"
           ],
-          "res": "Salida REAL: False True True   <- clave cruzada con la 16!"
+          "res": "Salida REAL: False True True   <- clave cruzada con la 16!",
+          "ancla": "y la diecisiete da"
         },
         {
           "tipo": "codigo",
@@ -171,7 +182,8 @@
             "",
             "# (T and T) or not(T) = T or F = True"
           ],
-          "res": "Salida: A"
+          "res": "Salida: A",
+          "ancla": "Pregunta dieciocho"
         },
         {
           "tipo": "codigo",
@@ -183,7 +195,8 @@
             "if x < 10:  print(x < 10)    # False!",
             "else:       print(\"else\")"
           ],
-          "res": "Salida: True True else   (el else es SOLO del 3er if)"
+          "res": "Salida: True True else   (el else es SOLO del 3er if)",
+          "ancla": "Pregunta diez"
         },
         {
           "tipo": "codigo",
@@ -195,7 +208,8 @@
             "else:",
             "    print(\"Impar\")"
           ],
-          "res": "Salida: Impar   (7 % 2 = 1, y 1 == 0 es falso)"
+          "res": "Salida: Impar   (7 % 2 = 1, y 1 == 0 es falso)",
+          "ancla": "Pregunta doce"
         },
         {
           "tipo": "codigo",
@@ -209,7 +223,8 @@
             "else:",
             "    print(\"Desaprobado\")"
           ],
-          "res": "Salida: Aprobado   (corta en el primero que se cumple)"
+          "res": "Salida: Aprobado   (corta en el primero que se cumple)",
+          "ancla": "Y pregunta catorce"
         }
       ]
     },
@@ -231,7 +246,8 @@
             "7. Del                 legal (mayúscula no es reservada)",
             "8. del                 ILEGAL (palabra reservada)"
           ],
-          "res": "Respuesta: 3, 6 y 8"
+          "res": "Respuesta: 3, 6 y 8",
+          "ancla": "Pregunta tres"
         },
         {
           "tipo": "codigo",
@@ -243,7 +259,8 @@
             "a = a / (2 * b)",
             "print(a)"
           ],
-          "res": "Salida: 1.0   (la / SIEMPRE devuelve float)"
+          "res": "Salida: 1.0   (la / SIEMPRE devuelve float)",
+          "ancla": "Pregunta cuatro"
         },
         {
           "tipo": "codigo",
@@ -251,7 +268,8 @@
           "cuerpo": [
             "print(\"a\", \"b\", \"c\", sep=\"sep\")"
           ],
-          "res": "Salida: asepbsepc   (sin espacios!)"
+          "res": "Salida: asepbsepc   (sin espacios!)",
+          "ancla": "Pregunta cinco"
         },
         {
           "tipo": "codigo",
@@ -261,7 +279,8 @@
             "x = input()   # usuario escribe: 6",
             "print(x + y)  # x va primero!"
           ],
-          "res": "Salida: 63   (concatena, no suma: 9 esta mal)"
+          "res": "Salida: 63   (concatena, no suma: 9 esta mal)",
+          "ancla": "Pregunta seis"
         },
         {
           "tipo": "codigo",
@@ -271,7 +290,8 @@
             "y = 10 % 3",
             "print(x, y)"
           ],
-          "res": "Salida: 3 1   (// = entero, % = resto)"
+          "res": "Salida: 3 1   (// = entero, % = resto)",
+          "ancla": "Pregunta once"
         },
         {
           "tipo": "lista",
@@ -283,7 +303,8 @@
             "Las dos estan INTERCAMBIADAS en el PDF.",
             "Verificado ejecutando ambos fragmentos."
           ],
-          "res": "Tu razonamiento manda sobre la clave"
+          "res": "Tu razonamiento manda sobre la clave",
+          "ancla": "Y recapitulando la errata"
         }
       ]
     },
@@ -298,7 +319,8 @@
           "cuerpo": [
             "Lista de nombres + función + menu while True",
             "Estructura: datos -> funciones -> flujo"
-          ]
+          ],
+          "ancla": "Práctica, ejercicio uno"
         },
         {
           "tipo": "codigo",
@@ -313,7 +335,8 @@
             "    lista_de_nombres.append(nombre_completo)",
             "    print(f\"{nombre_completo} agregado!\")"
           ],
-          "res": "append MUTA la global sin necesitar 'global'"
+          "res": "append MUTA la global sin necesitar 'global'",
+          "ancla": "La función pide nombre"
         },
         {
           "tipo": "codigo",
@@ -328,7 +351,8 @@
             "",
             "print(f\"Lista final: {lista_de_nombres}\")"
           ],
-          "res": "El print FINAL queda afuera: se ejecuta 1 sola vez"
+          "res": "El print FINAL queda afuera: se ejecuta 1 sola vez",
+          "ancla": "El principal es un while true"
         }
       ]
     },
@@ -344,7 +368,8 @@
             "Carga + promedio",
             "Parámetros entran, return sale",
             "Separar carga de calculo"
-          ]
+          ],
+          "ancla": "Ejercicio dos, carga y promedio"
         },
         {
           "tipo": "codigo",
@@ -356,7 +381,8 @@
             "        nota = float(input(f\"Nota {i+1}: \"))",
             "        notas.append(nota)   # SIN ESTO: lista vacia"
           ],
-          "res": "int(input): input es str y range necesita entero"
+          "res": "int(input): input es str y range necesita entero",
+          "ancla": "Agregar notas recibe"
         },
         {
           "tipo": "codigo",
@@ -368,7 +394,8 @@
             "        total += n",
             "    return total / len(notas)   # / siempre float"
           ],
-          "res": "return NO imprime: el principal debe capturarlo"
+          "res": "return NO imprime: el principal debe capturarlo",
+          "ancla": "Calcular promedio también"
         },
         {
           "tipo": "codigo",
@@ -379,7 +406,8 @@
             "promedio = calcular_promedio(notas)  # captura",
             "print(f\"Promedio: {promedio:.2f}\")"
           ],
-          "res": "Crear -> cargar -> capturar -> mostrar"
+          "res": "Crear -> cargar -> capturar -> mostrar",
+          "ancla": "En el principal"
         }
       ]
     },
@@ -394,7 +422,8 @@
           "cuerpo": [
             "Menu: calculadora / registrar / eliminar / salir",
             "Una opción = un elif = una función"
-          ]
+          ],
+          "ancla": "Ejercicio tres, el menú"
         },
         {
           "tipo": "codigo",
@@ -411,7 +440,8 @@
             "        return num1 / num2",
             "    return None"
           ],
-          "res": "Devuelve con RETURN, no imprime el resultado"
+          "res": "Devuelve con RETURN, no imprime el resultado",
+          "ancla": "Calcular recibe dos números"
         },
         {
           "tipo": "codigo",
@@ -428,7 +458,8 @@
             "    else:",
             "        print(\"No se encuentra registrado\")"
           ],
-          "res": "Preguntar ANTES de remove (si no: ValueError)"
+          "res": "Preguntar ANTES de remove (si no: ValueError)",
+          "ancla": "Registrar pide el nombre"
         },
         {
           "tipo": "codigo",
@@ -443,7 +474,8 @@
             "    elif opción == \"0\": break    # SOLO el 0 sale",
             "    else: print(\"Opción inválida.\")"
           ],
-          "res": "Menu adentro del while; despedida afuera"
+          "res": "Menu adentro del while; despedida afuera",
+          "ancla": "El principal es otro while true"
         }
       ]
     },
@@ -458,7 +490,8 @@
           "cuerpo": [
             "cargar_edades(lista) + contar_mayores(lista)",
             "Es el Ej2 con conteo en vez de suma"
-          ]
+          ],
+          "ancla": "Y este fue el parcial real"
         },
         {
           "tipo": "codigo",
@@ -477,7 +510,19 @@
             "            contador += 1",
             "    return contador"
           ],
-          "res": "Ej2 con conteo: for + if + contador + return"
+          "res": "Ej2 con conteo: for + if + contador + return",
+          "ancla": "Cargar edades recibe"
+        },
+        {
+          "tipo": "lista",
+          "titulo": "LAS 3 TRAMPAS DE ESTE EJERCICIO",
+          "cuerpo": [
+            "1) '> 18' en vez de '>= 18' -> el de 18 no cuenta",
+            "2) 'contador = 0' DENTRO del for -> siempre 1",
+            "3) No capturar el return -> no se ve nada"
+          ],
+          "res": "Sin error en rojo: el peor tipo de error",
+          "ancla": "Tres trampas"
         },
         {
           "tipo": "codigo",
@@ -488,17 +533,8 @@
             "total = contar_mayores(edades)   # captura",
             "print(f\"Mayores: {total}\")"
           ],
-          "res": "Verificado: tipico -> 3 | solo 18 -> 1 | vacia -> 0"
-        },
-        {
-          "tipo": "lista",
-          "titulo": "LAS 3 TRAMPAS DE ESTE EJERCICIO",
-          "cuerpo": [
-            "1) '> 18' en vez de '>= 18' -> el de 18 no cuenta",
-            "2) 'contador = 0' DENTRO del for -> siempre 1",
-            "3) No capturar el return -> no se ve nada"
-          ],
-          "res": "Sin error en rojo: el peor tipo de error"
+          "res": "Verificado: tipico -> 3 | solo 18 -> 1 | vacia -> 0",
+          "ancla": "Y el return hay que capturarlo"
         }
       ]
     },
@@ -517,7 +553,8 @@
             "4) append / remove(1ra vez) / contador ANTES del for",
             "5) Posicionales primero; range NO incluye el limite"
           ],
-          "res": "Práctica en papel: sin compu"
+          "res": "Práctica en papel: sin compu",
+          "ancla": "Cierre, los cinco puntos"
         },
         {
           "tipo": "titulo",
@@ -526,7 +563,8 @@
             "Papel + lapiz a mano",
             "Leer el enunciado dos veces",
             "Tranquilo: ya lo dominas"
-          ]
+          ],
+          "ancla": "practicá en papel"
         }
       ]
     }
