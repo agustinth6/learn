@@ -1,0 +1,488 @@
+1
+00:00:00,000 --> 00:00:05,757
+Hola, ¿cómo andas? En este video juntamos los dos modelos del primer parcial: el teórico,
+
+2
+00:00:05,757 --> 00:00:11,137
+con dieciocho preguntas de salida, y el práctico, con tres ejercicios de programa.
+
+3
+00:00:11,137 --> 00:00:17,108
+El formato, según el profe: primero recibís una hoja en papel con las preguntas, la entregás,
+
+4
+00:00:17,108 --> 00:00:20,121
+y recién después trabajas en la compu.
+
+5
+00:00:20,121 --> 00:00:24,425
+En la parte práctica te llega solo uno de los tres ejercicios.
+
+6
+00:00:24,425 --> 00:00:30,021
+Y ojo con el alcance: no entran módulos ni excepciones, eso se ve después del parcial.
+
+7
+00:00:30,021 --> 00:00:35,239
+Prepará papel y lápiz, porque el teórico se rinde sin computadora. ¡Arrancamos!
+
+8
+00:00:35,239 --> 00:00:40,987
+El método en papel es simple: anotá las variables con su valor actual en el margen,
+
+9
+00:00:40,987 --> 00:00:46,223
+recorré el código línea por línea, y cada vuelta de bucle, una fila nueva.
+
+10
+00:00:46,223 --> 00:00:49,467
+Si dudas de un valor, marcálo y seguís.
+
+11
+00:00:49,467 --> 00:00:52,369
+Vamos con el grupo A, los bucles.
+
+12
+00:00:52,369 --> 00:00:55,215
+Pregunta uno: un while con else.
+
+13
+00:00:55,215 --> 00:00:59,881
+n vale tres; se imprime n más uno y se resta: cuatro, tres, dos.
+
+14
+00:00:59,881 --> 00:01:05,345
+Cuando n llega a cero, la condición se pone falsa, el bucle termina sin break,
+
+15
+00:01:05,345 --> 00:01:08,987
+y el else del while se ejecuta e imprime cero.
+
+16
+00:01:08,987 --> 00:01:11,833
+Salida: cuatro, tres, dos, cero.
+
+17
+00:01:11,833 --> 00:01:17,922
+Pregunta trece: range de uno a cuatro genera uno, dos y tres; multiplicados por dos: dos,
+
+18
+00:01:17,922 --> 00:01:23,556
+cuatro, seis. Pregunta quince: dos contadores suben juntos y la condición es and;
+
+19
+00:01:23,556 --> 00:01:29,190
+corta cuando alguno pasa de tres; salen tres líneas: uno uno, dos dos, tres tres.
+
+20
+00:01:29,190 --> 00:01:35,393
+Pregunta dos: lista de acumulados; el acumulador guarda el total de cada vuelta: uno, tres,
+
+21
+00:01:35,393 --> 00:01:37,499
+seis, diez, quince.
+
+22
+00:01:37,499 --> 00:01:43,873
+Y pregunta ocho: insert en la posición uno, después del cero, después append: seis, dos, tres,
+
+23
+00:01:43,873 --> 00:01:45,979
+cuatro, cinco, uno.
+
+24
+00:01:45,979 --> 00:01:50,206
+Seguimos con los booleanos, el grupo donde más se pierde.
+
+25
+00:01:50,206 --> 00:01:56,350
+Pregunta siete: acordate que el and aprieta antes que el or; separá los bloques y da false.
+
+26
+00:01:56,350 --> 00:02:01,028
+Pregunta nueve: resolvé de adentro hacia afuera; z queda en true,
+
+27
+00:02:01,028 --> 00:02:04,071
+y el print final es not de z: false.
+
+28
+00:02:04,071 --> 00:02:09,820
+Preguntas dieciséis y diecisiete: ojo, la clave del examen las tiene intercambiadas;
+
+29
+00:02:09,820 --> 00:02:15,738
+la dieciséis da true, true, true, y la diecisiete da false, true, true; si tenés dudas,
+
+30
+00:02:15,738 --> 00:02:17,993
+tu razonamiento manda.
+
+31
+00:02:17,993 --> 00:02:23,742
+Pregunta dieciocho: con x igual a cuatro, la primera parte es true, el not da false,
+
+32
+00:02:23,742 --> 00:02:26,616
+true or false da true: imprime A.
+
+33
+00:02:26,616 --> 00:02:32,760
+Pregunta diez: son tres if independientes; el else se engancha solo al tercero: true, true,
+
+34
+00:02:32,760 --> 00:02:37,945
+else. Pregunta doce: siete por dos es uno, no cero, así que imprime impar.
+
+35
+00:02:37,945 --> 00:02:44,258
+Y pregunta catorce: nota ocho, no llega a nueve pero sí a seis: aprobado, y el elif corta ahí.
+
+36
+00:02:44,258 --> 00:02:46,936
+Grupo E, tipos y operadores.
+
+37
+00:02:46,936 --> 00:02:52,584
+Pregunta tres: nombres ilegales: cien, porque empieza con número; m ciento uno,
+
+38
+00:02:52,584 --> 00:02:56,951
+porque tiene espacio; y del, porque es palabra reservada.
+
+39
+00:02:56,951 --> 00:03:00,037
+Ojo: Del con mayúscula sí es legal.
+
+40
+00:03:00,037 --> 00:03:05,801
+Pregunta cuatro: la línea comentada no existe; seis entre seis es uno punto cero,
+
+41
+00:03:05,801 --> 00:03:09,411
+porque la división siempre devuelve decimal.
+
+42
+00:03:09,411 --> 00:03:13,661
+Pregunta cinco: el sep une sin espacios: a-sep-b-sep-c.
+
+43
+00:03:13,661 --> 00:03:18,960
+Pregunta seis: input siempre devuelve texto; y después x, y en ese orden;
+
+44
+00:03:18,960 --> 00:03:22,861
+seis más tres concatena al revés: sesenta y tres.
+
+45
+00:03:22,861 --> 00:03:29,382
+Pregunta once: diez barra barra tres, división entera, es tres; diez módulo tres es uno: tres,
+
+46
+00:03:29,382 --> 00:03:35,845
+uno. Y recapitulando la errata: dieciséis y diecisiete están cambiadas en la clave; el resto,
+
+47
+00:03:35,845 --> 00:03:37,417
+correcto.
+
+48
+00:03:37,417 --> 00:03:42,761
+Práctica, ejercicio uno, línea por línea: registrar nombres en una lista con menú.
+
+49
+00:03:42,761 --> 00:03:48,480
+Primero el dato: lista_de_nombres con corchetes vacíos, afuera de todo, porque es global,
+
+50
+00:03:48,480 --> 00:03:51,419
+y con el nombre exacto del enunciado.
+
+51
+00:03:51,419 --> 00:03:56,657
+Después la función: def saludar, sin parámetros, porque trabaja sobre la global;
+
+52
+00:03:56,657 --> 00:03:59,543
+acordate que definir no es ejecutar.
+
+53
+00:03:59,543 --> 00:04:05,582
+Adentro, dos inputs separados, nombre y apellido, cada uno con su strip para recortar espacios.
+
+54
+00:04:05,582 --> 00:04:11,033
+El f-string los combina con un espacio escrito entre llaves; si olvidás ese espacio,
+
+55
+00:04:11,033 --> 00:04:16,965
+queda AnaGomez. El append agrega al final y muta la lista sin necesidad de la palabra global,
+
+56
+00:04:16,965 --> 00:04:20,759
+y el mensaje de confirmación también va con f-string.
+
+57
+00:04:20,759 --> 00:04:25,249
+El principal arranca con while True: un menú infinito a propósito.
+
+58
+00:04:25,249 --> 00:04:29,471
+Lee la opción como texto; ojo, input siempre devuelve string,
+
+59
+00:04:29,471 --> 00:04:34,280
+por eso la comparamos con comillas; si la comparás contra el número uno,
+
+60
+00:04:34,280 --> 00:04:37,273
+nunca se cumple y el menú no responde.
+
+61
+00:04:37,273 --> 00:04:41,282
+Si es uno, invoca a saludar; cualquier otro valor, break.
+
+62
+00:04:41,282 --> 00:04:45,771
+Y el print final de la lista queda sin indentar, afuera del while,
+
+63
+00:04:45,771 --> 00:04:48,496
+para que se ejecute una sola vez.
+
+64
+00:04:48,496 --> 00:04:53,729
+Ejercicio dos, carga y promedio, línea por línea: la pareja parámetro más return.
+
+65
+00:04:53,729 --> 00:04:59,702
+Agregar notas recibe la lista por parámetro; adentro, la lista se llama notas, el nombre local.
+
+66
+00:04:59,702 --> 00:05:04,934
+Pregunta cuántas con input y la castea a entero, porque range necesita un entero.
+
+67
+00:05:04,934 --> 00:05:08,106
+El for pide cada nota, casteada a decimal,
+
+68
+00:05:08,106 --> 00:05:12,440
+y ahí está la línea que no puede faltar: notas.append; sin ella,
+
+69
+00:05:12,440 --> 00:05:17,355
+la lista queda vacía y el promedio revienta con error de división por cero.
+
+70
+00:05:17,355 --> 00:05:20,685
+Esta función muta la lista y no retorna nada.
+
+71
+00:05:20,685 --> 00:05:25,812
+Calcular promedio también recibe la lista; primero inicializa el total en cero,
+
+72
+00:05:25,812 --> 00:05:30,199
+antes del bucle: si lo borrás, name error, y si lo metés adentro,
+
+73
+00:05:30,199 --> 00:05:33,740
+se reinicia cada vuelta y el resultado queda mal.
+
+74
+00:05:33,740 --> 00:05:39,607
+Recorre la lista con for sumando, y devuelve el promedio con return, con la división por len.
+
+75
+00:05:39,607 --> 00:05:42,779
+Ojo: la función no imprime, solo devuelve.
+
+76
+00:05:42,779 --> 00:05:46,901
+En el principal: se crea la lista vacía, se invoca la carga,
+
+77
+00:05:46,901 --> 00:05:52,715
+se captura el retorno en una variable, y recién ahí se imprime con f-string y dos decimales.
+
+78
+00:05:52,715 --> 00:05:56,362
+El orden importa: crear, cargar, capturar, mostrar.
+
+79
+00:05:56,362 --> 00:05:59,801
+Ejercicio tres, el menú completo, línea por línea.
+
+80
+00:05:59,801 --> 00:06:02,279
+Tres funciones, una por opción.
+
+81
+00:06:02,279 --> 00:06:07,335
+Calcular recibe dos números y un operador; cada operador tiene su rama con return,
+
+82
+00:06:07,335 --> 00:06:09,965
+y la función devuelve, no imprime.
+
+83
+00:06:09,965 --> 00:06:13,100
+Tiene guardia: si el segundo número es cero,
+
+84
+00:06:13,100 --> 00:06:17,246
+avisa y devuelve None para que no explote con división por cero.
+
+85
+00:06:17,246 --> 00:06:21,747
+Registrar pide el nombre y lo agrega con append, sobre la lista global.
+
+86
+00:06:21,747 --> 00:06:26,500
+Eliminar pregunta el nombre; primero verifica con el in si está en la lista,
+
+87
+00:06:26,500 --> 00:06:31,708
+y solo entonces borra con remove, que quita la primera ocurrencia; si no está, avisa.
+
+88
+00:06:31,708 --> 00:06:35,450
+Ese orden no es casual: remove sin verificar tira error.
+
+89
+00:06:35,450 --> 00:06:39,445
+El principal es otro while true: muestra el menú cada vuelta,
+
+90
+00:06:39,445 --> 00:06:42,530
+porque los prints están indentados adentro;
+
+91
+00:06:42,530 --> 00:06:47,536
+lee la opción como texto y despacha con una cadena de elif: uno para calculadora,
+
+92
+00:06:47,536 --> 00:06:50,418
+dos para registrar, tres para eliminar.
+
+93
+00:06:50,418 --> 00:06:54,008
+Captura el resultado y solo lo imprime si no es None.
+
+94
+00:06:54,008 --> 00:06:56,941
+Cero, y solamente cero, rompe con break;
+
+95
+00:06:56,941 --> 00:07:00,683
+todo lo demás avisa opción inválida y sigue en el bucle.
+
+96
+00:07:00,683 --> 00:07:03,262
+Una opción, un elif, una función.
+
+97
+00:07:03,262 --> 00:07:08,101
+Y este fue el parcial real, línea por línea: cargar edades y contar mayores.
+
+98
+00:07:08,101 --> 00:07:10,932
+Es el ejercicio dos con otro disfraz,
+
+99
+00:07:10,932 --> 00:07:15,204
+y los nombres de las funciones son exactamente los del enunciado.
+
+100
+00:07:15,204 --> 00:07:20,249
+Cargar edades recibe la lista por parámetro, pregunta cuántas y castea a entero,
+
+101
+00:07:20,249 --> 00:07:23,801
+y con un for pide cada edad y la agrega con append.
+
+102
+00:07:23,801 --> 00:07:28,794
+Contar mayores recibe la lista, inicializa el contador en cero antes del bucle,
+
+103
+00:07:28,794 --> 00:07:33,067
+la recorre con un for, y adentro del for, con su propio sangrado,
+
+104
+00:07:33,067 --> 00:07:38,472
+el if de edad mayor o igual a dieciocho; solo cuando se cumple, incrementa el contador.
+
+105
+00:07:38,472 --> 00:07:43,413
+El sangrado importa: el if está dentro del for, y el incremento dentro del if.
+
+106
+00:07:43,413 --> 00:07:46,399
+Después devuelve el contador con return.
+
+107
+00:07:46,399 --> 00:07:52,061
+En el principal: lista vacía, invocar la carga, capturar el retorno, y mostrar con f-string.
+
+108
+00:07:52,061 --> 00:07:56,179
+Las tres trampas: usar solo mayor que en vez de mayor o igual,
+
+109
+00:07:56,179 --> 00:08:00,503
+y el que cumple dieciocho no cuenta, sin ningún error en pantalla;
+
+110
+00:08:00,503 --> 00:08:06,063
+inicializar el contador adentro del bucle, que siempre daría uno; y no capturar el return,
+
+111
+00:08:06,063 --> 00:08:07,916
+que no se ve nada.
+
+112
+00:08:07,916 --> 00:08:12,909
+Verificado: con cinco edades típicas da tres, solo alguien de dieciocho da uno,
+
+113
+00:08:12,909 --> 00:08:14,968
+y lista vacía da cero.
+
+114
+00:08:14,968 --> 00:08:17,725
+Cierre, los cinco puntos de oro.
+
+115
+00:08:17,725 --> 00:08:22,081
+Uno: input siempre devuelve texto; compará con el mismo tipo.
+
+116
+00:08:22,081 --> 00:08:26,106
+Dos: return no imprime; el principal captura y muestra.
+
+117
+00:08:26,106 --> 00:08:30,352
+Tres: and antes que or, y el else se engancha al último if.
+
+118
+00:08:30,352 --> 00:08:34,873
+Cuatro: append para agregar, remove borra la primera ocurrencia,
+
+119
+00:08:34,873 --> 00:08:38,402
+y el acumulador se inicializa antes del bucle.
+
+120
+00:08:38,402 --> 00:08:43,916
+Cinco: posicionales antes que nombrados, y el range no incluye el límite superior.
+
+121
+00:08:43,916 --> 00:08:49,264
+Sumale la errata del dieciséis y el diecisiete, y practicá en papel, sin compu.
+
+122
+00:08:49,264 --> 00:08:51,801
+¡Éxitos en el recuperatorio!
+

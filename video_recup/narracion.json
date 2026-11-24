@@ -1,0 +1,683 @@
+{
+  "titulo": "MODELOS DEL PRIMER PARCIAL - Teórico + Práctico",
+  "etapas": [
+    {
+      "id": 1,
+      "nombre": "Intro y formato",
+      "narracion": "Hola, ¿cómo andas? En este video juntamos los dos modelos del primer parcial: el teórico, con dieciocho preguntas de salida, y el práctico, con tres ejercicios de programa. El formato, según el profe: primero recibís una hoja en papel con las preguntas, la entregás, y recién después trabajas en la compu. En la parte práctica te llega solo uno de los tres ejercicios. Y ojo con el alcance: no entran módulos ni excepciones, eso se ve después del parcial. Prepará papel y lápiz, porque el teórico se rinde sin computadora. ¡Arrancamos!",
+      "slides": [
+        {
+          "tipo": "titulo",
+          "titulo": "MODELOS DEL PRIMER PARCIAL",
+          "cuerpo": [
+            "Teórico: 18 preguntas de salida",
+            "Práctico: 3 ejercicios de programa",
+            "Repaso completo paso a paso"
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titulo": "FORMATO DEL PARCIAL",
+          "cuerpo": [
+            "1) Hoja EN PAPEL con preguntas -> la entregas",
+            "2) Después, la compu -> parte práctica",
+            "3) Práctica: UNO solo de los 3 ejercicios",
+            "4) NO entran módulos ni excepciones",
+            "5) Salida en papel: solo la respuesta"
+          ],
+          "res": "Papel primero, compu después",
+          "ancla": "El formato, según el profe"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Teórico: método, bucles y listas",
+      "narracion": "El método en papel es simple: anotá las variables con su valor actual en el margen, recorré el código línea por línea, y cada vuelta de bucle, una fila nueva. Si dudas de un valor, marcálo y seguís. Vamos con el grupo A, los bucles. Pregunta uno: un while con else. n vale tres; se imprime n más uno y se resta: cuatro, tres, dos. Cuando n llega a cero, la condición se pone falsa, el bucle termina sin break, y el else del while se ejecuta e imprime cero. Salida: cuatro, tres, dos, cero. Pregunta trece: range de uno a cuatro genera uno, dos y tres; multiplicados por dos: dos, cuatro, seis. Pregunta quince: dos contadores suben juntos y la condición es and; corta cuando alguno pasa de tres; salen tres líneas: uno uno, dos dos, tres tres. Pregunta dos: lista de acumulados; el acumulador guarda el total de cada vuelta: uno, tres, seis, diez, quince. Y pregunta ocho: insert en la posición uno, después del cero, después append: seis, dos, tres, cuatro, cinco, uno.",
+      "slides": [
+        {
+          "tipo": "lista",
+          "titulo": "MÉTODO EN PAPEL (sin compu)",
+          "cuerpo": [
+            "1) Variables en el margen, con valor ACTUAL",
+            "2) Recorrer línea por línea",
+            "3) Cada vuelta de bucle = una fila nueva",
+            "4) Anotar el TIPO: '63' es texto, 1.0 es decimal",
+            "5) Dudas? marca y segui; después lo probas"
+          ],
+          "res": "Así lo pide el profe",
+          "ancla": "El método en papel"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P1 - while con else",
+          "cuerpo": [
+            "n = 3",
+            "while n > 0:",
+            "    print(n + 1)",
+            "    n -= 1",
+            "else:",
+            "    print(n)"
+          ],
+          "res": "Salida: 4 3 2 0   (el else del WHILE corre al terminar)",
+          "ancla": "Pregunta uno"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P13 - range con dos números",
+          "cuerpo": [
+            "for i in range(1, 4):",
+            "    print(i * 2)"
+          ],
+          "res": "Salida: 2 4 6   (range(1,4) = 1,2,3 - el 4 NO entra)",
+          "ancla": "Pregunta trece"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P15 - dos contadores",
+          "cuerpo": [
+            "i = 1",
+            "j = 1",
+            "while i <= 3 and j <= 3:",
+            "    print(i, j)",
+            "    j += 1",
+            "    i += 1"
+          ],
+          "res": "Salida: 1 1 / 2 2 / 3 3   (suben juntos, corta el AND)",
+          "ancla": "Pregunta quince"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P2 - lista de acumulados",
+          "cuerpo": [
+            "lst = [1, 2, 3, 4, 5]",
+            "lst_2 = []",
+            "add = 0",
+            "for number in lst:",
+            "    add += number",
+            "    lst_2.append(add)",
+            "print(lst_2)"
+          ],
+          "res": "Salida: [1, 3, 6, 10, 15]   (guarda el TOTAL de cada vuelta)",
+          "ancla": "Pregunta dos"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P8 - insert / del / append",
+          "cuerpo": [
+            "lst = [1, 2, 3, 4, 5]",
+            "lst.insert(1, 6)   # [1, 6, 2, 3, 4, 5]",
+            "del lst[0]         # [6, 2, 3, 4, 5]",
+            "lst.append(1)      # [6, 2, 3, 4, 5, 1]",
+            "print(lst)"
+          ],
+          "res": "Salida: [6, 2, 3, 4, 5, 1]   (escribi la lista en cada paso)",
+          "ancla": "Y pregunta ocho"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Teórico: booleanos y condicionales",
+      "narracion": "Seguimos con los booleanos, el grupo donde más se pierde. Pregunta siete: acordate que el and aprieta antes que el or; separá los bloques y da false. Pregunta nueve: resolvé de adentro hacia afuera; z queda en true, y el print final es not de z: false. Preguntas dieciséis y diecisiete: ojo, la clave del examen las tiene intercambiadas; la dieciséis da true, true, true, y la diecisiete da false, true, true; si tenés dudas, tu razonamiento manda. Pregunta dieciocho: con x igual a cuatro, la primera parte es true, el not da false, true or false da true: imprime A. Pregunta diez: son tres if independientes; el else se engancha solo al tercero: true, true, else. Pregunta doce: siete por dos es uno, no cero, así que imprime impar. Y pregunta catorce: nota ocho, no llega a nueve pero sí a seis: aprobado, y el elif corta ahí.",
+      "slides": [
+        {
+          "tipo": "codigo",
+          "titulo": "P7 - precedencia: AND antes que OR",
+          "cuerpo": [
+            "z = 0",
+            "y = 10",
+            "x = y < z and z > y or y < z and z < y",
+            "",
+            "# (F and F) or (F and T)",
+            "#   False   or   False"
+          ],
+          "res": "Salida: False",
+          "ancla": "Pregunta siete"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P9 - not al final",
+          "cuerpo": [
+            "x = 1",
+            "y = 0",
+            "z = ((x == y) and (x == y)) or not(x == y)",
+            "print(not(z))",
+            "",
+            "# x==y es False -> z = True -> not(z)"
+          ],
+          "res": "Salida: False   (no te comas el not del print)",
+          "ancla": "Pregunta nueve"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P16 - tres expresiones  (a=5, b=3, c=5)",
+          "cuerpo": [
+            "print((a == c) and (b < a))   # T and T",
+            "print((a != b) or (b > 10))   # T or F",
+            "print(not(a == b))            # not(F)"
+          ],
+          "res": "Salida REAL: True True True   <- la clave dice otra cosa!",
+          "ancla": "Preguntas dieciséis"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P17 - and / or / not  (x=True, y=False)",
+          "cuerpo": [
+            "print(x and y)   # T and F = False",
+            "print(x or y)    # T or F  = True",
+            "print(not y)     # not F   = True"
+          ],
+          "res": "Salida REAL: False True True   <- clave cruzada con la 16!",
+          "ancla": "y la diecisiete da"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P18 - if compuesto  (x = 4)",
+          "cuerpo": [
+            "if (x > 2 and x < 5) or not(x == 4):",
+            "    print(\"A\")",
+            "else:",
+            "    print(\"B\")",
+            "",
+            "# (T and T) or not(T) = T or F = True"
+          ],
+          "res": "Salida: A",
+          "ancla": "Pregunta dieciocho"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P10 - tres if y un else colgado",
+          "cuerpo": [
+            "x = 10",
+            "if x == 10: print(x == 10)   # True",
+            "if x > 5:   print(x > 5)     # True",
+            "if x < 10:  print(x < 10)    # False!",
+            "else:       print(\"else\")"
+          ],
+          "res": "Salida: True True else   (el else es SOLO del 3er if)",
+          "ancla": "Pregunta diez"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P12 - par o impar",
+          "cuerpo": [
+            "x = 7",
+            "if x % 2 == 0:",
+            "    print(\"Par\")",
+            "else:",
+            "    print(\"Impar\")"
+          ],
+          "res": "Salida: Impar   (7 % 2 = 1, y 1 == 0 es falso)",
+          "ancla": "Pregunta doce"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P14 - cadena de elif",
+          "cuerpo": [
+            "nota = 8",
+            "if nota >= 9:",
+            "    print(\"Excelente\")",
+            "elif nota >= 6:",
+            "    print(\"Aprobado\")",
+            "else:",
+            "    print(\"Desaprobado\")"
+          ],
+          "res": "Salida: Aprobado   (corta en el primero que se cumple)",
+          "ancla": "Y pregunta catorce"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Teórico: tipos y operadores",
+      "narracion": "Grupo E, tipos y operadores. Pregunta tres: nombres ilegales: cien, porque empieza con número; m ciento uno, porque tiene espacio; y del, porque es palabra reservada. Ojo: Del con mayúscula sí es legal. Pregunta cuatro: la línea comentada no existe; seis entre seis es uno punto cero, porque la división siempre devuelve decimal. Pregunta cinco: el sep une sin espacios: a-sep-b-sep-c. Pregunta seis: input siempre devuelve texto; y después x, y en ese orden; seis más tres concatena al revés: sesenta y tres. Pregunta once: diez barra barra tres, división entera, es tres; diez módulo tres es uno: tres, uno. Y recapitulando la errata: dieciséis y diecisiete están cambiadas en la clave; el resto, correcto.",
+      "slides": [
+        {
+          "tipo": "codigo",
+          "titulo": "P3 - nombres ilegales",
+          "cuerpo": [
+            "1. my_var              legal",
+            "2. m                   legal",
+            "3. 101                 ILEGAL (empieza con número)",
+            "4. averylongVariablename  legal (fea, pero legal)",
+            "5. m101                legal",
+            "6. m 101               ILEGAL (tiene espacio)",
+            "7. Del                 legal (mayúscula no es reservada)",
+            "8. del                 ILEGAL (palabra reservada)"
+          ],
+          "res": "Respuesta: 3, 6 y 8",
+          "ancla": "Pregunta tres"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P4 - división con línea comentada",
+          "cuerpo": [
+            "a = 6",
+            "b = 3",
+            "# a /= 2 * b     <- comentada, NO existe",
+            "a = a / (2 * b)",
+            "print(a)"
+          ],
+          "res": "Salida: 1.0   (la / SIEMPRE devuelve float)",
+          "ancla": "Pregunta cuatro"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P5 - sep",
+          "cuerpo": [
+            "print(\"a\", \"b\", \"c\", sep=\"sep\")"
+          ],
+          "res": "Salida: asepbsepc   (sin espacios!)",
+          "ancla": "Pregunta cinco"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P6 - input SIEMPRE devuelve texto",
+          "cuerpo": [
+            "y = input()   # usuario escribe: 3",
+            "x = input()   # usuario escribe: 6",
+            "print(x + y)  # x va primero!"
+          ],
+          "res": "Salida: 63   (concatena, no suma: 9 esta mal)",
+          "ancla": "Pregunta seis"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "P11 - división entera y resto",
+          "cuerpo": [
+            "x = 10 // 3",
+            "y = 10 % 3",
+            "print(x, y)"
+          ],
+          "res": "Salida: 3 1   (// = entero, % = resto)",
+          "ancla": "Pregunta once"
+        },
+        {
+          "tipo": "lista",
+          "titulo": "ERRATA DE LA CLAVE",
+          "cuerpo": [
+            "P16 dice:  False True True   ->  REAL: True True True",
+            "P17 dice:  True True True    ->  REAL: False True True",
+            "",
+            "Las dos estan INTERCAMBIADAS en el PDF.",
+            "Verificado ejecutando ambos fragmentos."
+          ],
+          "res": "Tu razonamiento manda sobre la clave",
+          "ancla": "Y recapitulando la errata"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Práctico: Ej1 lista + menu",
+      "narracion": "Práctica, ejercicio uno, línea por línea: registrar nombres en una lista con menú. Primero el dato: lista_de_nombres con corchetes vacíos, afuera de todo, porque es global, y con el nombre exacto del enunciado. Después la función: def saludar, sin parámetros, porque trabaja sobre la global; acordate que definir no es ejecutar. Adentro, dos inputs separados, nombre y apellido, cada uno con su strip para recortar espacios. El f-string los combina con un espacio escrito entre llaves; si olvidás ese espacio, queda AnaGomez. El append agrega al final y muta la lista sin necesidad de la palabra global, y el mensaje de confirmación también va con f-string. El principal arranca con while True: un menú infinito a propósito. Lee la opción como texto; ojo, input siempre devuelve string, por eso la comparamos con comillas; si la comparás contra el número uno, nunca se cumple y el menú no responde. Si es uno, invoca a saludar; cualquier otro valor, break. Y el print final de la lista queda sin indentar, afuera del while, para que se ejecute una sola vez.",
+      "slides": [
+        {
+          "tipo": "titulo",
+          "titulo": "PRACTICO - EJERCICIO 1",
+          "cuerpo": [
+            "Registro de nombres: linea por linea",
+            "datos -> funcion -> menu while True"
+          ]
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ1 - el dato (global)",
+          "cuerpo": [
+            "lista_de_nombres = []",
+            "# afuera de todo = GLOBAL",
+            "# [] = lista vacia (no dict, no tupla)",
+            "# nombre EXACTO del enunciado"
+          ],
+          "res": "Requisito 1: lista vacia llamada lista_de_nombres",
+          "ancla": "Primero el dato"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ1 - la funcion: pedir y combinar",
+          "cuerpo": [
+            "def saludar():   # sin parametros: usa la global",
+            "    nombre = input(\"Nombre: \").strip()",
+            "    apellido = input(\"Apellido: \").strip()",
+            "    nombre_completo = f\"{nombre} {apellido}\"",
+            "# definir NO es ejecutar"
+          ],
+          "res": "f-string: el espacio ENTRE llaves es literal",
+          "ancla": "Adentro, dos inputs"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ1 - append y confirmacion",
+          "cuerpo": [
+            "    lista_de_nombres.append(nombre_completo)",
+            "    print(f\"{nombre_completo} agregado!\")",
+            "# append MUTA la global: no hace falta 'global'",
+            "# append != =  (nunca pisar la lista)"
+          ],
+          "res": "Requisito: agregar con .append + mensaje f-string",
+          "ancla": "El append agrega al final"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ1 - el menu while True",
+          "cuerpo": [
+            "while True:   # infinito A PROPOSITO",
+            "    opcion = input(\"1 = agregar: \").strip()",
+            "# input SIEMPRE devuelve str"
+          ],
+          "res": "El menu vive adentro del while: se repite cada vuelta",
+          "ancla": "El principal arranca con while True"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ1 - la trampa de las comillas",
+          "cuerpo": [
+            "    if opcion == \"1\":    # COMILLAS: texto con texto",
+            "        saludar()         # invocar = con parentesis",
+            "    else:",
+            "        break             # cualquier otro valor corta"
+          ],
+          "res": "'1' == 1  ->  False: el menu no responderia",
+          "ancla": "input siempre devuelve string"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ1 - el print final",
+          "cuerpo": [
+            "print(f\"Lista final: {lista_de_nombres}\")",
+            "# SIN indentar: afuera del while",
+            "# se ejecuta UNA sola vez, despues del break"
+          ],
+          "res": "Estructura: [datos] -> [funciones] -> [flujo]",
+          "ancla": "Y el print final de la lista"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Práctico: Ej2 notas + promedio",
+      "narracion": "Ejercicio dos, carga y promedio, línea por línea: la pareja parámetro más return. Agregar notas recibe la lista por parámetro; adentro, la lista se llama notas, el nombre local. Pregunta cuántas con input y la castea a entero, porque range necesita un entero. El for pide cada nota, casteada a decimal, y ahí está la línea que no puede faltar: notas.append; sin ella, la lista queda vacía y el promedio revienta con error de división por cero. Esta función muta la lista y no retorna nada. Calcular promedio también recibe la lista; primero inicializa el total en cero, antes del bucle: si lo borrás, name error, y si lo metés adentro, se reinicia cada vuelta y el resultado queda mal. Recorre la lista con for sumando, y devuelve el promedio con return, con la división por len. Ojo: la función no imprime, solo devuelve. En el principal: se crea la lista vacía, se invoca la carga, se captura el retorno en una variable, y recién ahí se imprime con f-string y dos decimales. El orden importa: crear, cargar, capturar, mostrar.",
+      "slides": [
+        {
+          "tipo": "titulo",
+          "titulo": "PRACTICO - EJERCICIO 2",
+          "cuerpo": [
+            "Carga + promedio: linea por linea",
+            "parametro entran, return sale"
+          ]
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ2 - cargar: el parametro",
+          "cuerpo": [
+            "def agregar_notas(notas):",
+            "    cantidad = int(input(\"Cuántas? \"))",
+            "# 'notas' = nombre LOCAL del parametro",
+            "# int(input): input es str, range pide entero"
+          ],
+          "res": "La lista entra por PARAMETRO (no hay global)",
+          "ancla": "Agregar notas recibe la lista por parámetro"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ2 - el for y el append",
+          "cuerpo": [
+            "    for i in range(cantidad):",
+            "        nota = float(input(f\"Nota {i+1}: \"))",
+            "        notas.append(nota)   # LINEA CLAVE",
+            "# sin append: lista vacia -> ZeroDivisionError"
+          ],
+          "res": "float: las notas pueden tener coma decimal",
+          "ancla": "El for pide cada nota"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ2 - inicializar ANTES del bucle",
+          "cuerpo": [
+            "def calcular_promedio(notas):",
+            "    total = 0        # ANTES del for!",
+            "# borrado  -> NameError",
+            "# adentro  -> se reinicia: resultado MAL"
+          ],
+          "res": "Acumuladora: declarar antes de recorrer",
+          "ancla": "primero inicializa el total en cero"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ2 - sumar y devolver",
+          "cuerpo": [
+            "    for n in notas:",
+            "        total += n",
+            "    return total / len(notas)",
+            "# return NO imprime; / siempre da float"
+          ],
+          "res": "Funcion que RETORNA: el principal la captura",
+          "ancla": "Recorre la lista con for sumando"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ2 - programa principal",
+          "cuerpo": [
+            "notas = []",
+            "agregar_notas(notas)",
+            "promedio = calcular_promedio(notas)  # captura",
+            "print(f\"Promedio: {promedio:.2f}\")"
+          ],
+          "res": "crear -> cargar -> capturar -> mostrar",
+          "ancla": "En el principal"
+        },
+        {
+          "tipo": "lista",
+          "titulo": "EJ2 - la estructura",
+          "cuerpo": [
+            "1) Funciones: datos por PARAMETRO, salida por RETURN",
+            "2) Carga MUTA con append; calculo RETORNA",
+            "3) El principal solo orquesta, no calcula"
+          ],
+          "res": "Separar carga de calculo, como pide el enunciado",
+          "ancla": "El orden importa"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "Práctico: Ej3 menu completo",
+      "narracion": "Ejercicio tres, el menú completo, línea por línea. Tres funciones, una por opción. Calcular recibe dos números y un operador; cada operador tiene su rama con return, y la función devuelve, no imprime. Tiene guardia: si el segundo número es cero, avisa y devuelve None para que no explote con división por cero. Registrar pide el nombre y lo agrega con append, sobre la lista global. Eliminar pregunta el nombre; primero verifica con el in si está en la lista, y solo entonces borra con remove, que quita la primera ocurrencia; si no está, avisa. Ese orden no es casual: remove sin verificar tira error. El principal es otro while true: muestra el menú cada vuelta, porque los prints están indentados adentro; lee la opción como texto y despacha con una cadena de elif: uno para calculadora, dos para registrar, tres para eliminar. Captura el resultado y solo lo imprime si no es None. Cero, y solamente cero, rompe con break; todo lo demás avisa opción inválida y sigue en el bucle. Una opción, un elif, una función.",
+      "slides": [
+        {
+          "tipo": "titulo",
+          "titulo": "PRACTICO - EJERCICIO 3",
+          "cuerpo": [
+            "Menu completo: linea por linea",
+            "una opcion = un elif = una funcion"
+          ]
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ3 - calcular: 3 params, return por rama",
+          "cuerpo": [
+            "def calcular(num1, num2, operador):",
+            "    if operador == \"+\": return num1 + num2",
+            "    if operador == \"-\": return num1 - num2",
+            "    if operador == \"*\": return num1 * num2"
+          ],
+          "res": "Cada rama hace RETURN y la funcion termina ahi",
+          "ancla": "Calcular recibe dos números y un operador"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ3 - guardia de division",
+          "cuerpo": [
+            "    if operador == \"/\":",
+            "        if num2 == 0:",
+            "            print(\"No se puede dividir por cero\")",
+            "            return None",
+            "        return num1 / num2",
+            "    return None   # operador invalido"
+          ],
+          "res": "Armour extra: x / 0 explota con ZeroDivisionError",
+          "ancla": "si el segundo número es cero"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ3 - registrar y eliminar",
+          "cuerpo": [
+            "def registrar_nombre():",
+            "    nombres.append(input(\"Nombre: \").strip())",
+            "def eliminar_nombre():",
+            "    nom = input(\"Nombre: \").strip()",
+            "    if nom in nombres:      # verificar ANTES",
+            "        nombres.remove(nom) # 1ra ocurrencia",
+            "    else:",
+            "        print(\"No se encuentra registrado\")"
+          ],
+          "res": "remove sin verificar -> ValueError si no existe",
+          "ancla": "Registrar pide el nombre"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ3 - menu: prints adentro del while",
+          "cuerpo": [
+            "while True:",
+            "    print(\"1) Calc  2) Alta  3) Baja  0) Salir\")",
+            "    opcion = input(\"Opcion: \").strip()",
+            "# prints INDENTADOS: el menu se repite"
+          ],
+          "res": "Despues de cada operacion vuelve a mostrarse",
+          "ancla": "El principal es otro while true"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ3 - cadena de elif",
+          "cuerpo": [
+            "    if opcion == \"1\": ... calculadora",
+            "    elif opcion == \"2\": registrar_nombre()",
+            "    elif opcion == \"3\": eliminar_nombre()",
+            "# captura y solo imprime si no es None"
+          ],
+          "res": "Despachador: el menu NO hace nada mas que llamar",
+          "ancla": "despacha con una cadena de elif"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "EJ3 - salida",
+          "cuerpo": [
+            "    elif opcion == \"0\": break   # SOLO el 0 sale",
+            "    else:",
+            "        print(\"Opcion invalida.\")",
+            "# despues del while: despedida (nivel 0)"
+          ],
+          "res": "Una opcion = un elif = una funcion",
+          "ancla": "Cero, y solamente cero"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "El parcial real: edades",
+      "narracion": "Y este fue el parcial real, línea por línea: cargar edades y contar mayores. Es el ejercicio dos con otro disfraz, y los nombres de las funciones son exactamente los del enunciado. Cargar edades recibe la lista por parámetro, pregunta cuántas y castea a entero, y con un for pide cada edad y la agrega con append. Contar mayores recibe la lista, inicializa el contador en cero antes del bucle, la recorre con un for, y adentro del for, con su propio sangrado, el if de edad mayor o igual a dieciocho; solo cuando se cumple, incrementa el contador. El sangrado importa: el if está dentro del for, y el incremento dentro del if. Después devuelve el contador con return. En el principal: lista vacía, invocar la carga, capturar el retorno, y mostrar con f-string. Las tres trampas: usar solo mayor que en vez de mayor o igual, y el que cumple dieciocho no cuenta, sin ningún error en pantalla; inicializar el contador adentro del bucle, que siempre daría uno; y no capturar el return, que no se ve nada. Verificado: con cinco edades típicas da tres, solo alguien de dieciocho da uno, y lista vacía da cero.",
+      "slides": [
+        {
+          "tipo": "titulo",
+          "titulo": "EL PARCIAL REAL - edades",
+          "cuerpo": [
+            "cargar_edades(lista) + contar_mayores(lista)",
+            "Es el Ej2 con conteo en vez de suma"
+          ]
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "PARCIAL - cargar_edades",
+          "cuerpo": [
+            "def cargar_edades(lista):",
+            "    cantidad = int(input(\"Cuántas? \"))",
+            "    for i in range(cantidad):",
+            "        edad = int(input(f\"Edad {i+1}: \"))",
+            "        lista.append(edad)"
+          ],
+          "res": "Nombres EXACTOS del enunciado (asi se corrige)",
+          "ancla": "Cargar edades recibe la lista por parámetro"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "PARCIAL - contar_mayores",
+          "cuerpo": [
+            "def contar_mayores(lista):",
+            "    contador = 0          # ANTES del bucle",
+            "    for edad in lista:",
+            "        if edad >= 18:    # >= con la igualdad!",
+            "            contador += 1 # adentro del if",
+            "    return contador"
+          ],
+          "res": "Sangrado: if DENTRO del for, incremento DENTRO del if",
+          "ancla": "Contar mayores recibe la lista"
+        },
+        {
+          "tipo": "codigo",
+          "titulo": "PARCIAL - programa principal",
+          "cuerpo": [
+            "edades = []",
+            "cargar_edades(edades)",
+            "total = contar_mayores(edades)  # captura",
+            "print(f\"Mayores: {total}\")"
+          ],
+          "res": "crear -> cargar -> capturar -> mostrar",
+          "ancla": "En el principal"
+        },
+        {
+          "tipo": "lista",
+          "titulo": "PARCIAL - las 3 trampas",
+          "cuerpo": [
+            "1) '> 18' en vez de '>= 18' -> el de 18 no cuenta",
+            "2) 'contador = 0' DENTRO del for -> siempre 1",
+            "3) No capturar el return -> no se ve nada"
+          ],
+          "res": "Sin error en rojo: el peor tipo de error",
+          "ancla": "Las tres trampas"
+        },
+        {
+          "tipo": "lista",
+          "titulo": "PARCIAL - verificado en 3 casos",
+          "cuerpo": [
+            "5 edades (17,18,20,15,30) -> 3",
+            "solo alguien de 18 -> 1   (el >= cuenta!)",
+            "lista vacia -> 0   (no explota, no divide)"
+          ],
+          "res": "Mismo esqueleto que el Ej2: ya lo dominas",
+          "ancla": "Verificado: con cinco edades"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "nombre": "Cierre",
+      "narracion": "Cierre, los cinco puntos de oro. Uno: input siempre devuelve texto; compará con el mismo tipo. Dos: return no imprime; el principal captura y muestra. Tres: and antes que or, y el else se engancha al último if. Cuatro: append para agregar, remove borra la primera ocurrencia, y el acumulador se inicializa antes del bucle. Cinco: posicionales antes que nombrados, y el range no incluye el límite superior. Sumale la errata del dieciséis y el diecisiete, y practicá en papel, sin compu. ¡Éxitos en el recuperatorio!",
+      "slides": [
+        {
+          "tipo": "lista",
+          "titulo": "LOS 5 PUNTOS DE ORO",
+          "cuerpo": [
+            "1) input SIEMPRE es texto -> compara igual tipo",
+            "2) return NO imprime -> principal captura y muestra",
+            "3) AND antes que OR; else = último if",
+            "4) append / remove(1ra vez) / contador ANTES del for",
+            "5) Posicionales primero; range NO incluye el limite"
+          ],
+          "res": "Práctica en papel: sin compu",
+          "ancla": "Cierre, los cinco puntos"
+        },
+        {
+          "tipo": "titulo",
+          "titulo": "EXITOS EN EL RECUPERATORIO",
+          "cuerpo": [
+            "Papel + lapiz a mano",
+            "Leer el enunciado dos veces",
+            "Tranquilo: ya lo dominas"
+          ],
+          "ancla": "practicá en papel"
+        }
+      ]
+    }
+  ]
+}
