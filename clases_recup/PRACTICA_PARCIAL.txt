@@ -1,0 +1,79 @@
+--- pagina 1 ---
+1- Objetivo: Crear un programa en Python que permita registrar nombres 
+completos en una lista de forma dinámica utilizando funciones y bucles.  
+Requerimientos: 
+1. Estructura de Datos: Definir una lista vacía llamada lista_de_nombres 
+para almacenar los registros.  
+2. Definición de Función: Crear una función llamada saludar() que realice 
+las siguientes tareas:  
+o Solicite al usuario ingresar su nombre y su apellido por separado 
+mediante el teclado.  
+o Combine ambos datos en una sola variable llamada 
+nombre_completo, asegurando que haya un espacio entre ellos.  
+o Agregue este nombre completo a la lista global mediante el 
+método .append().  
+o Muestre un mensaje de confirmación utilizando f-strings que 
+indique que la persona ha sido agregada con éxito.  
+3. Flujo del Programa: Implementar un bucle infinito (while True) que actúe 
+como menú principal:  
+o Debe preguntar al usuario si desea agregar un nombre 
+(ingresando el número 1).  
+o Si el usuario ingresa 1, el programa debe invocar a la función 
+saludar().  
+o Si el usuario ingresa cualquier otro valor, el programa debe 
+finalizar su ejecución (break).  
+o Por ultimo mostras como queda  la lista 
+ 
+2 - Objetivo: Desarrollar un programa que separe la lógica de carga de datos 
+de la lógica de cálculo, utilizando funciones independientes. 
+Requerimientos: 
+1. Función agregar_notas: 
+o Debe recibir como parámetro una lista (donde se guardarán los 
+datos).  
+o Debe preguntar al usuario cuántas notas desea cargar. 
+o Debe usar un bucle for para solicitar cada nota y agregarla a la 
+lista mediante .append().  
+2. Función calcular_promedio: 
+o Debe recibir la lista de notas como parámetro.  
+o Debe recorrer la lista con un bucle for para sumar los valores.  
+o Debe retornar el promedio final utilizando la palabra clave return.  
+3. Programa Principal: 
+o Crear una lista vacía. 
+o Llamar (invocar) a la primera función para cargar los datos.  
+o Llamar a la segunda función para obtener el promedio y mostrarlo 
+con una f-string.  
+--- pagina 2 ---
+Ejercicio 3 – Menú de opciones 
+Crear un programa que muestre al usuario un menú con las siguientes 
+opciones: 
+1. Calculadora  
+2. Registrar nombre  
+3. Eliminar nombre  
+4. Salir  
+El programa debe solicitar una opción al usuario y ejecutar la acción 
+correspondiente. El menú debe mostrarse nuevamente después de realizar 
+cada operación, hasta que el usuario seleccione la opción 0 – Salir. 
+El programa debe trabajar con una lista de nombres. 
+Requisitos 
+1. Calculadora 
+Crear una función llamada calcular() que reciba como parámetros: 
+• dos números;  
+• un operador (+, -, * o /).  
+La función debe realizar la operación correspondiente y devolver el resultado. 
+2. Registrar nombre 
+Crear una función llamada registrar_nombre() que solicite al usuario un nombre y 
+lo agregue a la lista de nombres. 
+La función debe agregar únicamente el nombre ingresado a la lista. 
+3. Eliminar nombre 
+Crear una función llamada eliminar_nombre() que solicite al usuario el nombre que 
+desea eliminar. 
+• Si el nombre existe en la lista, debe eliminarlo.  
+• Si el nombre no existe, debe informar al usuario que no se encuentra 
+registrado.  
+4. Salir 
+Si el usuario ingresa 0, el programa debe finalizar mostrando un mensaje de 
+despedida. 
+Importante: utilizar funciones para cada una de las operaciones solicitadas y 
+una estructura de repetición para mantener el menú activo hasta que el usuario 
+seleccione la opción 0. 
+ 

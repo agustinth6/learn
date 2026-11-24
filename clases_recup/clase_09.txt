@@ -1,0 +1,94 @@
+--- pagina 1 ---
+Información Privada
+Docente: Lucas Marques de Paiva
+Técnicas de 
+Programación
+--- pagina 2 ---
+Información Privada
+Listas en Python
+Una lista en Python es como una caja con varios compartimentos, donde se pueden 
+guardar diferentes cosas (números, palabras, booleanos, incluso otras listas). 
+
+--- pagina 3 ---
+Información Privada
+Slicing(rebanado de listas)
+Permite obtener una "sublista" indicando rangos [inicio:fin]
+
+--- pagina 4 ---
+Información Privada
+Acceder a los elementos de una lista
+
+--- pagina 5 ---
+Información Privada
+Operaciones
+Modificar  elementos de  un lista
+
+--- pagina 6 ---
+Información Privada
+Diferencia entre funciones y métodos
+Una función es un bloque de código reutilizable, diseñado para realizar una tarea específica.
+Permite organizar el programa en partes más pequeñas, mejorar la legibilidad y evitar repetir 
+código.
+Un método es una función que está definida dentro de una clase y que actúa sobre los 
+objetos creados a partir de esa clase.
+Es como una función, pero ligada a un objeto.
+Función Método
+Independiente, no depende de un objeto. Está asociado a un objeto (instancia o clase).
+Se llama directamente: funcion(). Se llama a través de un objeto: obj.metodo().
+Ejemplo: len([1,2,3]). Ejemplo: [1,2,3].append(4).
+--- pagina 7 ---
+Información Privada
+Métodos principales de listas
+Método Descripción Ejemplo
+append(x) Agrega un elemento al final [1,2].append(3) → [1,2,3]
+extend(iter) Agrega varios elementos [1].extend([2,3]) → [1,2,3]
+insert(i,x) Inserta en posición i [1,3].insert(1,2) → [1,2,3]
+remove(x) Elimina la primera ocurrencia ["a","b"].remove("a") → ["b"]
+pop([i]) Elimina y devuelve (último o índice) [1,2,3].pop() → 3
+clear() Vacía la lista [1,2].clear() → []
+index(x) Devuelve índice de x ["a","b"].index("b") → 1
+count(x) Cuenta ocurrencias de x [1,1,2].count(1) → 2
+sort() Ordena la lista [3,1,2].sort() → [1,2,3]
+reverse() Invierte orden [1,2,3].reverse() → [3,2,1]
+copy() Copia la lista a = [1,2]; b = a.copy()
+Agregar y 
+combinar
+Eliminar
+Buscar e 
+información
+Ordenar y 
+cambiar 
+orden
+--- pagina 8 ---
+Información Privada
+Método append()
+
+--- pagina 9 ---
+Información Privada
+Método remove()
+El del no es un método de lista, sino una instrucción de Python, pero se usa mucho con listas 
+para eliminar elementos.
+Del
+
+--- pagina 10 ---
+Información Privada
+Ejercicios
+1-Agregar elementos Crear una lista vacía llamada frutas. Agregar 3 elementeos mediante append()
+2 -Eliminar elementos Crear una lista con 6 números. Eliminar uno de ellos utilizando remove() y 
+mostrar la lista resultante.
+3 - Mostrar elementos uno por uno Crear una lista con 5 nombres y utilizar un for para mostrar cada 
+nombre en una línea diferente.
+4 -Mostrar números mayores a 10. Crear una lista con números.  Recorre la lista y mostrar 
+solamente los mayores a 10
+5 - Contar números positivos Crear una lista de números positivos y negativos. Recorrerla y contar 
+cuántos números positivos contiene.
+6 - Sumar elementos Crear una lista de números y calcular la suma de todos sus elementos 
+utilizando un for. No utilizar sum().
+7 - Calcular promedio Crear una lista con las notas de 5 alumnos. Calcular y mostrar el promedio de 
+las notas.
+8 - Buscar un elemento Crear una lista de nombres. Pedir al usuario un nombre y verificar si se 
+encuentra dentro de la lista.
+9 - Contar aprobados Crear una lista con las notas de varios alumnos. Recorrer la lista y contar: 
+Cuántos aprobaron (>= 4). Cuántos desaprobaron (< 4).
+10- Mayor y menor Crear una lista de números y determinar cuál es el número mayor y cuál es el 
+menor. No utilizar max() ni min().
