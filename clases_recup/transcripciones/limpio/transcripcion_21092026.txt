@@ -1,0 +1,1493 @@
+está bastanteado Sí, está está separado, pero está junto con lógica.
+[risas] Las dos peores para mí, bueno, las más difíciles, ¿no?
+Eh, sí, lógica es difícil.
+¿Cuál es el resultado del siguiente fragmento?
+Ah, okay, okay, está bueno este porque no entendía la parte de que x sea igual a y x se = a i y
+después tu negación, ¿no?
+Y ahí ya me hice bola.
+Bien.
+A ver, ahí lo ahí lo vamos a ver.
+Eh hm hm.
+Sí, esto es como que hay que ir analizándolo por por bloquecitos, ¿no?
+Como eh que es como las operaciones matemáticas donde íbamos haciendo por términos.
+Eh, vamos lo podemos ir probando por partes.
+A ver, me voy a llevar esto, eh, una copia más fácil y me lo poo en en un chat.
+Así me lo transcribe y ahora ahora les comparto aquí.
+El 14 acá.
+Bueno, me quedo acá.
+Me quedo acá.
+un ch cto cargando En realidad el parcial está tan lejos porque como claramente iba a caer eh iba a
+ser para este lunes más o menos la fecha de parrocial que cae.
+E ahí estoy compartiendo.
+Sí, tengo muchas cosas ahí.
+No nos sirve mucho hacer los parciales los martes porque por un lado son menos horas, comparten
+materia con otro profe, yo trato de que caigan lunes para eh para poder utilizar bien las 4 horas,
+que puedan volver tranquilos a sus casas, no se tengan que conectar en el en el colectivo, no tengan
+que quedarse conectando a la clase, conectándose a la clase.
+Así que la idea era eh estoy viendo acá la idea, eh esto es lunes, martes.
+Sí, también podría haber sido este esta fecha, pero no recuerdo por qué la puse ya al cinco.
+Quizás para ver todos estos temas bien tranquilos y por ahí eh por ahí.
+Sí.
+Y además capaz que el 21 no teníamos clases y ya era una clase mé hoy, ¿no?
+Claro, claro.
+Se me iban a juntar mucho los los contenidos, así que eh teniendo esta clase está bueno porque
+podemos trabajar un poco más más solgados.
+Bueno, nada, esto a modo de repaso, ya que tienen más o menos pendiente las fechas de exámenes.
+Eh, estamos acá.
+El otro lunes vamos a trabajar con las resoluciones del laboratorio.
+Hoy vamos a empezar un poco con funciones, que es unidad cuatro.
+Y bueno, después el martes 29 haríamos un repaso general de todo.
+Es muy bueno, sería muy importante que lleguen con dudas, así como esto puntual.
+Este ejercicio no sé bien cómo cómo acceder y después al cinco sí nos vemos en en el instituto.
+Eh, ahí me preguntaba si era estudiando semana en papel.
+Consta de dos partes el examen, una parte en papel que puede tener preguntas como estas, como esta,
+como esta, como preguntas de este estilo donde ustedes tienen que responder o verdadero falso o qué
+imprime tal.
+Este ya lo habíamos visto, ¿eh?
+Y esta esta es la respuesta, ¿no?
+Ustedes tienen que responder esto porque yo estoy viendo directamente esto de el que creo que está
+subido, ¿no?
+La resolución del laboratorio 3.
+Eh, sí, creo que sí que está.
+Claro, está ahí.
+Dice falso, pero si no si no no se termina de entender como Claro, el razonamiento.
+Genial, genial, genial.
+Bueno, a ver, ya me lo pasé acá.
+Eh, pegar no sé pega.
+Copiar.
+Bueno, el ejercicio es algo así.
+Lo que nosotros podemos ir haciendo es eh haciendo las comparaciones eh que hay dentro de todos los
+eh de cada uno de los de los paréntesis y a ver qué nos devuelve eso y después ir haciendo la
+comparación entre uno y otro y después por último, cuando es de dos es más fácil, cuando es de hay
+un tercero ahí Entonces, eh se complica.
+Entonces tenemos primero que lo voy a llevar para acá que si x vale 1 y vale 0, entonces esta
+comparación es falso, ¿no?
+Porque 1 es igual igual a cer a cer, ¿no?
+Entonces vemos que la primera respuesta esta es.
+Después acá tenemos otra eh, que es la misma x = aí, falso.
+Entonces, por un lado, de acá, de esta eh de esta, ¿cómo se llama?, de esta comparación o de este de
+esta operación que se está ejecutando entre falso y un falso, habíamos visto que el operador ano
+siempre y cuando los dos sean verdaderos, que uno sea verdadero y que el otro sea verdadero también.
+¿Sí?
+Entonces, acá ya tenemos una primer opción y después nos quedaría resolver esto.
+Esto nos va a dar eh verdadero si acá da verdadero, porque con el operador OR habíamos visto que eh
+cuando una de las dos opciones era verdadera, la respuesta era verdadera.
+Entonces, si este es falso o este es verdadero, no, esto nos va a dar verdadero.
+Una de las dos, acuérdense que el operador an, los dos tienen que ser verdadero y el operador OR,
+uno de los dos tiene al menos uno tiene que ser verdadero.
+Y entonces nos quedaría ver qué nos está pasando acá.
+lo la misma comparación X e Y es falso en principio, pero como lo está negando acá, hay que invertir
+este resultado y nos quedaría verdadero.
+Entonces podemos decir que eh Z vale verdadero, porque si uno es falso y el otro es verdadero con el
+operador OR, esto nos daría verdadero.
+Pero, ¿por qué imprime falso entonces si la operación está si Z vale verdadera?
+Porque en el print también le está aplicando un not.
+Entonces, si Z es verdadero y le aplicamos el not, lo que hacía notar esa esa afirmación o esa o ese
+valor.
+Eh, entonces, si Z vale es verdadero y yo se lo niego, voy a imprimir falso.
+Y ese es el resultado final de de esta operación.
+Sí, está bien.
+Sí, sí.
+No, yo me compliqué de entrada porque tenía ganas más porque vi que la tenía las dos condiciones
+iguales.
+Entonces dije, "O acá hay algo mal o caí una trampa." Y ahí ya me compliqué y no está bien,
+siguiendo el razonamiento se tiene.
+Ah, bueno, podría ser.
+Claro, por si si esto es lo mismo que esto, entonces podría llegar a ser verdadero, pero la realidad
+es que era era simple.
+Sí, era es complejo, pero si lo es como todo lo en programación, si lo vamos descomprimiendo, si lo
+vamos achicando en problemitas chiquitos, nos va nos genera eso nos eh nos genera problemas más
+pequeños que podemos ir resolviendo de manera más fácil y así después unificar todo ese gran
+problema y llegar a la respuesta final.
+es consejo muy útil para para todos los programas, para todos los problemas que tengan en el en los
+laboratorios.
+Hay veces que son problemas que parecen ser muy complejos porque pero bueno, la idea es tener un
+pensamiento computacional que nos permita abstraernos de la complejidad y poder enfocarnos en lo que
+realmente tenemos que resolver y después empezar a a unir todos esos micrroblemas que tiene ese
+problema en general.
+Así que bueno, bien, buena buena consulta, ¿eh?
+E bueno, después lo que me cuesta es el tema del se dice para terminar un no sé muy bien cuándo
+usarlo, como que me cuesta bastante eh darme cuenta cuándo poner esa esa palabra.
+Eh, bien, bien, bien, bien.
+A ver si encuentro alguno que use break.
+Bueno, este es el son las es el resuelto resolución.
+Sí.
+Bueno, el 11 que tenía a ver cómo lo usa y ya lo vemos.
+17.
+Okay.
+For es un programa con un bucle f for y una for y una sentencia break.
+El programa debe iterar sobre los caracteres en una dirección de correo electrónico, salir del bucle
+cuando llegue al símbolo a imprimir la parte antes de la roba de esta línea.
+Okay.
+Imprimir.
+Okay.
+Okay.
+Eh, a ver que imprime este.
+Ah, o sea, imprimir lo que la letra antes, la parte antes del aro o toda la parte, no sé que a ver
+si for, va iterando en un bucle for, va guardando en ch todo lo que encuentra en Bueno, interesante
+este ejercicio en principio porque eh no lo habíamos trabajado, si bien yo había comentado que los
+los ciclos for y los while, todo lo que son ciclos nos va a servir para trabajar con iterables.
+Habíamos trabajado con el la función range que nos iba a devolver una lista de números.
+Habíamos trabajado con listas propiamente dichas que son conjunto de de elementos que se pueden
+iterar y había mencionado que los strings también son iterables, que es una un conjunto de
+caracteres que se puede ir iterando eh con un bucle for, con un bucle while.
+En este caso, lo que hace es e recorrer un eh un mail, una cadena de texto, lo que hace es, por
+ejemplo, bueno, este lo borro porque está es el mismo ejercicio que está en la resolución del
+laboratorio.
+E y lo que hace es con un bucle for va almacenando en la variable ch todo lo que se encuentra en
+directamente un eh mail.
+Alerto.
+Ay, este no es el más eh interesante.
+Yo en este caso fue crear la variable y puse el mail.
+Eso estaría bien también o es exactamente lo mismo.
+Ah, bueno, buenísimo.
+Sí, sí.
+Iba iba a comentar iba a comentar que se puede.
+Mira, me sigue.
+Eh, vamos a sacar esa ayuda y distintos.
+Listo.
+No quiero que me que me ayude.
+Eh, Gmail lo que hace básicamente esta es la estructura de un for donde usamos la palabra reservada,
+una variable temporal in ta taerable, ¿no?
+Y el bloque de código que que viene a continuación es todo lo que se va a ejecutar por cada uno de
+los elementos que vaya encontrando el bucle y vaya guardando en la variable temporal para este esta
+cadena de texto.
+En principio se va a guardar la la n, después se va a encontrar con la O y así sucesivamente.
+Pero el if de la del laboratorio dice que o de la resolución, más bien pensando en el ejercicio,
+¿no?
+Porque acá tenemos la la eh la resolución, pero la idea es que podamos resolver lo que dice el
+ejercicio.
+El programa debe iterar la dirección de correo electrónico y salir cuando encuentre un a y si
+encuentra un aro imprimir la parte antes del aro.
+O sea, que ese bucle va a ir imprimiendo todas las letras que encuentre hasta eh hasta llegar a este
+carácter que me dice que es el que me va a ejecutar el corte.
+si encuentra un aro corta y para eso sirve un poco el comando break para terminar ya sea un while o
+un for para terminar eh ese ciclo, porque ya después nos va a imprimir la G, la G, la M, todo lo que
+continúa después de la roa, porque nosotros le estamos diciendo que cuando una condición se cumpla,
+generemos el corte o o rompamos este bucle y termine de de iterar.
+lo que está haciendo es eh si lo que se guarda en la variable CH es igual igual a eh roa, pero vamos
+a cubrir las comillas.
+Entonces ahí, pero si esta condición no se cumple, que imprima, que vaya imprimiendo todo lo que
+está eh guardado en ch.
+Lo que hace también ese programa es que le está modificando la una de las propiedades que tiene
+print.
+¿Se acuerdan que habíamos visto que tiene eh dos propiedades eh modificables?
+que una es el SEP, que por defecto tiene un un espacio.
+Entonces, todos los elementos que nosotros pongamos en print por defecto se van a eh separar con una
+con un espacio de la barra y por cada uno de los elementos también lo que hace es un salto de línea,
+o sea, si encuentra la n, esperen que termino esto, y lo que hace es eh un espacio, bueno, no me
+acuerdo, creo que es un espacio.
+Si encuentra una n y esta validación viene, se queda guardada en esta variable, es igual igual a no.
+Perfecto.
+Entonces no ejecuta esta sentencia y continúa con la el flujo del programa.
+Imprime ch.
+Si no estuviera este comando, lo que haría el programa sería imprimir uno abajo del otro.
+Después con la N la imprimiría abajo porque por defecto va a ejecutar print las veces como elemento
+se encuentra el for.
+En este caso una, 2, 3, 4, 5, 6, 7, ocho veces.
+Pero a nosotros al modificarle el eh esta este parámetro, en vez de que sea un salto de línea,
+queremos que imprima separando con un espacio o con un carácter que nosotros le pongamos, nos va a
+escribir todo junto.
+Eso es lo que está haciendo.
+Y lo que va a suceder es que va a ir imprimiendo, va a ir iterando por en todas las letras que
+encuentre en esta cadena de texto hasta que se encuentre con un aro.
+Si el arroba en la cadena de texto no existiese, imprime todo.
+Y hace esto un poco porque el enunciado nos dice, ¿no?, que después que escribamos todo hasta todo
+lo anterior a la ara.
+Si nosotros no le ponemos esto, fíjense como eh escribió letra por letra y no una abajo de la otra.
+Simplemente porque acá en end le pusimos un espacio o le podemos poner eh numeral y me va a separar
+las letras con numeral.
+En realidad no es que me lo está separando, sino que estoy cambiando el salto de línea por un por un
+eh un carácter en particular.
+Y por otro lado, eh si no estuviera esto, me lo imprimiría línea por línea.
+O sea, da una vuelta, imprime n, da una vuelta, vuelve a imprimir la O.
+hasta el arroa, ¿no?
+Ahí cuando se encuentra con el arroa corta y esa es la función del break, más allá de que lo imprima
+en una línea o todo junto.
+Eh, ¿por qué no funcionaría si yo?
+A ver, esto estaba así.
+Me escribió Norberto separando cada uno de los caracteres con un numeral.
+Es más o menos lo que hace este parámetro, ¿no?
+Set.
+En este caso no me va a funcionar de la misma forma porque eh SEP sirve para separar elementos
+dentro de un eh dentro de un print.
+Y acá al print siempre le está llegando un solo elemento.
+Lo hace muchas veces porque está dentro de un for que está iterando y está ejecutando prints como
+número de letras encuentres.
+Si encuentra 1 millón de letras, va a ser 1 millón de print.
+El SEP nos servía cuando teníamos algo así, por ejemplo, print e no sé, un stram separado con otro
+streamado con comas.
+con cómo vamos separando los elementos.
+Eh, otro stream o una variable.
+No tengo variables acá, pero podría ir una variable.
+Y después usaba el concept igual e le voy a poner este.
+En este caso, ¿qué va a pasar acá?
+¿Cuántas veces se va a imprimir este print?
+Tres.
+¿Cuántas?
+Tres.
+Okay.
+¿Por qué tres?
+Porque lo va a separar por líneas cada cada stream.
+Eh, no, acá no se va a imprimir solamente como que nunca va a encontrar el arro, entonces va a
+seguir imprimiendo, ¿no?
+O no, eh no, no va a cambiar el no va a cambiar el la estructura, eh, porque el arroga está igual,
+la comparación todo en una línea y en vez de los espacios va a poner el porcentaje, ¿o no?
+Bien, bien.
+Pero la pregunta era, ¿cuántas veces voy a se va a imprimir este print?
+Y una.
+Okay, lo voy a correr.
+Lo imprimió varias veces y siempre el mismo porque acuérdense que todo lo que está dentro del for se
+va a ejecutar por cada elemento.
+Arranca el for, la línea uno, arranca.
+Yo corro el programa, arranca la línea uno, guarda la variable, la letra N que se encuentra en mi
+iterable y viene y hace todo esto, ¿no?
+Si yo acá tuviera muchas cosas, lo va a hacer siempre.
+Eh, voy a hacer contador igual a cer.
+Eh, esto lo tengo que hacer afuera.
+Bueno, esto es interesante que lo haga acá.
+Primero la tengo que definir afuera y después le muestro por qué.
+Control X.
+Contador igual a cer.
+Acá quiero que contador eh en uno más igual 1 y quiero imprimir con contar no tenía el número de
+vueltas.
+¿A dónde?
+Lo tengo, eh.
+Aarón, me pareció ver que no tenía el número definido, pero aún así te lo tiró cinco veces, dice la
+terminal.
+No, no alcanzo a ver igual.
+Sí, lo lo tiró unas cuantas veces, pero por la simple razón de que miren, una, dos, 3, 4, 5, 6, 7,
+ocho letras tiene Norberto hasta llegar al arroba.
+En el arroba acuérdense que rompe porque encuentra un arroba y esta condición es verdadera, rompe y
+ya no se ejecuta nada de lo que está acá porque break es romper el ciclo.
+Es si está dentro de un for, rompe el for y sigue acá, ¿no?
+Lo que sea que tengamos en el programa.
+Print sigue el programa.
+Ahí está.
+Eh, acá me lo me lo imprimió ocho veces, una por cada elemento.
+Y lo que quería contarles que que es lo que está pasando es como está dentro del bucle for, lo va a
+imprimir todas las en todas las iteraciones, todas las veces que eh el for encuentre un elemento
+dentro eh del iterable, va a trabajar todo este bloque de código se va a ejecutar para la N.
+Esta condición es falsa, imprime la C, o sea, o guarda en realidad.
+Eh, bueno, este así como está, imprime esto, después imprime esto, después la variable contador la
+incrementa.
+Imprime contador.
+Si este print estuviera afuera del eh del for, se imprimiría solo una vez.
+Por eso la pregunta era de cuántas e no me imprime contador.
+Ah, sí, eh, pero no se nota mucho.
+Vamos a hacerle un f strings, unas llavecitas.
+Vamos.
+Vamos a empezar a usar más el fstam, que es más cómodo, ¿eh?
+Y me falta esto, sería esto.
+El número de vueltas es control.
+Ahora sí voy de vuelta.
+Así que además se entiende un poquito más.
+Eh, se encuentra con la N.
+Imprime hola a todos separados con un e cosito de esto.
+Bueno, primero imprime la la ch.
+Esto no lo usa porque como tiene un solo elemento, no no no viene el caso.
+Acá sí se encuentra con varios elementos dentro de un print.
+Estamos modificando el parámetro SEP, que por defecto es un espacio.
+Ahora le decimos que se pare con un signo de porcentaje.
+Teníamos una variable fuera del contador, pero adentro, en cada iteración, la estamos eh
+modificando.
+Y por último, imprimimos el número de vuelta es y el valor de la variable contador.
+Había arrancado en cero.
+En la primera iteración el número de vueltas es uno.
+Perfecto.
+Ahí terminó el bucle for porque esto está fuera del programa, no está dentro de la lineita.
+Fíjense, esto siempre le la tabulación les va a servir de mucha ayuda para identificar qué es lo que
+está dentro de un eh de una estructura de programación o dentro de otra.
+Si está todo tabulado, quiere decir que todo esto corresponde a este ciclof.
+Incluso si yo lo cierro ahí, eh, bueno, les va a quedar un poquito más incómodo, e, y pueden
+identificar qué es lo que está fuera, ¿no?
+Afuera del for está esto, sigue el programa, otra cosa, puedo tener un while, puedo tener otro for,
+puedo tener un montón de cosas.
+Ahora son programas simples, pero eh ya se van a ir complejizando un poquito.
+Eh, bueno, después se encuentra con la letra O de Norberto, hace lo mismo.
+El número de vueltas es dos, después va con la R, después va con la Bueno, ahí.
+Hasta que es después de la O se encuentra con el aro.
+Si lo que se guardó en la variable ch es igual igual @ si esta condición es verdadera, entonces
+rompe rompe el if.
+Y si rompemos acá ya estamos rompiendo el en realidad lo que estamos rompiendo es el bucle for.
+cualquiera podría pensar que se podría llegar a la confusión de que lo que rompe es el condicional,
+pero bueno, el condicional no tiene estructura de eh se rompe o no, porque es o o es verdadero o es
+falso.
+Si es verdadero, ejecuto una vez y si es falso no ejecuta.
+Entonces no tiene esa estructura, salvo que sea un condicional anidado o un elif que podríamos
+cortar antes de tiempo, pero lo que hace break es romper el for.
+Entonces, no sigue buscando después, no imprime la G, la M y la A y las letras que sigue.
+que la condición era una vez que encontras el aro, listo, rompé y imprimíme todo lo que estaba
+anterior a eso, porque no sé, quizás que queremos hacer uso de eh los primeros caracteres del de una
+lista de mails y bueno, no necesitamos nada más.
+Eh, se entendió.
+Sí, perfecto.
+Y lo otro que les quería contar, que casi pasa es que si yo pongo contador eh acá, bueno, si yo
+defino la variable adentro es como que le estoy modificando todas las veces que itere, ¿no?
+En la en la letra N, que es la primer vuelta, viene acá.
+Acá se define una variable contador, la incremento, imprimo uno.
+Perfecto, vuelve a empezar.
+Acuérdense que mi variable contador vale uno en la O.
+Sería la número dos, ¿no?
+Hace todo esto, hace esto, hace esto, pero cuando llega acá me la pone en cero de vuelta, me borra
+el valor que yo venía almacenando, la inicializa en cero y la vuelve a incrementar.
+Entonces, siempre va a valer uno.
+No tiene ningún sentido práctico tener la variable inicializada dentro del eh dentro del bucle
+porque me la va a ir poderse hacer se puede, pero no es funcional.
+El número de vuelta es uno, el número de vuelta es uno, el número de vuelta es uno porque la borra
+la inicializa cero, le incrementa uno y así para todas las vueltas.
+Entonces, cuando tengan una variable que incremente, acuérdense de siempre ponerla eh del lado de
+afuera de la estructura de iteración porque si no se la se las va a ir pisando eh automáticamente.
+Eh, bien.
+Bueno, y lo que había comentado ahí la compañera que así como e lo tenemos ahí, también lo podríamos
+tener en una variable ese mail.
+Bueno, en vez de tenerlo ahí, lo puedo tener acá y voy a recorrer todo lo que esté en mail.
+eh no va a recorrer la m, la e, la a, la i y la l, sino el valor que tenga e esa variable, ¿no?
+En este caso es un stream que tiene la particularidad de tener una forma de mail, pero es un stream,
+tiene comillas, es un estrinas.
+Por más que tenga espacios, por más que tenga eh números, que tenga letra, que tenga lo que tenga,
+si está dentro de comillas, Python lo reconoce como un strings, es uniterable, eh, se puede recorrer
+con Bien.
+Bueno, ¿alguna duda más?
+quieran que miremos un ratito.
+Bueno, un poco como eh en pie para el tema que vamos a empezar a ver hoy, que es funciones, nos
+sirven eh esto algo que ya estamos trabajando, empezar a a crear nuestras propias funciones, a
+pensar cómo cómo se definen.
+cuál es la estructura y lo primero que aprendimos fue la a trabajar con la función print, que es una
+función que nos devuelve cosas por consola.
+Nosotros sabemos que la función print, tiene esa palabra que nosotros usamos y tiene esta
+estructura, ¿no?, que para invocarla y para hacer uso de esa función eh es el nombre y los
+paréntesis.
+Dentro de los paréntesis vamos a colocarle los parámetros o argumentos que necesita para trabajar.
+streams, una operación, pero nosotros hacemos uso de esta función, sabemos que es una función,
+sabemos cómo funciona, sabemos cuál es el resultado de esa función, pero no sabemos en realidad qué
+está haciendo internamente la función.
+llegado al caso, no nos interesa por ahora cómo está creada, pero bueno, sabemos que o tenemos que
+saber que atrás de de dentro de Python y atrás de esta función hay una estructura de código que
+define que nosotros podamos eh ejecutar ese comando y que la acción o el resultado de ejecutar o de
+invocar esa función sea eh ver algo por consola.
+Si hacen click, no nos vamos a meter mucho en esto.
+Sí, pero como para ir viendo toda la complejidad.
+Si hacen control click de la función, les va a aparecer esto y es un poco lo la definición de print.
+Hay una palabra def, está el nombre y dentro de los paréntesis, bueno, un una serie de de líneas de
+código que lo que hacen es eh ejecutar esta esta acción de poder e mostrar cosas con consola.
+No nos vamos a poner a analizar la función print, pero es importante saber eh y como de alguna forma
+entender que ya veníamos trabajando con funciones así como print, eh input, eh la función lengo de
+una cadena de texto, eh que la estructura para invocar una función siempre es el nombre de la
+función y eh los paréntesis y lo que recibe, ¿no?
+si recibe un parámetro, si recibe un número, si recibe si no recibe nada, hay distintos tipos de
+funciones y es un poco lo que vamos a ver en la clase de hoy, que está en la diapositiva número 11,
+que arranca eh preguntándose de dónde vienen las funciones, como el caso de print, eh o de Input o
+de algunas otras que estuvimos trabajando.
+Bueno, provienen de Python mismo, ¿no?
+Son funciones que ya están integradas a este lenguaje de programación que todos los lenguajes de
+alguna forma la tienen, se llaman de distintas formas, hacen la misma acción, pero son como
+funciones genéricas para para todos los lenguajes de programación, pero que que están dentro del
+programa.
+Después hay otro tipo de funciones que están no están tan eh están disponibles para usar, pero no
+están eh hay que hacer algo para poder utilizarlos.
+¿Cómo importar módulos?
+Esto es un tema que vamos a ver más adelante, pero eh no sé si se acuerdan que yo en algún momento
+les había pasado una estructura de programación, un bloquecito de código que lo que hacía era
+limpiar la consola automáticamente.
+Eh, nunca me acuerdo cómo es eso, pero lo que hacía era importos.
+Ah.
+Y abajo os punto systemado.
+¿Cómo se tacha?
+CLS.
+Gracias.
+Muchas gracias.
+Bueno, acá está usando una función eh no sé por qué no me está cls tiene que entre comillas.
+Profe, no sé si eso te cambia, ¿no?
+Entre comillas, sí está entre comillas.
+Eh, me resulta.
+Ah, está.
+Perfecto, perfecto.
+Okay, okay, okay.
+Bueno, lo que está haciendo acá es importando un módulo, un módulo que se llama OS.
+A través de ese módulo está llamando a la función system.
+Y esa función system recibe este parámetro por por eh para funcionar.
+Nosotros no sabemos dónde está esa función.
+Nosotros sabemos eh que eh hace una acción, que recibe esto por parámetros.
+Después si quieren se puede se puede investigar un poco si hacen control click, de dónde viene esa
+función.
+Todo esto es bastante avanzado, pero lo que nos interesa saber que o podemos traer funciones de
+Python o podemos traer funciones de otros módulos.
+Ya después del parcial vamos a empezar a a hacer módulos, a traer módulos, eh hacer distintas
+acciones, pero eh accediendo a funciones, mezcla lenguajes.
+Eh, no sé qué a qué te referís Aaron con mezcla lenguajes.
+Eh, y esto es a lo que hace referencia de módulos preinstalados de Python que están están ahí.
+Pero para poder acceder a las funciones de esos módulos tenemos que hacer es esa importación,
+importar el módulo al al archivo donde nosotros vamos a estar trabajando y a través de ese módulo,
+bueno, usar, llamar las funciones que necesitemos.
+Hay módulos con operaciones matemáticas, eh hay un montón de de módulos para trabajar, hay módulos
+para trabajar con eh, no sé, son librerías que sirven para la ciencia de datos, para el análisis de
+datos como Panda, Numpi, todos son módulos que tienen funciones ya diseñadas que que podemos hacer
+usos para, no sé, trabajar un archivo en particular o hacer la limpieza de una de un de una cantidad
+x de de información, un montón de cosas.
+Por ahora estamos viendo de dónde provienen las funciones y cómo vamos a hacer para empezar a
+crearlas.
+Y la otra, el otro origen de las funciones que podemos encontrar es de nuestra de la creación
+propia, ¿no?
+Nosotros podemos hacer escribir funciones directamente en el código para después poder
+reutilizarlas.
+¿Para qué nos va a servir esto?
+En principio, para reutilizar código, para escribir menos código, para tener toda una acción o una
+funcionalidad dentro de una estructura de código escrita una sola vez y después poder hacer uso de
+esa eh de esa funcionalidad o de esa función simplemente invocándola.
+Así es como se ve la definición o la creación de una función, la palabra reservada def, el nombre de
+la que le vamos a poner a la función, los paréntesis y los dos puntos.
+La estructura generalmente siempre es la misma, es eh la palabra reservada, algo por acá, los dos
+puntos, tabulación y todo lo que esté dentro de la tabulación va a corresponder a la estructura o al
+código de la función.
+Lo mismo para el for, lo mismo para el while, para el if, para todas las los bloques, eh las los
+bloques de de programación que estuvimos viendo.
+Eh, ahora vamos a empezar a hacer algunas creaciones, pero vamos mirando un poco, así también les
+queda en la diapositiva un poco un resumen de lo que está en el apunte de la unidad tres, que es
+como el material más eh más más completo de todo lo que vamos hablando y viendo y charlando en
+clases.
+y algunas cositas más que siempre es interesante eh acudir al al apunte para tener la la información
+completa.
+Eh, acá tenemos un ejemplo.
+Supongamos que queremos calcular e imprimir el doble el doble de un número.
+Sabemos que esto es básicamente si tenemos el número que es tres, el doble es multiplicarlo por dos.
+Imprimimos el doble.
+Okay, perfecto.
+Ahora sigamos suponiendo que lo tenemos que hacer un montón de veces.
+Tendríamos que hacer número, hacer la operación, imprimir.
+Tenemos el resultado.
+Son tres líneas de código que si tuviéramos que hacerlo 10 veces serían 30 líneas de código.
+Si tuviéramos que hacerla 100 veces sería una cantidad casi eh inf, bueno, no infinita, pero sería
+una cantidad muy larga de código.
+Lo que podemos hacer nosotros para e evitarnos todo esa escritura de código de más, hacer esa acción
+una función.
+¿Cómo hacemos?
+Palabrita reservada def de definición.
+Estamos definiendo la función.
+Le vamos a poner un nombre, respetando un poco también la sintaxis que teníamos o las convenciones
+que teníamos para las eh para las variables, que es eh no se puede empezar con número, no puede
+haber espacio, tiene que ser un nombre representativo a la acción que queremos desarrollar.
+en este caso duplicar.
+Básicamente esa función dentro de los paréntesis está lo que va a recibir y es un número.
+En Python no hace falta especificar de qué tipo de dato eh estamos hablando.
+Simplemente algo acá le puso número, pero simplemente es lo que ponemos acá lo va a usar acá.
+eso que reciba y después adentro de la de la función, bueno, básicamente lo que hace y lo que
+retorna.
+Hay distintos tipos de funciones.
+Hay funciones que no reciben nada, hay funciones que no devuelven nada, hay funciones que
+simplemente hacen una acción.
+Este caso es una función que recibe algo, en este caso un número y que retorna un resultado.
+Entonces ese número que recibe lo guarda en la variable n y después hace una operación y la guarda
+en dos.
+n * 2 y retorna ese lo que guardó en la variable, o sea, que lo que recibe lo está haciendo medio
+complicado, pero para ir eh detallando paso a paso qué es lo que pasa en una función, se puede hacer
+de manera más simple, ¿sí?
+se puede directamente retornar número por dos y va a ser el mismo efecto, pero acá está como eh
+separando paso por paso qué es lo que hace la función.
+Una vez que tenemos definida el comportamiento o el acción de nuestra función, lo que tenemos que
+hacer es invocarla como hacíamos con todas las funciones que estuvimos trabajando.
+Nombre de la función, paréntesis.
+y el numerito que queremos duplicar y por consola nos va a devolver eh el resultado.
+Ahora, si nosotros queremos hacerlo 10 veces, simplemente duplicar 10 veces y vamos poniendo el
+número que queramos duplicar.
+Esto es una función sers simple, es un solamente una operación, pero supongamos que queremos hacer
+todo el mismo proceso de lo que habíamos trabajado acá.
+Si queremos hacer para cada para un montón de eh iterables distintos, queremos hacer todo esto.
+Bueno, podemos guardar todo este bloque de código dentro de una función y si lo tenemos que ejecutar
+muchas veces, en vez de copiar y pegar el mismo bloque de código, lo guardamos dentro de una función
+y simplemente vamos invocando la función para eh los distintos mail que nos vengan llegando o la
+lista de mail que tengamos que trabajar.
+Esto es un poco la la lógica de las de las funciones.
+¿Cómo vienen dudas?
+Profe, yo entendí, o sea, la lógica, lo que no entendí bien es cómo cómo está estructurado, cómo
+funciona cada cada parámetro.
+Bien, bien, bien, bien, bien.
+E con respecto a esta que que estamos Claro.
+Bueno, ahí dice def duplicar, así se llama la función duplicar.
+Sí.
+Y entre paréntesis número que ahí cuando vos la la invoques, pones cualquier número que quieras y te
+lo va a duplicar.
+Sí.
+¿Y qué es eso que dice return doble?
+Return es una palabra reservada.
+Esto es lo que nos va a devolver la función.
+Ah, doble, que sería n * 2.
+Claro, n es como que sea resultado.
+Claro.
+Ah, listo.
+¿Y eso qué era lo de abajo?
+Duplicar tres.
+Y acá estás funcion ahí.
+Que se llama duplicar.
+Y para invocarla, esto es la esta es la creación.
+Claro, un lado tenemos la creamos nuestra función, después en otra parte del código la llamamos y
+ahí pones tres y abajo te devuelve el se lo Claro, eso es lo que devuelve la consola.
+Bien, bien.
+A ver qué dicen los mensajes.
+Bien, profe.
+Bien por ahora.
+Bueno, joya, Joya, hoy vamos a seguir eh viendo algunas cositas y eh bueno, esto es es lo que lo que
+ya venimos hablando, ¿no?
+Se comienza para con la palabra def, que es la palabra reservada para definir las funciones, luego
+el nombre.
+E es importante no usar las palabras reservadas que tenemos como lead, set, true, convenciones o que
+que vimos de Python, ni tampoco nombres de otras funciones ya existentes como range, leng, appen,
+todas.
+Eh, profe, perdón, eh, yo probé el ejemplo ese recién y no me devuelve.
+No sé si escribí o mientras está escuchando esa explicación, eh, escribí y el ejemplo tal cual está
+acá en la en el apunte.
+Sí.
+Y el no me devolvió seis.
+No sé si habría que modificar algo dentro de lo que es el ejemplo.
+A ver, yo creo que miren, vamos, lo voy a hacer acá.
+Para crear una función, palabra reservada, dev, nombre de la función duplicar, que va a recibir un
+número.
+Le voy a ir cambiando acá.
+Cuando vaya cambiando quiere decir que no importa que acá diga número y o diga palabra, que es más o
+es para que tenga la referencia de lo que recibe acá, me lo multiplique por acá.
+Y después acá hac algo que que no es como un está de más, pero lo vamos a hacer.
+dice que lo que reciban num va a valer n.
+O sea, si le paso un 10 acá, n va a valer 10.
+Si le paso un 14, n va a valer 14.
+Eso como primera acción.
+Y después, ¿qué hace acá?
+Eh, acá, bueno, ponerle que haga resultado también como para ir cambiando.
+Va a ser igual a, perdón, a n por 2 llega a 14.
+Lo que n va a pasar a valer lo que tenga 14.
+14 * 2 se guarda en resultado y por último retur resultado.
+Esta sería la definición.
+Si yo corro el programa acá, la función puede estar bien, puede estar mal, pero no va a pasar nada.
+Para hacer eh uso de esa función, la tengo que invocar como todas las funciones.
+Si llamo a print, la llamo por su nombre.
+Si llamo a quiero llamar a la función duplicar, nombre de la función paréntesis.
+Y bueno, las funciones se queda esperando algo, algo any, num, algo, un número, tirar lo que sea.
+Si yo tiro una palabra va a funcionar porque va a poner dos veces la palabra.
+Si yo pongo, bueno, otro tipo de dato que no soporte esa operación, va a romper, pero como está
+esperando un número, no se la compliquemos.
+Vamos a pasarle un número.
+E y ahora sí, perdón, ahora sí si corro esa función debería devolverme eh el seis.
+No sé si a vos no te no te funcionó.
+No, no me funcionó.
+Puse tal cual el que está en el en explicación que después de de de n o de num va deum dice doble
+igual y está la operación de n por 2.
+Después está la el ret que lo invoca con el duplicar tres y no no me devuelve nada, no me trae
+ningún resultado así de Sí, a mí tampoco.
+Como que faltaría un print, parecería.
+ser exactamente.
+Eh, return no significa que lo vaya a imprimir por consola, me significa que yo puedo tener en
+memoria ese resultado y aplicarlo, no sé, o a un print o lo puedo eh aplicar a una variable.
+El duplicar tampoco quiere decir que lo vaya a traer en por consola.
+Es solamente para envocar la función.
+Esto es como es como siempre, digamos, para que traer o imprimir en consola que traer por print.
+Exactamente.
+Es es interesante que que pase esto para para ver cuál es la diferencia.
+retur nos va a devolver un resultado, pero nosotros tenemos que hacer uso de ese resultado.
+Que nosotros corramos la función, que invoquemos la función, le pasemos un número y que retorne un
+resultado correcto, no quiere decir que lo veamos.
+Nosotros podemos hacer uso de ese resultado guardándolo en una variable, imprimiendo el resultado.
+Yo puedo imprimir el resultado de duplicar, de invocar una función y pesarle un varón, un valor eh
+33.
+Eh, en este caso sí vamos a ver el resultado de de esa operación, pero si simplemente la invocamos
+eh no no vamos a ver nada.
+Vamos a a tener el resultado correcto en un espacio de memoria mientras el programa esté en
+ejecución.
+Pero si no lo guardamos, no lo printamos, no lo hacemos uso, return simplemente nos devuelve
+resultado.
+En este caso sí vamos a ver el resultado y también podemos hacer alguna otra cosita.
+Me duplicó y después, bueno, este último print que ya está afuera, ¿no?, de la función.
+Entonces, pero porque yo invoqué la función, le pasé un número y aparte lo imprimí.
+Y otra opción sería guardarlo en una variable eh, e imprimir si queremos ver el resultado de esa
+variable.
+E bueno, lo mismo, ¿no?
+Me da resultado, imprime el print que sigue el programa.
+Distintos tipos de funciones.
+Esta es una función que retorna un resultado.
+Podemos tener funciones que en vez de retornar un resultado eh ejecute una acción.
+Yo por ahí no necesito guardar eh guardar ningún valor, simplemente necesito mostrarlo.
+Bueno, puedo directamente desde eh desde la función hacer que esa acción sea eh imprimir el
+resultado de la operación.
+Eh, para distintos enunciados o distintos problemas vamos a tener que eh realizar distintas formas
+de funciones.
+La anterior retornaba un valor para nosotros después guardarlo en una variable, hacer alguna otra
+operación.
+En este caso, esta función recibe un parámetro y ejecuta una acción, que es el de mostrar el
+resultado por consola.
+Y después va a haber funciones que eh no reciban nada y retornen algo o retornen una acción.
+Va a haber funciones que reciban varios parámetros.
+Vamos a ir viendo de a poco eh los distintos tipos de funciones.
+Hay en este caso vimos como en principio dos funciones que reciben algo, ejecutan una operación,
+retornan o imprimen.
+Este, si yo borro estas dos, esta acción sí, el hecho el de invocar esta función va a mostrar por
+consola aplicar eh un valor, el valor eh siempre control C.
+El valor va a recibir N.
+num va a pasar a n, n se va a guardar n se va a multiplicar por dos y se guarda se guarda en
+resultado y se imprime resultado.
+Ahora sí, la función devolvió algo, pero anteriormente si bien retornaba un valor, nosotros teníamos
+que encontrar la forma de capturarlo y hacer uso de ese valor.
+Eh, ya después van a ir viendo con los ejemplos para qué en qué momento usar una o u otra.
+Eh, ah, bien, bien, bien, bien.
+¿Qué más tenemos por acá?
+Eh, van a escuchar por ahí y si o o a mí mismo eh decir esa función recibe parámetros o esa función
+eh utiliza argumentos.
+Cuando nosotros eh estamos definiendo estos, no no es tan strict, esto es información nada más, no
+va a haber una pregunta en el parcial en qué por qué se llama parámetros o por qué se llama
+argumentos.
+Simplemente para que no se mareen y y van a escuchar que le digo parámetro o argumento cambia en el
+momento de que que estamos hablando.
+Si estamos definiendo la función e son parámetros.
+Los parámetros son las variables que se definen en la declaración de la función.
+O sea, cuando nosotros decimos def, nombre de la función paréntesis, lo que estamos definiendo ahí
+son parámetros.
+Esos parámetros sirven como espacios reservados para que las funciones eh para que los valores de la
+función para que la función reciba válvulas.
+Parámetros en la definición de la función y cuando estamos invocando la función se llaman
+argumentos.
+argumentos van a ser los valores reales que le vamos a pasar a la función.
+Por ejemplo, def duplicar número.
+Esto es un parámetro, pero cuando la llamamos duplicar entre paréntesis cuatro, cuatro es el
+argumento que recibe la función.
+Los argumentos son los datos concretos que se le envían a los parámetros.
+un poco para hacer la la aclaración de de a veces le decimos parámetros y a veces le decimos
+argumentos.
+Bueno, es cuando estamos definiendo num viene a ser el parámetro donde le va a llegar un argumento.
+Es lo mismo porque eh después cuando la invocamos lo que se llama argumentos va a pasar a la a los
+parámetros de la función.
+Pero nada, una un poquito de información para que eh no se confundan y me van a escuchar a veces
+decir parámetros y a veces argumentos y eso es un poco la razón por la cual eh cambia la palabra.
+Dicho esto, la realidad es que a veces le digo argumentos a esto y parámetros a esto o pero estamos
+hablando de lo mismo.
+La información es que cuando la definimos son eh parámetros, ya me estaba confundiendo.
+cuando la eh la invocamos son argumentos y de hecho ahí en la a ver acá me si ahí nos marca
+parámetros y acá a no me marca acá no me marca de función duplicar no acá bueno nos dice que espera
+eh algo que es algo, un ni.
+Em, si hacemos clic arriba de la función nos dice que es una función que recibe un número que puede
+ser algo del tipo algo y no devuelve nada.
+Hace una acción, pero no está retornando nada.
+Y si le ponemos así return, ¿qué nos dice?
+nos dice que devuelve algo, fichitas y es algo porque eh Python es más flexible en ese sentido.
+En otros lenguajes eh de programación lo que es necesario es decirle acá vas a recibir un entero.
+Eh, entonces la función eh como es en Python.
+Claro, ¿por qué no te lo pide?
+A ver, un doble a ver si te gusta ahí.
+Tampoco doble.
+Hay una forma de hacer esto, pero eh no es necesario.
+Bueno, en otros lenguajes sí es necesario decir, "Bueno, ¿qué vas a qué esperas recibir acá?
+Un stream, un entero, un doble, un flotante?" Eh, Python dice, "Acá le va a llegar algo.
+Si lo puede trabajar, lo va a trabajar.
+y si no va a tirar un error.
+Por eso algunos lenguajes prefieren eh ser más estructurados en ese sentido y acotar las
+probabilidades de que se generen esos errores.
+Pero en Python no es necesario especificar el tipo de dato que va a recibir esa esa función.
+Bueno, unas cositas más.
+Eh, bueno, en la diapositiva, por si les queda un poco la duda, está también lo mismo que venimos
+charlando, el cuerpo de la función, todo el bloque de código que contiene las instrucciones que le
+vamos a dar a la computadora están eh dentados o con la sangría, lo mismo que charlamos
+anteriormente, eh, y habla del return, palabra clave, return.
+Eh, con ella concluye la construcción de nuestra función.
+Siempre generalmente es como un cierre, es el cierre de la función, aunque puede no estar, puede que
+no retorne nada a esa función, eh, y ante sea aquello que obtenemos cada vez que lo ejecutamos.
+En este caso, devuelve tru.
+Bueno, es lo que nos devuelve la función, ¿no?
+E bueno, todo esto ya lo ya lo charlamos un poco para que les quede manera más gráfica la estructura
+de la función, palabra reservada, nombre, argumentos o parámetros.
+Claro.
+Acá parámetros, eh, acá argumentos.
+Eh, lo podría corregir el código de la función respetando la tabulación, la palabra reservada return
+para devolver esa acción.
+Y bueno, haciendo uso en con print como habíamos probado nosotros para que se pueda ver el resultado
+que está devolviendo esa función.
+La invocación como todas las funciones eh una función que no recibe nada, pero que retorna el 13.
+No me acuerdo con qué puse esto.
+Eh, a ver, veamos un poco este ejemplo.
+¿Qué tenemos?
+una función que se llama mitad, que recibe un número, y va a guardar en resultado el la acción o la
+operación de dividir ese número por dos y va a retornar al resultado.
+Va a guardar el número o con el ejemplo que hicimos también anteriormente, guarda en número eh la el
+resultado que va a retornar la función mitad.
+y le pasa el seis.
+Y por último, imprime el número.
+Bueno, y ahora vamos a hacer un cortecito y vamos a trabajar con algunos ejercicios ya para empezar
+a trabajar con con funciones.
+E bueno, no nada más le iba a sumar algunas cositas, pero estamos bien para empezar a hacer nuestras
+primeras funciones.
+¿Cómo están dudas?
+Bien, bien, bien, bien.
+Bueno, buenísimo, buenísimo.
+Igual hagamos un cortecito, descansen un poco, reset y volvemos en 8:20, ¿les parece?
+Matecito, cafecito, aire, ir al baño, eh, tirar las piernas.
+Damos de vuelta.
+Bien, bien, bien.
+Bueno, ¿alguna duda de lo que estuvimos viendo hasta acá?
+Hasta el momento, ¿no?
+Bueno, genial, genial.
+E al final de la diapositiva está subida en el aula, hay una serie de ejercicios para que vayamos
+entrando en tema de funciones.
+Todos los tienen que hacer, los van a entregar.
+Eh, puede ser, no sé, no le no definí la fecha, pero la idea es que estos los tengan los tengan
+hechos y probablemente los entreguemos mañana.
+Igual hoy vamos a trabajar bastante con esto.
+Vamos a hacer algunos ejercicios.
+Eh, igual que en la vez anterior, son incrementales, qui decir que va de fácil a más complicado,
+pero vamos a empezar a trabajar con alguno de estos para ver cómo sería que tendríamos que hacer,
+por ejemplo, agarrar el primero, me voy a ir acá.
+Esto lo borro.
+Eh, y lo pego acá.
+Voy a comentar todo.
+Control KC.
+Y el ejercicio nos dice lo siguiente.
+Escribir una función llamada saludar que muestre por pantalla hola, bienvenida.
+Luego llamar la función para comprobar que funciona correctamente.
+Como variante, modificar la función para que el saludo se muestre dos veces.
+principio eh parecería ser fácil, pero es cuestión de de ir acostumbrándose a la estructura de las
+funciones, a cómo definirlas y y cómo invocarlas.
+Eh, y después se va a empezar a complejizar.
+Básicamente lo que tenemos que hacer es usar nuestra palabra reservada para definir funciones.
+Nos dice el nombre que es def.
+nos dice cuál, cómo se va a llamar la función y se tiene que llamar saludar.
+Tenemos que ponerle los paréntesis, aunque no reciba nada porque esta función no recibe ningún eh
+barámetro.
+Y lo que necesitamos es eh que esta que el cuerpo de esta función básicamente imprima por pantalla o
+muestre un muestre por pantalla el mensaje.
+Hola, bienvenido.
+Entonces e nuestra función va editar por pantalla.
+Hola, bienvenido.
+Está acá estaríamos.
+Esa sería nuestra función.
+Para hacer uso de esta función tenemos que invocarla.
+A ver si dice algo más.
+Pero bueno, esto es importante, ¿no?
+Si yo invoco la función acá, estaría cayendo en un un error.
+Saludar porque esto está siendo llamado dentro de la función y para que funcione correctamente
+tendría que estar fuera del cuerpo de la función.
+La llamo, la invoco, no recibí ningún parámetro, no tengo que hacer nada más y hasta ahí estaríamos.
+Eh, bienvenido, está mal escrito, ¿no?
+Díganme.
+Bienvenido.
+Eh, ahora sí.
+O sea, que ahí termina el ejercicio.
+Ahí termina el ejercicio como variante dice, "Llama la función para comprobar que la función
+correcta lo que acabamos de hacer y como variante modificar la función para que el saludo se muestre
+dos veces." Bueno, podemos hacer dos cosas, ¿no?
+Podemos hacer esto.
+Así se va a mostrar dos veces.
+O podemos hacer, a ver si funciona esto.
+Hola, bienvenido.
+Perdón.
+Y la parte de ret Bueno, pero por eso no.
+Acá no, porque el enunciado no dice nada.
+en ningún momento dice que retorne eh algo.
+Ah, yo pensé que lo usábamos siempre que creábamos que definíamos una función.
+Bien, como el cierre de la función era eso, ¿no?
+No siempre usamos retour tiene que estar como al cierre al final, pero no, o sea, no puede estar acá
+turnos quedando esto.
+Eh, fíjense que lo puso de un color como más opaco, eh, y nos dice, "El código es estructuralmente
+inaccesible." O sea, que esta parte de código no está siendo accedido por la función, como que la
+empecé y la terminé, pero no tengo nada ahí y dejé una parte del código afuera función.
+Eh, si yo quisiera retornar algo, tendría que tener lo como al final.
+En este caso no es una función que no recibe parámetros, no retorna a nada, simplemente ejecuta un
+una acción.
+Eh, saluda, manda un saludo.
+Es incremental porque esta función, este, esta serie de ejercicios, bueno, por ahí si los hacemos
+acá, veo de dejar otros parecidos para que entreguen por ahí nos viene bien para practicar y ir
+viendo estas cositas.
+El otro ejercicio nos dice, definir una función llamada saludar que reciba un parámetro llamado
+nombre y muestre el saludo personalizado como por ejemplo hola Pepe.
+Luego modifica la función para que también reciba la edad y muestre ambos datos por el mensaje.
+Seguimos sin encontrar la eh la palabra retorne, ¿no?
+que en todos momentos nos dice muestre, que reciba un parámetro y muestre un saludo.
+Eh, después que reciba la edad y muestre ambos datos.
+Por ahora no tenemos nada de retorno.
+Voy a juntar un poquito esto y me voy a poner control B.
+Esto si quieren ustedes bien, si ya lo van agarrando pueden ir viendo los ejercicios que están en
+Profe, pero el retorno no va siempre en la función, ¿no?
+Y no, entonces no entiendo para qué sirve si no va siempre.
+Ahora, ahora vamos a ver para qué sirve, porque tenemos eh, insisto, distintos tipos de funciones.
+Tenemos funciones que no reciban nada y que retornen y que y que muestren o que generen una acción,
+pero que no retornen nada.
+Simplemente tenemos la estructura de un código dentro de una función para reutilizar ese código eh,
+y no tener que cada vez que queamos saludar a alguien, llamar al print.
+Simplemente llamamos a la función y como en el caso del ejemplo dos, bueno, le vamos a ir pasando
+nombre y la edad y lo va a ir saludando, va mandando mensajes.
+Eso es una función que no recibe y no retorna.
+Después tenemos funciones que reciben y tampoco retornan y también tenemos funciones que reciben y
+retornan.
+Esos tres eh tres tipos de funciones podríamos llegar a encontrar.
+Quizás algunas más, pero esas son las que más vamos que vamos a usar.
+Eh, el return es básicamente para cuando nosotros necesitamos retornar un valor y a raíz de ese
+valor poder utilizarlo, ¿no?
+Poder eh obtener un resultado, guardarlo en una variable, hacer alguna otra operación.
+Esas operaciones puede ser mostrarla o no.
+E por ejemplo, si nosotros tuviéramos que hacer una función, voy a definir otra función por una
+función para calcular.
+Hm, no sé, no no quiero no me acuerdo bien cuáles son los ejercicios que hay, pero por ejemplo,
+supongamos que queremos calcular eh, bueno, la la edad me parece que está, pero Me faltaron los dos
+puntitos.
+Entonces esta función va a recibir el año de nacimiento.
+Vamos a ponerlo así, así no.
+Y a raíz de ese año va a retornar eh, no sé, 2000.
+26 menos el sería lo más fácil, lo más básico de para calcular la edad, ¿no?
+Esto se puede hacer así o se puede hacer con una un paso anterior que sea guardar en la variable
+edad.
+la operación de el año actual menos el año de nacimiento.
+Entonces, retom se usa cuando hay un resultado para mostrar.
+Sí.
+Sí.
+Entonces, retornamos edad.
+Ahora, si nosotros lo mismo invocamos calcular el mismo ejemplo que que estuvimos viendo
+anteriormente, edad y le pasamos, no sé, el año del nacimiento 1990 y no hacemos nada más, va a
+calcular, va a devolver la edad, pero no lo estamos guardando en ningún lado.
+Entonces, si nosotros queremos ir almacenando la edad de varias personas, eh, no sé, pu poner edad
+de Pedro va a ser igual a.
+En vez de hacer el cálculo, reutilizamos este código.
+Ya nos tenemos nuestro cálculo guardado en una función, simplemente la invocamos y le pasamos la
+edad.
+Le pasamos el dato.
+Eh, quiero hacer lo mismo para la edad de Juan.
+Entonces, calcular edad.
+y Juan nació en 1000 2000, este es más jóvenes 200.
+Eh, y por último, bueno, quiero, supongamos que tengo un montón y ahora sí quiero mostrar print em
+la edad de Juan.
+Juan es llavecitas edad Juan, que es una variable y Pedro tiene queda, Pedro.
+Ahí estaríamos haciendo una función que sí retorna un un valor que es el resultado de hacer el año
+actual menos el año que está recibiendo.
+Supongo que esta función trabaja así, le das un año y te devuelve la data básicamente.
+Después está podemos calcular, poner el mes o trabajar con algún otro tipo de estructura de fecha,
+año, mes, día.
+Simple ejemplo como para trabajar esto.
+Em, bienvenido.
+La edad de Juan es 24 y Pedro tiene 36.
+Esto sería otra función.
+Después podemos tener una función que hm bueno, en vez de la misma función, en vez de que retorne
+esa edad, que la muestre edad.
+En ese caso nosotros no vamos a poder hacer esto porque no está retornando nada, simplemente lo está
+printando, está mostrando por consola.
+Entonces, cuando nosotros necesitamos guardar el resultado de esa eh de esa eh operación que realiza
+la función, bueno, necesitamos el reto.
+En este caso quisimos hacer lo mismo, quisimos guardar esos valores dentro de estas variables al
+llamar a la DAT, pero lo que hace la función es imprimirlas.
+Son estas dos líneas que están acá.
+Y en este print cuando queremos imprimir la edad de Juan es cuando llega la variable edad Juan, se
+encuentra que no hay nada, entonces se imprime nada.
+es nada, está vacía esa variable está declarada, pero como la función print le sacamos el retur, no
+devolvió ningún valor y no pudimos guardar o actualizar el valor de la de las variables.
+Para eso básicamente se usa el reto.
+Después podemos hacer un montón de cosas.
+Nosotros podemos eh tener una estructura de código que bueno, devuelva de vuelta con el return.
+devuelva la DAT.
+Y nosotros queremos tenemos una lista, por ejemplo, de una lista de edades.
+Después vamos a a empezar a a combinar todo esto.
+Ahora estamos viendo funciones.
+Después vamos a empezar a a combinar funciones con for, una función que recorra un ciclo for y que a
+la vez vaya guardando dentro de una lista esas eh esos resultados o eh por lista de edades, que es
+una lista que está vacilla.
+Por ejemplo, esto ya me está tirando error, lo voy a sacar.
+Eh, y nosotros queremos guardar en esa lista de edades cada uno de los resultados de lo que nos
+devuelva esa función.
+Bueno, podemos hacer lo mismo.
+Edad, vamos a esa función que es calcularidad.
+Pasamos un año 20000.
+Entonces el en esta variable sí se me va a se me va quedar guardada una este un valor.
+Bueno, ahora yo valor se lo quiero guardar a la lista de edades.
+¿Se acuerdan cómo era para modificar?
+Eh, para agregar eh elementos a una lista.
+Muy bien.
+Punto apen.
+¿Y qué le voy a pasar?
+Edad.
+Y después si yo imprimo esa lista y puedo hacer lo mismo, ¿no?
+Puedo ir guardando y llamando o mismo esto lo puedo poner en un for y que recorra una lista de
+números y que me calcule la edad y que a medida que vaya calculando edades lo vaya agregando a la
+lista.
+Y entonces si yo imprimo esto, e lista de edades, en principio está definida en la línea 18 como
+vacía, pero después eh esta variable DAT es simplemente para guardar el resultado de este cálculo.
+pues lo guardo en una lista y si tuviera dentro un for si la podría ir pisando porque la lista se me
+va a ir actualizando la cantidad de eh bueno, ahí está mi mi lista con un solo elemento por ahora se
+entiende.
+Muy bien, muy bien.
+Después vamos a hacer un for, vamos a hacer un ejercicio que sea hacer una función que calcule la
+edad de cuando recibe un año, pero que después tener una lista vacía y que una o una lista de años y
+que el Ford recorra esa lista de años y en base al año que le toque, que encuentra como elemento,
+calcule Dad y lo vaya agregando en una eh pues en una en una lista de edades.
+Eso sería bueno.
+Lo hacemos ahora.
+No sé si si espero que no confunda mucho esto, pero esto sería lista de años.
+Lista.
+Bueno, bajo años.
+y tengo eh 2000 eh 1980 1999 e 2000 5 y 996 lista de años.
+No tengo una lista vacía, pero ahora esto no quiero que no quiero hacer esto y hacerlo primero 2000,
+después no lo quiero hacer cinco veces, tendría que hacer algo como control C, control B y le voy
+modificando los años, ¿no?
+Como haciéndolo de forma manual.
+Solamente quiero hacer dos o tres líneas de código.
+Entonces, me voy a crear un for para recorrer y guardar en la variable i todo lo que está en mi
+lista de años.
+Y por cada elemento que se encuentre, eh, bueno, quiero en principio voy a llamar a la a la función
+calcular edad que recibe un año, ¿no?
+Entonces, si mi primera iteración se va a guardar en la variable en 2000, cuando yo llame a calcular
+edad, eh, y le paso lo que se guardó en la variable i, bueno, voy a tener ahí el resultado de una
+edad, ¿no?
+que mi función anteriormente me está acá arriba.
+Yo la definí donde yo quiera, dentro del programa, dentro de un for, en un while donde eh se me
+ocurra.
+Entonces, se encontró 2000, va a guardar en edad el resultado de el llamado a mi función calcular
+edad que recibe 2000.
+Cuando yo llame a función va a ser esto, edad, eh, va a retornar 2026 menos ese año que recibe y
+retorna edad.
+Voy a cambiar este nombre.
+Resulta se llaman igual.
+No va a haber conflicto porque esto está sucediendo adentro de la función.
+La clase que viene vamos a trabajar un poco de eh el scope, que es el la vida que tienen las
+variables dentro de las funciones.
+Una cosa es que esté adentro y otra cosa es que esté afuera de la función.
+Pero lo para más para no complejizar tanto de entrada lo vemos la la clase que viene.
+Entonces voy a guardar en resultado de llamar a la función invocar a calcular edad.
+que está en esta iteración trabajando con el número 2000 que se guardó en eh la variable I.
+Y por último quiero que a ese resultado se lo agregue a mi lista de edades.
+Lista edades punto apen.
+Eh, que me estoy faltando un y este método de listas recibía algo, ¿no?
+Eso que recibe como parámetro lo va a guardar en la lista.
+Y lo que yo quiero guardar es el resultado, que si todo está bien va a ser 2000 26 - 2000 y bueno y
+ahí me va a dar una edad.
+Bueno, y ahí termina mi for.
+No quiero hacer nada más por ahora.
+Quiero que me llene la lista vacía.
+Tengo una lista de edades vacías, tengo una lista de años.
+No quiero hacer la cuenta eh uno por uno.
+También podría tener esto acá, ¿no?
+Y para cada año que es 2026 menos t ta ta ta en vez de tenerlo en una función lo podría hacer.
+Pero es una forma de modularizar y acomodar el código porque acá es una cuentita fácil, pero si
+tuviéramos mucho código, mucho bloque de código en esta sección, nosotros tenemos nuestra función
+ahí ya la probamos, sabemos que que funciona, que anda bien, simplemente hacemos uso de ese código y
+nuestro programa principal solo tiene esto, las listas.
+un for que va a recorrer eh la lista de años, un llamado a una función y la sintaxis para empezar a
+llenar esa lista.
+Eh, ¿se entiende esto?
+¿Quieren que lo probemos paso a paso a ver qué hace o o lo corro directamente a ver si si funciona?
+Perfecto, perfecto.
+Los que levantan pulgar es porque entienden, los que no están callados entiendo que también lo
+entienden, pero no duden en en preguntar, eh, en Me quedé, no entendí esto, no entendí otro, lo lo
+revemos.
+Sí, yo estoy medio perdido ya, ya estoy medio quemado en todas las cosas.
+el no entiendo por qué estamos usando el for para agregar estos datos para no hacerlo eh no crear
+una variable por cada uno.
+Hm lo hacemos.
+Este es un ejemplo, ¿no?
+Este es otro ejemplo que surgió a partir de el return que me decían, "Bueno, pero entonces para el
+returno no sirve para nada." A veces no, dependiendo lo que tengamos que hacer.
+Si solo necesitamos una función para mostrar, no necesitamos returno.
+Ahora, si necesitamos guardar un valor para x motivo, lo vamos a usar.
+En este caso, el motivo de usar return es que nosotros necesitamos la función calcular edad poder
+tener un registro de ese número.
+Entonces usamos retur edad.
+La cuenta es simple, es el año actual menos el año de nacimiento.
+Eso te da tu edad o la edad de la persona que estemos queriendo eh contabilizar su edad.
+Pero vamos a hacer el registro en nosotros tenemos una lista de años y necesitamos desarrollar un
+programa para generar una lista de edades que para mi análisis de datos no me sirve los aí.
+Yo necesito saber que mi cuál es mi público, eh qué edades tiene mi público.
+Bueno, entonces tengo que generar un programa para calcular.
+Si yo tuviera una lista de 50 personas, yo tendría que hacer esta operación 50 veces.
+Pero como tenemos una estructura que nos va a automatizar esa esa tarea y nos permite ir iterando o
+haciendo ciclos por cada uno de los elementos que contenga una lista, la voy a usar, que es el bucle
+for.
+Por eso es que está presente acá el for.
+Es un ejemplo que surgió a raíz de explicar por qué usamos esto.
+Nada tiene que ver con el ejercicio uno, eh, sino que tiene que ver con funciones, para qué usamos
+funciones, para qué usamos retur.
+Y un poco volviendo al tema de listas, que fue el tema de la clase pasada para que empecemos a a
+mezclar y a utilizar todas las herramientas que vamos incorporando en acá en el en Python, ¿no?
+Para hacer guardas lo que hace a partir de No, no, sí, sí, listas lo vamos empezar a mezclar.
+Por ahí doy el contenido de funciones medio separado, pero sepan que después se se empieza a usar
+todo, todo, todo, todo.
+Vamos a volver a usar if, eh, for, bucles y todo, todo junto en un solo enunciado.
+Este for lo que va a hacer es e, a ver, lo voy a lo voy a ¿Cómo era esto?
+Voy a debugar, voy a poner un punto acá y ejecutar ejecución de impulación.
+Vamos a poner esto.
+Así vamos analizando Python de Buer, archivo de Python.
+Para los que no estuvieron en esta clase, con esta herramientita lo que nos hace es correr el
+programa, eh, y deteniéndose en los puntos que yo le puedo ir indicando, estos puntos rojos, estos
+puntos de de inspección y yo le puedo ir dando instrucciones.
+Ahora me va a aparecer un cuadrito acá como para ir ejecutando paso por paso, línea por línea.
+Primera instrucción, le doy, pasé esto.
+Segunda instrucción va a ser otra cosa, pero estoy tardando un poquito en en cargar.
+Bueno, si era por acá, ahí está, era por acá.
+nos va a aparecer este esta ventanita con los botones que nos sirven para bueno, cerrar, reiniciar,
+salir y depurar paso a paso por instrucciones.
+Este es el comando F11 el que vamos a ir trabajando para ir viendo qué hace eh en cada uno de los eh
+de las líneas de código que va ejecutando.
+El programa empezó y frenó acá donde yo le dije que frene.
+Entonces, eh, opción saludar.
+Bueno, hizo esto, está acá, se encuentra con una función.
+Cuando encuentra una función, esto no hace nada porque simplemente es la definición de la función se
+pone en práctica recién cuando nosotros la se pone a funcionar recién cuando nosotros la invocamos,
+como que tenemos un pedazo de código ahí esperando ser llamado para trabajar.
+No es que en la línea 14 ya hace este cálculo porque quiere, no, simplemente es la definición.
+Podría estar en otro módulo, en otro bloque, pero eso para después.
+Ahora está acá.
+Sigue, sigue, sigue.
+Se encuentra una lista, se encuentra otra lista.
+Por ahora está haciendo lectura, se encuentra en for y acá es donde empieza la el trabajo del for y
+la automatización.
+Va a guardar en la variable i el primer elemento que encuentra en la lista, que es 2000.
+va a ejecutar una operación que va a guardar en resultado el eh el cálculo de que se que salga de mi
+función que es calcular edad.
+Es como que yo a calcular edad le paso 2000.
+Va a venir acá.
+Vamos a ver si lo podemos ver.
+Eh, okay.
+No me mostró no me mostró cuándo viene acá, pero lo que pasó con 2000 viene acá.
+Guarda en edad.
+2026 - 2000 resultados 26 retorno y lo guarda acá.
+Después de hacer ese cálculo, guarda el resultado y lo agrega a la lista.
+Entonces, mi lista de edades ahora tiene ya un elemento, una edad que surgió del primer elemento de
+la lista de años.
+El ciclo for no va a terminar hasta que llegue a 1996, que es el último elemento de la lista.
+Entonces, sigue, se encuentra con 1980, va a llamar de vuelta a calcular edad.
+Hm.
+Vamos a correr un paso más por instrucciones.
+Ahí está.
+Y ahí frenó.
+Fíjense como de mi for donde está invocando [carraspeo] calcular edad, el programa viene acá.
+Nosotros ahora actualmente estamos adentro del for, pero el ciclo for está siendo llamados afuera,
+está haciendo un llamado a una función que está afuera.
+Pero lo que va a hacer básicamente es con ese elemento que tiene va a ir acá, va a ejecutar la
+operación que va a ser 198 2026 men 1980, guarda en edad y retorna a edad.
+Una vez que retorna a edad, voy a dar un pasito más.
+retornoedad 46.
+Eh, después de acá viene acá y lo guarda.
+Ahora mi lista va a tener donde estoy un pasito más.
+Ahí volvió con el resultado, lo guardó acá.
+Ahora lo guarda.
+Resultado 46.
+El método append es el que nos servía para guardar elementos en una lista y que va a guardar 46
+años.
+Perfecto.
+Un paso más y ya mi lista va a pasar a tener dos elementos y así lo va a ejecutar todas las veces
+que sea necesaria o las veces como elementos se encuentre.
+Acá miren esto.
+Ahora 1999, edad 26.
+Sigo.
+Lo guarda.
+Vamos a esperar a que pase el otro elemento.
+2004.
+2004.
+Edad 22.
+Lo vas a guardar.
+Vuelve.
+Ya mi lista ya se va conformando.
+Ya ahora por cuatro por cuatro elementos.
+Se encuentra con 1996.
+Llama la var a la función calcular edad.
+Calcula la edad.
+Lo agrega a la lista.
+Ahora tengo 30.
+Y este es mi último resultado, ¿no?
+Porque tenía 1 2 3 cu 5 lista de años.
+Por ende, voy a tener cinco elementos en nuestra lista de edades.
+Eh, listo.
+Por último, print lista de edades y terminó.
+Esta es la salida por consola de es la ejecución de ese programa.
+Eso es lo que va haciendo paso por paso.
+Ahora nosotros lo fuimos parando, pero esto en esta serie de operaciones que entre llamar a la
+función, guardar eh en la lista de edades, todas esas operaciones se van sucediendo en milésimas de
+segundo y en un ratito tenemos varios cálculos y varias acciones eh reflejadas en unos en unos
+segundos.
+Es una lista de solo cinco elementos, pero cuando se empieza a analizar grandes cantidades de datos,
+estas estructuras de programación van a ser superútiles para recorrer listas, para hacer cálculos.
+Eh, bueno, bien, eso como un poco saliéndonos de los ejercicios para eh ir mostrando cositas que se
+pueden ir haciendo, porque de hecho creo que los ejercicios algo de eso, algo de eso.
+Habíamos hecho el uno.
+El dos dice, "Defin una función llamada saludar que reciba un parámetro eh llamado nombre y muestre
+un saludo personalizado." Por ejemplo, "Hola, Pepe." Luego modificada la función para que también
+reciba y muestre ambos datos en el mensaje.
+Eh, bueno, leer un poquito.
+Bueno, yo les voy a dejar los ejercicios para que los hagan ustedes.
+Voy a hacer eh dos ejemplitos más, no de esto, sino como de ejemplos, ¿no?
+Porque ahí en la en la serie de ejercicios que tienen se van a encontrar con funciones que reciban
+dos parámetros de eh resto y por ejemplo va a recibir un parámetro A y un parámetro B.
+División así.
+Bueno, el resto también me iba iba a hacer lo mismo, pero este ejemplo lo hago para que entiendan
+que este parámetro es una ubicación donde van a recibir eh simplemente a es como la dirección donde
+después le van a llegar los argumentos, le va a llegar un número, una palabra un un valor.
+Lo importante no es entender que acá se le puede poner número eh uno y número dos, sino que eso va a
+hacer referencia después a los argumentos que nosotros le pasemos, que no importa lo que diga acá,
+lo importante es que lo que dice ahí yo después lo resultado correctamente que no va a ser lo mismo,
+sobre todo en una división hacer eh número número uno dividido número dos.
+¿Qué palabra resultado?
+Bueno, lo mismo, no importa.
+Eh, gracias por avisar, pero después si yo eh a la hora de retornar le pongo el mismo res dato, no
+va a funcionar.
+Buenísimo el error para poder eh ejemplificar.
+Si yo acá le pongo Pepe, después acá le tengo que poner Pepe.
+Y si yo acá le pongo manzana, después cuando lo uso tiene que ser manzana.
+O sea, es una palabra que va a hacer referencia a lo que cuando invoquen mi función, que es
+división, si yo pongo un 10 acá, ese va a ser el primer argumento que reciba, el primer parámetro
+con el que trabaja la función.
+Y si yo después acá pongo un dos, esto va a funcionar bien porque es una división, eh, pero y yo
+quiero trabajar números enteros, supongamos, ¿no?
+Pero si yo hago lo mismo, pero al revés, en la división pongo primero número dos y después pongo
+número uno.
+Bueno, acá el la persona que está queriendo usar la operación quiere hacer la división de 10 di 5,
+pero como yo en mi operación interna de la función que no va a estar visible para supongamos que es
+un programa que que trabaja con la consola, yo le voy a decir ingresar el primer número, ingresar el
+segundo número.
+Esos los voy a usar en la en la función y si yo ejecuté mal esto me va a devolver otro valor, no me
+va a dar el valor eh correcto.
+Todo esto para decir que lo que el parámetro que yo ingreso en el en la primer posición va a ser el
+mismo argumento que va a llegar en la primer posición de la función y así sucesivamente.
+Entonces, yo cuando haga un resultado tengo que tener en cuenta las ubicaciones.
+Esto como primer eh acercamiento a las funciones.
+La semana que viene vamos a ver otro tipo de eh posicionamientos de los argumentos y los parámetros.
+E cómo podemos acceder a través de un eh a través del nombre de ese parámetro.
+Así y así no importa de tanto la ubicación que nosotros le pongamos, pero en principio entender
+esto, ¿no?
+Que primero no importa si yo le pongo resultado.
+Ahora lo voy a corregir porque su eh resultado.
+Sí importa que sea el mismo nombre que yo uso acá, que sea el nombre que uso acá.
+Resul.
+Sí.
+Y tampoco importa lo que yo le ponga acá, porque estamos haciendo operaciones con números y yo está
+bueno ponerle en número, pero yo le puedo poner a B e X y que sea siempre y cuando después cuando
+venga a hacer la operación tenga en cuenta eso, que quiero dividir el primer argumento por el
+segundo.
+Eh, le pongo primero, segundo, A, B, X y número uno, número dos, manzana y per, lo que quieran, pero
+es la referencia que después tienen que usar para hacer los cálculos necesarios.
+Eso como primer eh consideración para hacer estos estas funciones.
+Y después dentro de una de una función, nosotros podemos hacer así como llamamos a print, también
+podemos hacer uso de otras funciones, ya sean de Python o ya sean funciones que nosotros eh hayamos
+creado anteriormente, así como dentro de un for llamamos a la función calcular edad, que nosotros
+mismos llamamos.
+Amos, también podemos llamar a eh a calcular edad.
+No lo voy a hacer ahora, pero que no no viene el caso, pero podríamos hacer calcular edad de res y
+lo volví a escribir mal.
+Resul dato.
+Ah, pero lo escribí mal en los dos lados.
+Qué genio.
+Resum eh resum y acá, bueno, calcular en base al resultado la edad.
+Podría ser esto.
+No me no me no me sirve porque no sé qué números voy a a calcular, no sé qué división estoy
+haciendo, pero podría hacer esto.
+O también podría llamar a otras funciones que ya conocemos, como por ejemplo eh una función que no
+reciba nada, pero que trabaje con dos parámetros.
+Podría ser una función en la que yo voy a llamar a la función input.
+Voy a transformar en entero lo que me ingrese el usuario.
+Ingrese un punto espacio y que se guarde en la variable A.
+O sea, es una función que no recibe nada por parámetros, pero nosotros al invocar la función
+división va a llamar a input y de otra forma va a estar recibiendo e números o un ingreso de
+valores.
+Vamos a hacer que en B también se guarde un número que nos va a ingresar el usuario.
+Profe, en este caso A y B no tiene que estar definido en división o esto es parte de la función
+sintética definidos.
+Sí.
+Bueno, insisto, esto es una Ahí le cambié la estructura.
+es una función que va a retornar, pero que no recibe nada por parámetros.
+Parámetros son los argumentos que va a recibir después acá.
+Entonces, acá no necesito esto ya al invocarlo.
+Es otra estructura.
+Teníamos por un lado la misma función C B.
+Teníamos algo así.
+Son dos formas de aquí y esto es cuando nosotros invocamos a la función división eh chuno, tenemos
+que pasarle los parámetros dentro de dentro de los paréntesis y cuando llamamos a la función
+división dos no le pasamos nada, simplemente la invocamos.
+Al invocarla va a llamar a input.
+Input es una es otra función que está dentro de la función que estamos creando nosotros que nos va a
+permitir ingresar números.
+Esto depende si nosotros queremos permitir que el usuario ingrese los números, los valores, o
+queremos ingresarlo nosotros manualmente.
+Son como dos formas distintas de hacer la misma función que trabajan distintas.
+Las dos retornan resultado, pero una recibe parámetros y la otra no.
+No recibe parámetros por el llamado, por la invocación de la función, los va a recibir después
+cuando ingrese la eh a la función.
+Y ahora estamos acá en el mismo caso, ¿no?
+Estamos llamando a funciones distintas, pero estamos retornando un resultado con el que no estamos
+haciendo ningún eh uso, simplemente estamos invocando.
+Bueno, los voy a imprimir, voy a e voy a hacer así.
+Selecciono esto, le hago un cosito ahí, le pongo un print y esto va a ser f.
+Claro, es más fácil hacerlo todo de cero.
+Cortar F3.
+Eh, esto sería función uno.
+A ver si puedo hacer esto.
+Puedo hacer eso.
+Y lo mismo acá.
+Función función dos.
+Llavecita.
+División dos.
+Ahí los Marí, ¿no?
+Y faltaría el pin el último, ¿no?
+Me llegaría mucha duda.
+¿Qué va a pasar acá?
+Claro, esto no está dentro de un print, es la función que estoy llamando.
+Eh, es permiso, lo voy a correr porque me genera intriga.
+Vamos a este lo voy a comentar.
+Eh, tengo más print por ahí.
+Eh, para saludar.
+Ya la probamos.
+Es la función más básica que tenemos.
+A ver qué pasa.
+Esto es raro lo que dice acá, ¿no?
+Claro.
+No, no.
+C cualquiera.
+Estoy usando la función división dos que habíamos dicho que no recibe nada y yo le estoy pasando una
+cadena de texto formateada.
+Esto está muy mal.
+Eh, vamos a hacer así.
+Esto es print.
+Ahora sí.
+Entonces quiero, olvídense de esto, ¿no?
+Básicamente es un cartelito para imprimir lo que me devuelva.
+división uno, que yo le estoy pasando un parámetro y un argumento y otro argumento para que trabaje
+con esa función.
+Y en la línea 43 también estoy llamando a una función que se llama división 2, que no recibe nada,
+pero lo que va a pasar es que me va a pedir que ingrese números, que ingrese valores, pero la
+diferencia es un poco estructural.
+Bueno, eh, anduvo y se rompió.
+Hm.
+¿Por qué?
+No sé por qué para mí se volvió loca.
+Ay, un resultado.
+Voy a dar de vuelta.
+En principio decía resultado 5.0.
+Está bien.
+Sí, sí, lo vimos.
+Y después se rompe.
+Eh, ingrese un número.
+Qué raro, me está tomando como a ver ingreso.
+Ingres número 36.
+Ahí no es al revés, ¿no?
+Que va into, input después.
+Eso no tenía que ver.
+Input, eh, sí, sí, sí, sí.
+Input in.
+Claro.
+Muy bien, muy bien.
+Eh, input.
+Qué qué loco que no me marcaba.
+No, y muchas gracias.
+Yo lo estaba buscando más por otro lado el el problema.
+Lo estaba buscando acá.
+Eh, literal for in base 10.
+Ingreso un número.
+A ver si es bien.
+Sí, sí, estaba al revés.
+Claro, porque yo primero lo capturo con int, con input y después lo paso a int, ¿no?
+Bueno, estas cosas, si les pasan estas cosas, yo veo que están ahí y yo yo los puedo ayudar y o le
+preguntamos a a Tati, no tanta confianza, ¿no?
+Bueno, bien.
+Entonces, genial.
+El primer print de la línea 41 sería este, ¿no?
+Función un y me da el resultado de invocar a la función división 1 pasándole 10 y 2.
+Pero la división, la función división 2 como no recibe parámetros llama a input, me manda el
+mensajito.
+Bueno, 10.
+Enter.
+Ingresa otro número.
+Función 2 5.0.
+Eh, bueno, me van a decir, está haciendo lo mismo.
+Hiciste dos formas distintas de hacer lo mismo.
+Bueno, si necesitas si necesitamos permitir al usuario que lo ingrese, lo hacemos de esta forma.
+Todas las dos retornan algo.
+La diferencia es que una no va a recibir parámetros eh por la invocación de la función, sino que los
+va a recibir de manera indirecta.
+input llamando indirecta porque hace llamado a otra función que va a guardar, hace una serie de
+acciones, pero llegamos al mismo resultado.
+Eh, esto un poco para también dejarles ahí alguna herramientita más para trabajar con estos
+ejercicios.
+Por ejemplo, que recibo Bueno, en estos ejemplos, en ningún en ninguno dice explícitamente eh que
+que el usuario ingrese los valores que necesita la función para trabajar.
+Pero pruébenlo, prueben hacerlo ustedes en vez de primero hagan la opción que reciben los
+parámetros, ¿no?
+Por ejemplo, escribe una función llamada sumar que reciba dos números como parámetros e imprima la
+suma de ambos.
+Eh, bueno, este, el ejemplo tres es algo de lo que estuvimos haciendo.
+Primero que los imprima la suma y después cambiamos la función para que devuelva el resultado usando
+la palabra clave retur en lugar de imprimir.
+Ese sería que, profe, cuando dice después cambiar la función, ¿qué hacemos?
+Anculamos la fila de imprimir.
+Usamos retom.
+Sí, sí.
+Háganlo, háganlo así, comenten la fila del print, déjenlo ahí y agréguenla de retur como para que
+quede registro de que hicieron todas las en realidad es más para uso de eh para que vean esto que
+estuvimos probando entre todos, que lo puedan ir probando ustedes también esto como si yo pongo
+print devuelve algo, si yo pongo retur, lo tengo que pasar a una variable o lo tengo que llamar a
+través del print.
+Eh, son dos ejercicios incrementables y para que vayan probando eh los funcionamientos de las
+variables.
+Después tenemos una función llamada área cuadrada que reciba el valor de un cuadrado y devuelva su
+área.
+Bueno, va a recibir algo.
+Ustedes tienen que hacer el cálculo del área y después lo mismo para un rectángulo.
+Ahí van a tener que hacer dos funciones, ¿no?
+El cuatro.
+una función llamada spar que reciba un número y devuelva true si es par o falso si es impar.
+Luego modificar la función para que en lugar de devolver un valor buliano muestre el mensaje que
+indique el número spa o el número impact.
+Ahí pueden hacer si quieren dos funciones, una que vuelva true o false y la otra que muestre el
+mensaje.
+Pero va a ser lo mismo, la estructura va a ser lo mismo, ¿no?
+Va a recibir un número, va a hacer una operación para identificar.
+Esto ya lo habíamos hecho en algunos ejercicios, pero ahora un poco traerlos y ponerlos en una
+función para eh reutilizar código.
+en función clasificar edad.
+Ahí también este ya lo habíamos hecho, pero ahora dentro de una función va a recibir un número y
+nosotros tenemos que evaluar si es menor es decir si es niño si es menor a 13, adolescente si está
+entre 13 y 17 y adulto si es 18 o mayor.
+Por último, los últimos dos, una función llamada sumar, que reciba una lista de números y devuelva
+la suma de todos los elementos.
+Esto es eh trabajar con una lista va a ser lo mismo.
+Vamos a tener una lista ya predefinida y en nuestra función vamos a poner acá lista o lo que sea,
+pero pues acá vamos a poner sumatoria.
+Lo voy a hacer, ¿no?
+Porque por ahí queda más.
+Eh, supongamos que tenemos que hacer una función sumar que va a recibir algo.
+Ese algo como nosotros sabemos que va a ser una lista que es lista de años y queremos sumar todos
+los años.
+Bueno, eh, ¿qué podemos hacer?
+Sumatoria.
+Suma va a ser igual a, pueden usar zoom, eh, zoom de algo.
+Y retornamos.
+Zoom es otra función que básicamente suma todos los elementos de una lista, así como len eh bueno,
+retour, porque si no tendrían que recorrer con un for y eh ir sumando una variable que vaya
+incrementando en cada en cada iteración.
+Eh, return.
+Puse algo porque para poner que es acá es algo y acá suma eso algo que recibió, pero nosotros
+sabemos que vamos a recibir una lista, una lista, una list.
+Entonces vamos a sumar todo lo que vaya en esa lista.
+Creo que list es palabra reservada, pero dentro de una función poner list.
+Eh, entonces así como tenemos funciones que le pasamos números, le pasamos palabras, le pasamos
+cosas, también le podemos pasar una lista.
+Y el tratamiento que le demos adentro de la función, bueno, va a ser el de una lista.
+Si sabemos que va a recibir una lista, que sume una lista.
+Después, si llamamos a esa función y no le pasamos una lista, eh, bueno, qué sé yo, una vez que
+terminemos esa función y llamamos a la función sumar y lo que va a estar esperando es una lista de
+años o una lista de edades o lo que sea, pero nosotros le pasamos un stream.
+Bueno, ahí me va a saltar un error.
+Est ya me lo está tirando.
+Lista no está definida.
+Ah, me tomó listada.
+Creo que no me lo corro directamente.
+Ya me está marcando problemas.
+Bueno, e lo mismo que al momento de nosotros definir las acciones que va a ejecutar esa lista, ¿no?
+requiere una lista un error de tipo porque le estamos pasando otro tipo de dato que no no quiere no
+no puede procesar con esto, no puede hacer zoom una Mira, E después pruebo una cosita.
+Podemos también hacerlo con for.
+Claro, claro, claro, claro.
+Sería más interesante que lo hagan con for, ¿eh?
+E sí, esto sería confora, mm, vamos a definir la variable afuera sumatoria que va a ser igual a cer.
+Eh, digo que es más interesante porque les va a dar práctica para eh el uso del recorrido del uso
+del bucle for dentro de un de una función que es lo mismo, pero hay que entender cómo es el flujo de
+la información dentro de todas ese esas iteraciones for.
+Y en lista acá lo mismo, el nombre que le pongamos acá es lo que vamos a usar acá.
+Más allá que después la lista se llame eh lista de año, lista de manzanas, lista de lo que sea, esta
+función es genérica y va a trabajar con cualquier tipo de listas.
+Entonces, cuando nosotros le pasemos una lista, no le va a importar si es de si vamos a hacer
+sumatorias, va a necesitar que sean números, si son palabras las va a concatenar, calculo.
+Uh, me está tirando errores por toda, ¿por qué el bloque?
+Ah, porque no estoy terminando acá la la función.
+como que entiende que lista corresponde a esta función, pero como no la estoy terminando, reto e
+Bueno.
+para hacerlo con un for.
+Cualquier lista que nosotros le pasemos acá la vamos a recorrer.
+Si es una lista de daño, la recorremos.
+Vamos a guardar en la variable i.
+Y por cada una de esas interacciones vamos a sumar su sumatoria.
+Le vamos a decir que le sume más igual lo que hay.
+Entonces, de cero le va a sumar 2000.
+Cuando tenga 2000 le va aar 1080.
+Así para todos los elementos y después va a retornar su.
+Ahora, si yo quiero usar eh la función sumar lista, voy a poner sumar lista porque creo que hay una
+eh la puedo usar para sumar lista y puedo pasar lista de años.
+Le puedo pasar sumar sumar listas.
+Lista.
+Le puedo pasar eh lista de edades.
+Ah, no, lista de edades no porque está rico.
+Voy a hacer otra lista acá.
+Eh, lista de precios.
+22 44 no punto no coma 66 precios en dólares debe ser no porque no vale nada sale eso.
+dos listas distintas, una sola función, pero yo puedo usar la función sumar elementos de una lista,
+debería decir para todas las listas que nosotros tengamos lista eh gu precios y demás.
+Y ese es un poco el objetivo de de las funciones, hacer una función una sola vez y después usarla.
+Profe, consulta.
+Una vez que definimos una función, ¿la podemos usar después cuando abrimos otros archivos?
+Eh, para usar, ¿no?
+Eso después lo vamos a ver.
+Si tenemos otro archivo Pi, no podemos usar esa función sumar porque en este entorno es como es
+distinto.
+En este archivo no lo podemos usar, pero sí podemos hacer eh después vamos a ver cómo podemos tener
+todas las funciones en un archivo y hacer una importación de ese archivo.
+ponerle que yo clase 11.
+Hay que hacer algunas cositas más.
+Y de clase 11 quiero eh desde algo así, desde clase 11 quiero importar la función suma.
+Em, algo me falta, pero después así vamos a poder hacer uso de las funciones, pero eso lo vemos la
+después del cuatrimestre, después del parcial.
+Eso no va a entrar en este parcial, pero sí, en principio no, todas las vamos a trabajar en el mismo
+entorno, en el mismo ámbito, el mismo scope.
+Eh, pero después vamos a empezar a trabajar módulos, vamos a traer eh librerías eh que tienen
+funciones.
+Python no tiene directamente, por ejemplo, la función raíz cuadrada.
+lo que se hace es la potencia de la mitad o no sé, la raíz cuadrada se hace la potencia de 1/io o
+pero hay librerías como que tienen funciones matemáticas, no solo la raíz cuadrada tiene seno,
+coseno, eh y lo mismo punto.
+Y ahí tenemos un montón de funciones matemáticas, pero porque estamos importando un módulo, un
+módulo que tiene funciones, básicamente son funciones que están definidas en otro lado, en una
+estructura interna de de Python que tiene la definición de la función.
+Supone que esto calcula el exponente o función exponencial, no sé qué será.
+Spoiler.
+Bueno, dudas.
+Hablé un montón.
+No, no, este no, no lo háganlo, háganlo.
+Mañana vamos a trabajar un poquito más con esto, ¿eh?
+Pero es importante que lo hagan.
+Háganlo por ahí les habilitos bañarnos, depende de cómo vengamos para subirlo, pero bueno, no quedó
+mucho tiempo de práctica hoy.
+Eh, mañana no lo definí todavía.
+No sé si estos o algunos otros, eh, pero es importante que los hagan.
+Sí, probablemente los lo habilite para que lo suban mañana.
+Dejemos un tiempo también, pero me gustaría que se tomen unos minutos ahora si quieren, si no están
+muy quemados para con la información fresca poder hacer algunos.
+¿Qué les parece?
+Me parece bien.
+Bueno, bueno, bueno.
+Yo estaba bien, estaba intentando hacer el último este, el de la lista.
+Puse para hacer el de la lista de años y cuando le doy print no hace nada.
+Eh, bueno, porque creo que básicamente no estamos e vos pusiste esto dentro de un prim, eh, puse
+print entre paréntesis sumar lista, que es lo que definimos la función y entre paréntesis lista de
+años.
+Sí, eso hice y no mira, eh, está bueno.
+Sí, esa es una opción eh mal.
+No le puse mal acá sumatoria eatoria.
+Y usted, vos hiciste la misma estructura igual que esta con for o hiciste zoom.
+Yo con for.
+A ver, voy a probarla.
+No logro ver si hay un error de sintaxis, pero no debería andar.
+Eh, resultado igual sumarle esta.
+Creo que está mal la función.
+No logro ver.
+No logro ver dónde están.
+Ahora creo que está mal la función, pero no sé dónde.
+Eh, tengo que no creo que lo que está pasando es que sumatoria yo lo tenía afuera de la función y no
+lo vimos todavía, pero es importante que esté adentro.
+dentro porque eh a veces las funciones no tienen acceso.
+Hay que tenemos que ver esto de variables globales y variables locales.
+Eh, su como estaba fuera el for no tiene forma o la función no tiene forma de acceder a funciones
+que están fuera de su función.
+Eh, entonces la variable que vamos a a usar tiene que estar eh adentro.
+Básicamente la semana que viene vamos a trabajar más en profundidad estas cuestiones, pero eh
+básicamente era ese el problema.
+Y lo mismo, está bueno esto de ponerlo en una variable y después imprimirlo.
+Son dos líneas de código que resultan eh si les resulta más más claro está bueno que lo hagan así,
+pero es lo mismo.
+Podemos eh hacer un print de acá como si fuera en la línea 26 y la línea 27 son los mismos que
+hacer.
+Lo de la línea 28 que voy a hacer ahora, hacer todo el llamado a la función dentro del print es eh
+es el mismo resultado, pero esto al principio es más claro, si es más eh más claro para ustedes,
+mejor.
+otro error.
+E no sé cuál división dos.
+Ah, eh, bueno, ahí funcionó.
+Esto es la sumatoria de los años y esto es la sumatoria de edades, eh, no de precios, perdón.
+sería la línea 29 y después estos llamados que hicimos ahí también se está que quedó esperando este
+división dos.
+Bueno, un ratito si quieren para 3 segundos.
+Yo si quieren me quedo por acá.
+Quédense conectados un rato así.
+Aprovechan los minutitos, ¿eh?

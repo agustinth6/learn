@@ -1,0 +1,69 @@
+--- pagina 1 ---
+Información Privada
+Docente: Lucas Marques de Paiva
+Técnicas de 
+Programación
+--- pagina 2 ---
+Información Privada
+Bucles en Python - While
+El bucle while en Python sirve para repetir un bloque de instrucciones mientras se cumpla una 
+condición
+→Se evalúa una condición (que da True o False).
+→Mientras sea True, se ejecuta el código dentro del bucle.
+→Cuando la condición es False, el bucle termina.
+Break: Se usa dentro de un bucle (while o for) para salir inmediatamente de él, aunque la condición o el 
+rango no hayan terminado.
+Continue: Hace que el bucle salte a la siguiente iteración sin ejecutar el resto del código de esa vuelta. 
+No corta el bucle entero, solo “se saltea” una vuelta.
+
+--- pagina 3 ---
+Información Privada
+Bucles en Python - While
+Break: Se usa dentro de un bucle (while o for) para salir inmediatamente de él, aunque la condición o 
+el rango no hayan terminado.
+Continue: Hace que el bucle salte a la siguiente iteración sin ejecutar el resto del código de esa vuelta. 
+No corta el bucle entero, solo “se saltea” una vuelta.
+
+--- pagina 4 ---
+Información Privada
+Bucles en Python – For
+Sirve para repetir un bloque de instrucciones un número conocido de veces, 
+sin necesidad de escribir una condición manual
+Eso repite 5 veces, pero tuvimos 
+que crear una variable, poner una 
+condición y actualizarla.
+Acá, range(5) genera los números 0, 1, 2, 3, 4.
+El for recorre esos números uno por uno, y la 
+variable i los va tomando.
+Diferencia clave
+while → se repite mientras una condición sea verdadera.
+for → se repite una cantidad de veces ya determinada.
+--- pagina 5 ---
+Información Privada
+Bucles en Python – For
+range() es como una “máquina de números” que le entrega al for valores uno 
+por uno.
+La función puede usarse de tres formas:
+Un solo número → range(fin)Genera los números desde 0 hasta fin-1.
+Dos números → range(inicio, fin)Genera desde inicio hasta fin-1.
+Tres números → range(inicio, fin, paso)El tercer número es el salto (cuánto aumenta o 
+disminuye).
+
+--- pagina 6 ---
+Información Privada
+Listas en Python
+Una lista en Python es como una caja con varios compartimentos, donde se pueden 
+guardar diferentes cosas (números, palabras, booleanos, incluso otras listas). 
+
+--- pagina 7 ---
+Información Privada
+Bucles en Python – For
+Un bucle for sirve para recorrer todos los elementos de una lista, uno por uno,
+Es como decir: “para cada cosa en esta caja, hacé tal acción”.
+¿Cómo funciona el bucle for?
+fruta es una variable temporal.
+En cada vuelta del bucle, toma un valor distinto de 
+la lista:
+1ª vuelta → "manzana“
+2ª vuelta → "banana“
+3ª vuelta → "naranja"

@@ -1,0 +1,91 @@
+--- pagina 1 ---
+Información Privada
+Docente: Lucas Marques de Paiva
+Técnicas de 
+Programación
+--- pagina 2 ---
+Información Privada
+Nombres de variables
+Reglas para nombrar variables
+-Pueden contener:
+Letras (a-z, A-Z)  → nombre = "Lucas"
+Números (0-9)     → edad2 = 30
+Guion bajo (_)      → _total = 100    ó total_compra = 100
+-NO pueden empezar con número
+2edad = 30  → Error
+edad2 = 30  → Correcto
+-No pueden tener espacios :
+mi nombre = "Juan"  → Error
+mi_nombre = "Juan"  → Correcto
+--- pagina 3 ---
+Información Privada
+-NO pueden usar símbolos especiales
+precio$ = 100  → ❌
+precio = 100    → ✅
+-NO usar palabras reservadas
+if = 10      → ❌
+for = 5       →❌
+class = "A"  → ❌
+Usar nombres descriptivos, usar snake_case, no usar nombres confusos, 
+tampoco letas fuera del alfabeto ingles(ñ, ü)
+Palabras reservadas:
+
+--- pagina 4 ---
+Información Privada
+Programación estructurada
+Combinación de tres estructuras de control
+Secuencia Selección Iteración
+
+--- pagina 5 ---
+Información Privada
+Preguntas y repuestas
+Operador de igualdad ==
+Desigualdad: el operador no es igual a (!=)
+Operadores de comparación: mayor que o menor que ( >  < )
+Operadores de comparación: mayor o igual que,  menor o igual que ( >=  <= )
+¿Qué hacer con las respuestas?
+- Memorizarlo (almacenarlo en una variable)
+- Utilizar la respuesta para tomar una decisión 
+
+--- pagina 6 ---
+Información Privada
+Condiciones y ejecución 
+de condicional
+Es como en la vida real: haces ciertas cosas o no cuando se cumple una condición específica, por 
+ejemplo, sales a caminar si el clima es bueno, o te quedas en casa si está húmedo y frío
+Sentencias if
+--- pagina 7 ---
+Información Privada
+Sentencias if-else anidadas
+Sentencias if-else
+--- pagina 8 ---
+Información Privada
+Ejercicio en clase
+1. Construir un programa que pida al usuario un nombre y
+devuelva un saludo personalizado
+2. Se requiere un programa que pida un numero al usuario y 
+devuelva si ese numero
+3. Realizar un programa que permita ingresar ancho y alto para 
+calcular la superficie
+--- pagina 9 ---
+Información Privada
+Ejercicio para entregar en el aula virtual
+1. Construir un programa que calcule la edad de una persona(solo año)
+2. Construir  un programa  que permita pedir dos números y mostrar la 
+suma.
+3. Pedir la base y la altura y calcular el área. El programa debe devolver 
+el siguiente mensaje: “El área es …”
+4. Pedir al usuario que ingrese su edad y devuelva los siguientes 
+mendajes:
+“Es mayor de edad” Si la  edad es >= 18
+“Es menor de edad” Si la edad es < 18
+5. El programa debe permitir ingresar un numero si eso numero en 
+mayor a cero informar “Positivo” sino informar “Negativo”
+6. Pedir dos números. Si el primero es mayor que el segundo, informar 
+que el primero es mayor. En caso contrario, informar que el segundo 
+es mayor.
+7. Pedir el precio de un producto. Si el precio es mayor a $50.000, 
+aplicar un 10% de descuento. Si no, no aplicar descuento. Mostrar el 
+precio final.
+8. Pedir un número e indicar si es par o impar. Para determinarlo, 
+utilizar el operador %.

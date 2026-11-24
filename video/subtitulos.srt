@@ -1,0 +1,827 @@
+1
+00:00:00,000 --> 00:00:04,116
+Bienvenido al repaso del parcial de Técnicas de Programación.
+
+2
+00:00:04,116 --> 00:00:07,355
+En este video vamos a recorrer, línea por línea,
+
+3
+00:00:07,355 --> 00:00:10,728
+los tres ejercicios del modelo de segundo parcial:
+
+4
+00:00:10,728 --> 00:00:14,439
+primero estudiantes y notas, después productos y stock,
+
+5
+00:00:14,439 --> 00:00:18,015
+y por último el inventario con diccionarios anidados.
+
+6
+00:00:18,015 --> 00:00:23,818
+Vas a ver qué hace cada línea de código, las fórmulas clave y las trampas más comunes.
+
+7
+00:00:23,818 --> 00:00:24,560
+¡Empecemos!
+
+8
+00:00:26,320 --> 00:00:31,240
+Antes de entrar a cada ejercicio, mirá lo que los tres tienen en común.
+
+9
+00:00:31,240 --> 00:00:34,012
+Hay un diccionario global con los datos.
+
+10
+00:00:34,012 --> 00:00:36,299
+Después, funciones que solo leen:
+
+11
+00:00:36,299 --> 00:00:38,239
+promedios, totales, filtros.
+
+12
+00:00:38,239 --> 00:00:44,337
+Una única función, la de agregar, es la que modifica el diccionario, y siempre al final,
+
+13
+00:00:44,337 --> 00:00:46,000
+después de validar todo.
+
+14
+00:00:46,000 --> 00:00:51,890
+Y por último, la función main con el guard if name igual a main, que arranca el menú.
+
+15
+00:00:51,890 --> 00:00:55,840
+Si entendés este esqueleto, entendés los tres ejercicios.
+
+16
+00:00:57,680 --> 00:01:01,374
+Ejercicio uno: gestión de estudiantes y notas.
+
+17
+00:01:01,374 --> 00:01:07,156
+El diccionario usa como clave el nombre y como valor una lista de notas.
+
+18
+00:01:07,156 --> 00:01:11,975
+Ana tiene nueve coma cinco, nueve coma dos y ocho coma ocho.
+
+19
+00:01:11,975 --> 00:01:15,669
+Luis, siete, seis coma cinco y siete coma dos.
+
+20
+00:01:15,669 --> 00:01:17,597
+Marta, seis en adelante.
+
+21
+00:01:17,597 --> 00:01:20,006
+Y Carlos tiene la lista vacía:
+
+22
+00:01:20,006 --> 00:01:23,941
+ese es el caso borde, existe pero no tiene notas.
+
+23
+00:01:23,941 --> 00:01:28,840
+Si tu código no lo contempla, revienta con división por cero.
+
+24
+00:01:30,560 --> 00:01:32,994
+Empecemos con agregar estudiante.
+
+25
+00:01:32,994 --> 00:01:36,829
+El input devuelve texto, así que le aplicamos strip,
+
+26
+00:01:36,829 --> 00:01:40,442
+que borra los espacios del principio y del final.
+
+27
+00:01:40,442 --> 00:01:47,006
+Sin eso, Ana con espacios y Ana sin espacios serían dos claves distintas del diccionario.
+
+28
+00:01:47,006 --> 00:01:49,587
+Después preguntamos si quedó vacío:
+
+29
+00:01:49,587 --> 00:01:53,570
+si lo quedó, avisamos y con continue volvemos a pedir.
+
+30
+00:01:53,570 --> 00:01:56,815
+Luego isalpha verifica que haya solo letras;
+
+31
+00:01:56,815 --> 00:01:58,954
+el not invierte la condición.
+
+32
+00:01:58,954 --> 00:02:01,609
+Si no cumple, se repite la pregunta.
+
+33
+00:02:01,609 --> 00:02:05,960
+Recién cuando el nombre es válido, el break sale del bucle.
+
+34
+00:02:07,600 --> 00:02:12,040
+Segundo paso: verificar que el estudiante no exista todavía.
+
+35
+00:02:12,040 --> 00:02:17,737
+Si el nombre ya está en el diccionario, imprimimos un aviso y hacemos return:
+
+36
+00:02:17,737 --> 00:02:22,029
+corta ahí, sin pedir nada más, y sin tocar el diccionario.
+
+37
+00:02:22,029 --> 00:02:25,433
+Después pedimos cuántas notas quiere ingresar.
+
+38
+00:02:25,433 --> 00:02:27,209
+Eso va dentro de un try:
+
+39
+00:02:27,209 --> 00:02:31,279
+int convierte el texto, y si el usuario escribe letras,
+
+40
+00:02:31,279 --> 00:02:34,978
+salta el except con ValueError y volvemos a pedir.
+
+41
+00:02:34,978 --> 00:02:40,084
+Si el número es menor o igual a cero, con continue también se repite.
+
+42
+00:02:40,084 --> 00:02:44,080
+El break solo se ejecuta cuando la cantidad es válida.
+
+43
+00:02:45,840 --> 00:02:50,085
+Ahora las notas, en un bucle que se repite mientras falten.
+
+44
+00:02:50,085 --> 00:02:54,978
+Creamos una lista vacía y en cada vuelta pedimos una nota con float,
+
+45
+00:02:54,978 --> 00:02:57,496
+porque las notas aceptan decimales.
+
+46
+00:02:57,496 --> 00:03:01,022
+Si el usuario escribe ocho, queda ocho coma cero.
+
+47
+00:03:01,022 --> 00:03:05,987
+Si escribe letras, ValueError, y el except avisa que no es un número.
+
+48
+00:03:05,987 --> 00:03:09,225
+Si la nota es menor o igual a cero, no sirve:
+
+49
+00:03:09,225 --> 00:03:12,247
+se avisa y con continue se vuelve a pedir.
+
+50
+00:03:12,247 --> 00:03:15,341
+Si es válida, el append la agrega al final.
+
+51
+00:03:15,341 --> 00:03:17,140
+Y acá el detalle clásico:
+
+52
+00:03:17,140 --> 00:03:19,586
+append siempre lleva el argumento;
+
+53
+00:03:19,586 --> 00:03:22,680
+append vacío es el error de tipo TypeError.
+
+54
+00:03:24,480 --> 00:03:28,119
+Y llegamos a la línea más importante de la función:
+
+55
+00:03:28,119 --> 00:03:31,687
+estudiantes entre corchetes nombre, igual a notas.
+
+56
+00:03:31,687 --> 00:03:37,538
+Es la única que modifica el diccionario, y está al final, después de validar todo.
+
+57
+00:03:37,538 --> 00:03:43,817
+Si en cualquier paso anterior falló, nunca se llega acá, y el diccionario queda intacto.
+
+58
+00:03:43,817 --> 00:03:47,028
+Esto es exactamente lo que pide el enunciado:
+
+59
+00:03:47,028 --> 00:03:51,309
+una vez validada toda la información, agregar el estudiante.
+
+60
+00:03:51,309 --> 00:03:56,803
+Fijate que la lista de la variable local notas queda colgada del diccionario:
+
+61
+00:03:56,803 --> 00:04:02,440
+cuando la función termina, la variable muere, pero la lista sigue viva adentro.
+
+62
+00:04:04,160 --> 00:04:08,119
+Calcular promedio recibe el diccionario y el nombre.
+
+63
+00:04:08,119 --> 00:04:10,175
+Primero verifica si existe:
+
+64
+00:04:10,175 --> 00:04:13,678
+si no está, imprime el mensaje y retorna nulo.
+
+65
+00:04:13,678 --> 00:04:15,276
+Y acá el punto clave:
+
+66
+00:04:15,276 --> 00:04:20,911
+el valor nulo significa que no hay resultado, no que el promedio sea cero.
+
+67
+00:04:20,911 --> 00:04:22,586
+Después toma la lista;
+
+68
+00:04:22,586 --> 00:04:28,144
+si está vacía, también informa y retorna nulo, evitando dividir por cero.
+
+69
+00:04:28,144 --> 00:04:31,418
+Si hay notas, retorna sum dividido por len.
+
+70
+00:04:31,418 --> 00:04:35,225
+En Python tres la división siempre da número real:
+
+71
+00:04:35,225 --> 00:04:38,880
+o sea, siempre devuelve un número con decimales.
+
+72
+00:04:40,640 --> 00:04:44,568
+Para obtener el máximo promedio, arrancamos sin candidato:
+
+73
+00:04:44,568 --> 00:04:46,870
+max nombre y max promedio en nulo.
+
+74
+00:04:46,870 --> 00:04:50,391
+En cada vuelta del for llamamos a calcular promedio,
+
+75
+00:04:50,391 --> 00:04:53,439
+que puede devolver un número o el valor nulo.
+
+76
+00:04:53,439 --> 00:04:56,689
+Si devuelve nulo, con continue salta esa vuelta.
+
+77
+00:04:56,689 --> 00:04:59,872
+La condición de actualización tiene dos partes:
+
+78
+00:04:59,872 --> 00:05:04,070
+que max promedio sea nulo, que se cumple en la primera vuelta,
+
+79
+00:05:04,070 --> 00:05:07,388
+o que el promedio sea mayor que el máximo actual.
+
+80
+00:05:07,388 --> 00:05:09,623
+Esa primera parte es obligatoria:
+
+81
+00:05:09,623 --> 00:05:14,160
+en Python tres, comparar nulo con un número lanza un error de tipo.
+
+82
+00:05:16,000 --> 00:05:21,353
+Clasificar estudiante traduce la tabla de rangos, y acá está la trampa:
+
+83
+00:05:21,353 --> 00:05:22,785
+el orden de los if.
+
+84
+00:05:22,785 --> 00:05:26,404
+Primero preguntamos si es mayor o igual a nueve:
+
+85
+00:05:26,404 --> 00:05:30,928
+si se cumple, retornamos Excelente y la función termina ahí.
+
+86
+00:05:30,928 --> 00:05:34,471
+Después, si es mayor o igual a siete, Aprobado.
+
+87
+00:05:34,471 --> 00:05:37,185
+Y si no entró en ninguno, Reprobado.
+
+88
+00:05:37,185 --> 00:05:42,990
+Si preguntaras primero mayor o igual a siete, Ana, con nueve coma diecisiete,
+
+89
+00:05:42,990 --> 00:05:46,760
+caería en Aprobado, y nadie sería nunca Excelente.
+
+90
+00:05:46,760 --> 00:05:48,720
+De mayor a menor, siempre.
+
+91
+00:05:50,400 --> 00:05:52,203
+Mostrar resumen junta todo.
+
+92
+00:05:52,203 --> 00:05:57,613
+Llama a calcular promedio, y si el resultado es nulo, hace return inmediatamente:
+
+93
+00:05:57,613 --> 00:06:00,351
+la función anterior ya informó el motivo,
+
+94
+00:06:00,351 --> 00:06:05,960
+y así evitamos formatear un nulo con dos decimales, lo que tiraría un error de tipo.
+
+95
+00:06:05,960 --> 00:06:10,635
+Si hay promedio, llama a clasificar estudiante, y muestra tres líneas:
+
+96
+00:06:10,635 --> 00:06:14,709
+el nombre, el promedio con dos decimales, y la clasificación.
+
+97
+00:06:14,709 --> 00:06:18,115
+Fijate que los dos decimales son solo para mostrar;
+
+98
+00:06:18,115 --> 00:06:21,120
+en memoria sigue guardado el número completo.
+
+99
+00:06:23,040 --> 00:06:26,508
+Obtener aprobados usa una lista por comprensión.
+
+100
+00:06:26,508 --> 00:06:31,204
+Por cada nombre, primero mira si la lista de notas no está vacía:
+
+101
+00:06:31,204 --> 00:06:36,477
+si está vacía, el cortocircuito del and evita llamar a calcular promedio,
+
+102
+00:06:36,477 --> 00:06:39,512
+así no calcula de más ni imprime mensajes.
+
+103
+00:06:39,512 --> 00:06:44,208
+Si tiene notas, pregunta si el promedio es mayor o igual a siete.
+
+104
+00:06:44,208 --> 00:06:46,592
+Y ahora, la errata del enunciado:
+
+105
+00:06:46,592 --> 00:06:51,793
+dice que el resultado es Ana y Luis, pero Luis promedia seis coma nueve,
+
+106
+00:06:51,793 --> 00:06:57,211
+porque veinte coma siete dividido tres es seis coma nueve, menor que siete.
+
+107
+00:06:57,211 --> 00:07:00,607
+Con estos datos, el resultado real es solo Ana.
+
+108
+00:07:00,607 --> 00:07:03,280
+Confía en la regla, no en el ejemplo.
+
+109
+00:07:04,960 --> 00:07:07,203
+Ejercicio dos: productos y stock.
+
+110
+00:07:07,203 --> 00:07:11,961
+La estructura es la misma del ejercicio uno, pero con dos diferencias.
+
+111
+00:07:11,961 --> 00:07:17,806
+El valor sigue siendo una lista, pero ahora son cantidades enteras registradas en cada
+
+112
+00:07:17,806 --> 00:07:18,961
+control de stock.
+
+113
+00:07:18,961 --> 00:07:22,291
+Y el caso borde es Impresora, con la lista vacía.
+
+114
+00:07:22,291 --> 00:07:25,486
+La diferencia grande con el ejercicio anterior:
+
+115
+00:07:25,486 --> 00:07:31,263
+cada registro se pide con int y no con float, porque el enunciado dice número entero.
+
+116
+00:07:31,263 --> 00:07:37,040
+Si el usuario escribe tres coma cinco, int lanza ValueError y hay que volver a pedir.
+
+117
+00:07:38,800 --> 00:07:41,909
+Agregar producto repite el mismo esqueleto:
+
+118
+00:07:41,909 --> 00:07:46,897
+pedir el nombre con strip, verificar que sea todo letras con isalpha,
+
+119
+00:07:46,897 --> 00:07:51,163
+comprobar que el producto no exista con un return temprano,
+
+120
+00:07:51,163 --> 00:07:54,127
+pedir la cantidad dentro de try y except,
+
+121
+00:07:54,127 --> 00:07:58,754
+y después cada registro con int y el chequeo de entero positivo.
+
+122
+00:07:58,754 --> 00:08:02,513
+Recién al final, productos nombre igual a registros.
+
+123
+00:08:02,513 --> 00:08:06,996
+Si ya hiciste el ejercicio uno, este lo tenés casi de memoria:
+
+124
+00:08:06,996 --> 00:08:09,960
+lo único nuevo es la conversión a entero.
+
+125
+00:08:11,600 --> 00:08:15,788
+El punto dos te hace elegir entre una de dos opciones.
+
+126
+00:08:15,788 --> 00:08:18,735
+La opción A calcula el stock promedio:
+
+127
+00:08:18,735 --> 00:08:23,854
+verifica si existe, si la lista está vacía informa y retorna nulo,
+
+128
+00:08:23,854 --> 00:08:27,266
+y si hay datos retorna sum dividido por len.
+
+129
+00:08:27,266 --> 00:08:29,748
+La opción B suma el stock total:
+
+130
+00:08:29,748 --> 00:08:32,385
+es prácticamente la misma función;
+
+131
+00:08:32,385 --> 00:08:36,650
+cambia solo la última línea, en vez de dividir se suma,
+
+132
+00:08:36,650 --> 00:08:39,985
+y el mensaje dice total en vez de promedio.
+
+133
+00:08:39,985 --> 00:08:47,120
+Para el parcial elegí una sola, pero saber que son casi idénticas te ahorra medio ejercicio.
+
+134
+00:08:48,960 --> 00:08:51,665
+El punto tres es la lista por comprensión:
+
+135
+00:08:51,665 --> 00:08:56,560
+devuelve los nombres de los productos cuyo stock promedio sea menor a cinco,
+
+136
+00:08:56,560 --> 00:08:59,072
+excluyendo los que no tengan registros.
+
+137
+00:08:59,072 --> 00:09:01,326
+Fijate en el orden de la condición.
+
+138
+00:09:01,326 --> 00:09:04,095
+Primero, productos nombre, que es la lista:
+
+139
+00:09:04,095 --> 00:09:09,570
+si está vacía es falsa, y el cortocircuito del and ni siquiera llama a calcular stock
+
+140
+00:09:09,570 --> 00:09:13,112
+promedio. Después, el promedio menor a cinco, estricto:
+
+141
+00:09:13,112 --> 00:09:16,075
+cuatro coma nueve entra, exactamente cinco no.
+
+142
+00:09:16,075 --> 00:09:22,000
+Con los datos del parcial, el resultado es solo Monitor, igual que el ejemplo del enunciado.
+
+143
+00:09:23,680 --> 00:09:27,343
+Ejercicio tres: inventario con diccionarios anidados.
+
+144
+00:09:27,343 --> 00:09:29,969
+Acá cambia la estructura de los datos.
+
+145
+00:09:29,969 --> 00:09:35,428
+La clave sigue siendo el nombre del producto, pero el valor ya no es una lista:
+
+146
+00:09:35,428 --> 00:09:37,985
+es otro diccionario, con tres campos:
+
+147
+00:09:37,985 --> 00:09:39,782
+precio, stock y categoría.
+
+148
+00:09:39,782 --> 00:09:42,892
+Para llegar a un dato hacen falta dos saltos:
+
+149
+00:09:42,892 --> 00:09:47,038
+primero la clave del producto, y después la clave del campo.
+
+150
+00:09:47,038 --> 00:09:50,286
+Es el ejercicio que más se complica en memoria,
+
+151
+00:09:50,286 --> 00:09:53,880
+pero la lógica de validación es la misma de siempre.
+
+152
+00:09:55,760 --> 00:09:58,183
+Agregar producto pide cuatro datos.
+
+153
+00:09:58,183 --> 00:10:00,675
+El nombre, con el patrón de siempre:
+
+154
+00:10:00,675 --> 00:10:03,582
+strip, isalpha, y verificar que no exista.
+
+155
+00:10:03,582 --> 00:10:06,490
+El precio con float y chequeo de positivo:
+
+156
+00:10:06,490 --> 00:10:07,667
+acepta decimales.
+
+157
+00:10:07,667 --> 00:10:10,920
+El stock con int, pero con el chequeo distinto:
+
+158
+00:10:10,920 --> 00:10:15,974
+stock menor a cero, porque el cero sí se permite, como pide el enunciado,
+
+159
+00:10:15,974 --> 00:10:17,427
+mayor o igual a cero.
+
+160
+00:10:17,427 --> 00:10:20,681
+Es la diferencia con los ejercicios anteriores.
+
+161
+00:10:20,681 --> 00:10:22,688
+Y la categoría, que es texto:
+
+162
+00:10:22,688 --> 00:10:26,219
+solo hay que verificar que no quede vacía, sin try,
+
+163
+00:10:26,219 --> 00:10:29,680
+porque no hay ninguna conversión que pueda fallar.
+
+164
+00:10:31,440 --> 00:10:35,463
+Al guardar, se crea un diccionario nuevo con los tres campos:
+
+165
+00:10:35,463 --> 00:10:39,551
+precio, stock y categoría, y se asigna como valor de la clave.
+
+166
+00:10:39,551 --> 00:10:44,695
+Si te olvidas un campo, el producto queda incompleto, y después, al consultar,
+
+167
+00:10:44,695 --> 00:10:46,410
+te tira un error de clave.
+
+168
+00:10:46,410 --> 00:10:52,279
+Al igual que en los ejercicios anteriores, esta es la única línea que muta el inventario,
+
+169
+00:10:52,279 --> 00:10:54,983
+y está al final, después de validar todo.
+
+170
+00:10:54,983 --> 00:10:58,280
+Todo lo demás hasta acá fue solo pedir y chequear.
+
+171
+00:11:00,160 --> 00:11:03,643
+Consultar producto hace el chequeo de existencia:
+
+172
+00:11:03,643 --> 00:11:06,487
+si el nombre no está, informa y retorna.
+
+173
+00:11:06,487 --> 00:11:12,103
+Si está, toma el diccionario interno en la variable producto, y muestra precio,
+
+174
+00:11:12,103 --> 00:11:15,089
+stock y categoría con dos saltos de clave.
+
+175
+00:11:15,089 --> 00:11:17,079
+Un detalle con las comillas:
+
+176
+00:11:17,079 --> 00:11:23,406
+adentro del f-string van comillas simples, porque afuera ya estás usando comillas dobles.
+
+177
+00:11:23,406 --> 00:11:28,240
+Si pusieras dobles adentro, cerrarías el texto y el código rompería.
+
+178
+00:11:30,000 --> 00:11:36,145
+Calcular el valor total recorre el inventario con items, que entrega clave y valor juntos:
+
+179
+00:11:36,145 --> 00:11:38,876
+el nombre y el diccionario del producto.
+
+180
+00:11:38,876 --> 00:11:43,451
+En cada vuelta multiplica precio por stock y lo suma al acumulador.
+
+181
+00:11:43,451 --> 00:11:45,226
+Con los datos del parcial:
+
+182
+00:11:45,226 --> 00:11:49,733
+Mouse aporta ciento cincuenta mil, Teclado ciento veinticinco mil,
+
+183
+00:11:49,733 --> 00:11:54,786
+Monitor quinientos cuarenta mil, e Impresora, con stock cero, aporta cero,
+
+184
+00:11:54,786 --> 00:11:56,766
+porque acá no se divide nada.
+
+185
+00:11:56,766 --> 00:11:59,156
+El total da ochocientos quince mil.
+
+186
+00:11:59,156 --> 00:12:02,160
+Ese es el número para verificar tu programa.
+
+187
+00:12:04,000 --> 00:12:07,959
+Filtrar por categoría es otra lista por comprensión:
+
+188
+00:12:07,959 --> 00:12:14,658
+recorre los nombres y compara inventario nombre punto categoría con la categoría pedida.
+
+189
+00:12:14,658 --> 00:12:16,637
+Es una comparación exacta.
+
+190
+00:12:16,637 --> 00:12:22,955
+Si escribís perifericos con minúscula y los datos tienen Perifericos con mayúscula,
+
+191
+00:12:22,955 --> 00:12:26,000
+no coincide, y devuelve una lista vacía.
+
+192
+00:12:26,000 --> 00:12:30,872
+Con los datos del parcial, Perifericos devuelve Mouse y Teclado,
+
+193
+00:12:30,872 --> 00:12:33,080
+y Pantallas devuelve Monitor.
+
+194
+00:12:34,960 --> 00:12:39,555
+Y productos sin stock compara el stock con cero exactamente:
+
+195
+00:12:39,555 --> 00:12:42,388
+no es menor o igual, es igual a cero.
+
+196
+00:12:42,388 --> 00:12:46,906
+Con los datos del parcial devuelve una lista con Impresora,
+
+197
+00:12:46,906 --> 00:12:49,586
+igual que el ejemplo del enunciado.
+
+198
+00:12:49,586 --> 00:12:54,640
+Si agregas un producto con stock cero, también entra en esa lista.
+
+199
+00:12:56,400 --> 00:12:59,924
+Y para cerrar, las trampas que más se olvidan:
+
+200
+00:12:59,924 --> 00:13:01,686
+strip antes de isalpha;
+
+201
+00:13:01,686 --> 00:13:05,516
+el valor nulo nunca se formatea con dos decimales;
+
+202
+00:13:05,516 --> 00:13:09,040
+la clasificación se pregunta de mayor a menor;
+
+203
+00:13:09,040 --> 00:13:12,027
+int para cantidades y float para notas;
+
+204
+00:13:12,027 --> 00:13:15,934
+leé bien si es mayor a cero o mayor o igual a cero;
+
+205
+00:13:15,934 --> 00:13:19,152
+y un solo diccionario en todo el programa.
+
+206
+00:13:19,152 --> 00:13:23,595
+Ya tenés las tres soluciones, la guía en PDF y este video.
+
+207
+00:13:23,595 --> 00:13:25,280
+¡Éxitos en el parcial!

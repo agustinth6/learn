@@ -1,0 +1,582 @@
+00:00:00 - 00:01:47
+Lo lo pasamos. Sí. Bueno. Ah, bueno, Ja, claro. Buenísimo, buenísimo. Dale, dale, dale. Genial, genial.
+Gracias.  Después  de  última  ponemos  el  link  en  el  en  el  aula.  Bien.  Aquí  tenemos  técnica  de
+programación.  No  estoy  compartiendo.  Ya  voy  a  empezar  a  compartir  toda  la  pantalla.  Este  partir
+segundo  trimestre  estructura  de  datos.  Bueno,  vamos  a  seguir  acá.  Bien,  ese  ejemplo.  Vamos  a  hacer
+una pruebita. a las carpetitas. Estas primer estas clases son también para que empecemos a trabajar y a
+hacernos amigos de
+00:01:11 - 00:02:52
+eh práctica en clase 5. Voy a hacer un archivo práctica en clase 6. Amigos de Visor Studio Code, los que
+están  trabajando,  monetiza  después,  después  le  ponemos  publicidad  al  canal  de  de  R.  Le  mira  qué
+bueno. Bueno, genial. Buen eh de paso le ayudamos al canal de Está bueno, está muy bueno. Eh, voy a
+hacer un Ah, les decía, los que no tienen compu o trabajan con el celu o no sé, de repente en el trabajo y
+tienen el celo a mano, usen eh Google Colap o le funciona lenta. Sí, sí. Google Colaps o eh
+00:02:14 - 00:03:40
+PD  aber  Google  Colap  desde  mielo  o  después  los  prueben,  pero  ahí  directamente  ya  pueden  escribir
+código, no tienen que instalar nada. Yo no les, si bien es más fácil eh la idea de que aprendan este editor
+de código es porque sirve para un montón de lenguajes, eh, y sirve después para si tienen que hacer un
+proyecto  con  alguna  librería,  como  si  es  de  Python  puede  ser  Jango  o  nada,  esto  te  genera  toda  la
+estructura, trabajas con las terminales, empiezan a a a identificar las rutas, se puede conectar con una
+base de datos
+00:02:55 - 00:04:41
+datos  es  bastante  completo  y  pero  para  para  lo  que  es  la  práctica  de  de  técnicas  de  programación
+pueden usar incluso cualquier eh editor eh online. Bueno, vamos con mi ejercicio clase punto PI. Esto
+que  ya  habíamos  visto  que  era  clase  seis.  poner  Bueno,  esto  que  veníamos  charlando  práctican  clase
+cinco.  Ah,  esto  es  lo  que  hice  ayer  para  Hm.  nos  decía  que  voy  a  hacer  un  ejemplo  parecido  al  que
+estábamos hablando. Si el programa el ejercicio nos decía, decir al usuario que te ingrese un número
+con intut.
+00:04:18 - 00:06:10
+Vamos a poner el cartelito, eh, un número hasta acá. No, todo bien, ¿no? Sí, vayan parándome cualquier
+cosa. Y nos pedía validar ese número y habíamos empezado a trabajar o visto este eh evidentemente es.
+Ah, pero bueno, que yo tengo también muchas actualizaciones muchas extensiones en Tengo que hacer
+una una buena limpieza porque tarda virtual. Mientras voy a desinstalar eh deshabilizar esta desinstalar
+y  empezamos  a  trabajar  con  esta  estructura  de  control  que  nos  preguntaba  que  si  el  número  que
+ingresa el usuario es
+00:05:38 - 00:07:31
+igual igual a, voy a hacer este ejemplo, eh, para tomar también la eh esto lo que quería esta adtoayuda
+la quería sacar. Si esto es igual a cer, si la respuesta es verdadera, entonces que me diga directamente,
+bueno, el número es cero. Ahora, si esto es falso, que ahora sí, si me que evalúe acá dentro, yo puedo
+trabajar con otra eh con otra estructura de control. Después lo voy a probar. Primero lo voy a hacer así.
+Si esto es verdadero, me da un una respuesta y si no es y si no, bueno, podemos hacerle podemos
+00:06:39 - 00:08:02
+decirle otra cosa que me podemos hacer algo si el número es cero. Bueno, entonces el número no es ni
+positivo  ni  negativo  como  veníamos  charlando.  El  número  es  cero.  Ingresaste  cero.  Ahora,  si  eso  es
+falso, ¿qué podemos hacer por el camino falso? Si no es cero, es porque ingresó o menos o negativo o
+positivo.  Eh,  entonces  ante  la  respuesta  falsa  de  esa  eh  de  ese  condicional  que  está  evaluando  en  la
+línea dos, le podemos decir, bueno, no es cero. Está bien, genial. Ya descarté el cero. Ahora, ese
+00:07:29 - 00:08:59
+número es mayor a cer0. Perfecto. Si es mayor, si me puse un número positivo, esta condición va a ser
+verdadera, entonces ese número es positivo. Y si esta condición no se cumple, entonces va a ejecutar la
+condición  de  este  segundo  bloque.  Lo  importante  de  esto  es  entender  qué  pedazo  de  bloque
+corresponde  a  cada  uno  de  las  de  los  condicionales.  Esto  se  entiende  el  funcionamiento  de  este
+programa.  Sí.  Sí.  Perfecto,  perfecto,  perfecto.  Entonces,  de  esta  forma,  con  la  misma  con  las  mismas
+herramientas que con las los
+00:08:14 - 00:09:48
+condicionales con dos sentidos, podemos anidar eh condicionales o condiciones y evaluar varias cosas.
+Eh,  un  poco  era  el  ejemplo  del  video  en  el  que  si  tienen  determinada  edad  y  tiene  DNI.  Bueno,  pero
+supongamos que queremos evaluar más condiciones. Esto sería un ejemplo. Lo voy a probar también
+para  que  vayamos  haciendo  las  pruebas  correspondientes.  Eh,  ingreso  el  número.  Ingreso  cero,  el
+número cero y termina. Entonces, cuando esto es verdadero, imprime este mensaje y cuando siempre
+cuando una condición es verdadera, ya no
+00:09:05 - 00:10:37
+toma el camino del, no toma el camino por la respuesta falsa. Dos opciones, o verdadero o falso. Si es
+verdadero, ejecuta el primer bloque de código y si es falso, ejecuta el segundo bloque de código. Vamos
+a ir por la segunda opción. Ahora le voy a agregar un número eh positivo y me va a decir que el número
+es  positivo  porque  en  esta  línea  ingreso  el  número,  se  guarda  la  variable  antes  se  castea  a  entero,  se
+guarda en la variable número. Esto es el dos es igual igual a cero falso, ¿no? Ejecuta este bloque de
+00:09:54 - 00:11:07
+código  y  se  viene  para  acá  directamente  al  else  y  lo  y  vuelve  a  hacer  una  una  validación,  vuelve  a
+preguntarse  si  ese  número  es  mayor  a  cero.  Ahora  sí  está  usando  el  operador  mayor  para  ver  si  es
+positivo o negativo. No hace falta preguntar de vuelta si es negativo, porque o es positivo o es negativo,
+no hay muchas opciones. En este caso número dos es mayor a cer. Entonces el número es positivo, no
+ejecuta este bloque de código y termina el programa. Y vamos a hacer la última prueba con el número
+negativo.
+00:10:35 - 00:12:19
+Vamos a poner -2. En este caso lo que pasó es que tomó todos los caminos con respuesta falsa. -2 es
+igual igual a 0. Falso. Se viene por el elss. En el tiene dos también dos caminos. número es mayor a cero,
+falso, no hace este bloque de código y se viene por el els dentro de este els el número es eh como esto
+es  falso,  ejecuta  el  camino  del  sino  y  imprime  el  número  negativo.  Esto  por  un  lado  puede  ser  este
+ejercicio. Después había había otros como para hacer operaciones o para hacer primero una cuenta y si
+esa cuenta
+00:11:30 - 00:13:08
+eh  no  sé  para  encontrar  el  número  par  utilizando  el  módulo.  Hm  se  puede  darse  el  caso  de  que
+tengamos  que  hacer  muchas  validaciones.  Por  ejemplo,  eh  en  la  diapositiva  está  eh  que  lo  que  pedía
+era que ingrese una edad, ingrese un número, ingrese una edad. Eh, y queremos hacer, bueno, acá ya
+tengo que cambiar. Esperen que voy a cambiar de vuelta. Quiero que deje de aparecerme eso. Cambiar
+deshabilitar.  Estas  son  ayudas  de  deshabilitar.  ¿Por  qué  me  sigue?  que  eso  está  bueno  cuando  ya  la
+tenemos bastante clara, pero en
+00:12:32 - 00:14:41
+ahora nos conviene escribir mano a mano todo y de última usar la la ayuda del del editor de código. Ahí
+me  falta  un  paréntesis  y  me  lo  sigue  poniendo.  Lo  voy  sacando.  Supongamos  que  necesitamos  un
+programa que dependiendo la edad nos diga de distintas distintas opciones. Vamos a decir que eh si es
+mayor de 10, si es menor de 10. o de 13 es niño. Acá en los comentarios sí se permite poner ñ eh si es
+menor de 13 es niño. Si es mayor o igual a 13, eh, entonces y menor a 18 es adolescente. Si es mayor o
+igual a 18 y menor a 60 es
+00:13:46 - 00:15:32
+alumno  y  si  es  mayor  adul  60  es  adulto  mayor.  Un  montón  de  condiciones  y  dependiendo  de  la  edad
+que  me  ingrese,  bueno,  nosotros  tenemos  una  estructura  para  esto,  porque  supongamos  que  me
+ingresa 13. Bueno, mi primer validación tendría que ser si es mayor o igual a 13, ¿no? O si es menor. Si es
+menor  a  13,  entonces  pongo  que  en  el  mensaje  también  se  puede.  Ahora,  si  no  puedo  venir  acá
+entonces y de vuelta a preguntarme si el número es mayor o igual a a 13. Entonces, mayor o igual mayor
+o igual a 13.
+00:14:51 - 00:16:31
+Entonces,  eh  estoy  haciendo  un  una  opción  que  podríamos  llegar  a  hacer.  Después  voy  a  mostrar
+alguna otra. Eh, a ver, el número no es condición no se cumple, entonces podría hacer otro porque sigo
+teniendo eh cosas para preguntarse acá. Si esto no se cumple, entonces puedo hacer porque necesito
+deshabilitar eso. Acá dentro podría hacer otro if y preguntarme esto y así sucesivamente. Esto funciona.
+y  funciona,  pero  llega  un  punto  que  se  empiezan  a  anidar  de  tal  manera  tantos  if  que  perdemos  un
+poquito
+00:15:59 - 00:17:54
+la la el control. En este caso son eh 1 2 3 cu tr anidados eh y no hay problema, pero tenemos que ver que
+tenemos  otros  otros  operadores  para  trabajar  y  otra  estructura  de  control.  En  el  aula  está  subida  la
+diapositiva de la clase 6, que sería esta clase y es para que veamos un poquito el diagrama de flujo de
+una estructura de control que se llama el if, que ahí me lo estaba tirando la la ayuda, pero vamos a ver el
+el cómo cuál es la representación gráfica de lo que pasa. está eh en el código. Eh, ah, no cualquier cosa.
+00:17:05 - 00:18:42
+Ya lo vimos ayer. Esto lo que subí eh mmo. Ahora me queda la duda. Esto lo vimos, lo vimos, lo vimos, lo
+vimos. sería este grafiquito y es un poco lo que veníamos charlando, ¿no? si es menor a 13, si es menor a
+18, si es menor a 60, eh salvando las diferencias, pero me gustaría que se eh fijen en este gráfico que es
+la  el  gráfico  de  la  estructura  del  control  de  de  esta  estructura  donde  cuando  se  encuentra  en  una
+primera condición, si esa respuesta es verdadera, termina el hace el bloque de código para la respuesta
+verdadera, pero
+00:18:04 - 00:19:34
+en  el  caso  de  que  sea  falsa,  hace  de  vuelta  una  validación,  lo  mismo  que  estábamos  haciendo
+anteriormente,  pero  con  una  estructura  un  poco  más  simple.  La  traducción  sería  si  esta  condición  se
+cumple tal cosa, si en si no otra condición y si esta condición tampoco se cumple, si no de vuelta otra
+condición. Y si se cumple, no sé, supongamos la segunda, ejecuta este bloque de código y ya no evalúa
+las siguientes porque ya encontró la respuesta verdadera. funciona de alguna manera igual que anidar
+sentencias de if y else, pero
+00:18:49 - 00:20:39
+queda un poquito más ordenado y es más claro para trabajar con cuando tenemos que validar distintas
+eh cuando nuestra condición puede tomar distintas posibilidades, siendo, o sea, se usa cuando tenés
+más de una condición, ¿sí? Cuando ya tenés más de una, lo correcto sería usar el if en vez de poner si o
+poner if varias veces. Claro, claro. El if es si no. Profe, ¿y si volvemos a poner if, eh, nos va a tirar error?
+Eh,  no  puedes  poner  if  acá  abajo  porque  sería  otro  if,  no  sería  el  mismo.  Si  vos  lo  ponés  identado,  sí
+estarías
+00:19:44 - 00:21:44
+evaluando la la estarías trabajando con el mismo proceso. Un ejemplo de eso, muy buena la pregunta.
+Si  vos  me  decís  si  yo  no  pongo  este  els  y  pongo  este  acá,  pues  nosotros  podemos  hacer  esto  en
+programación, pero son eh cosas distintas, no están anidados. Es primeros si es mayor a 13 es niño. Si
+es mayor o igual a 13 es adolescente. Pasa, no es no no tiene un camino. Son sentencias eh verdadero a
+la izquierda porque el verad lo tiene eh Sí, sí, sí. No importa, no importa. El signo que en realidad mayor
+a 13. Acá decía
+00:20:44 - 00:22:19
+menor a menor a 18 en el aula, ¿no? Eh, profe, en el L sí puede ir un montón de veces el if. dentro del F,
+del if, perdón, adentro. Sí, pero también anidad porque aplicaba con el tabulador. Si uno le da con el
+tabulador para que quede el espacio, como que lo vas separando, vas lo vas separando. Entonces ahí sí
+lo tomaría. Claro, claro. Para anidar hay que tabular. Si lo pones en la misma línea, no es anidado. Claro.
+Y  si  no,  la  otra  es  poniendo  los  dos  puntos  al  final  de  la  línea.  Cuando  apretas  enter  ahí  ya  se  se
+estructura.
+00:21:32 - 00:23:14
+Okay.  Eh,  cuando  apretas  enter,  pero  después  de  poner  los  dos  puntos.  Claro,  si  no  pones  los  dos
+puntos, ¿no? Ahí tenés que apretar el tabulador. Claro, claro, claro. Sí, esas tienen esa esas pequeñas
+ayuditas el editor que que acompañan para eso. Eh, entonces si yo corro este programa, me va a hacer
+las validaciones para todas las va a entrar en todos los if porque bueno, probemos. Vayamos haciendo
+pruebas. Supongamos que yo le voy a poner eh voy a poner 10. Vamos a ver cuál es el resultado. Eh,
+00:22:30 - 00:24:34
+¿qué  pasó?  Inputreso  la  Y,  ¿qué  puse?  No  sé  qué  pasó.  Y  dat  bien  10.  Ahí  está.  Nos  pone  es  niño,  es
+adolescente y es adulto. ¿Por qué? Si yo encontré que primero eh es menor de edad, entonces es niño.
+Pero lo que está pasando acá es que se ejecuta este bloque de código. Eh, después este también esto.
+Claro, todas las condiciones son verdaderas. Claro, falta el els que sería si no que te imprime. Es como
+que Claro. O estarían mal, no, no sé. pasa que sí, exacto, perfecto. Salvo en este no es es adulto
+00:23:47 - 00:25:19
+mayor, no me lo imprime. Pero si yo hago exactamente lo mismo, pero va empiezo a anidar if dentro de
+if, solo va a tomar una de las opciones. Pongamos ingreso nuevo 10. es menor a 10, verdadero. Perfecto,
+imprime. Es niño y ya no me va a entrar en estos en estos distintos eh en estas preguntas de nuevo, en
+estas  validaciones.  Voy  a  hacer  la  misma  prueba  para  que  vean  la  diferencia.  Es  es  interesante,  ¿eh?
+Hizo lo mismo. Sí. Ah, me faltó el no me faltaría el para los demás. Vamos a hacer la primera con 10.
+00:24:55 - 00:26:39
+Ahora sí, si eh 10 es menor a 13, sí, entonces es niño. Listo, ya no imprime más como en el caso anterior.
+Ahora si eh pongo 14, entonces va a entrar de vuelta, no va a entrar en la primera opción, va va a entrar
+en la segunda, en el else, en el si no va a poner 14. Y lo mismo me sigue imprimiendo. Eh, ahora sí me
+imprime es adolescente, eh, es adolescente y es adulto. Me está usando estos dos. Entonces también
+tengo que cerrar el Se entiende esta la diferencia que me hizo. Profe, en vez de nuevo, tendrías que
+00:25:50 - 00:27:32
+poner  el  if.  Claro,  para  no  hacer  toda  esta  anidación  de  if  y  lo  que  tenemos  que  hacer  es  si  no  sí  y
+también acá tendríamos que ponerle un x y no los dos puntitos para no hacer toda esta anidación de
+hago un if, si no evalúo de vuelta, si no evalúo de vuelta y si no por último evalúo de vuelta. En este caso
+sí me va a funcionar, pero tenemos la otra estructura que ahora vamos a probar que es la el if aaron. Eh,
+sí, tengo una duda. Eh, había visto que en el ejemplo pusiste el verdadero a la izquierda y el falso a la
+derecha.
+00:26:54 - 00:28:13
+Sin embargo, en el aula virtual lo tenían al revés. ¿Cuál es el que está bien? El verdadero a la izquierda,
+eh, perdón, en el aula virtual. Este, este ejemplo. Claro. Sí, ese tiene el verdadero a la izquierda y el que
+yo vi en el aula virtual antes de ingresar lo tenía al revés. tenía el falso a la izquierda eh, en el dibujo, o
+sea, no estoy hablando de de ese PDF, sino de cómo nos dieron la teoría antes de de tener estas cuatro
+materias. A eso voy yo. Eh, pero vos me hablas del dibujo, del diagrama.
+00:27:37 - 00:28:53
+Claro. Sí, sí, sí, del diagrama. Claro, como ese que tiene el falso a la izquierda. No, no, eso es indistinto,
+es  una  representación,  no  sé  para  qué  lado  va  el  programa.  Simplemente  toma  una  decisión  si  es
+verdadero o falso. Es no no tiene más allá de que puede estar al revés. Lo importante es la respuesta si
+es que devuelva true o devuelva false. Y acá, claro, acá está a la izquierda y acá está a la Sí. No, no es eso
+es indistinto ahí lo que estás diciendo a la izquierda y de la derecha te va a devolver lo que le
+00:28:20 - 00:29:18
+estás pidiendo. O sea, si es a la izquierda te va te va a dar un resultado, a la izquierda te va a dar te va a
+dar otro, pero no hay un orden específico. El orden sí debe estar es en el if y en el if. Ahí sí debe haber un
+orden, porque ahí es donde te va a decir, por lo menos en el if, que significa sí, siempre tiene que tener
+una condición de si no, porque si pones todo if, como el ejemplo que puso, siempre nos va a dar el el
+resultado que está ahí, pero porque no le estamos dando la condición de que nos devuelva
+00:28:48 - 00:30:34
+lo contrario. Exacto, correcto, correcto, correcto. En vez de hacer esta estructura que estamos haciendo
+acá,  hacer  la  misma  para  evaluar  las  mismas  condiciones.  No  sé  si  Aaron  quedó  levantada  la  mano  o
+siento no era a pólvora. No era quemado. Espero que no se esté quemando nada. A ver, voy a hacer un
+chequeo un segundito, eh. Vamos bien. No sé, habrán tirado un un cohete de fuera, ¿eh? Se asustaron.
+Eh, di se le prendió fuego todo el prof. vamos a a refactorizar este código. Entonces, habíamos visto que
+en vez de ponerle un
+00:30:36 - 00:32:29
+usar solo un els al final y las otras nosotros condicionales usar el el if. Y lo mismo acá, este lo sacamos y
+acá le vamos a poner lo mismo. Lif. Y por último este y por último le vamos a dejar este, pero ya no le
+vamos a que si ya hicimos todas las validaciones anteriores, eh, y esto funciona ya en este caso ya nos
+estaría quedando nos queda un poquito más prolijo. Eh, puede ser la eh perdida de gas. No, no es olor a
+gas. Y recién cuando salí por las ventanas se sentía bastante como olor a a pólvora,
+00:31:43 - 00:33:04
+a cohete. Este, profe, si dentro de un if tendríamos, perdón, si parece ser que est medio quemado y no
+sé si lo hablamos o lo dijo alguna vez dentro del lift, si tenemos que poner un motivo, otro motivo, otro
+print se puede dejar en el mismo en la misma anidado o en el mismo altura, digamos, o también hay
+que hacer lo mismo como de como con los IFA, hay que dejar otro espacio con el tabulador, pero por
+ejemplo Abajo de es niño. Si por algún motivo hay que poner otro mensaje, otro print, ¿no? Todo lo que
+nosotros pongamos acá
+00:32:25 - 00:34:17
+va a pasar. Eh, otro mensaje, ¿eh? Y acá no sé si queremos se puede hacer una cuenta. No sé. cuenta es
+igual a eh número más 10. Y queremos todo lo que hagamos, todo es un bloque de código que se va a
+ejecutar  solo  cuando  esta  condición  sea  verdadera.  Eh,  y  imprimimos  esto.  Vamos  a  hacer  la  prueba.
+Vamos a poner, vamos a seguir haciendo pruebitas a ver si esto funciona. ¿Cómo lo ven? Porque le das
+la orden que lo haga y eso voy borrar esto porque tira ese error, pero es del anterior. A ver, 10.
+00:34:01 - 00:35:20
+Sí. Todo el todo el bloque de código que esté dentado, que tenga la tabulación, se va a ejecutar. Esto va
+a  servir  también  cuando  veamos  los  los  bucles.  Eh,  Python  maneja  esta  metodología.  Hay  otros
+mensajes,  hay  otros  mensajes,  hay  otros  lenguajes  de  programación  que  lo  hacen  distinto.  En  vez  de
+ponerle los dos puntos, ponen las eh llaves. Y todo lo que esté entre llaves, es práctico también. Todo lo
+que esté entre llaves es el bloque de código que se va a a ejecutar. Ahora me va a tirar un millón de
+00:34:40 - 00:36:14
+errores, pero lo que pasa con con otros lenguajes de programación es esto. Eh, y algunos te pide, mira,
+metier un millón de errores porque no le gusta para nada. Algunos te piden un punto y coma después de
+cada  sentencia.  Python  en  ese  sentido  es  bastante  más  simple,  eh,  no  necesita  las  llaves,  pero  sí
+necesita eh esa estructura, la identación y los dos puntitos para indicarle que después de esta sentencia
+va a haber un bloque de código en el caso de que la respuesta sea verdadera. El editor ayuda bastante
+porque va
+00:35:27 - 00:37:26
+poniendo como estas lineitas, eh, y también bueno, te va avisando si te faltan algunas algún algún error
+de  sintaxis,  algún  algún  carácter.  Lo  mismo  podríamos  hacer  para  cualquiera  de  estos.  Acá  también
+podríamos  hacer  otro  prill.  Eso  es  otro  mensaje.  Eh,  voy  a  hacer  una  prueba  más.  Si  tuviera  eh  13,  si
+tuviera 13 lo va a tomar ya como adolescente porque no sé por qué me a veces eh le pasan estas cosas a
+Python.  un  mensaje  ahí  que  le  quedó  seteado  o  rompí  algo.  Creo  que  no.  Antes  tiraba  un  mensaje  y
+después no hago nada y lo lo
+00:36:46 - 00:38:31
+corre normal. Eh, en 13 lo debería tomar como ya mayor, como adolescente en realidad, eh, porque este
+operador está validando solo si es menor, no si es menor o igual. Se traba el video. Se te tra bien. Con
+respecto a esto de mayor o igual en la diapositiva, voy a ver del aula porque sé que me confundí subí
+otra  cosa.  Eh,  dentro  de  la  unidad  dos,  la  diapositiva  de  la  clase  cinco  es  la  que  tiene  los  eh  estas
+convenciones para los nombres de las variables, un poquito la estructura de selección, las estructuras
+de control, perdón.
+00:37:59 - 00:39:39
+Estamos  viendo,  estuvimos  trabajando  primero  con  secuencia,  ahora  estamos  trabajando  con  estas
+estructuras de selección y la semana que viene vamos a empezar con las de interacción, los bucles for,
+los bucles que por ahí sintieron nombrar por ahí o ya conocen. Eh, vamos a ver. Eso es que subir la clase
+pasada y ya haciendo la introducción a la clase número a la unidad número tres tenemos voy a cambiar
+a estudiante. ¿Cómo lo ven ustedes? Eh, tres diapositiva clase se que soy. Ay, sub otra cosa. Bueno, esto
+después lo
+00:39:04 - 00:40:43
+eh  Sí,  Tobías,  te  escucho.  Bueno,  en  realidad  no  hay  problema.  Esto  ya  está  medio  duplicada  la
+información.  La  diapositiva  que  yo  quería  subir  empieza  desde  acá.  Y  es  interesante  que  veamos  y
+hablemos  un  poquito  de  estos  otros  operadores  que  de  alguna  forma  indirectamente  estamos
+trabajando con esto de eh mayor o igual. Cuando tenemos un operador OR o un operador eh o un not,
+¿qué es lo que pasa? Lo que pasa con el eh o el operador OR o cuando usamos mayor o igual, esto no sé
+si lo ven en lógica también,
+00:39:59 - 00:41:30
+¿no? Eh, nos va a devolver un true si una de las dos condiciones se cumple. Eh, en este caso tengo una
+condición verdadera y una condición falsa con un operador OR. Cuando una de las dos condiciones sea
+verdadera, el resultado va a ser verdadero porque se tiene que cumplir o una o la otra. Con el operador
+and se tienen que cumplir las dos, tiene que ser verdadera una y la otra. En este caso, como es un true y
+un false, me da falso porque no se cumplen las dos o tienen que ser las dos, las dos falsas, pero para
+nosotros vamos a
+00:40:44 - 00:42:21
+utilizar más eh la opción verdadera, pero falso y falso también daría falso, eh daría verdadero. tenemos
+el  operador  Note,  que  lo  que  va  a  hacer  básicamente  es  cambiarme  el  resultado  o  darme  vuelta  el
+resultado de lo que está lo que está anticipando. Si tenemos un falso con un operador not, nos va a dar
+verdadero. Y si tenemos un verdadero con el operador not el caso contrario. Otro ejemplito. 2 es menor
+a 1, eso es falso. O -1 es menor a 3. Esto es verdadero. Entonces si hacemos esta comparación nos va a
+dar verdadero.
+00:41:39 - 00:43:38
+¿Para qué lo vamos a usar nosotros? ¿Por qué podemos hacer esto? Eh, bueno, podríamos simular en
+principio que si f if true, esto es como darle vida vida libre a a al if. Acá le estamos seteando que siempre
+va  a  ser  verdadero  o  le  podemos  setear  para  que  sea  falso.  Sería  lo  mismo  que  poner  falso,  ¿no?  Not
+true es poner falso. Antes se me había escriido una ejemplo e o por lo o también si queremos evaluar
+con otro operador con el an o con el OR. Eh, si el número es menor a 13, si está entre 13 y
+00:42:48 - 00:44:37
+no  sé  evaluar  que  me  ponga  un  número  positivo.  está  entre  un  rango  de  números.  Si  el  número  es
+mayor a 0 y menor a 13, entonces 0 y 12 me va a entrar a este bloque de código. Lo mismo podríamos
+hacer para acá, que esté entre 18 y 60 para decir que o 18 y 40, no sé, o 30, no sé, hasta cuándo se es
+adolescente,  25.  No  importa.  Podríamos  también  utilizar  el  operador  ANT  o  cuando  tengamos
+condiciones del tipo eh, no sé, el ejemplo más típico para los operadores es el día lluvioso. No sé, vamos
+a hacer, vamos a hacer ese
+00:43:46 - 00:46:03
+ejemplo aumentando todo esto. Control C. Esto es a ver si si lo puedo hacer con este ejemplo. Eh, está
+lindo el día. Voy a decir que es eh tengo paraguas. S. Yo lo vi con el ejemplo de Vamos a poner al revés.
+Está  lindo.  Le  vamos  a  poner  falso.  Y  yo  puedo  hacer  esa  validación.  Sí.  Eh,  y  esto  por  ahí  es  otra
+herramienta, eh, que le es como una un atajo para poner en vez de poner if está lindo y tengo paraguas,
+entonces algo para no hace falta poner si está lindo es igual igual a true O tengo agua es igual igual.
+00:45:30 - 00:46:51
+Esto lo podemos poner como con para claridad nuestra, pero no es necesario. Si nosotros le decimos si
+está  lindo  y  tengo  paraguas,  estamos  preguntando  está  lindo,  ¿es  verdadero  y  tengo  paraguas
+verdadero,  entonces  salgo  a  pacial?  ¿Cierto?  En  este  caso,  como  estoy  usando  el  operador  ANT,  se
+tienen que cumplir las dos condiciones. ¿Está lindo? ¿Es falso? Entonces, ya cuando una de las dos eh
+condiciones  se  me  eh  se  no  sea  verdadera,  no  va  a  pasar  nada.  Este  PR  no  se  ejecuta  y  no  se  ejecuta
+nada porque no hay nada más
+00:46:13 - 00:47:44
+adelante.  Ahora  si  yo  qué  pasó.  Si  yo  utilizo  el  operador  eh  OR,  que  es  a  O,  básicamente  es  O  i  y  i  O.
+Entonces sí, efectivamente me imprimes, salgo a pasear porque eh está lindo, ¿no? No es true. Bueno,
+está  bien,  pero  yo  tengo  un  operador  que  acá  estoy  validando  dos,  estoy  evaluando  dos  condiciones
+dentro de una de un mismo de una misma estructura. Profe, pregunta. Sí. En este caso en el OR, si las
+dos son verdaderas, también la va a tomar como verdadera. Sí. Vamos a hacer las pruebas. Perdón, me
+perdí. ¿Por qué le pone doble
+00:47:12 - 00:48:45
+igual?  Eh,  doble  igual  es  el  operador  que  venimos  usando  para  hacer  comparaciones,  así  como
+ponemos mayor, mayor, igual para hacer una comparación, esto es igual a esto, Python necesita que le
+pongas dos porque si usamos uno solo es asignación. Un solo operador es asignación. Dos operadores
+es igualdad, pero es medio con por la sintaxis del programa. Profe, perdón. A ver, decime. Ahí probé con
+los dos true y voy a probar con los dos falsos. Hace mucho que no lo pruebo, así que no me acuerdo,
+pero
+00:47:58 - 00:49:43
+creo  que  debería  funcionar,  pero  creo  se  lo  llevaron  preso.  Frase  vieja  si  las  hay.  En  realidad  era  con
+seguro. Eh, ¿qué dicen? Andar esto. Ah, no, no sé si va a andar por no sé. Acá no estaría faltando el A mí
+no  me  no  me  no  manduvo  ni  el  primero.  Ah,  no.  Bueno,  el  primer  intento  como  lo  primero  que  que
+había  puesto  que  está  lindo  igual  false,  tengo  paraguas  true  y  con  lo  primero  que  que  se  habíamos
+puesto tampoco me corrió. E este tiene que andar. que anduvo. Ahora voy a sacar esto. Ya sabemos que
+00:48:53 - 00:50:24
+si yo pongo está lindo y tengo paraguas o tengo paraguas es lo mismo que poner esto es igual a esto.
+¿Está lindo? ¿Es verdadero? No. O tengo paraguas. ¿Es verdadero? Sí. Bueno, si una de las dos se cumple
+con el operador OR, habíamos visto que salgo a pasear. Este no tiene función. Disculpe si pongo solo, no
+puedo poner solo el if, tengo que definir primero la variable. Claro, está bien. Y si puse que la variable es
+falsa, pero después cuando pongo el if lo pongo al revés, eso sí se puede porque está está lindo, es false,
+pero
+00:49:39 - 00:51:18
+en el if es true. Está lindo, es false, pero en el es true. Acá implícitamente está diciendo que es es true. Es
+true. Exactamente. Pero eh como estamos usando el operador es una o la otra. Una o la otra te va a dar
+verdadero. Falso. Falso. Te dan verdadero. Te dan verdadero, dice Aarón. Eh, a ver, a mí no no me salió
+recién, ¿eh? Eh, no enor no me parece que en N. Voy a probar con N. A ver, con eh se colgó. Me parece
+que tampoco eh me daría me saldría a pasear si yo pongo en con estas variables así seteadas yo
+00:50:49 - 00:52:25
+pongo igual igual en ese caso si las dos variables son exactamente iguales e no no hace nada caso en en
+este  ejemplo,  no  me  acuerdo  bien  cómo  es  para  lógica,  pero  Eh,  me  daría  esto  acá  me  daría  salgo  a
+pasear. M. Bueno, y así puedo hacer varias cosas. Entonces acá es con el solo me va a funcionar si tengo
+los dos true. Y la primer variable es true y la segunda variable es, o sea, profe, la condición an es como
+una condición exigente que se cumple cuando hay dos cuando hay dos variables que se cumplen igual,
+si no no se da. En
+00:51:45 - 00:53:39
+cambio, con OR es más flexible. Exactamente. Exactamente. Es estricta y flexible. Sí, sí. Eh, bueno, por
+ejemplo, acá vamos. Igual esto es como para ah para ver cómo funciona. Por ejemplo, si yo tengo falso
+acá y está lindo, le digo que no está lindo. Y no, falso, no es falso. ¿Qué creen que va a pasar acá? Y va a
+salir a pasear. Van a ser las dos verdaderas. Ahí va eso. Sí, exactamente. Esta la variable está linda. Por
+definición es falsa, pero yo la estoy negando acá. Le estoy diciendo lo que valga
+00:52:48 - 00:54:33
+eh está lindo, cámbialo, dalo vuelta. No, no es falso, es verdadero. Entonces, las dos son verdaderas, por
+eso  imprime  el  mensaje.  Es  algo  paciente.  Eh,  bueno,  no  sé,  se  le  podría  poner  un  els  a  simplemente
+para  seguir  practicando.  No  hace  falta.  habrán  dado  cuenta  que  podemos  trabajar,  pero  si  yo  quiero
+poner  una  un  camino  posible  para  la  respuesta  falsa  de  mi  afirmación,  de  mi  condición,  bueno,  me
+quedo casi. H, vimos el, el not, el eh el OR y lo que pasa con el mayor o igual es lo mismo. Es lo mismo. Y
+nosotros le podemos
+00:53:45 - 00:55:36
+asignar un número, uno. Y a paraguas le voy a poner eh a ver cómo era Puedo hacer lo mismo sería uno
+y  cero.  Eh,  puede  ser,  puede  ser,  pero  estoy  estoy  tratando,  no  es  no  es  no  es  no  quiero  hacerlo  de
+binario. Voy a poner para cambiarlo. Voy a poner y acá quiero poner un eh un OD. No voy a cambiar todo
+porque si no no va a quedar claro. Voy a poner la edad. era 13 y el límite me parece que lo voy a marear
+un montón límite. Eh, ahí ya me dice, me está tirando todo. Si edad e es igual igual a 13 o
+00:55:13 - 00:57:00
+edad. No sé para qué puse cuando ponemos mayor o igual, cuando usamos el operador mayor o igual,
+eh, es lo mismo que poner, o sea, este no mayor o igual es lo mismo que poner esto. Si es mayor, eh, es
+verdadero  o  igual,  porque  si  me  ingresa  exactamente  el  número  tres  y  yo  no  puse  el  igual,  no  estaría
+validando la segunda opción, una o la otra, pasa lo mismo, pero nada no está escrito así, sino que está
+eh implícito implícitamente incrustado en ese en esa en ese operador. E, ¿qué más? Creo que nada más
+tenemos para
+00:56:18 - 00:57:41
+ver,  porque  después  en  la  diapositiva  está  un  poco  esto,  bueno,  más  allá  de  los  operadores  que
+estuvimos viendo, estás eh un poco más explicado que esto está en el apunte de la de la unidad tres.
+Habla  de  la  orientación  que  estuvimos  trabajando,  todo  lo  que  se  coloque  dentro  del  nivel  de  la
+orientación del true. se va ejecutar y lo que está fuera corresponde ya al programa en sí. habla de los
+condicionales  sanidados,  lo  que  hicimos  anteriormente.  Acá  tenemos  un  IF,  adentro  tenemos  un  IF  y
+varias
+00:56:59 - 00:58:23
+condiciones  que  se  van  eh  validando.  El  mismo  ejemplo  que  un  ejemplo  parecido  al  que  estuvimos
+trabajando. una demostración en un ejemplo para ver la importancia de los espacios a la al momento
+de empezar a a definir cuál va a ser mi estructura de control. trabajar con un if, con un if else, con un if
+adentro de otro if y entender esto, ¿no? Este bloque, todo este if y este elf else els else están adentro de
+este if y esta es la opción eh por el caso por el camino falso. Entonces, esto no se va a ejecutar y se
+00:57:45 - 00:59:33
+va  a  ejecutar.  ya  se  van  a  ir  acostumbrando  a  medida  que  que  sigamos  eh  trabajando  y  sumando
+ejercicios. Dudas, consultas, eso ya es eso sería todo el contenido que que tenemos para completar lo
+que  lo  que  estuvimos  viendo  ayer.  ¿Se  entendió  bien?  Bien.  Sí.  Si,  por  favor.  Yo  a  veces  me  me
+dependiendo  el  tema  nos  podemos  enroscar  o  más.  Siempre  voy  a  buscar  la  forma  más  práctica  de
+poder  explicarlo,  pero  a  veces  no  me  sale  este,  así  que  trénenme,  pregúntenme  y  y  y  le  buscamos  la
+vuelta. Todos los que están presentes entienden
+00:58:41 - 01:00:47
+perfectamente  todo  o  hay  si  hay  alguna  pregunta.  Eh,  sí.  Ah,  conozco  uno  que  se  llama  PC  in,  que  es
+interesante, ¿no? Nunca está de más saber PCIN, porque hay hay algunos entrevistas de trabajo que te
+toman pseudocódigo. Pseudocódigo es una especie de ¿Qué es? Eh, es mucho más fácil, pero Ah, claro,
+pero si no estás acostumbrado, claro, el PN sirve eh no me acuerdo. Sí, hay que descargarlo. A ver, web.
+Sí, para empezar es útil. Sí, bueno, no sé cómo se esto. Eh, yo conozco el que te descargas. Este, la
+00:59:59 - 01:01:26
+verdad que no sé cómo funciona, pero que no es un programa pesado y ese ese software te sirve para
+hacer  pseudocódigo  o  hacer  diagramas  de  flujo.  Eh,  después  nosotros  usamos  en  una  materia  del
+modelado, que es la representación gráfica de todo un sistema de de software. Eh, online usamos uno
+que es draw. Pero ese lo tenés que hacer, eh, hasta ahora no no pegó una eh lo tenés que hacer vos el
+tenés  las  los  rombitos,  todo,  pero  Ah,  mira  qué  bueno.  PC.  Bueno,  ¿ves?  Esto  es  un  modelado  de  un
+diagrama de
+01:00:57 - 01:02:47
+clases  de  un  Pero  acá  diagrama  de  flujo  e  s  pones  el  inicio,  pones  las  eh  esto,  bueno,  para  entradas,
+salidas, las tomas de decisiones, pero no. Bueno, esto por ahí. Sí, sí, sí. A veces cuando para eso que dice
+Enrique lógica de algoritmo, está bueno poder tener una una abstracción de del concepto, como poder
+verlo un poco por imágenes sin meternos en el código. Por eso también eh estas representaciones, el
+flujo  del  sistema  se  encuentra  con  una  condición,  evalúa  si  es  cierta  a  la  derecha  o  a  la  izquierda,  no
+importa, y
+01:01:57 - 01:03:36
+si  no,  sigue  el  su  camino.  Lo  mismo  para  la  doble  y  lo  mismo  para  las  sentencias.  Hm.  Sí,  profe.
+Programitas de diagrama, eh, etcétera. Y después me preguntas por while y for. Ah, para para ah cuando
+la clase que viene, cuando veamos Wild y for, lo vamos a a ir viendo desde e desde una herramienta que
+sirve  para  debugar,  para  ir  probando  paso  a  paso  el  sistema  y  ir  viendo  qué  es  lo  que  hace.  Ah,  pero
+bueno, acá no. No va a hacer nada. No tiene mucho sentido probarlo acá. Cuando veamos el recorrido
+de un
+01:03:10 - 01:04:40
+elemento  iterable,  una  lista  o  un  stream  o  algo  con  un  bookle  for,  eh  lo  vamos  a  probar  y  vamos  a  ir
+viendo  paso  a  paso.  Una  herramienta  para  también  que  les  va  a  servir  eh  de  utilidad  para  hacer
+comprobaciones. Eh, es un cuadrito ir anotando qué valor va tomando cada variable. Eh, esto lo voy a
+cancelar.  Bien,  más  dudas,  más  dudas.  Estos  estos  minutos  que  siempre  dejo  al  final  de  la  clase  son
+sobre todo para e aquellas personas que tienen problemas o con la compu o tienen problemas con un
+archivo o tienen problemas con,
+01:04:00 - 01:05:33
+bueno,  como  le  pasó  el  otro  día  la  ayer  a  la  compañera  que  lo  resumió  con  con  Mati,  eh  aprovechen
+aprovechen  este  rato  para  para  consultas  o  no  sé,  no  hice  el  laboratorio,  no  pude,  no  no  entiendo.
+Lucía, profe, es una pregunta que tengo que es algo simple, pero Python es lo mismo que Java o sea,
+utilizan  el  mismo  lenguaje.  Yo  sé  que  son  distintos.  No,  no,  no  son  distintos  lenguajes.  Son  distintos
+lenguajes y tenemos que aprender de ambos, ¿no? Y ustedes para hacer análisis y ciencia de datos con
+que manejen Python está
+01:04:46 - 01:06:14
+bien.  La  realidad  es  que  después  técnicas  de  programación  eh  es  lo  mismo  para  todos.  Vos  pasás  a  a
+sabes cómo trabaja un if, sabes cómo trabaja un for, pasas a un lenguaje y te cambia un poco la forma,
+la estructura, la sintaxis nada más. Después las técnicas de programación son las mismas. Los distintos
+lenguajes se utilizan a veces para otras cosas. Yo entiendo que para la carrera que usan ustedes van a
+ver,  no  sé  si  van  a  ver  otro  lenguaje,  pues  post  integramente  eh  Python,  pero  depende  para  lo  que
+hagas. Si aprendés
+01:05:30 - 01:07:15
+la sintaxis y sabes programar, sabes podés programar en cualquier lenguaje, nada más que tenés que
+aprender  las  sintaxis.  Eh,  Java  en  vez  de  poner  print  pone  eh,  no  me  acuerdo  en  Java,  pero  pone
+console punto cosas así y algunas algunas estructuras más, ¿no? Eh, las clases. Eh, gracias, profe. Era
+esa  consulta  que  tenía.  Está  bueno,  está  bueno,  buena  pregunta.  Sí,  no  crean  que  hay  preguntas.  Eh,
+profe, yo me estoy como me quedo flojita la parte cuando usamos corchetes. Eh, es eh paréntesis. Esto,
+01:06:36 - 01:08:24
+no, no, no. En la parte de arriba cuando usaron corchete en cuenta en cuenta. Ah, esto. O ya, esto es una
+forma nosotros si queremos eh es es igual. Claro, me estos son llaves para para la los corch corchetes
+vamos a usar para las listas, eh, que son elementos que pueden albergar muchas cosas. Por ejemplo,
+números.  Vamos  a  tener  un  elemento  o  una  variable  que  tenga  una  lista  de  números  o  una  lista  de
+palabras  o  una  lista  de  eh  buleanos  o  lo  que  sea.  Para  eso  usamos  los  corchetes.  para  esa  forma  de
+mostrar en
+01:07:39 - 01:09:22
+en  consola,  eso  se  llama  f  strams  y  básicamente  lo  que  hacemos  es  poner  un  stram  formateado.
+Ponemos un stream es lo que está dentro de comillas, ¿no? Me quedo en casa, esto es un stream. Pero si
+a  nosotros  a  esto  le  queremos  agregar  una  variable,  lo  que  hacemos  es  ponerlo  dentro  de  llaves.
+Entonces  acá  me  va  a  imprimir  edad.  Edad,  ¿qué  valor?  O  sea,  me  va  a  imprimir  el  valor  literal.  Que
+estaba  señalando  con  el  dedo  la  pantalla  el  valor  literal  de  esa  variable.  Y  edad  tiene  13.  Si  yo  acá  le
+pongo ad le pongo,
+01:08:30 - 01:10:41
+no sé, 15 acá vamos a poner edad 15 y acá chilla porque la estoy usando acá, pero y no puede comparar.
+La otra forma que teníamos de hacer eso era así un extremo eh, coma la variable edad. Eh, voy a ponerle
+acá poner tiene de variable edad coma años y lo otro que teníamos para usar, pero en este caso no nos
+va a servir porque es el la concatenación que es el operador más. Eh, y si queremos usar eh el operador
+más, tenemos que castearlo, así como con el input agarraba un stream y lo transformaba a entero o a
+alguna otra
+01:10:11 - 01:11:34
+eh  número  flotante  o  entero.  Eh,  lo  mismo  podemos  hacer  con  un  número,  que  lo  que  necesitamos
+usarlo  como  stream  para  para  mostrarnos  por  consola  o  para  guardarlo  en  un  archivo  o  para  hacer
+algún eh otro uso de ese de ese elemento en ese formato. Bueno, también lo podemos pasar a a este.
+Estas serían las dos formas. Ahora, si esto es un número, es si ya fuera un stream como estaba escrito
+anteriormente,  bueno,  no  hace  falta  de  vuelta  arlo  o  transformarle  el  dato.  ¿Se  entiende?  ¿Entendió?
+Esta no la vimos, pero bueno, es lo
+01:11:01 - 01:12:51
+mismo que into, transformación de datos. ¿Quién más? Dale, vamos a hacer el siete, eh. en el aula, ¿no?
+Sí,  profe.  Yo  la  verdad  que  ese  no  lo  pude  hacer  porque  no  sabía  cómo  aplicar,  en  cómo  pongo  el
+descuento porque decía aplicar un 10% de descuento y no sabía cómo poner. Eso está. Sí, es el cierre de
+la unidad dos, diapositiva clase cinco. Último, el siete de pedir. Me llevo esto. ejercicio punto vamosir el
+precio  de  un  producto  si  es  mayor  a  50  aplicar  un  10%  de  descuento.  Si  no  aplicar  si  no  no  aplicar
+descuento, mostrar el
+01:12:55 - 01:14:39
+precio final. Bueno, nos pide pedir el precio un producto. Entonces, voy a guardar en la variable precio.
+E voy a transformar a con el input le pido el precio, lo paso a punto flotante, a un número decimal y lo
+guardo en la variable. Y ahora vamos a usar nuestro queridísimo eh if. Si me ingresa un precio mayor a
+50.000,  1000,  supongamos  que  ingresa  51,000  pesos  y  me  dice  si  el  precio  es  mayor,  no  me  dice  si  es
+mayor  o  igual,  simplemente  mayor,  aplicar  un  10%  de  descuento.  Entonces,  si  esta  variable  es  eh
+verdadera,
+01:13:55 - 01:15:47
+entonces yo le tengo que aplicar un descuento y ahí lo que podría hacer es, no sé, precio final es igual a
+precio.  No  sé  si  se  puede  hacer  así,  -  10%.  Póngale  por  punto  nu  ese  eh  precio  por  profe,  si  ahí  es  un
+descuento, en vez de ser igual, no debería ir menos. Eh, es menos el 10, entonces menos el 10 te queda
+el 90%. Claro, no. En la estructura del código yo lo hice distinto. Donde hice igual, yo puse menos y entre
+paréntesis puse el precio por el porcentaje para indicarle al código que me descuente cuando precio
+01:15:00 - 01:16:17
+al precio final. Eh, perdón, ¿cómo de vuelta? Ahí en el código dice precio final. Ah, no, también lo puse.
+No, no, yo yo me confundí. Sí, primero está el igual y y después puse el menos igual que usted. Sí, sí. Que
+vi el código a más adelante, pero está bien, está igual que ese. Ahí me equivoqué. No, no me equivoqué
+yo porque estaba viendo solamente el menos, pero también lo hice con el igual antes del precio. Sí, sí,
+perdón. Y yo que me equivoco. Ah, no, bueno, eh, esta es una forma de hacerla. Hay esa
+01:15:48 - 01:17:20
+yo la verdad que es algo que nunca puedo memorizar cómo generar incremento de precio o descuento,
+pero esta sería como la más o eh para sacar el 10% no hacemos precio por 10 di 100. Yo multipliqué por
+09. Ahí está. Esa esa es. No, esa es una opción. Sí, si lo hice. Sií, lo hice yo cuando le compartí. Tal cual.
+Perfecto.  Cualquiera  de  las  12.  Eh,  genial.  Me  gusta  esa.  Me  gusta.  Es  la  que  nunca  me  voy  a  acordar,
+pero es lo mismo. Sea el 20% de descuento que que tendríamos que poner 0 por el por 08.
+01:16:34 - 01:18:32
+Claro.  Okay.  Gracias.  digamos  como  que  te  ahorras  una  cuenta  porque  que  es  al  precio  del  que  se  el
+100% le tenés que restar el porcentaje que le Ay Flor te escucho medio mal si 100 es tanto o 20 es tanto y
+es lo que restas directamente te queda que el 80% con él si es 20, si es 10 es el 90 se te y para sumarle es
+1 punent matemática si vos lo multiplicas punto 10. Lo que hacés es profe, no se termina de escuchar lo
+que sí se te entrecorta. Bueno, no importa. Es es una es una cuenta, así sea eh sumarle
+01:17:49 - 01:19:33
+5000  pesos  o  restarle  si  compra  50  le  hacen  una  bonificación  de  5000  pesos.  Bueno,  nada,  agarrar  el
+precio que nos ingresó el cliente, el usuario, y decir, "Bueno, este es el la bonificación que te hace el eh
+el  comercio.  Entonces,  el  tu  precio  final  va  a  ser  el  precio  que  ingresaste  más  el  descuento"  y  le
+imprimimos el mensaje, ¿no? Dice imprimir el eh, ¿cómo es? tu voy a ahorrar no está plantito porque
+entonces le mostramos esto, eh la variable precio final secas. Después si quieren ponerle un mensajito
+01:18:48 - 01:20:09
+y hacer uso de las formas que tenemos para que Yo puse descuento precio por punto 10, precio final.
+Ah,  claro.  O  sea,  primero  hiciste  el  descuento,  que  es  el  10%  del  precio  final  y  después  al  precio  final
+hiciste precio menos descuento. Está bien, está bien. Son formas y después ahí ya va a empezar a entrar
+un  poco  la  lógica  de  negocio,  porque  nosotros  ese  eso  esa  estructura  que  hace  él  está  bueno  porque
+tenés  en  una  variable  el  descuento.  Ponerle  que  los  días  miércoles  hacen  un  15%  de  descuento.  No
+pones si es lunes
+01:19:29 - 01:21:06
+uso el descuento del lunes, después pongo otra variable descuento de los miércoles y así. Pero eso en
+este  caso  no  es  tan  importante  la  cuenta,  sino  el  uso  de  de  esta  estructura.  Buenas  noches,  Juaco.  Y
+bueno, ¿y qué pasa si esto si me ingresa 40,000 pesos, entonces esta condición ser falsa y tengo que dar
+un resultado por e por la condición falsa? Si me ingreso un eh un valor que no supera los 50.000, no le
+voy a hacer descuento y el precio va a ser el precio lo que ingresó. Y hasta acá estamos. Eh, esto sería
+pedir
+01:20:18 - 01:21:56
+precio. Y lo interesante de este ejercicio es entender que dentro de una estructura if se puede hacer eh
+cálculos. Hay un bloque de código que se va a ejecutar siempre y cuando esta condición sea verdadera
+para probarlo. Si no, no aplicar descuento, va a estar el precio final. Eh, para probarlo. Y salgo a pasear,
+dice. No sé si quedó. Eh, vamos a probar con 55000 pesos. me hizo un descuento importante, me queda
+el precio final, 49500. Y si le pongo un precio de inferior a 50,000 pesos, le voy a poner 40,000,
+01:21:23 - 01:22:57
+el precio es 40,000. Eh, la particularidad de este puntito cero, yo le puse 40,000, pero acá me dice 40,000,
+no sé, un número punto cer. Buenas noches, Rosalía. Nos vemos la semana que viene. Pasa eso porque
+lo  estoy  transformando  a  flotante.  Si  yo  le  pusiera  in  acá,  no  me  pondría  ese  eh  ese  nombre.  le  está
+dando la posibilidad de que te lo des con decimales, con el floor. Claro. Eh, le voy a poner pes. Ahora,
+como le cambié el tipo de datos, ya me lo devuelve común entero, sin decir cositas, cositas, un montón
+de cosas la
+01:22:13 - 01:23:43
+programación  y  y  bueno,  en  particular  este  tipo  de  de  cositas.  Perdón,  profe.  Entonces,  no  se  puede
+poner la opción de pesos, tampoco la opción de porcentaje, tal cual, ¿eh? No, no, no, no. No nos no nos
+deja, digamos. No existe el operador y tampoco existe el operador. Sí, perdón. E yo sí usé la opción de
+pesos y me lo tomó bien sin darme error en el if. Después del print puse la F, abrí comillas, puse el signo
+pesos y entre llaves, eh, bueno, el el precio y cuando lo lo imprimía, ahí sí lo imprimía con
+01:22:58 - 01:24:46
+pesos,  pero  no  se  lo  pude  poner  al  els  else,  ahí  ya  no,  porque  ahí  sí  me  tirado  error,  no  tenía  cómo
+ponérselo para el precio que no tenía descuento. Ah. decir, no sé si se entendió aquí. F comillas. Aquí
+pusiste el signo pesos. Signo. Sí. Y ahí abrí eh llave. Llaves acá presión final. Eh, y para les debe ser lo
+mismo. Eh, debería ser lo mismo. Sí, se puede usar los signos especiales, se pueden usar dentro de un
+stream, se pueden usar. Lo que no se puede usar es acá en la variable o acá, no hace falta. Después lo
+que
+01:24:00 - 01:25:31
+ahí  ya  me  tiro  un  me  tira  un  error  acá  tampoco,  pero  en  los  en  los  print  o  en  los  mensajes  ingrese  el
+precio del producto. Eh, esos ahí también. Y esto no sé por qué no te habrá funcionado en el els si está
+dentro  del  print  y  dentro  de  un  f  strings  o  dentro  un  stram  pueden  poner  lo  que  quieren  eh  las  los
+puntitos,  lo  que  quieran.  Eh,  vamos  a  probar.  V  acá  me  lo  me  devolvió  me  da  el  cartelito  con  signo
+pesos. Voy a poner 3000 pesos. Sí, sí. Lo que es mensajes, consola, todo lo que está dentro de un stream.
+01:24:54 - 01:26:41
+Pueden  poner  lo  que  quieran  acá  también  comentando  también.  No  se  puede  para  variable,  no  se
+puede fuera de eh de nada de esto. Acá no podemos, acá no podemos, ¿eh? Y tampoco lo que decía que
+se puede poner acá una. En realidad parece que sí se puede, no es aconsejable, peroño. Sí, anda, anda.
+Hay  algunas  convenciones,  eh,  a  veces  ahí  yo  le  dejé  un  solo  espacio.  Creo  que  con  dos  espacios
+funciona con uno también se usa cuatro porque quede más prolijo por convención, pero hay cosas que
+no son estrictamente. Sí, sí, sí.
+01:26:00 - 01:27:36
+Los que estén okay, no tengan dudas, pueden retirar. Buenas noches. Me quedo un ratito con los que
+necesitan ahí refuercito o tienen alguna duda y si no se pueden ir a comer si los están esperando para
+comer, si tienen que cocinar. Profe, muchas gracias por explicar el ejercicio. Siete. A mí me faltaba este y
+el  otro.  ¿Lo  puedo  entregar  o  ya  no?  Sí,  sí,  sí.  Em.  Voy  a  habilitar  en  estos  días  habilito  para  que  lo
+puedan entregar. Eh, ¿quieren lo quieren entregar ahora? Lo voy a habilitar en la semana, les aviso.
+01:26:48 - 01:28:21
+Así, pero tampoco como 2 minutos. Lo voy a dejar ahí un rato, así pueden entregar los que no llegaron.
+Bueno,  muchas  gracias,  prof.  No,  de  nada.  Si  yo  también  tengo  que  cocinar,  dice  Lucas.  también.
+Buenas  noches.  Bueno,  muchas  gracias,  profe.  Saludo.  Ah,  ¿quién  era  que  subía  e  la  clase?  ¿Qué  fue?
+Romina,  creo  que  Romina  Barrios.  Bueno,  si  queres  ya  cortar,  me  parece  que  va  a  haber  más  dudas,
+¿eh? Sí. Y después puedes pasar el link al Telegram el lunes espectacular.

@@ -1,0 +1,1169 @@
+Eh, es importante hacer toda la ejercitación.
+Los ejercicios del laboratorio tienen como una estructura más de problema.
+los que yo les voy a dejar hoy con un enunciado y y toda la la cuestión para que tengan que un poco
+abstraerse del problema y y ver cómo pueden resolverlo con las herramientas que que estuvimos
+trabajando.
+que les dejo hoy al final de la diapositiva son como más concretos, más crear una lista, agregar
+elementos, crear una lista, fíjate cuál es el mayor, así como más puntuales, como para trabajar esta
+también las herramientas sin la necesidad de pensarlo dentro de un enunciado o de un problema real.
+Así que también es eh es otra forma de de plantear ejercicios, pero más eh más directa.
+Pero los otros también es es muy importante que puedan eh resolverlo porque nunca se nos va a
+presentar así el problema tan servido como bueno, acá tenés que hacer esto.
+Eh, generalmente las situaciones en las que tenemos que intervenir para analizar, para resolver o
+para desarrollar algún sistema, eh bueno, tenemos que imaginarnos cómo lo haríamos.
+Así que por eso los ejercicios de del laboratorio vayan avanzando, todavía nos queda eh esta semana
+para trabajar con la unidad tres, así que eh tienen tiempo, tienen tiempo los que no pudieron
+avanzar mucho.
+Es importante que hagan aunque sea algunos.
+Eso es sí muy importante.
+Eh, ¿qué más?
+A ver, no estoy leyendo los mensajes.
+A ver si alguien eh Bueno, de vuelta les no sé si a los que se sumaron recién se me va a volver a
+cortar.
+Ya está planteada una solución del problema, pero ojalá se resuelva para el día de mañana.
+Eh, bien, bien, bien, bien, bien.
+Hm.
+Bueno, ¿alguna duda?
+¿Alguo quiere hacer alguna pregunta antes de arrancar?
+No, por el momento ahora.
+Genial.
+Bueno, perfecto.
+Vamos a seguir trabajando con listas.
+No sé si llegaron a chusmear la diapositiva que está en el aula.
+La clase pasada vimos cómo hacer una lista, cuál es la estructura, qué tipo de datos podíamos poner
+adentro de una lista.
+También estuvimos viendo que a través del índice nosotros podíamos acceder a elementos de esa lista.
+Si quiero acceder al primer elemento, voy al al subíndice cero y así sucesivamente.
+Y también podríamos acceder al último elemento de la lista con el subíndice negativo.
+El último siempre va a ser el -1, ante último -2.
+y así sucesivamente.
+Hoy vamos a trabajar una herramienta que se llama slicing, que viene de rebanada o rebanado de
+listas, eh, que nos va a permitir poder de una lista de n cantidad de elementos, de una lista
+grande, generalmente poder acceder a una rebanada de esa lista, a un slicing de esa de esos
+elementos.
+tiene una sintaxis particular e que se usa sería esta forma que está acá.
+Tenemos por un lado la lista y por el otro lado el acceso.
+Lo veo si está compartiendo.
+Ah, qué genio.
+No estoy compartiendo.
+Perdón.
+gracias por para por avisarme.
+Eh, anteriormente lo que estábamos viendo es esta misma diapositiva que también está en el que
+estábamos viendo, no estaba viendo yo solo, eh, está en el aula.
+Eh, nada, contando un poco, ¿no?, de los elementos eh que pueden tener las listas, números,
+palabras, mixto, unianos, cómo acceder a elementos a través de los índices, tanto positivos como
+negativos para ir de atrás para adelante.
+Y los que les quería mostrar que vamos a ver hoy como algo nuevo es este esta forma de acceder a
+rebanadas de listas.
+es se llama slicing y la sintaxis para acceder sería algo como esto.
+también tiene.
+Nosotros podemos acceder así como eh que la semana pasada vimos algo así como el rango tenía un
+principio, un final y un paso.
+Con esta otra formita usando los corchetes de las listas podemos trabajar es otra herramienta.
+Es parecida porque, bueno, se separa así con dos puntos.
+E a ver, déjenme ver cómo habíamos visto el rango clase 7.
+Eh, es parecido sin con la salvedad de que eh están los corchetes en vez de las de las paréntesis y
+vamos a empezar a separar en vez de con coma eh 10 31 con paso 5 vamos a separar con dos puntos.
+O sea, ahora nuestra estructura para acceder a esto al principio es un es un montón de información,
+después se van a ir acostumbrando a a trabajar eh y de paso el el editor de código nos va a ir
+ayudando en vez de si ponemos coma no va a funcionar o nos va a generar una una advertencia que que
+algo hay un error de sintaxis, que algo está pasando.
+Eh, tenemos punto de partida, final y paso.
+También el final va a ser -1 al igual que el rango.
+Esa eso sí se respeta la misma estructura, pero vamos directamente a a ver algunos ejemplitos.
+Por ejemplo, ya llevándolo a código, tenemos una lista de enteros.
+con números positivos, números negativos, eso es indistinto y queremos acceder a toda la lista.
+Bueno, si nuestra estructura es el nombre de la lista, corchetes, inicio, fin y salto, bueno, el
+inicio es el índice cero, el final es eh salto o paso, ¿no?
+El final es el elemento cinco.
+Entonces tenemos 0 0 1 2 3 4 5.
+Este último no lo no lo estaría tomando, o sea, el que vendría de allá ahí termina.
+Eh, y de esta forma, básicamente lo hacemos así como para ejemplificarlo, pero si nosotros queremos
+obtener este resultado con imprimir la lista completa, eh nos estaría funcionando de la misma
+manera.
+Ahora, si queremos, por ejemplo, acceder a elementos eh a una fracción, ahí vamos a empezar a
+trabajar las distintas formas de de acceder.
+Queremos acceder al elemento que empieza en el subíndice dos.
+No le indicamos el final y no le indicamos el paso.
+Y acá me va a traer estos elementos 0 1 2 el elemento 2 hasta el final de la lista.
+Entonces me devuelve 5 10 33 - 10.
+Para este ejemplo, un montón de combinaciones posibles, ¿no?
+Si queremos de repente desde el principio hasta el elemento dos, pero empezando desde atrás ponemos
+el -1, va a ser un paso de uno, pero negativo.
+Entonces va a empezar de atrás siempre eh el subíndice o cuando utilizamos un negativo ya sea en el
+rango o en estas e en este en estos slicing, bueno, nos vamos a dar cuenta de que estamos trabajando
+de atrás para adelante.
+Voy a voy a ir haciendo pruebitas de esto.
+Me voy a venir acá.
+Voy a abrir.
+¿Dónde estamos?
+Esto no.
+Hm.
+Esta sería la clase nu e clase bajo 9 pun.
+Y ahí teníamos una lista.
+E bueno, corchetes para arrancar una lista.
+Había números negativos.
+No importa eh si son negativos, no importa si son positivos, no importa.
+Eh, ahora en este caso simplemente vamos a accederar los elementos.
+Podemos tener así, podemos tener positivos, eh una serie, una determinada serie de elementos, en
+este caso números.
+Sabemos que en las listas podemos tener palabras, eh sabemos que podemos tener buleanos.
+Por ahora lo que vimos.
+Después vamos a ir viendo que hay otro tipo de elementos que se pueden eh guardar en una lista.
+Vamos a probar con nuestro queridísimo eh print.
+Queremos una fracción de nuestra lista.
+Tenemos que llamar, supongamos que esto se llama lista mixta.
+Para nada, para entender que estoy hablando del nombre de la lista, que puede ser un nombre
+cualquiera, algún nombre que sea representativo a los elementos que estoy guardando.
+habíamos visto la clase pasada que si yo quiero acceder a elementos de alguna posición, bueno,
+podría ir básicamente eh agarrando elementos por elementos, pero si yo quisiera de repente agarrar
+elementos que empiezan en la posición eh cero desde el principio hasta el elemento cinco.
+Bueno, con esta estructura yo puedo acceder a 0 1 2 3 cu y cco hasta este elemento.
+la lo que les había dicho anteriormente, depende cómo cómo lo entiendan ustedes, cuál cuál cuál va a
+ser la forma más eh eh más práctica para entenderlo.
+Como en el rango decíamos que es el elemento -1, pero también habíamos visto que ese elemento, que
+ese rango nos iba a traer información si le decíamos cinco, si dividíamos esto por paquetitos, algo
+así.
+Si este era el punto CCO, bueno, lo que estaba de este lado no me lo traía.
+Pero en este caso, como empieza en cero, si nosotros le decimos que vaya del cer al 5, bueno, va a
+traer hasta el elemento CCO inclusive o hasta este punto y todo lo que está a la izquierda de ese
+punto.
+Entonces, con esta estructura, con este slicing en particular, vamos a traer desde el inicio cer
+hasta el elemento CCO, ¿no?
+Estamos indicando paso por ahora.
+Entonces, lo reconoce como uno, como un paso de uno en uno.
+Elemento cero uno, elemento dos, elemento 3, elemento Bueno, en realidad sería el cinco.
+El uno sería este posición cer.
+¿Se entiende esto?
+Eh, voy aar esto.
+Después también está bueno que ustedes hagan sus sus propias pruebas eh para ver cómo cómo les
+funciona.
+Eh, sí, de repente pueden hacer si yo no le pongo nada acá, eh, y no le pongo nada acá.
+Pongo los dos juntos porque si no también se va a quejar.
+Bueno, a ver qué me devuelve.
+No le puse nada al principio, nada al final y nada a como paso.
+Me devuelve la lista entera.
+Como no les estoy especificando principio final ni paso, toma que va a imprimir desde el principio
+al final, hasta desde el principio hasta el final con un paso de uno.
+Esto es lo mismo que imprimir la lista entera, pero es una herramienta que más adelante vamos a ver
+que podemos usar para eh sumar listas, concatenar listas.
+eh nos puede llegar a servir.
+También podemos no indicarle el principio y indicarle el final, pero en este caso queremos que nos
+devuelva los elementos con un paso de dos.
+Este ya no sería el caso.
+Entonces va a ir desde la posición cer hasta el final hasta el número seis.
+Sería 0 1 2 3 4 5 6 hasta el 44, pero haciendo un salto de eh va alternando, va se va salteando uno
+con un paso de dos.
+me va a traer el men -1 -3 límites.
+Eh, se cortó.
+Sí, sí, sí.
+¿Cómo es una lista en sí?
+Es sí, sí es una es una estructura o una nomenclatura para buscar para mejor dicho por ahí me
+expresé mal puse no para establecer un límite sino para buscar entre ciertos límites en una lista.
+Sí.
+Okay.
+Sí, claro.
+Sí.
+Para agarrar una fracción de una lista puede ser la fracción del medio, del principio, del final.
+Eh, hm, podemos hacer algo así.
+A ver qué me devuelve esto.
+Eh, ah, perdón, tengo que volver a compartir.
+Yo creo que está cortando más rápido.
+Voy a poner el cronómetro de vuelta.
+Em, bien, miren este ejemplo.
+Yo le dije que vaya desde el principio hasta la posición seis, pero con un con un paso de uno
+negativo.
+Entonces va a empezar a traerme palabras desde el final hasta la posición eh que yo le indiqué en
+este en este en este en este caso.
+La posición seis es eh 0 1 2 3 4 5 6 El 44.
+Le puedo hacer una pregunta.
+Cuando uno pone negativo siempre lo trae de atrás para adelante.
+Sí.
+Sí.
+Y lo trae de medio.
+¿Cómo más?
+Somos toda la lista de negativos, ¿eh?
+Sí, sí, porque por eso yo puse distintos valores negativos, positivos y puse palabras y gulianos
+para que nada, vean que una cosa es el negativo que nosotros ponemos dentro de esta estructura que
+nos permite traer una rebanada y indistintamente de los eh índices o de los eh signos que tengan
+tengan los eh elementos adentro negativos, positivos, eso es indistinto.
+Lo interesante de si usamos el operador negativo para indicarle el paso es que no nos va a traer.
+Nosotros tenemos definimos esto, ¿no?
+En la primer sintaxis desde el cero.
+Imagínense que acá dice cero, ¿no?
+Si no ponemos nada, ahí está, hay un cero hasta la posición 6, que es el 44, sería toda esta
+fracción de de lista.
+Pero le decimos, "Okay, pero empezar desde atrás y me va a traer hasta ese lugar." Y lo que nos
+devuelve este print es primero true, el último lugar, después palabras, después uno, después dos y
+después tres.
+O sea, habíamos definido un límite exactamente acá y vamos de atrás para adelante hasta ese lugar.
+Eh, un montón de cosas se pueden hacer con slicing.
+Eh, por ejemplo, no sé, acá da un ejercicio también el eh la diapositiva.
+nos dice, "Da la siguiente lista 1 A B 3C, o sea, alternando e letras y números." y nos dice que
+definamos listas que contengan en principio todos los elementos de la lista, después todas las
+letras de la lista, después eh las letras vocales que aparecen en la lista y acá que dice la mínima
+lista pero en el orden inverso.
+Y hace también un montón de slicing distintos.
+Por ejemplo, para crear una lista de números, esta es otra de las ventajas que tiene esta
+herramienta.
+Nosotros conociendo una lista podemos agarrar los elementos que querramos de esa lista y crear
+listas nuevas.
+Por ejemplo, de la lista varios va a crear en principio una lista números con los elementos que
+tiene varios desde el principio hasta el final con un paso de dos.
+Esto quiere decir que me va a agarrar conociendo que hay un orden en la lista, ¿no?
+Que primero un número, después una letra, después un número y eso se repite.
+Entonces nosotros con esta herramienta podemos decir, quiero el primer elemento, saltéate el
+segundo, el que sigue, saltéate uno, el que sigue, saltéate uno.
+Y así de esta forma nos va a traer todos los eh todos los números.
+Después para una letra, para una lista de letras, podemos hacer lo mismo, pero en vez de que empiece
+en el la posición cero, que empiece en la posición uno.
+Entonces, le decimos empezar en la posición uno hasta el final y con el mismo paso, salteándote dos,
+eh, salteándote uno.
+agarra la primer letra, saltea, agarra lo que sigue, saltea uno, agarra lo que sigue y ahí accede a
+tod a todos los las letras de esta lista, eh, letras vocales que aparecen en la lista.
+Okay, ¿cómo hacemos?
+Acá tengo eh el que está en el elemento cero y después no tengo más hasta el último elemento.
+Bueno, podría hacer eh acá lo que hace es un paso de ocho.
+Se saltea ocho posiciones y agarra ese elemento.
+Me dice desde el primer elemento hasta el final salteándote ocho posiciones.
+Entonces agarra el primer elemento, ¿no?
+el el que está en la posición cero, el que está en la posición uno, se saltea 1 2 3 4 5 6 7 y ocho y
+agarra exactamente la otra vocal.
+Varias cositas.
+Después para los pares lo mismo, ¿no?
+Y identificando en este caso porque se conoce la lista, está es es un ejercicio, ¿no?
+Está eh ordenada de esa forma.
+eh y va practicando con la herramienta slicing cómo podría ser para esto, agarrar solo los números,
+solo las letras, solo las vocales, solo los pares.
+Y en este caso el primer par que encuentro está en la posición eh 0 1 2.
+Después tengo uno en la posición dos 3 4 5 6 y después no tengo más.
+Acá lo que hace es desde la posición dos hasta el final con un salto de cuatro, con un paso de
+cuatro.
+Entonces tenemos dos e y va a saltar 1, dos, 3, cu y ahí lo agarra.
+Eh, los mismos para los números primos, lo mismo para los hacer una la misma lista, pero en el orden
+inverso.
+Entonces, la sintaxis es desde el principio hasta el final, empezando del último para adelante.
+Esto es lo que le estamos diciendo en esta última en la línea ocho, en el último rebanada de lista
+que estamos agarrando.
+¿Cómo vienen?
+¿Cómo lo ven?
+Ya.
+Bueno, esto eh obviamente hay que que practicarlo.
+Es una herramienta, la vamos a empezar a a utilizar en los distintos ejercicios.
+Ahora vamos a pasar a un al operaciones que podemos hacer con las listas.
+Eh, creo que voy a voy a dar así como todo el contenido.
+Tenemos un poco de contenido y después vamos a empezar a trabajar con con esto en los ejercicios.
+Eh, no es mucho, pero después lo vamos a ir refrescando a medida que vamos ejercitando.
+Algunas operaciones que podemos hacer con las listas, porque después vamos a ver que las listas
+tienen métodos que son acciones o funcionalidades que podemos acceder, pero que son propios del
+formato lista, del tipo de dato lista.
+En principio vemos que lo que está haciendo acá está sumando está sumando elementos de una lista que
+se llama número dos.
+Se lo está agregando a una lista que se llama números.
+Eh, me faltaría, claro, me falta la lista número números.
+eh como para que poder hacer esta operación.
+A ver, lo voy a hacer acá.
+Eh, bueno, esto lo voy a comentar.
+Después vamos a seguir un poquito con esto.
+Ahí me dice que hay una lista de números.
+Em, que supongo que está definida en y después me decía que hay una número dos que tiene una cosa e,
+a ver, me voy a ir trayendo las cosas de la de la diapositiva.
+Así lo voy haciendo tal cual.
+Bueno, 1, dos y 3.
+Tiene 1, dos 3.
+Y lo que hace es un print de eh número en la posición cero más eh número dos.
+en la posición dos.
+Bueno, acá ya en principio me está tirando un error porque en la posición cero, como yo tengo la
+lista vacía, no puede no puede hacer absolutamente nada.
+Déjen probar una cosita.
+Eh, ahora me dice que no está definido, por ende, debería ponerle aunque sea algo, ¿no?
+Eh, ponerle 10.
+¿Por qué les puse números?
+Ahí dejó de quejarse.
+Eh, bueno, sumo elementos de una lista dentro de una acción.
+Puedo, eh, imaginen que siempre que usamos print es para mostrarlo, pero si nosotros quisiéramos lo
+podríamos guardar en otra variable, en alguna otra lista.
+eh seguir haciendo operaciones, guardarlo eh de alguna forma para poder seguir trabajando.
+Eh bueno, esto me debería devolver una un entero.
+me sumó la posición cero con el esto es está bueno que empiecen a a acostumbrarse a esta forma de
+trabajar accediendo a los elementos de una de un de un iterable, digámosle así, porque después vamos
+a ver que hay más más eh formatos para guardar elementos y esta es una de las formas más prácticas
+de poder modificar.
+Eh, hm, porque, bueno, lo que podemos hacer es si queremos modificar, vamos a hacerlo con este
+ejemplo que en principio es lo que está en la posición cero.
+Podemos hacerlo, dale con con la S.
+Si queremos modificar un elemento de una lista, le decimos que eh le reasignamos un valor con el
+operador igual.
+Le decimos que lo que está en la posición cero de la lista números ahora pase a valer 20.
+Eh, ¿qué otras cosas se pueden hacer con las listas?
+Ahí en la diapositiva nos habla de concatenar.
+Me traigo de vuelta para acá, me traigo de vuelta la la diapositiva.
+Ahora estamos queriendo concatenar un pedazo de lista suelto con una lista.
+Vamos a a probar qué pasa en este en este ejemplo.
+¿Qué pasa con la lista original?
+¿Qué pasa si eh si le sumamos en un print una lista y lo que está haciendo ahí el ejercicio es Se me
+está cortando, no bien?
+Ahora puse el cronómetro para saber más o menos eh en qué momento se me va a cortar este print.
+Lo voy a aumentar.
+Voy a hacer e bueno, lo que hace acá es números le va.
+Yo estoy probando el de cambiar el 10 por el 20 y me tira error.
+Okay.
+Eh, ¿por qué será el 10 por el 20 con la misma estructura?
+Sí, a vos te da que te tendría dar 23, ¿no?
+Este print Sí, sí funciona.
+A ver, corro, eh, para que este no lo quiero probar todavía.
+Claro.
+Eh, sí, sí debería dar 23.
+E, ¿qué estará pasando?
+Hm.
+No sé porque antes eh me había dado 13 y le puse la una fila más abajo de Bueno, yo le puse número
+en vez de números y hice la misma estructura.
+Número corchete cer igual 20.
+Ah, 20 va a ser corchete, ¿no?
+Claro.
+Listo, ya está.
+Era eso.
+Claro.
+Yo había puesto corchete.
+Sí.
+Eh, a ver, claro, si vos le decís, eh, sí, ahora sí me da 23.
+Ah, joya.
+Pero, ¿qué le estamos diciendo acá?
+Si yo le pongo esto, ¿qué le estamos diciendo?
+Eh, ¿qué número?
+Okay, déjame ver que qué hace.
+Le está guardando una lista adentro de otra lista, me parece.
+Eh, vamos a imprimir números.
+No, no te va a dar el mismo resultado, pero te daba error.
+Sí, me daba error.
+En la parte de número cer número dos, me marc.
+Ah, claro, claro, porque estabas queriendo sumar una lista más un más un número.
+Eh, mira, claro.
+Esa sintaxis lo que estás haciendo es estás guardando una lista adentro de otra lista, que se puede
+hacer tranquilamente.
+Esto es un número, pero una lista podría ser esto y es exactamente lo mismo con esa sintaxis.
+Si vos le ponés corchetes, le está diciendo, bueno, lo que hay en la posición cero ahora va a pasar
+a valer esto una lista.
+Ah, claro.
+Interesante.
+Está bueno.
+Eh, pero por ahora vamos a dejarlo ahí.
+Y lo que vamos a hacer es este print.
+Este no, este sí.
+Entonces, a mi lista de números que vale 10, después le modifico ese valor a que tiene un elemento
+que tiene un valor de 10.
+Después se lo modifico en la línea 6 y pasa a valer 20.
+Le voy a sumar, le voy a concatenar un pedacito, un cachito de lista.
+No es lo mismo que hicimos anteriormente, porque antes le estábamos agregando eh una ¿Cómo es?
+una.
+Voy a volver a compartir los microcortes.
+Lo último que quería lo que estamos hablando es que podemos concatenar operaciones que podemos hacer
+con listas, ¿no?
+En principio habíamos sumado una lista con otro, a ver, no, todavía no sumamos, no habíamos hecho
+una suma dentro de del print.
+A ver cómo estaba el último print.
+Eh, no habíamos sumado en un print elementos de una lista y bueno, básicamente print lo que hace es
+eh mostrar la suma de esos elementos.
+Si son element si son elementos que Python puede sumar, los va a sumar y bueno, si hay algún error
+nos va nos va a avisar.
+Pero ahora estamos concatenando una, me llaman de telecentral.
+Eh, estamos concatenando una lista ya creada que en el principio tiene un solo elemento, pero podría
+tener más con otro pedacito de lista y lo estamos concatenando adentro del print.
+La pregunta era, ¿qué pasaba con mi lista original?
+Si yo estoy sumando esto y me devuelve una lista completa, acuérdense que la lista de números tiene
+10, eh, y después se lo pasamos a 20, o sea, tiene un elemento que tiene un valor de 20 y después le
+estamos sumando 4 y 5.
+Este print me devuelve una lista, una lista enterita.
+No tiene lista dentro, no tiene dos cosas separadas, es una lista eh con todos los elementos
+adentro.
+La pregunta era, ¿qué pasaba con mi lista original, que es números, que solo tenía un elemento?
+La respuesta es que la lista original no se modifica.
+Y este es un ejemplo que vimos también eh en algunos ejercicios que que había de laboratorio.
+No me acuerdo si era del eh donde en print se hacía una suma, pero después preguntaba cuánto era el
+valor de esa variable que estaba quedando y la respuesta era que no se modificaba.
+Bueno, en este caso es exactamente lo mismo que la lista original sigue manteniendo su valor, lo que
+hace es para dentro del print si eh concatenarlo.
+O sea, podemos concatenar listas, pero esta acción no va a tener quedar eh asentada en la variable o
+en la lista números.
+Si nosotros quisiéramos modificar números, bueno, si realmente queremos agregarle esos elementos,
+tendríamos que eh modificarlos.
+Podemos hacer números, va a ser igual a eh vamos a hacer así.
+Es lo mismo que estamos haciendo dentro del print, pero ahora sí se lo estamos con el operador igual
+se lo estamos asignando a al valor de, o sea, le estamos modificando lo que tiene guardado en el
+espacio de memoria.
+Esto es un una es un deja no termina deja, perdón, sigue siendo una variable, una un espacio de
+memoria en la en la memoria de la computadora que tiene una dirección, que tiene una referencia,
+opciones más técnicas, pero eh nosotros cuando utilizamos el operador igual estamos modificando lo
+que hay guardado en esa en esa cajita.
+Eh, con esta estructura que es la misma, sí lo estamos eh modificando, pero en esta estructura solo
+estamos haciendo uso para mostrar.
+¿Qué más tenemos?
+más operaciones.
+Ahora, cuando nos metamos con los con los métodos.
+Vamos, cinco.
+Eh, podemos repetir elementos si teníamos una lista.
+Clara esta diapositiva.
+Se supone que números, por lo que veo acá, es 1 2 3, que es lo mismo que número dos.
+Eh, salvo que en esta operación que definida número no tampoco.
+Eh, lo que podemos hacer es repetir elementos.
+Los queremos repetir dos veces todos los elementos de la lista.
+Bueno, igual con el mismo concepto, no va a suceder en la consola y no va a ser va a impactar en el
+eh en la en la lista original.
+Acá empezamos a ver algunas funciones que son eh genéricas para varias cosas.
+Ahora las vamos a usar con listas, pero podemos preguntarnos si un elemento está en la lista o si no
+está en la lista.
+No queremos saber si eh el elemento dos está en números o si el elemento 10 está en números.
+si la respuesta a eso va a ser eh verdadero o falso.
+Esto va a ser útil también para cuando tengan que buscar en alguna lista.
+Si eh no sé, esto no, no sé una lista de nombres.
+Está el nombre Juan dentro de esta lista.
+Bueno, va a recorrer.
+Vamos a podemos hacer varios usos de esta herramienta.
+Eh, o también podríamos hacer la misma acción con un if, ¿no?
+y y un operador de comparación hacer que recorra la con un for la lista números y si eh lo que
+guarda en la variable temporal por cada iteración es igual igual a 2, entonces devolvemos true.
+Pero bueno, sería como un camino más rebuscado para obtener el mismo el mismo resultado.
+Otra función de listas es la función len que nos va a devolver el largo de la lista.
+Y como es una función siempre eh bien, estos son funciones y estos son operadores para hacer la la
+diferenciación, porque ahora vamos a ver también métodos.
+Entonces podemos usar los operadores in para ver si hay un elemento dentro de la lista y tenemos
+funciones como el caso de len que viene de largo de leng eh para obtener la cantidad de elementos de
+una lista.
+Vamos a hacer algunas pruebitas con esto.
+Eh, bueno, básicamente vamos a imprimir la respuesta de si eh casa está en tenía otra lista más
+arriba, ¿no?
+Eh, vamos a comentar esto.
+Si uso esta lista.
+en lista mixta.
+Eh, eso por un lado.
+Mm, ¿qué no le está gustando acá?
+Ahí.
+¿Qué más habíamos visto?
+Podemos eh queremos saber el largo de la lista.
+print leng dentro de los paréntesis, esa función recibe un parámetro que es una lista y le vamos a
+pasar la mixta, le vamos a eh hacer otro print para medir el largo de em números y nada más porque
+tampoco tengo más muchas número dos, pero bueno, es lo mismo.
+Eh, acá nos debería devolver un falso, un número y otro número.
+Bueno, sigue imprimiendo estas dos cosas, ¿no?
+Lo que lo último que hicimos sería eh casa está en lista mixta.
+Falso, eso falso.
+¿Cuál es el largo de lista mixta?
+Tiene dos elementos.
+¿Cuál es el largo de número?
+dos elementos e qué está haciendo modificar elementos de una lista.
+Algo de eso ya estuvimos viendo con el operador igual le puedo asignar un valor a ese elemento.
+Eh, ¿y acá qué hace?
+Números.
+Le agrega letra.
+llamar.
+Eh, eso cuando dejas un número en una base de datos te empiezan a llamar de todos lados.
+Increíble.
+O de la misma empresa, pero un montón de veces.
+Eh, frutas.
+Eh, acá estamos a la lista de números en la posición cero le voy a agregar ahora eh le voy a decir
+que no sé cuánto valía, creo que había un número.
+Le voy a decir que ahora eh tenga un stream stream que dice letra, pero es una cadena de texto, no
+una palabra.
+Eh, y lo que hay en número dos, en la posición uno, que se le asigne lo que hay en la en la e lista
+números en la última posición.
+Bueno, lo mismo.
+Estamos modificando.
+Siempre que vean esto seguido de un igual, van a hay que reconocer que estamos modificando ese
+elemento de la lista.
+Y acá le estamos diciendo, bueno, concretamente este elemento estamos pasando el literal, el valor
+literal de que va a ocupar esa posición, pero acá le estamos pasando un una posición de una lista.
+Y si números números salen tenía tres, creo, en la última posición.
+Eh, bueno, lo que se lo va a asignar ese tres, va a ir a ocupar el lugar que hay en la posición
+número uno de la lista número dos en medio de un trago lengua, pero sería acá.
+La posición uno de número dos es este lugar.
+Y ahora va a pasar a valer tres sería y la lista quedaría 1 3 3.
+¿Quiere que los probemos estas cositas?
+Ah, lo vi.
+Sí, esa última si puede ser que no me quedó del todo claro.
+Dale, dale, dale.
+Vamos a hacer una una prueba.
+Eh, se se puso medio.
+Me llevo esto para poder verlo.
+Bajar la pantalla.
+Bien.
+Eh, ¿qué listas tenemos nosotros?
+Por ejemplo, tenemos número dos.
+Voy a trabajar con lista mixta y con números.
+Números que empezó valiendo 10.
+No sé si está bien dicho eso.
+Me suena raro.
+Después pasó a valer 20 en esta línea.
+Y ahora esa misma la voy a modificar de vuelta.
+Le voy a decir que números en la posición, ahí hay un spoiler, eh, en la posición cero.
+Quiero que pase a valer lo que está en lista mixta.
+Está bien bajo mixta en la posición.
+No se elijan un elemento.
+Quiero que ahora en esta lista de números, en la posición cero, quiero que tomen lugar de palabras.
+Okay.
+De lista mixta.
+Ese sería la posición.
+Puedo empezar a contar acá o puedo decirle -1 -2.
+Eh, vamos de vuelta.
+Tengo una lista números, la defino, defino la variable, ¿no?
+Le voy a decir acá vas a hacer, vos vas a hacer una lista que tenés un número.
+Puede tener más, eh, puede tener varios números.
+Eh, en la línea seis le digo, "Bueno, okay, lo que hay en la posición cero ahora va a tomar este
+valor, va a ser igual a 20.
+Perfecto.
+Ahora, en vez de 10 y 2 va a haber 20.
+y dos.
+En la línea siete voy a hacer lo mismo.
+Voy a modificar de vuelta el elemento de la posición cero, el 10 que pasó a valer 20.
+Pero ahora quiero decirle, no le quiero pasar el valor concreto, le quiero decir eh que tome el
+valor de otra lista, que vaya y acceda a los elementos de mi lista mixta y me que me traiga el
+último, no, el anteúltimo.
+Y lo hago con esta sintaxis.
+También le podría haber dicho el 0 1 2 3 4 5 6 7 8 9 10.
+El elemento en la posición 10.
+Pero bueno, se puede hacer.
+Era más fácil contar dos elementos de atrás para adelante que contar eh 10 veces, ¿no?
+Eh, esto sería lo mismo que poner lista mixta, eh, pero en la posición 10 y a ver si puedo imprimir
+este.
+No quiero imprimir, imprimir números y es mi primer print, así que eh va a ser lo primero que
+imprima.
+En teoría debería aparecer 10 o 20, dos y palabras, ¿no?
+Habíamos puesto dentro de una lista.
+En breve se va a cortar.
+Eso palabras dos.
+Palabra 2 45.
+Ah, claro, claro, claro.
+No, este es eh en la posición cero.
+Ahora hay palabras.
+Voy a hacer un print anterior, así lo podemos ver.
+Eh, voy a hacer un print acá, si podemos ver cómo era anteriormente.
+La lista números arranca con estos valores.
+Después pasa y modificamos el primer elemento en la línea seis.
+toma esta forma, una lista con dos elementos, la imprimimos y después volvemos a modificar el
+elemento que está en la posición cero de esa lista trayendo elementos de otra lista.
+El anteúltimo elemento de una lista lo queremos agregar a esa a esa eh posición.
+Entonces, palabras y el dos queda ahí.
+Eh, después lo que sigue pasando son los distintos print que me quedaron, ¿no?
+Después números, la vuelvo a modificar acá, le agrego el cuatro, el cinco, entonces me queda una
+lista un poco más grande y después, bueno, hago algunas preguntas.
+¿Y qué pasa si ahora yo le pregunto eh estas palabras palabras en eh números?
+Mmm.
+Bien, ustedes van haciendo también en sus van trabajando también a la par en en su computadora.
+No se cortó.
+Sí, bien, bien, bien.
+Bueno, me llama la atención que pasaron 20 minutos, no se cortó.
+Eh, bueno y bueno, me devuelve true.
+Esta es una eh es una No, no puede ser.
+Lo tomamos.
+Sí, sí, sí, sí.
+Ahora cuando vamos a seguir viendo cosas y cuando termine lo paso.
+Acá yo hice la prueba en vez de palabras exactamente como estaba escrito, le cambié una mayúscula y
+me devuelve falso.
+Eh, Python va haciendo un análisis letra a letra y si no hay una exacta igualdad me devuelve falso.
+Después vamos a ver qué herramientas tenemos para poder trabajar estas cosas.
+Supongamos que queremos pedirle a un usuario que ingrese un mail y y validar que es sea el mail
+correcto.
+Bueno, ¿cómo va a comparar Python para hacer ese tipo de proceso?
+Eh, bueno, vimos eso, vimos que podemos tener en largo una lista, hay varias funciones.
+Ah, genial.
+Gracias.
+Eh, ya estamos.
+Entonces yo le cambié acá la mayúscula y me devolvió falso.
+Hagan la prueba a ustedes también o si le cambian una letra.
+Eh, obtuvimos el largo de las distintas listas con las que estuvimos trabajando e de estas funciones
+vamos a ir sumando de a poquito también eh funciones funciones que son propias de de los lenguajes
+en realidad y de cada uno le pone la el nombre usa alguna palabra reservada.
+Eh, en general son parecidas, pero algunos ponen lengthon todo lo quiere minimizar y hacer más
+simple.
+Entonces, solo usa leng.
+Eh, después hay funciones para, bueno, después les cuento si no les spoileo nada, pero lo que sí
+necesitamos eh saber es que hay funciones que son propias del lenguaje o de Python o de la
+estructura de programación o funciones que nosotros mismos vamos a a crear y hay métodos.
+El método es propio del objeto y o del tipo de dato.
+Como estamos trabajando con listas, nosotros sabemos que las listas son un tipo de dato que puede es
+albergar un conjunto de elementos.
+Es una estructura.
+Esas listas tienen sus propias funcionalidades que eh se le llaman métodos.
+La diferencia es que las funciones son como generales o globales y las y los métodos son propios de
+la del objeto listas de la de la del tipo de datos listas.
+Como no vieron objetos y eso viene del paradigma orientado objetos por en principio eh sepan que
+está relacionada con su estructura.
+Eh, ¿cuál es la diferencia y por qué nos nos interesa saber esta estas dos cosas?
+Bueno, en principio porque se accede de formas distintas.
+un para usar una función, como estuvimos viendo, eh ponemos el nombre de la función y dentro de los
+paréntesis ponemos los parámetros que recibe esa función para trabajar, como la función print, como
+la función input, siempre es el nombre de la función y nos eh uno paréntesis para pasarle lo que
+necesite la función para trabajar.
+En cambio, la los métodos se acceden a través de el comando punto, pero tenemos que mencionar la
+lista en este caso o el objeto que vamos a estar trabajando.
+Como estamos trabajando lista, vamos a empezar a decirle lista.
+Entonces, para usar los métodos relacionados a las listas, primero tenemos que nombrar la lista y
+con el punto vamos a poder acceder a todos los métodos de esos elementos, de esos objetos, que esos
+métodos también van a tener una un paréntesis para recibir en parámetros.
+Básicamente lo que hacemos es en este caso estamos usando función print paréntesis, le pasamos lo
+que queremos que imprima.
+Usamos la función len, entre paréntesis le pasamos lo que queremos que mida, que nos devuelva largo.
+Para acceder a los métodos, lo que hacemos es primero llamar al objeto propio, en este caso a las
+listas.
+Ya vamos a la lista y con el operador, con el comando punto, podemos acceder a todos los métodos de
+de este de este tipo de datos.
+Si esperan un cachito, se despliega esta ventanita que nos devuelve, que nos muestra todos los
+métodos que podemos usar de las listas.
+Append, que es para agregar, copiar, contar, extender, obtener el índice, insertar.
+eh borrar, remover, ordenar, limpiar, dar vuelta, un montón.
+Hay un montón eh un montón de cosas que se pueden hacer con los no se asusten que todo esto por
+ahora no lo vamos a ver, solo nos vamos a enfocar en estos primeros que la verdad que simplifican eh
+simplifican un montón la las cosas para, por ejemplo, para agregar un número Pero nosotros
+anteriormente eh bueno, lo que hacíamos era algo parecido a esto, ¿no?
+A números.
+Le sumamos, por ejemplo, este pedacito.
+Eh, con el método apen, básicamente le decimos la lista a la que le queremos agregar, punto el
+método y le pasamos el parámetro.
+¿Que le queremos agregar?
+Seis.
+Pero antes de meternos tanto en esto, vamos a les quiero mostrar que acá tienen un cuadrito con
+todos los métodos que vamos a ver ahora, eh, que vamos a usar en esta etapa.
+Después los otros por ahí lo ven los ven más adelante o cuando lo necesiten lo pueden investigar,
+pero para estos ejercicios y para esta etapa de esta materia con con estos vamos a andar bien.
+Tenemos métodos para agregar y combinar, métodos para eliminar, métodos para buscar información y
+tenemos métodos para ordenar y cambiar el orden.
+Bueno, y acá para generar una copia.
+Eh, en cada una de las columnas tenemos primero el método, cómo se escribe y qué recibe por
+parámetros.
+Después, eh, bueno, algunos reciben dos, algunos reciben otra lista, eh algunos no reciben nada.
+y la descripción de qué hace cada uno.
+Por ejemplo, appen agrega un elemento al final porque después vamos a ver que hay métodos que nos
+sirven para agregar elementos en una determinada posición, como por ejemplo el insert.
+Inserta un elemento en la posición que le indiquemos.
+Entonces le decimos a esta lista, insertame en la posición uno el número dos y quedaría un poco así
+y nos da el resultado.
+Esto es como una una ayuda que les va a quedar como para decir, bueno, ¿cómo funcionaba el método
+clear?
+Bueno, vacíarle directamente la lista.
+Para extender.
+Agrega varios elementos, extiende.
+Acá nos pide que es un iter, es un iterable o una lista.
+Entonces, agrega una lista.
+Es para extender la lista, pero con otro iterable, con otro conjunto de datos.
+Eh, y apen.
+Bueno, agrega al final remove.
+recibe un parámetro y va a remover ese parámetro que le estamos pasando.
+Hm.
+El método pop elimina y devuelve eh el índice.
+Eh cuando nosotros nos devuelve la posición en la que estaba.
+Si no sabemos el largo de la lista y queremos eliminar el último, bueno, va a eliminar el tres y nos
+dice estaba en la posición eh, bueno, pero acá dice tres devuelve último o índice.
+Ah, nos devuelve el último o el índice.
+Ahora, ahora lo vamos a ir probando.
+Eh, vamos a vamos directamente a a probar.
+Y otra de las cuestiones que tiene el Visual Studio Code, que es un poco de ayuda, eh está en inglés
+y hay que acostumbrarse a a leerlo, pero si ponemos el mouse arriba del método, nos dice que, bueno,
+en principio es un método.
+Este es el método.
+Después vamos a ver que esta es la estructura para crear una función o un método.
+Esto es una palabra reservada para definir ese método y recibe un entero.
+Ahí nos dice qué es lo que recibe dentro de los paréntesis y que devuelve nada.
+No devuelve nada.
+Hace la acción y no devuelve como eh un resultado.
+Lo mismo podemos hacer con los distintos métodos.
+Números punto eh a ver, vamos para acá.
+Acá sí, a diferencia del anterior, este nos devuelve uno entero, eh, nos va a eliminar el último, el
+índice -1, como decía la diapositiva y vamos a probar a ver qué nos devuelve de números.
+De números.
+¿Cómo había quedado mi lista de números?
+Así no, eh.
+Vamos.
+Ah, okay, okay.
+Bueno, para poder hacer uso de ese de esa devolución que nos da POP, tenemos que eh o guardarlo o eh
+mostrarlo en un print.
+Y acá como lo hice al último, tampoco nos estamos dando cuenta cómo quedó la lista.
+Vamos a imprimir la lista al final.
+Vamos a imprimirla acá también porque acá le estoy agregando, eh, le estoy agregando y después lo
+estoy borrando, así que no tiene mucho sentido, no se va a notar la diferencia.
+Eh, bien, nuestra lista venía quedando así.
+le pusimos la palabra que la trajimos de otra lista, después le sumó este fragmentito.
+Eh, nos preguntábamos si un una palab la el stream palabras estaba escrito, pero lo pusimos con la P
+mayúscula, entonces nos dice que es falso.
+Le pedimos el largo y nos nos devolvió 12.
+Le pedimos el largo de lista y nos devolvió cuatro porque en ese momento tiene cuatro.
+En la línea 22 le agregamos el seis.
+y la imprimos.
+Y en la línea 24 con el método poporramos el último y este nos iba nos va a devolver el índice.
+Pero bueno, en este caso no lo estamos guardando en ningún lado.
+Si nosotros queremos guardarlo, podríamos hacer así, índice igual número punto pop y ah, ahí tengo
+que imprimir índice.
+A ver acá, eh, ¿cómo vienen?
+Mientras va corriendo la consola.
+¿Qué tal esas pruebas de escritorio?
+Bueno, son útiles los métodos.
+Este pop, bueno, yo justo nos quedamos hablando de ese, lo hice en las pruebas, pero sí, perdón que
+te interrumpa.
+Yo tuve un problema que no entiendo por qué, pero a vos viste que las de tr y número y todas esas
+que pusiste no se te ponen en azul.
+Sí.
+Y a vos qué?
+A mí se me pone en blanco.
+Hm.
+Pero te funciona bien.
+No, me tira R.
+Tipo, me tira que true no tiene nada que ver.
+Eh, true como de verdadero.
+Claro.
+Sí.
+Eh, el de arriba de todo.
+Ah, acá.
+Claro.
+Yo no entendía por qué.
+Lo pusiste y yo puse pi y todo.
+Pusiste con mayúscula true.
+Eh, a ver, a ver si le pongo así.
+Ah, es verdad.
+Ah, mira, sí, tira error.
+Tira error.
+Eh, true no está.
+Claro, es un lo toma como una variable e nunca la definimos, así que sí.
+Okay.
+También no entiendo por qué también los las palabras números me tira con con blanco mío.
+Si no te genera errores, no se te pone Ah, tienes razón, profe.
+Es verdad.
+O sea, tenía que fijarme si me tira me tiraba error.
+Perdón.
+Claro, porque a veces eh son hay un montón de extensiones que sirven para cambiarles los colores a
+esto.
+Yo la verdad que no me acuerdo.
+En algún momento le habré cambiado y quedó así, ¿eh?
+O por ahí vos tenés alguna otra extensión.
+Claro, si funcionan.
+Okay.
+Bueno, gracias, profe.
+No, de nada.
+debería sacarla a ver qué qué es lo que tengo que me hace que sea que se vea así.
+Así vemos todo lo mismo, pero esos son ayudas visuales, ¿no?
+No se preocupen por eso.
+Eh, después reviso y última lo pongo cómo está.
+Me parece que es este.
+No, esto yo no sé cuándo está.
+Este esitar.
+A ver cómo queda.
+Igual.
+Bueno, eh, nada, no se preocupen.
+Y por último, entonces habíamos dicho, eh, okay, okay, okay.
+Si no, el está diciendo mal.
+¿Qué estoy diciendo acá?
+Me está guardando el pop, me lo guarda.
+Y si lo quiero lo, o sea, si yo quiero eliminar un un elemento de la lista, pero bueno, lo quiero
+guardar porque después lo quiero pasar a otro lado.
+Bueno, con el pop puedo hacer uso de ese elemento que se borró.
+E porque me devuelve el número seis, no me devuelve el índice, ¿eh?
+Ay, no me acuerdo.
+Después lo investigo porque hay una forma de que te devuelva el índice.
+Sí.
+Voy a volver a compartir.
+Eh, bueno, en la diapositiva después vamos a seguir trabajando con esto.
+Vamos a ir haciendo más pruebitas.
+Eh, los que a ver está, bueno, el método apen que estuvimos e que creo que es uno de los que más se
+usa eh un elemento, el método remove que sirve para eh remover un elemento concreto.
+Si nosotros le decimos remove, le decimos, "Bueno, ¿cuál quieres que borremos?" Y ese es el que nos
+va nos va a borrar.
+Y lo mismo, ¿no?
+Desde la lista, desde el objeto lista con el comando punto accedemos al método y dentro de los
+paréntesis le pasamos el elemento.
+tenemos DEL, que es útil, pero DELodas, va a servir, lo vamos a poder trabajar con diccionarios o
+con cualquier otra con otro objeto.
+es una palabra reservada, es funciona más o menos como el int, eh, y usamos del, le decimos el la
+lista y el subíndice, como está acá, si tenemos una lista que se llama frutas y queremos borrar lo
+que está en la posición cero, también podemos hacer uso de esta función.
+también es útil porque habíamos visto que bueno, vem mueve eh el elemento concreto del con del le
+podemos decir qué posición concreta podemos trabajar y con pop, bueno, nos va a borrar directamente
+eh el último.
+¿Qué más?
+Bueno, y después tenemos ejercicios para trabajar.
+Eh, yo les diría que hagamos un cortecito, así descansamos, descansan un poco.
+Vamos a seguir trabajando con esta listita.
+Vamos a ir probando los distintos métodos que de hecho creo que tengo.
+Les voy a pasar el archivo ahora si quieren quedar practicando en el eh [carraspeo] en el recreo.
+Tomémonos 20 minutos, eh, y después seguimos.
+Pero venimos bien, eh, venimos ya terminando la unidad.
+Es un comando que sirve para cuando ustedes tienen eh la terminal muy llena y se empieza a poner
+molesto y engorroso cuando hay muchos print y la consola queda bastante ocupada.
+Lo que pueden hacer es o hacer eh ingresar directamente el comando clear ahí en la consola o creo
+que CLS también, eh, pero nosotros lo estamos dejando acá directamente al principio del archivo para
+que se se pase automáticamente cada vez que que corremos la consola.
+Lo primero que se va a ejecutar es esto.
+Eh, básicamente, sin entrar mucho en detalle, porque tampoco lo vimos, estamos haciendo una
+importación de una librería o una carpeta o un módulo que tiene como accesos al sistema operativo y
+lo que hace es decirle eh lo mismo que hicimos nosotros acá es limpia la consola.
+Entonces, cada vez que corramos, no nos va a quedar todo el choclo y va a ir limpiando eh la
+consola.
+Es práctico, eh queda un poco viejo esto, pero sigue funcionando, por eso está tachado ahí.
+Dice que que está obsoleta, pero anda, así que no se preocupen.
+Bueno, lo primero que vimos fue crear listas, tipos de listas.
+eh imprimir elementos de una lista, acceder a elementos.
+Está todo comentado porque lo pueden [resoplido] ir probando ustedes, van descomentando y van
+probando algunas cosas.
+Les va a quedar ahí como un machete para todo lo que estuvimos trabajando y lo que vamos a seguir
+trabajando de listas.
+Eh, esto un poco lo dijimos, no lo no lo trabajamos tanto, pero habíamos dicho que podíamos hacer
+listas que contengan otras listas.
+Un poquito lo vimos por arriba que que cuando creamos eh pasó algo que que nos creó un lista de un
+elemento adentro de una lista que ya teníamos.
+Bueno, saber también que podemos tener en dentro de esta estructura eh lista que va a albergar un
+conjunto elementos que esos elementos pueden ser otras listas.
+Este es el caso del que está ahí en la línea 16, que tenemos una lista de números, una lista de
+palabras, una lista mixta, elementos sueltos.
+Bueno, todo eso podemos eh podemos llegar a encontrarnos con estos elementos.
+La particularidad que tiene esto es que nosotros para quizás en eh acceder a elementos que están
+dentro de esas listas, vamos a tener que usar una sintaxis como esta.
+Queremos imprimir de nuestra lista, que se llama lista dentro de listas, elo dos y de esa lista el
+elemento cero.
+Entonces, vamos a a descifrar un poquito esto.
+Esta es nuestra lista completa.
+Queremos imprimir el elemento dos, eh, 0 1 2.
+Nuestro elemento dos sería este, pero como a su vez es otra lista, queremos imprimir el que esté en
+la posición cero.
+En este caso nos va a imprimir el uno.
+Si quisiéramos imprimir solo la lista, podemos hacer o solo ese elemento, podemos hacer esto de
+listas dentro de listas, lo que esté en la posición uno.
+Acuérdense que en cada coma va a ir separando un elemento, pero las comas que están dentro de los
+corchetes pertenecen a esa lista en particular, a ese elemento que es una lista.
+En la línea 18 lo que vamos a imprimir es la lista completa.
+Esta lista que tiene dos palabras raras.
+Eh, a ver qué hace este código.
+No lo corro, pero puede que tenga algunas cositas más.
+Eh, bueno, el print de la línea 17 que le habíamos dicho que imprima del elemento dos el lo que está
+en la posición cero me está devolviendo efectivamente el número uno.
+¿Qué sería este elemento?
+¿Esto se entiende o es muy complicado?
+Si quieren lo podemos trabajar un poquito más.
+Perfecto.
+Por ejemplo, si ahora yo quisiera imprimir esto, el número tres, bueno, la sintaxis sería, voy a
+copiar esto y sería del elemento que está en la posición cero.
+Ahora quiero imprimir eh 0 1 2, el que está en la posición dos y ahí me va a devolver el tres.
+¿Por qué me tiré ese error?
+Ahí está.
+Se estaba acomodando.
+Eh, bueno, y esto es básicamente imprimir eh dos elementos en el mismo print.
+uno que es el de la posición dos en el uno, que sería este, no, perdón, este, y el de la posición en
+el dos, sería 0 1 2 y ahí tenemos distintas usos de acceso a los elementos de una lista compleja,
+una lista que tiene, además de elementos simples, tiene otros eh otros los datos y me imprimió falso
+y hola.
+Eh, okay, okay, falso y hola porque estamos accediendo al mismo elemento, el elemento dos, pero por
+un lado estamos accediendo al uno y al dos.
+Primero al uno y después al dos.
+y más abajo, eh, bueno, este print no sé, está habrá quedado perdido por ahí abajo.
+E control, no sé, ahí comento eso, así ya no nos jode.
+de slicing también les queda bastante completito lo que estuvimos viendo, la estructura del slicing,
+principio, final y paso.
+Hay una lista de frutas y bueno, iba haciendo distintos print de rebanadas distintas de de esa
+lista.
+Eh, pruébenlo después.
+Esto es interesante también.
+¿Cómo podemos usar esa herramienta para generar una copia?
+Más allá de que habíamos visto que en los métodos hay una copia, podemos hacer eh uso de esta
+herramienta, de esta este rebanado para hacer una copia.
+Por ejemplo, tenemos una lista original con números y queremos generar una copia.
+lo hacemos eh asignándole a esa copia, a esa variable que le pusimos copia, eh los valores de la
+lista original completo de principio a fin sin peso.
+Esto es lo mismo que decirle desde el desde la posición cer hasta 0 1 2 3 4 e me va a generar una
+copia exactamente idéntica a a la que teníamos arriba, a la lista original.
+Em, ¿qué más?
+Vamos a volver a comentar esto.
+Un repasito de este archivo que ahora les voy a pasar, así lo pueden usar.
+Las operaciones que vimos más me interesa ver de esta lista, concatenar listas, repetir eh el
+operador in para saber si un elemento está en una lista.
+Y así como está el in, está el not in, que nos sirve para verificar si no está ese elemento.
+Eh, y la sintaxis es es queremos saber si este elemento no está en nuestra lista de frutas, que la
+tengo que descomentar porque si no me va sillar.
+Mi lista de frutas tiene manzana, banana y pera.
+Y quiero saber si pera no está.
+Bueno, esto me va a devolver falso porque efectivamente pera sí existe en la lista.
+Eh, y si le pregunto por sandía, como es en el la línea 65, un poquito más abajo, eh, me va a
+devolver true porque no sandía no.
+Esto sí es verdadero.
+Esto es falso.
+Eh, la función largo ya la habíamos visto.
+Ah, bueno, si quieren corremos esto para chequear que esto esté siendo así.
+falso y falso y verdadero.
+Lo que sí me quería centrar la función largo, también podemos eh consultar por el largo de una
+palabra.
+Eso también es es útil.
+Eh, ¿cómo modificar elementos?
+Ah, acá está este, el que me está imprimiendo ahí abajo.
+No, está la lista.
+Eh, esto también lo vimos, cambiar un elemento según su posición, reasignarle un valor.
+Y acá empezamos con los métodos.
+Ahí yo me digo que mezclé un poco el método index con el método pop, que bueno, básicamente son para
+eh hay varios según como está en la en la diapositiva, uno es remover, otro es pop y otro es clear
+para eliminar.
+Y el método index sí es el que nos va a devolver el índice de un de eh de un elemento determinado.
+Nosotros le decimos tal elemento, manzana, bueno, está en la posición cer uno.
+Eso nos va a devolver el método de index.
+Eh, los que tenemos para para trabajar para eliminar elementos de una lista son el del.
+Ahora vamos a ir viendo también de poquito e appen para agregar.
+Nos va a agregar un elemento en la última posición.
+Insert nos va a agregar un elemento, pero en la posición que nosotros le digamos.
+Entonces, si siguiendo con nuestra lista de frutas accedemos al método insert con el comando punto y
+le decimos que en la posición uno nos eh primero lo primero que recibe es la posición y lo segundo
+el elemento, eh nos va a agregar ese elemento.
+Bueno, en acá, si fuera esta lista, en la posición cero, ¿no?
+Entre manzana y naranja va a aparecer banana.
+Y acá también podemos ver eh qué es lo que recibe, recibe un índice y un objeto que en este caso
+como es Hm.
+Es archivo.
+M este listas.
+Ahí lo pasé al al teléfono, así lo manteniendo porque ahora como lo estoy toqueteando así le queda
+el original, pero bueno, nada es más que ir comentando y descomentando o agarran un fragmento y se
+lo pasan [carraspeo] a otro archivo y van probando.
+Eso está para que hagan todas las pruebas que quieran y necesiten.
+Y este frutas quedó ahí bien.
+Ah, bueno, uno de los otros e separado como por métodos.
+El método extend agrega varios elementos a otra lista final.
+Si tenemos la lista manzana banana, vamos a agregar a frutas pun extend otro fragmentito de lista
+parecido a la otra forma que habíamos visto, pero estos son métodos.
+Después si se acostumbran a usar métodos para todo también es práctico o pero es importante saber
+que hay distintas formas de acceder.
+pueden hacer un montón de cosas sin eh métodos, simplemente conociendo y accediendo a los a los
+índices y a la estructura, pero con los métodos se nos agiliza un montón la eh la programación.
+Bien, ahí empezamos para eliminar.
+habíamos visto del que es como un operador, funciona como un operador, sin eh hacer uso del punto
+como los métodos, sin hacer uso de las de los corchetes como las funciones.
+Eh, y en este caso vamos a eliminar el elemento cero de la lista frutas.
+Eh, esto sigue siendo Del.
+Bueno, con Dell también podemos hacer eh uso de slicing.
+En este caso estamos borrando una fracción, por eso también está bueno saber slicing y poder
+practicarlo y usarlo, porque si queremos borrar de la mitad de la lista para adelante, bueno, le
+decimos desde la posición tal hasta tal.
+Bueno, en este caso está borrando una parte del medio dependiendo cómo sea la lista, ¿no?
+Cambiando tanto.
+Eh, vamos a borrar desde la posición uno hasta la cuatro, todo eso del la lista de frutas.
+E el método remove sirve para remover eh un elemento, pero nosotros le tenemos que pasar qué tipo de
+elementos y si hay varios elementos, va a borrar solo el primero que encuentre.
+En este caso le estamos diciendo manzana, encuentra manzana, lo borra.
+Pero si hubiese otra manzana por acá, bueno, va a borrar solo la primer el primer elemento con esos
+valores que encuentro.
+El pop, este que estábamos hablando anteriormente nos va a eliminar eh un elemento de la lista.
+por defecto es el último, pero nosotros podemos pasarle eh un índice para que nos borre algún alguna
+posición que quisiéramos.
+Por ejemplo, vamos a descomentar este.
+Si tenemos fruta y queremos borrar el último elemento, pero a la vez dejar un registro o guardar el
+valor de ese elemento.
+Con pop, vamos a borrarlo y lo va a guardar en una variable.
+Si no lo guardamos, bueno, simplemente lo va a borrar y no nos va a definir, eh, no nos va no lo
+vamos a poder usar, pero sí lo borra de todas formas si no si no guardamos.
+Eh, entonces lo que estamos haciendo acá es borrando el elemento naranja, lo estamos guardando en la
+variable último y después si queremos imprimir esa variable nos va a salir naranja.
+Eh, voy a correr esto para ver qué pasa, pero como hay tantas cosas abiertas, eh, sin comentar puede
+que genere algún algún conflicto, pero estamos pisando la variable frutas un montón de veces.
+Eh, bueno, funcionó, no pasa nada.
+Yo creo que sería eh este, ¿no?
+Si la lista final es manzana, banana, naranja, en la línea 117 va a borrar el último que es naranja,
+lo va a guardar en la variable último que le pusimos último, le ponemos como queremos.
+Imprimimos esa variable, nos imprime el valor que guardó y si imprimimos de nuevo la lista, vemos
+que nos quedan esos eh elementos solamente.
+Y el otro uso que tiene el método pop es borrar, guardar lo que borra, pero le podemos indicar la
+posición de qué elemento queremos borrar.
+Si queremos borrar el primer elemento, vamos con la posición cer0.
+Si queremos borrar el segundo, vamos con la posición uno.
+Si queremos borrar el último, vamos con la -1.
+Y nos va a ir guardando.
+Si nosotros e lo lo definimos así, almacenando lo que borra en una variable, podemos guardar el
+algún elemento de de esa lista.
+Y después lo mismo, ¿no?
+Imprimimos, imprimimos el elemento que guardo y primimos la lista y vemos cómo va quedando.
+son unos cuantos medio rápido así para que tengan un vistazo general de todos, eh, pero después,
+bueno, van a ir viendo cuál se usa más, van a ir viendo cuál cuál les queda más cómodo, con cuál
+pueden resolver determinadas eh actividades.
+El clear básicamente limpia completamente la lista.
+frutas.
+Clear, no un parámetro, borra todo el índice, el método index, nos va a devolver eh el índice de la
+primera aparición que encuentre con el elemento que nosotros le pasamos, ¿no?
+Si decimos frutas punto index index, decimos banana, bueno, va a recorrer la lista y cuando se
+encuentre con banana va a devolver el índice.
+En este caso es 0 1 el índice de ese elemento.
+Eh, count sirve para contar cuántas veces aparece un elemento.
+Rutas pun count.
+Eh, el mismo elemento.
+Si aparece dos, nos devuelve dos o la cantidad de veces que sea que que encuentre apariciones en esa
+lista.
+Eh, este es un método bastante bastante útil porque hay formas de hacer eh ordenamientos, hay métod
+hay como estructuras de programación para ordenar elementos de una lista o elementos de de un objeto
+iterable, que son el ordenamiento burbuja.
+Eh, hay distintos distintas formas de ordenar, pero la verdad que con estos métodos se nos
+simplifica un montón la eh la la tarea, porque si tenemos un elemento, una lista con números
+desordenada y queremos darle un orden, eh, bueno, números punto sort y nos va a devolver esa lista
+ordenada de de menor a a mayor.
+Eh, si queremos mantener la lista original y hacer un ordenamiento, pero queremos eh también crear
+otra ordenada, tenemos el método sorted que va a ordenar la lista, pero lo nos va lo tenemos que
+hacer para que nos cree una lista nueva.
+Y esta es la original.
+En lista ordenada vamos a guardar lo que el método el en este caso sí es función sorted.
+Aunque está relacionada con los métodos, se accede con los paréntesis eh de la lista original.
+¿Qué más?
+Y bueno, si queremos eh usar el sort y no no crea una lista, pero al revés de no sé, de mayor a
+menor, eh podemos pasarle el parámetro reverse true y nos va a devolver una lista ordenada de mayor
+a menor.
+Si no le pasamos nada por defecto es de menor a mayor.
+Eh, reverse invierte el orden de la lista.
+El copy nos crea una copia, no se modifica el original.
+Esto es importante.
+Este método cuando queremos eh si necesitamos tener así sea una lista o un archivo también sirve o
+un algún tipo de formato, una tabla o algo que necesitamos mantener un original.
+Eh, este sería la opción indicada porque si en la en la copia vamos a hacer modificaciones, eh, es
+es recomendable hacerlo con este con este método porque hay formas de generar eh copias que lo que
+hacen básicamente es generar una copia virtual de alguna forma.
+en realidad lo que hace es pasando una referencia de donde está ubicada.
+Entonces, si nosotros modificamos la copia original, la copia la si modificamos la copia, esa
+modificación va a ser eh va a ser impacto también en el en el original.
+Así que nada, simplemente para tener en cuenta de que hay algún tipo de copias que no son copias
+reales, pero eh con el eh con el comando copy, sí, este nos sirve para hacer una una copia real.
+Eh, bueno, bien y terminamos.
+Son un montón.
+¿Cómo vienen?
+Bueno, por ahí son todos juntos, quemados.
+Sí, se los paso todos juntos.
+No los tienen que que aprender todos de memoria.
+Ahora ya vamos a ir trabajando, vamos a ir haciendo cositas para que vayan, se vayan asimilando con
+la práctica.
+literalmente practicarlo todo.
+Sí, sí, sí, sí.
+Eh, bueno, eso, ese eh archivito se lo mandé.
+La lo que está en la diapositiva subida al aula está hasta los que vimos hoy.
+Lo que no llegamos a ver son estos ejercicios que nos vamos a quedar haciéndolos.
+Si quieren, háganse un cafecito, un mate.
+Eh, son incrementales, pero para que empiecen a trabajar con listas, porque los primeros van a ver
+que es muy sencillo crear una lista, pero bueno, es son eh cosas que tienen que empezar a
+acostumbrarse a hacer.
+eh crear una lista y agregar tres elementos mediante el método appen.
+Si no se acuerdan, vienen al archivo o vienen a la diapositiva o ponen lista punto apen y intentan
+descifrar qué es lo que les dice ahí.
+Después nos dice eliminar elementos.
+Crea una lista con seis números.
+Elimina uno de de ellos utilizando el método remove y mostrar la lista resultante.
+Eh, mostrar elementos uno por uno, crear una lista y utilizar un for para mostrar cada nombre en una
+línea diferente.
+¿Se acuerdan?
+No.
+¿Cómo hacíamos para recorrer con for una lista?
+Bueno, ahora vemos entonces.
+Vamos a a ver algo de eso.
+Eh, mostrar números mayores a 10 por in range.
+Okay.
+Sí, sí, algo así.
+Pero ahora en vez del range vamos a recorrer una lista.
+Vamos a hacerlo.
+Eh, crea una lista con números, recorre la lista y mostrar solamente los mayores a 10.
+Esto ya les pasé.
+Voy a volver a clase nueve.
+Eh, voy a comentar todo esto.
+Distancia.
+Bueno, lo primero que nos decía es crea una lista.
+Lista.
+No le voy a poner ningún nombre.
+Lista.
+Forchetes.
+Y vamos a poner números.
+Tres.
+Bueno, decía eh agregar elementos con método append lista punto apen.
+Esto recibía un parámetro.
+¿Cuál parámetro?
+lo que queremos que agregue y después nos decía mostrar resultado.
+Le decía agregar tres elementos, ¿no?
+Lo tienen que hacer tres veces o si se las ingenian pueden hacerlo de una forma eh iterando, puede
+ser un bucle, puede ser un for.
+Por ahora no hace mucha falta que piensen cómo hacer esto tres veces porque son tres líneas de
+código y no no es tan necesario.
+Eh, bien, perfecto.
+Agregó el cinco al final.
+Después me decía que remuevo un elemento lista punto remove.
+En realidad me decía que lo haga con el con el remot.
+¿Y qué?
+¿Qué espera el remot de mí?
+Bueno, un valor, un entero, me paso el cuatro, me va a remover el elemento cuatro.
+Y por último la vamos a imprimir.
+Eh, que se ve si realmente me está borrando el cu.
+Bueno, el cuatro ya no está, pero acá hay otro cuatro.
+Ya habíamos visto que el remove solo iba a remover la primer ocurrencia de ese valor.
+Remueve la la primer eh ocurrencia, ¿sí?
+El primer match con el cuatro y el segundo me lo deja.
+Eh, y después nos decía que recorramos esa lista.
+E bueno, primero que le recordamos for y en pista.
+En este caso la estructura era esta.
+For in.
+Antes hacíamos un range de tantos números que me devuelva.
+Ahora, como ya tenemos un elemento iterable para recorrer, vamos a usar ese y los dos puntos.
+Y por último, lo que quisiéramos, ¿no?
+Si queremos imprimir todos los elementos de ese eh es Ah, perdón, de este de esta lista.
+El for va a trabajar recorriendo elemento por elemento y va a ir guardando en cada iteración lo que
+encuentre es el valor de ese elemento en la variable.
+Entonces, si yo corro esto, me va a imprimir todos los elementos de de esa lista.
+366, ¿no?
+Pero el enunciado del problema no me decía que muestre todos los elementos, me decía que recorra la
+lista y muestre solamente los mayores áreas.
+Bueno, tenemos una estructura que nos va a permitir hacer que si lo que está en esa variable es
+mayor a 10, entonces lo imprima.
+Si no nada, no me decía nada por eh me falta una identación ahí.
+Acuérdense de las siguientciones.
+Todo esto.
+En que vamos a recorrer con un for que vaya guardando en la variable i todo lo que está en mi lista.
+y que si ese elemento que se guardó en la variable lista es mayor a 10, lo imprima.
+Y si no, nada.
+Entonces si no lo imprime se va a ir al otro elemento que encuentre.
+Cont.
+Imaginen que tenemos nuestra lista acá y nuestro flujo del sistema va a ser se va va a arrancar el
+for, va a guardar en la variable i el tres.
+Y 3 es mayor a 10.
+Falso.
+Vuelve si con el otro elemento.
+4 de vuelta es mayor a 10, no vuelve.
+Se encuentra con el 66.
+Se guarda en la variable, evalúa la condición.
+66 es mayor a 10.
+Verdadero.
+Entonces ejecuta este print y ahí imprime eh 66.
+Y esto es lo que se va a ver con consola.
+hago un poco este ejercicio porque después en el parcial puede que les pase toque un ejercicio como
+este y la pregunta sea, bueno, ¿qué se imprime por consola?
+No hace falta hacer todas las iteraciones porque ya en este caso nos damos nos damos cuenta que lo
+único que va a imprimir es 66, que es el único mayor a 10.
+si la condición fuera otra o si no estuviera el el if en primer día todo.
+Pero bueno, con este pedacito de código lo que vamos, la respuesta correcta sería 66.
+Eh, creo que va a hacer algunas cositas antes, pero ah, vieron que este no está limpiando la consola
+porque no traje el archivito, entonces les queda todo el choclo ahí, no pasa nada, pero si les
+incomoda lo usan.
+Eh, y no pasó nada.
+O sí, será esto.
+Eh, tengo un PIN acá que quieroar.
+Otro Pin acá.
+vuelto.
+Bien, solo 66.
+Efectivamente.
+¿Alguna duda con respecto a esto?
+están haciendo los ejercicios ya.
+Bueno, porque los tienen que hacer.
+Genial, genial, genial.
+Eh, para contar les dejo ahí como una ayudita para contar.
+tienen que eh no háganlo.
+Ahora nos quedamos nos vamos a quedar conectados.
+Tómense un un rato.
+Eh yo me quedo conectado también.
+Si hay dudas me preguntan.
+Para contar o para sumar estas estos ejercicios tienen que tener una variable.
+Algo de esto vimos también que es que tiene que estar primero inicializada en cero o e sí en cero
+para poder ir empezando a sumarle valores a eso.
+Pero con estas estructuras van a poder hacer todos estos ejercicios.
+Así que está en el aula, si quieren arranquen, me van escribiendo por acá si hay dudas o al
+Telegram, pero no no hace falta subirlo al Telegram, Rodri.
+Bueno, los dejo tranquilos.
+Me dicen cualquier cosa.
+La suma.
+Bueno, podría ser exactamente lo mismo.
+Si queremos sacar el promedio de esta lista, lo que tenemos que hacer es sumarlo y dividirlo por la
+cantidad de elementos, ¿no?
+Entonces, acumulador después eh haya terminado para sacar el promedio.
+Esto básicamente sería e el promedio va a ser igual a acumulador dividido 1 2 3 4 5 6 7 8 9.
+Pero bueno, sabemos que tenemos una herramientita para hacer para contar.
+¿Cuántos elementos hay en la lista?
+En vez de poner nosotros contar a mano y poner nueve, bueno, básicamente dividimos por el largo de
+esa lista y por último también imprimimos el promedio.
+Eh, no, yo solo ver algunas casos, algunas dudas que tengan.
+Por ahora no vamos a a sumar más contenido, así que Paloma Pablo, Paloma, eh, Paloma, si quieres
+Yeah.

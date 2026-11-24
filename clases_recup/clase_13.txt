@@ -1,0 +1,53 @@
+--- pagina 1 ---
+Información Privada
+Docente: Lucas Marques de Paiva
+Técnicas de 
+Programación
+--- pagina 2 ---
+Información Privada
+Funciones como se comunica con su entorno 
+PARAMETROS
+
+--- pagina 3 ---
+Información Privada
+Funciones como se comunica con su entorno 
+Paso de parámetros posicionales 
+
+--- pagina 4 ---
+Información Privada
+Funciones como se comunica con su entorno 
+Paso de argumentos de palabra clave 
+
+--- pagina 5 ---
+Información Privada
+Funciones como se comunica con su entorno 
+Mezclando argumentos posicionales y de palabras clave  
+
+--- pagina 6 ---
+Información Privada
+Funciones como se comunica con su entorno 
+Funciones parametrizadas 
+
+--- pagina 7 ---
+Información Privada
+Ejercicio 1— Calcular precio final
+Crear una función precio_final() que reciba:
+precio
+descuento
+iva
+y devuelva el precio final. También probar: precio_final(precio=1000, descuento=10, iva=21) 
+Ejercicio 2 — Datos de una persona
+Crear una función mostrar_persona() que reciba:
+nombre
+edad
+ciudad
+y muestre un mensaje como: Juan tiene 22 años y vive en Buenos Aires
+Probar llamando a la función: usando parámetros posicionales, usando parámetros nombrados, 
+mezclando ambos
+Ejercicio 3 — Calculadora simple
+Crear una función calculadora() que reciba:
+num1
+num2
+operación
+La operación puede ser:  +   - *    /  
+La función debe devolver el resultado.

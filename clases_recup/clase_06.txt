@@ -1,0 +1,48 @@
+--- pagina 1 ---
+Información Privada
+Docente: Lucas Marques de Paiva
+Técnicas de 
+Programación
+--- pagina 2 ---
+Información Privada
+Preguntas y repuestas
+Operador de igualdad ==
+Desigualdad: el operador no es igual a (!=)
+Operadores de comparación: mayor que o menor que ( >  < )
+Operadores de comparación: mayor o igual que,  menor o igual que ( >=  <= )
+¿Qué hacer con las respuestas?
+- Memorizarlo (almacenarlo en una variable)
+- Utilizar la respuesta para tomar una decisión 
+
+--- pagina 3 ---
+Información Privada
+Condiciones y ejecución 
+de condicional
+Es como en la vida real: haces ciertas cosas o no cuando se cumple una condición específica, por 
+ejemplo, sales a caminar si el clima es bueno, o te quedas en casa si está húmedo y frío
+Sentencias if
+--- pagina 4 ---
+Información Privada
+Sentencias if-else anidadas
+Sentencias if-else
+--- pagina 5 ---
+Información Privada
+Sentencias elif
+Se usa para verificar más de una condición, y para detener cuando se encuentra la primera 
+sentencia verdadera
+
+--- pagina 6 ---
+Información Privada
+Operadores lógicos
+
+--- pagina 7 ---
+Información Privada
+Indentación y condicionales anidados
+
+--- pagina 8 ---
+Información Privada
+Condicionales anidados
+
+--- pagina 9 ---
+Información Privada
+Condicionales anidados

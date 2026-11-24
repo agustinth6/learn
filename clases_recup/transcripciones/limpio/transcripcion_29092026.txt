@@ -1,0 +1,326 @@
+Más.
+Más buenas.
+Bien, bien, bueno, ayer estuve viendo algunos creo que vi todos, no sé si alguno me faltó darle la
+devolución de los la entrega que hicieron de esos tres ejercicios de funciones que había.
+Eh, ¿alguno tiene dudas con respecto a esos ejercicios?
+Ejercicios de funciones.
+Lo que sí veo que solo 17 me entregaron.
+Eh.
+Es un tema, ah, no sé si creo que, mmm, a ver.
+Mmm, Enrique escribió que tenía problemas ahí con el precio con descuentos.
+Cómo hacer el procedimiento.
+Ehm.
+Bueno, no sé Enrique si después pudiste hacerlo.
+Los, también, no sé si vieron en el aula ayer mientras se vacían esos, yo habilité para los modelos
+de parcial que habíamos hablado que íbamos a trabajar hoy.
+Genial.
+Algunos lo vieron, eh, voy a compartir Hay dos modelos, eh, uno sería como la parte técnica y otro
+sería, ah, son tres ejercicios de la parte práctica.
+De esos tres ejercicios la idea es que puedan hacer los tres como forma de, a manera de, de práctica
+del parcial.
+En el parcial va a haber solo uno.
+Eh, mira, Tomás, podés, eh, sí, la, el parcial, repito ahí para Tomás y para los que no pudieron
+estar ayer, el parcial tiene dos partes, una parte, eh, práctica y una parte teórica.
+La parte teórica también es medio práctica, pero me refiero a teórica que va a ser más en en papel,
+para ver algunas preguntas.
+Y en la unidad cuatro, que es donde estamos ahora, hay un modelo de parcial teórico de preguntas
+similares a las que, eh, les pueden aparecer en en el parcial.
+Estas preguntas, la mayoría también están en los laboratorios o si no están exactamente así, hay
+preguntas de este estilo.
+Esto se lo voy a dejar a ustedes para que puedan, eh, analizarlo, practicarlo.
+Al final son, acá son 18 preguntas.
+Al final están las respuestas.
+Medidas que puedan hacerlo, eh, sin sin recurrir a las respuestas y en, bueno, y después ir haciendo
+una autoevaluación.
+De este estilo de preguntas es como va a ser la parte teórica, ¿no?
+Van a ver, no sé, una pregunta de estas, ¿qué pasa con esto, qué imprime?
+Bueno, acá tienen que poner imprime los valores, ¿no?
+X e Y, y dependiendo de qué vale X y qué vale Y, bueno, ponen, esto imprime ta y ta.
+Sí, va a imprimir tres y va a imprimir, eh, tres coma tres, supongamos.
+Profesor, la respuesta, ¿no?
+no hay que explicar nada no no solo hay que cuál será la salida y la salida me la va a dar print no
+y print está imprimiendo X qué valores toma X qué valores toma y Eh bueno y así para cada esto es un
+rango que empieza en uno termina en cuatro y va a imprimir y por dos Entonces acá va Si quieren si
+lo pueden ir haciendo Y razonando en papel o si no les sale no pasa nada código y lo van probando
+también a ver cómo Eh resultaría Y así para cada uno de estos ejercicios ¿Qué más?
+Bueno esto por un lado la parte técnica le va a les va a quedar para que trabajen y analicen y
+practiquen Y Ahora nos vamos a enfocar un poco en estos tres ejercicios Que son Cómo les va a llegar
+a ustedes uno de estos eh de de esta estructura les va a llegar alguno de estos ejercicios no los
+mismos pero van a ser de este tipo así que también Vamos a ir viéndolos hoy en clase eh vamos a ver
+alguno y por ahí les voy a dejar tiempo para que practiquen ustedes y y podamos tener esta instancia
+de de consulta yo me me quedo conectado y ustedes van consultando ¿Cómo sería esto?
+Por ejemplo el número uno dice que el objetivo es crear un programa que permita registrar nombres
+completos en una lista de forma dinámica utilizando funciones y un Como estructura de datos nos dice
+que tenemos que definir una lista llamada Una lista vacía llamada lista de nombres para almacenar
+registros bueno podemos ir haciendo eso si quieren.
+Eh, hoy sería mmm clase 11, se fue.
+Sí.
+Bueno, mmm Sería la clase 14.
+¿Hoy es 14?
+Ah, gracias.
+Clase 14.
+Bueno, lo primero que nos decía eh el ejercicio, bueno, ese creo que se los voy a dejar para que lo
+hagan porque tiene ahí una cosita que estaría bueno que eh que lo hagan ustedes.
+Después nos dice, "Crear una lista para tener una estructura, definir una función." Cosas que
+estuvimos trabajando ayer y las clases anteriores.
+"Crear una función llamada saludar que realice las siguientes tareas.
+Solicite, la función tiene que solicitar al usuario nombre y apellido por separado, o sea, va a
+haber dos inputs, ¿no?
+Después tenemos que combinar am- ambos datos en una sola variable, nombre completo.
+Eh asegurándonos que haya un espacio entre ellos.
+Después hay que agregar ese nombre completo a la lista global mediante el método append." Otro dato
+que nos está tirando que la lista va a ser global.
+"Y después muestra un mensaje de confirmación utilizando f-strings que indique que la persona
+agregada ha sido eh que la persona ha sido agregada con éxito." Esto sería una estructura de datos,
+una función y después nos dice que el flujo del programa o el programa principal debe implementar un
+bucle infinito while true que actúe como un menú principal.
+Ahora vamos a ver cómo se con funciona el guito de esto estuvimos viendo, pero vamos a ver cómo
+funcionaría un menú while true.
+Debe preguntar al usuario si desea agregar un nombre ingresando uno.
+Si ingresa uno, el programa debe invocar a la función saludar.
+Si el usuario ingresa cualquier otro valor, el programa debe finalizar su ejecución, break.
+Por último, mostrar cómo queda la lista.
+Por último, mostrar cómo queda la lista.
+Desarrollar un pro Ah, bueno, este sería el número Bueno, vamos vamos a trabajar con ese.
+No no voy a hacer la toda la implementación, pero voy a mostrar más o menos cómo sería la estructura
+de ese programa.
+Primero me decía que teníamos que crear una lista eh que se llame lista de nombres.
+Más o menos, ¿no?
+Y que sea una lista vacía.
+Después teníamos que definir una función que sea saludar.
+Vamos a saludar.
+Y nos decía que no no recibía parámetros, nos decía que qué es lo que tenía que hacer, ¿no?
+Guardar nombre.
+Eh y pedir al usuario que lo ingrese.
+Eh y después apellido, lo mismo.
+A ver, le pongo el pongo el con n, input.
+Después me decía que tenía que tener una variable nombre completo.
+Y piensen ustedes cómo hacer que ese nombre sea completo.
+Yo ahora le voy a poner Pepe.
+Para definirlo un valor, ¿no?
+Pero para que no me tire error, pero después ustedes acá tendrían que ver cómo hacen para que esa
+variable eh contenga el nombre, un espacio y apellido.
+Después, ¿qué me decía el ejercicio?
+Que la función, además de pedir nombre y de concatenar esos datos, debería agregar a esa lista eh
+nombre completo con el método append, creo que lo decía también en el ejercicio.
+Agregue nombre completo a la lista ahora mediante append.
+Bueno.
+Y después me mostrar un mensaje, por último, eh un mensaje de confirmación.
+Entonces, después de eh sí, lista de nombres {punto} append, que va a recibir ese nombre completo.
+Eh Siempre me falta una letra, ¿no?
+Después de agregarlo, mostrar un mensaje con f-string.
+El nombre pa pa pa se agregó correctamente a la lista.
+Eso como en principio de de la estructura de clases y de la función.
+Pero después nos decía que como programa principal tenemos que implementar un while true.
+Principal.
+Vamos a hacer un while donde la condición va a ser verdadera, por ende siempre va a entrar hasta que
+yo decida romperlo.
+¿Cómo hacíamos para romper?
+Con break.
+Eh.
+Okay.
+Pero antes, o sea, este este flujo, este estructura de flujo va a arrancar y cerrar.
+Que todavía no tengo nada de código en el dentro del while.
+¿Qué otra cosa nos pedía?
+Y cómo trabajamos con un while true, bueno.
+Debe preguntar al usuario si desea ingresar un número ingresando uno.
+Entonces, vamos a eh vamos a usar nuestra función para preguntarle cosas al usuario o para obtener
+datos por consola.
+Eh.
+Voy a guardar acá, no lo voy a salvar, voy a poner una variable.
+Algo que va a ingresar eh el usuario.
+Lo voy a transformar entero.
+Que me va, espero que el usuario me ingrese un uno.
+Me puede ingresar cualquier cosa, pero eso, cómo manejar esas eh, esas, esos errores que pueden
+pasar, lo vamos a trabajar después del parcial, son las excepciones.
+Eh, para capturar esos errores y que no nos aparezca ese cartel rojo en pantalla.
+Entonces, voy a guardar en variable algo que me va a ingresar el usuario.
+Si querés ingresar un un nombre a la lista.
+Eh, agregar un nombre.
+Ingresa un.
+Entonces, si el usuario me ingresa uno, si mi variable tiene un valor igual igual a uno, entonces
+hago tal cosa, ¿no?
+Si el usuario me ingresa uno, le voy a decir que eh, invoque la función.
+Porque lo que está queriendo hacer el usuario, yo ya tengo el código para eso y está guardado dentro
+de una función un, eh, saludar.
+Entonces, voy a invocar a la función sa lu dar.
+Ahora, si eso no, si no ingresa uno, que rompa.
+Y hasta ahí estaríamos contentos con lo que nos eh, está pidiendo el enunciado, que es si el usuario
+debe ingresa uno, invocar a la función salvar.
+Si el ingresa, el usuario ingresa cualquier otro valor, finaliza la ejecución del break.
+Y por último mostrar cómo queda la lista.
+Bueno, por último, fuera del while, print eh lista de nombres.
+¿Se entiende?
+Sí.
+Muy bien, muy bien.
+Bueno, vamos a esto no hace nada.
+Profe, ¿no faltaría decir que eh la lista es global?
+¿Cómo que la lista es?
+Global.
+Eh no, no, no, en este caso no.
+Eh claro, por lo que vimos ayer.
+Igualmente por donde está definida ya queda global.
+Ya la definí acá global, claro, pero ayer habíamos visto que si nosotros queremos dentro de una
+función modificar, mm pero me parece que hace relación más a la modificación de eh del tipo sumar o
+incrementar.
+Bueno, y si nosotros eh lo marcamos igual como global, no estaría mal, ¿no?
+Mm mm.
+No.
+Acá, por alguna particularidad, sí me va a dejar, pero mm porque si nosotros ponemos la lista dentro
+de función, después la tendríamos que de de forma retornar para poder imprimirla, ¿no?
+Este print debería eh no podemos hacer uso de una lista que está dentro de una función, salvo que la
+retornemos, entonces para imprimir la lista tendríamos que llamar de nuevo a la función.
+Son dos formas distintas, ¿eh?
+Si quieres agregar un nombre a la lista, ingresa uno.
+Bueno, eh pero ahí no cae en consola.
+Uno.
+Y me debería invocar a la función saludar.
+Ah, pero como no le puse ningún mensaje a input, fíjense que me está esperando que ponga un nombre.
+Voy a poner cualquier cosa, de vuelta, cualquier cosa.
+Y agrega a Pepe.
+Esto en realidad no está funcionando, está medio hardcodeado, porque lo que debería agregar acá no
+es Pepe, sino esto, ¿no?
+Nombre completo.
+Que esto le dejo ahí como tarea para ustedes para que hagan el f string, pero fíjense que funcionó.
+Eh lo que decía la compañera, que nosotros podríamos definir, ah en este caso está funcionando con
+estos métodos, no funciona.
+Deberíamos, podríamos definir global.
+Eh estará bien escrito.
+No.
+Mal.
+Lista no.
+Son esas cosas de de la programación que a veces no la yo no no sé, no sé, nunca se llega a saber el
+funcionamiento de todo, de exactamente de todo y y y esto me me sorprendió.
+Funciona igual, no haría falta, pero si les llega a pasar que no les funciona, prueben siendo
+avisándole a la función que estamos trabajando con una lista global.
+Si yo no tuviera la lista global, como nos está pidiendo, y de hecho el enunciado lo pide, ¿no?
+Entonces, está bueno respetar.
+Eh, lista de nombres, la voy a definir acá dentro, vacía.
+Me va a funcionar, pero este print no funciona, ¿ves?
+Ya acá me está diciendo, no está definida, no lo encuentra porque desde un entorno global no puede
+acceder al esta lista, salvo eh salvo que yo la retorne.
+Lista.
+La devuelva, ¿no?
+Que la haga accesible, para que alguien la pueda usar, pero acá tendría que estar para imprimir, eh
+tendría que no sería eh tendría que invocar a saludar.
+Pero si yo hago esto, cuando yo invoque a saludar, aparte de retornarme, me va a empezar a pedir
+todas estas cosas.
+O lo podrí- podría hacer este print directamente acá, ¿no?
+También funcionaría.
+Pero me parece que esta es la opción más simple.
+Esto lo sacamos.
+Y acá simplemente imprimimos lista de nombres.
+Quiero darles así como algunas opciones para trabajar.
+Ah nosotros podemos decirle a en este input una serie de cuestiones, una serie de variantes para si
+nosotros tuviéramos otras funciones como están en el ejercicio que sigue eh por ejemplo def calcular
+eh esa palabrita reservada es para hacer un método que no hace nada.
+Sirve para algunas otras cosas, yo lo hago para no de no implementar todo este método porque es
+simplemente para hacer un un una pruebita con el while true.
+Eh entonces en este mensaje le podemos decir varias cositas, si querés agregar un nombre a la lista
+ingresa uno.
+Si querés eh calcular ingresa dos.
+Vamos a hacer un print acá para print calcular para que haga algo, ¿no?
+Para que entendamos.
+Eh entonces acá voy a tener como en variable voy a poder guardar dos valores o varios valores.
+Si me ingresa uno, que llama a saludar.
+Eh, okay, pero ¿y si me ingresa dos?
+Entonces, puedo hacer el if, esta otra estructura de condicionales.
+Si la variable cuando el usuario ingresó quedó seteada en dos, bueno, invoca a calcular.
+Si no, break.
+Si esto no es verdadero, esto no es verdadero, break.
+Ahora, por ahí le quiero poner también una variable para que salga.
+Eh, vamos vamos a probar esto.
+Habíamos probado que si ingreso uno, y esta también sería una buena práctica, ¿no?
+Si ustedes tienen en varias cosas para hacer, pueden hacer, bueno, primero uno, saludar, anda,
+genial, o sea, mi función anda.
+Bueno, ahora la parte dos, tengo que hacer otra condición para que mi while true reciba un dos.
+Bueno, si querés sin agregar un nombre a la lista, ingresá uno, si querés calcular, ingresá dos.
+Voy a ingresar dos.
+Calculando, me puso, ¿no?
+Y también me imprime la lista de nombres que quedó vacía porque arranca vacía y como no le agregué
+nada, pero, bueno, ahora yo quiero que mmm solo salga cuando el usuario eh, quiero que, por ejemplo,
+poder agregar muchos muchos eh nombres a la lista de nombres y después que calcu.
+Bueno, puedo modificar esto y decirle, bueno, en principio, si, a ver si puedo poner acá Si queréis
+agregar un nombre a la lista ingresa uno, si queréis calcular ingresa dos.
+Para salir ingresa cero.
+Entonces, si ingresa uno saluda, si ingresa dos eh, sale.
+Y si ingresa cero si la variable variable es igual igual a cero entonces, ahí sí, es tenemos que
+break.
+Que rompa solo cuando ingresa cero.
+Eh, ahí está.
+Entonces, tengo uno que me hace agregar eh, a la la función saludar, que en realidad no sé por qué
+se llama saludar que no saluda, pero simplemente agrega a la lista de nombres, se podría llamar
+agregado.
+O sea, dos para calcular, cero para salir.
+Probemos.
+Probamos uno, ya probamos dos.
+Eh, ¿Se entiende hasta acá?
+Bien, bien, bien, ¿no?
+Bueno, el mensaje y agregar cero, bueno, básicamente sale.
+Eh, voy a hacer una prueba, a ver qué pasa si ingreso tres.
+Cualquier otro número.
+Le voy a dar cuatro.
+Me mantiene ahí hasta que yo ingrese cero, porque la única condición que va a romper el bucle es
+cuando yo ingrese cero.
+Esto es práctico por si nosotros queremos eh mantener al usuario y tomar la decisión para cerrar,
+entonces podemos eh ingresamos uno, eh nos va a decir que ingresemos un nombre, pa pa pa, pa pa,
+perfecto.
+Me tiene de vuelta, porque yo todavía no le dije que quiero salir.
+Si querés agregar un nombre, ingresá uno y si querés calcular, ingresá dos.
+Bueno, quiero agregar otro nombre.
+Ingreso uno.
+Me pide que ingrese otro nombre, otro apellido.
+Me tiene de vuelta, me manda de vuelta al mensajito.
+Lo que está pasando es como que empieza el programa principal, la condición del while es verdadera,
+forzosamente va a entrar y solo va a romper cuando ingrese un cero.
+Entonces, si yo ingreso uno, eh llama a saludar, perfecto.
+Llama a saludar y vuelve.
+Si ingreso dos, llama a calcular, vuelve.
+Si ingreso uno, hace lo mismo y cada vez que yo ingrese uno o dos o cualquier otro número que no sea
+cero, el while va a ser true.
+Solo se va a romper cuando yo, una vez que terminé de cargar todos los nombres, y bueno, ya está.
+Ingreso cero y ahí me me imprime, bueno, dos veces Pepe porque cuando yo invoco saludar, le estoy
+hardcodeando que agregue Pepe Pepe.
+Pero porque todavía esto no está implementado, que les va a quedar ahí como como práctica a ustedes.
+¿Se entiende?
+Sí, profe.
+Eh sí, Tomás.
+Sí, sí.
+Primero les entrego una hoja con las preguntas a completar.
+Después que me entregan la hoja, sacan su compu o piden una de las de las compas de las compus del
+instituto y hacen la parte práctica, que sería un ejercicio como este o como los que están a
+continuación.
+El ejercicio dos dice, desarrollar un programa que separe la lógica de la carga de datos, lógica del
+cálculo utilizando funciones independientes.
+Por un lado, tenemos que tener una función agregar notas.
+Debe recibir como parámetro una lista donde se guardarán los datos.
+Guarda, acá hay una función que recibe por parámetros una lista.
+Debe preguntar al usuario cuántas notas desea cargar.
+Ayer vimos que qué función usamos para cuando nos decían un número de veces, o sea, debe usar un
+bucle for para solicitar cada nota y agregarlo mediante append.
+Esta es una función.
+Después tenemos otra función.
+Calcular promedio.
+Debe recibir una lista de notas como parámetro y debe recorrer esa lista con un bucle for para sumar
+los valores.
+Debe retornar el promedio utilizando la palabra return.
+Y el programa principal nos dice que tenemos que crear una lista vacía, eh invocar a la primera
+función de carga de datos, llamar a la segunda función para obtener promedio y mostrarlo con f
+strings.
+Este no nos pide un eh no nos pide un while true para simplemente creamos la lista, invocamos a la
+función, le pasamos la lista y que esa función se encargue de cargar los datos.
+Y la segunda función va a trabajar con esa misma lista que ha sido cargada previamente o con otra
+que tengan ahí seteada, pero la función tiene que calcular el promedio.
+¿Se animan a hacer este?
+Sí.
+Bien.
+Manos a la obra entonces.
+Eh Bueno, esto está subido en el aula por si yo dejo de compartir y me me pongo a a a ver otras
+cositas.
+Eh Trabajen con este y después vemos el tercero, si quieren ir adelantando con el tercero y si
+tienen dudas me escriben y y lo lo preguntamos.
+Como ayuda son todas cosas que ya vimos, así que recurran a todas esas herramientitas que estuvimos
+trabajando para aplicar a a en este ejercicio.
+No los molesto más, no hablo más, cualquier cosa me escriben.
+o alguien tiene alguna duda antes de que corte el micrófono.
+Perfecto.
