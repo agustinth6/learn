@@ -58,3 +58,9 @@ Las referencias señalan dónde se trata el mismo tema: el resumen reúne materi
 - Variables, pila, inicialización y aritmética: transcripción p. 9–19, aprox. **00:38–01:22** → parte 2, secciones 6–7, p. 26–29.
 - Comparaciones y saltos condicionales: transcripción p. 19–22, aprox. **01:22–01:36** → parte 2, sección 9, p. 31–33.
 - Funciones, `call`, `ret` y paso de parámetros: transcripción p. 23–32, aprox. **01:36–02:20** → parte 2, sección 8, p. 30–31.
+
+## Ejercicios y modelos de parcial
+
+- **Parte 3 · Ejercicios del TP5 y modelos de parcial:** páginas 35–40 del PDF unificado.
+- **Figuras del SIPO y del temporal SR:** páginas 41–42.
+- **Fotografías de los modelos de parcial:** páginas 43–45. Las respuestas manuscritas no son una solución oficial y la tercera foto tiene partes borrosas.
